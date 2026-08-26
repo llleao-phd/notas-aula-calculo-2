@@ -1,0 +1,192 @@
+% ============================================================
+% CLASSE DO DOCUMENTO
+% ============================================================
+\documentclass[a4paper,12pt,twoside]{book}
+
+% ============================================================
+% PACOTES DE IDIOMA E CODIFICAÇÃO
+% ============================================================
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+
+% ============================================================
+% LAYOUT, MARGENS E TIPOGRAFIA
+% ============================================================
+\usepackage[top = 20mm, bottom = 20mm, left = 15mm, right = 10mm]{geometry}
+\usepackage{microtype} % tipografia refinada
+\usepackage{setspace}  % permite onehalfspacing
+\usepackage{fancyhdr}  % cabeçalhos
+\usepackage{enumitem}  % controle de listas
+\usepackage{titlesec}  % personalização de títulos
+\usepackage{makeidx}
+\makeindex
+
+% Fonte elegante mas leve (troque se quiser outra família)
+% \usepackage{tgpagella}
+
+% ============================================================
+% MATEMÁTICA
+% (minimalista + robusta = AMS + utilidades)
+% ============================================================
+\usepackage{amsmath, amssymb, amsfonts, amsthm, mathrsfs}
+\usepackage{mathtools} % complementa amsmath
+\usepackage{cancel}
+\allowdisplaybreaks    % permite quebrar alinhamentos longos
+
+% ============================================================
+% FIGURAS, GRÁFICOS E TABELAS
+% ============================================================
+\usepackage{graphicx}
+\graphicspath{{img/}}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% ============================================================
+% CORES E LINKS
+% ============================================================
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+    hidelinks,
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    breaklinks=true,
+    pdftitle={Análise Funcional},
+    pdfauthor={Lucas Leão}
+}
+
+% ============================================================
+% COMANDOS PERSONALIZADOS — NUMÉRICOS E CONJUNTOS
+% ============================================================
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+% ============================================================
+% COMANDOS PERSONALIZADOS — OPERADORES
+% ============================================================
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\Vol}{Vol}
+\DeclareMathOperator{\esssup}{ess\,sup}
+\DeclareMathOperator{\qtp}{q.t.p.}
+
+% ============================================================
+% CORES PARA RASCUNHO (OPCIONAL)
+% ============================================================
+\newcommand{\cv}{\color{red}}
+\newcommand{\co}{\color{orange!90!black}}
+\newcommand{\cb}{\color{blue}}
+\newcommand{\cg}{\color{green!25!gray}}
+\newcommand{\cz}{\color{black}}
+
+% ============================================================
+% ESTILOS DE TEOREMA (Robusto + Profissional)
+% ============================================================
+\definecolor{theoremcolor}{RGB}{0, 80, 80}
+\definecolor{definitioncolor}{RGB}{0, 60, 130}
+\definecolor{examplecolor}{RGB}{150, 90, 20}
+\definecolor{remarkcolor}{RGB}{130, 30, 0}
+\definecolor{proofcolor}{RGB}{40, 80, 0}
+
+% Teorema
+\newtheoremstyle{color-theorem}
+  {10pt}{10pt}{\itshape}{0pt}
+  {\color{theoremcolor}\bfseries}{}
+  {\newline}{}
+\theoremstyle{color-theorem}
+\newtheorem{theorem}{Teorema}[chapter]
+\newtheorem{lemma}{Lema}[chapter]
+\newtheorem{proposition}{Proposição}[chapter]
+\newtheorem{corollary}{Corolário}[chapter]
+
+% Definição
+\newtheoremstyle{color-definition}
+  {10pt}{10pt}{\normalfont}{0pt}
+  {\color{definitioncolor}\bfseries}{}
+  {\newline}{}
+\theoremstyle{color-definition}
+\newtheorem{definition}{Definição}[chapter]
+
+% Exemplos
+\newtheoremstyle{color-example}
+  {10pt}{10pt}{\normalfont}{0pt}
+  {\color{examplecolor}\bfseries}{}
+  {\newline}{}
+\theoremstyle{color-example}
+\newtheorem{example}{Exemplo}[chapter]
+\newtheorem{exercise}{Exercício}[chapter]
+\newtheorem{claim}{Afirmação}[chapter]
+\newtheorem{notation}{Notação}[chapter]
+
+% Observações
+\newtheoremstyle{color-remark}
+  {10pt}{10pt}{\normalfont}{0pt}
+  {\color{remarkcolor}\bfseries}{}
+  {\newline}{}
+\theoremstyle{color-remark}
+\newtheorem{remark}{Observação}[chapter]
+
+% ============================================================
+% AMBIENTE DE DEMONSTRAÇÃO PERSONALIZADO
+% ============================================================
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{%
+  \par\pushQED{\qed}%
+  \normalfont\topsep6pt\trivlist
+  \item[\hskip\labelsep\color{proofcolor}\bfseries #1.]%
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+\makeatother
+
+% ============================================================
+% INÍCIO DO DOCUMENTO
+% ============================================================
+\begin{document}
+
+\frontmatter
+
+\onehalfspacing
+
+\input{capa.tex}
+
+\tableofcontents
+
+
+\mainmatter
+
+\input{variasvariaveis.tex}
+\input{topologia.tex}
+\input{continuidade.tex}
+\input{derivadas.tex}
+% \input{integrais.tex}
+% \input{vetoriais.tex}
+% \input{linha.tex}
+
+\appendix
+
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Índice Remissivo}
+\printindex
+
+\bibliographystyle{apalike}
+\bibliography{bibliografia}
+
+
+\end{document}
