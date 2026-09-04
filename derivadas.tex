@@ -919,9 +919,107 @@ Seja \(f(x,y)\) \textit{diferenciável} em \((x_0,y_0)\) e seja \(L:\R^2\to\R\) 
         L(h,k) = \frac{\partial f}{\partial x}(x_0,y_0)\cdot h + \frac{\partial f}{\partial y}(x_0,y_0)\cdot k.
     \end{equation}
 
-Então, como já observamos antes, \(L(h,k)\) é a única função linear tal que \[\lim_{(h,k)\to(0,0)} \frac{f(x_0+h,y_0+k) - f(x_0,y_0) - L(h,k)}{\|(h,k)\|} = 0.\] Logo, podemos afirmar que \[f(x_0+h,y_0+k) - f(x_0,y_0) = L(h,k) + E(h,k),\] com \(\lim_{(h,k)\to(0,0)} \frac{E(h,k)}{\|(h,k)\|} = 0\).
+Então, como já observamos antes, \(L(h,k)\) é a única função linear tal que \[\lim_{(h,k)\to(0,0)} \frac{f(x_0+h,y_0+k) - f(x_0,y_0) - L(h,k)}{\|(h,k)\|} = 0.\] Logo, podemos afirmar que \[f(x_0+h,y_0+k) - f(x_0,y_0) = L(h,k) + E(h,k),\] com \(\lim_{(h,k)\to(0,0)} \frac{E(h,k)}{\|(h,k)\|} = 0\). Ou seja, na aproximação de \(f(x_0+h,y_0+k) - f(x_0,y_0)\) por \(L(h,k)\), o erro \(E(h,k)\) tende a zero mais rápido do que \(\|(h,k)\|\) quando \((h,k)\to(0,0)\)
 
-% \section{Vetor gradiente}
+Em outras palavras,    \begin{equation}\label{eqn.Aproxf}
+        f(x_0+h,y_0+k) - f(x_0,y_0) \sim L(h,k),
+    \end{equation}
+no qual a aproximação é melhor quanto menores os módulos de \(h\) e \(k\).
+
+Por outro lado, seja \[T(x,y) = f(x_0,y_0) + \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0). \] Sabemos que o gráfico de \(T\) é o plano tangente a \(f\) no ponto \((x_0,y_0,f(x_0,y_0))\). Fazendo \(x = x_0 + h\) e \(y = y_0 + k\) e notando que \(f(x_0,y_0) = T(x_0,y_0)\), obtemos \[T(x_0+h,y_0+k) - T(x_0,y_0) = \frac{\partial f}{\partial x}(x_0,y_0)h + \frac{\partial f}{\partial y}(x_0,y_0)k = L(h,k),\] ou seja
+    \begin{equation}\label{eqn.AproxT}
+        T(x_0+h,y_0+k) - T(x_0,y_0) = L(h,k).
+    \end{equation}
+Assim, se \(z = f(x,y)\) e denotamos \[\Delta T = T(x_0+h,y_0+k) - T(x_0,y_0) \text{ e } \Delta z = f(x_0+h,y_0+k) - f(x_0,y_0)\] as variações, respectivamente, de \(T\) e \(f\) quando \((x,y)\) varia de \((x_0,y_0)\) para \((x_0+h,y_0+k)\), então \eqref{eqn.Aproxf} e \eqref{eqn.AproxT} nos dizem que \(\Delta z \sim \Delta T\) quando \(h\) e \(k\) são pequenos, ou seja, a aproximação é ``melhor'' quanto menores forem os módulos de \(h\) e \(k\).
+
+
+\begin{definition}
+Dizemos que \(L(h,k) = \frac{\partial f}{\partial x}(x_0,y_0)h + \frac{\partial f}{\partial y}(x_0,y_0)k\) é a \textbf{diferencial} de \(f\) em \((x_0,y_0)\) com relação aos acréscimos \(h\) e \(k\).
+\end{definition}
+
+Seja \(z = f(x,y)\) uma função diferenciável. A \textit{diferencial} de \(f\) em \((x,y)\) com relação aos acréscimos \(dx\) e \(dy\) é a função linear
+    \begin{equation}\label{eqn.Diferencial}
+        dz = \frac{\partial f}{\partial x}(x,y)dx + \frac{\partial f}{\partial y}(x,y)dy.
+    \end{equation}
+Chamaremos \eqref{eqn.Diferencial} simplesmente de \textit{diferencial} de \(z = f(x,y)\).
+
+Lembre que \(dz\) é a variação do plano tangente quando passamos do ponto \((x,y)\) para o ponto \((x+dx,y+dy)\).
+
+Por outro lado, a variação de \(f\) quando passamos de \((x,y)\) para \((x+dx,y+dy)\) é denotada por \[\Delta z = f(x+dx,y+dy) - f(x,y).\] Portanto \[\Delta z \sim dz\] com aproximação ``melhor'' quando os módulos de \(dx\) e \(dy\) são menores.
+
+\begin{example}
+    Seja \(z = x^2 y\).
+        \begin{enumerate}
+            \item Calcule a diferencial de \(z\).
+            \item Usando a diferencial, calculo um valor aproximado para a variação \(\Delta z\) em \(z\), quando passamos de \((1,2)\) para \((1.02,2.01)\).
+            \item Calcule o erro cometido na aproximação acima.
+        \end{enumerate}
+
+    Temos que \(z = x^2 y\), logo \[dz = \partial_x f(x,y) dx + \partial_y f(x,y) dy = 2xy dx + x^2 dy.\] Para aproximar \(\Delta z\) quando passamos de \((1,2)\) para \((1.02,2.01)\) note que \[dx = 1.02 - 1 = 0.02 \text{ e } dy = 2.01 - 2 = 0.01,\] portanto \[\Delta z \sim dz = 2xy dx + x^2 dy = 2(1)(2)\cdot(0.02) + (1)^2\cdot(0.01) = 0.09.\] Por fim, dado que \[\Delta z = f(x+dx,y+dy) = (x+dx)^2(y+dy) - x^2y = (1.02)^2\cdot (2.01) - (1)^2\cdot (2) = 0.091204,\] o erro cometido na aproximação é \[E = \Delta z - dz = 0.091294 - 0.09 = 0.001204.\]
+\end{example}
+
+\begin{example}
+    Calcule o valor aproximado para a variação da área de um retângulo \(A(x,y) = x\cdot y\) quando passamos de \((4,2)\) para \((4.01,2.001)\).
+
+    Temos que \[dx = 4.01 - 4 = 0.01 \text{ e } dy = 2.001 - 2 = 0.001\] logo \[\Delta A \sim dA = \partial_x A(x,y) dx + \partial_y A(x,y) dy = ydx + xdy = 0.024\text{u.a}.\]
+\end{example}
+
+\begin{exercise}
+    Calcule um valor aproximado para a variação da área de um triângulo \(A(x,y) = \frac{xy}{2}\) quando passamos de \((2,1)\) para \((2.01,0.5)\).
+\end{exercise}
+
+\section{Vetor gradiente}
+
+\begin{definition}
+    Seja \(z = f(x,y)\) uma função que admite derivadas parciais em \((x_0,y_0)\). O vetor \[\nabla f(x_0,y_0) = \left( \frac{\partial f}{\partial x}(x_0,y_0), \frac{\partial f}{\partial y}(x_0,y_0) \right)\] é chamado \textbf{vetor gradiente} de \(f\) em \((x_0,y_0)\).
+\end{definition}
+
+Geometricamente, interpretamos \(\nabla f(x_0,y_0)\) como um vetor aplicado no ponto \((x_0,y_0)\).
+
+\begin{example}
+    Seja \(f(x,y) = x^2 + y^2\). Calcule \(\nabla f(1,1)\) e o represente geometricamente.
+
+    Temos \[\nabla f(x,y) = (\partial_x f(x,y), \partial_y f(x,y)) = (2x,2y),\] portanto \(\nabla f(1,1) = (2,2)\).
+    \begin{figure}[htbp]
+        \centering
+            \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+            \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+            %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+            %Straight Lines [id:da31508838601939004] 
+            \draw    (100.59,200.09) -- (100.59,82.39) ;
+            \draw [shift={(100.59,80.39)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da06200086745299671] 
+            \draw    (90.22,190.64) -- (242.98,190.64) ;
+            \draw [shift={(244.98,190.64)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da7072164214998465] 
+            \draw    (130.43,186.03) -- (130.43,196.03) ;
+            %Straight Lines [id:da888000515117196] 
+            \draw    (94,159.98) -- (106.27,160.01) ;
+            %Straight Lines [id:da5252627295358931] 
+            \draw    (190.43,186.03) -- (190.43,196.03) ;
+            %Straight Lines [id:da8828878184993503] 
+            \draw    (94,99.98) -- (106.27,100.01) ;
+            %Straight Lines [id:da639177782403502] 
+            \draw  [dash pattern={on 0.84pt off 2.51pt}]  (99.8,190.3) -- (130.13,160.3) ;
+            %Straight Lines [id:da5599043942406073] 
+            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (129.8,160.3) -- (188.72,101.38) ;
+            \draw [shift={(190.13,99.97)}, rotate = 135] [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+            % Text Node
+            \draw (251.04,183.3) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (81.34,74.51) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            % Text Node
+            \draw (178.07,118.2) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$\nabla f( 1,1)$};
+            % Text Node
+            \draw (124.33,202.4) node [anchor=north west][inner sep=0.75pt]    {$1$};
+            % Text Node
+            \draw (79.67,153.73) node [anchor=north west][inner sep=0.75pt]    {$1$};
+            \end{tikzpicture}
+        \caption{Vetor gradiente da função \(f(x,y)=x^2+y^2\) no ponto \((1,1)\)}
+        \label{fig:VetorGradiente}
+    \end{figure}
+\end{example}
 
 % \section{Regra da cadeia}
 
