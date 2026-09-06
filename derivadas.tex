@@ -1021,13 +1021,79 @@ Geometricamente, interpretamos \(\nabla f(x_0,y_0)\) como um vetor aplicado no p
     \end{figure}
 \end{example}
 
-% \section{Regra da cadeia}
+Agora, suponha que \(f\) seja diferenciável em \((x_0,y_0)\). Então
+    \begin{equation}\label{eqn.Diferenciavel}
+        \lim_{(x,y)\to(x_0,y_0)} \frac{f(x,y) - f(x_0,y_0) - \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) - \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0)}{\|(x,y)-(x_0,y_0)\|} = 0,
+    \end{equation}
+e podemos escrever
+    \begin{align*}
+        \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0) 
+            & = \left( \frac{\partial f}{\partial x}(x_0,y_0),\frac{\partial f}{\partial y}(x_0,y_0) \right)\bullet (x-x_0,y-y_0) \\ 
+            & = \nabla f(x_0,y_0)\bullet[(x,y)-(x_0,y_0)].
+    \end{align*}
+Assim, substituindo em \eqref{eqn.Diferenciavel} obtemos \[\lim_{(x,y)\to(x_0,y_0)} \frac{f(x,y) - f(x_0,y_0) - \nabla f(x_0,y_0)[(x,y) - (x_0,y_0)]}{\|(x,y) - (x_0,y_0)\|} = 0,\] ou ainda, denotando \(\mathbf{x} = (x,y)\) e \(\mathbf{x_0}=(x_0,y_0)\),
+    \begin{equation}\label{eqn.Diferenciavel1}
+        \lim_{\mathbf{x}\to\mathbf{x_0}} \frac{f(\mathbf{x}) - f(\mathbf{x_0}) - \nabla f(\mathbf{x_0})(\mathbf{x} - \mathbf{x_0})}{\|\mathbf{x} - \mathbf{x_0}\|} = 0.
+    \end{equation}
+
+Por outro lado, sabemos que se uma função de uma variável \(f\) é diferenciável em \(x_0\), então \(f'(x_0)\) existe e
+    \begin{equation}\label{eqn.Diferenciavel2}
+        \lim_{x\to x_0} \frac{f(x) - f(x_0) - f'(x_0)(x-x_0)}{|x-x_0|} = 0.
+    \end{equation}
+
+Assim, comparando \eqref{eqn.Diferenciavel1} e \eqref{eqn.Diferenciavel2}, se \(f(x,y)\) é diferenciável em \((x_0,y_0)\), é natural \textit{definir} a derivada de \(f\) em \((x_0,y_0)\) por \[f'(x_0,y_0) = \nabla f(x_0,y_0).\] Ou seja, a derivada de \(f\) em \((x_0,y_0)\) é o gradiente de \(f\) em \((x_0,y_0)\).
+
+\section{Regra da cadeia}
+
+Lembre que se \(f\) e \(g\) são funções de uma variável tais que \(f:D_f\subset\R \to \R\) e \(g:D_g\subset R\to D_f\) são diferenciáveis, então \(f\circ g\) é diferenciável e \[(f\circ g)'(t) = f'(g(t))\cdot g'(t),\] em outras palavras \[\frac{dy}{dt} = \frac{df}{dx} \frac{dx}{dt}.\]
+
+O que acontece para uma função de duas variáveis \(z = f(x,y)\)?
+
+Seja \(f(x,y)\) definida num aberto \(A\subset\R^2\), com \(x = x(t)\), \(y = y(t)\) e \((x(t),y(t))\in A\), para todo \(t\in I\). Queremos provar que se \(f, x\) e \(y\) são diferenciáveis, então a composta \(F(t) = f(x(t),y(t))\) também é diferenciável e vale a \textit{regra da cadeia}
+    \begin{equation}\label{eqn.RegraDaCadeia}
+        F'(t) = \nabla f(x(t),y(t))\bullet(x'(t),y(t)).
+    \end{equation}
+
+Denotaremos por \(\gamma: I \subset \R \to \R^2\) a função (curva em \(\R^2\)) dada por \(\gamma(t) = (x(t),y(t))\).
+
+\begin{example}
+    \(\gamma(t) = (\cos(t),\sin(t))\), com \(t\in[0,2\pi)\) é a circunferência centrada na origem de raio \(1\).
+
+    \begin{figure}[htbp]
+        \centering
+            \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+            \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+            %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+            %Straight Lines [id:da9629358395304484] 
+            \draw    (189.78,249.54) -- (189.78,67.82) ;
+            \draw [shift={(189.78,65.82)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da933912057656217] 
+            \draw    (79.22,170.15) -- (314.74,170.15) ;
+            \draw [shift={(316.74,170.15)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Shape: Circle [id:dp5522369189829185] 
+            \draw  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ] (130.32,170.16) .. controls (130.32,137.24) and (157,110.56) .. (189.92,110.56) .. controls (222.84,110.56) and (249.52,137.24) .. (249.52,170.16) .. controls (249.52,203.08) and (222.84,229.76) .. (189.92,229.76) .. controls (157,229.76) and (130.32,203.08) .. (130.32,170.16) -- cycle ;
+
+            % Text Node
+            \draw (329.26,162.94) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (163.44,60.85) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            % Text Node
+            \draw (251.52,173.56) node [anchor=north west][inner sep=0.75pt]    {$1$};
+            % Text Node
+            \draw (174.07,90.37) node [anchor=north west][inner sep=0.75pt]    {$1$};
+            % Text Node
+            \draw (227.04,100.2) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.96,0.65,0.14}{\gamma ( t) \ =\ (\cos t,\sin t)}$};
+            \end{tikzpicture}
+        \caption{\(\gamma(t) = (\cos(t),\sin(t))\)}
+        \label{fig:Curva}
+    \end{figure}
+\end{example}
 
 % \section{Teorema da função implícita}
 
 % \section{Gradiente e derivada direcional}
 
-% \section{Fórmula de Taylor}
+% \section{Fórmula de Taylor}S
 
 % \section{Máximos e mínimos}
 
