@@ -14,7 +14,7 @@ Assim, pode acontecer de \((x_0,y_0)\notin D_f\), ou seja, \(f(x_0,y_0)\) nem me
     Temos que \(D_f = \R^2\setminus\{(0,0)\}\), ou seja, \((0,0)\notin D_f\). Além disso, para \((x,y)\neq(0,0)\), \[f(x,y) = \frac{(x^2 + y^2)^2}{x^2 + y^2} = x^2 + y^2\]
         \begin{figure}[htbp]
                 \centering
-                    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+                    \begin{tikzpicture}[x=0.5pt,y=0.5pt,yscale=-1,xscale=1]
                         %Straight Lines [id:da9108779740102381] 
                         \draw    (130.5,219.74) -- (130.27,47.62) ;
                         \draw [shift={(130.26,45.62)}, rotate = 89.92] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
@@ -36,11 +36,11 @@ Assim, pode acontecer de \((x_0,y_0)\notin D_f\), ou seja, \(f(x_0,y_0)\) nem me
                         \draw  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ] (127.3,219.74) .. controls (127.3,219.12) and (128.76,218.61) .. (130.55,218.61) .. controls (132.34,218.61) and (133.8,219.12) .. (133.8,219.74) .. controls (133.8,220.36) and (132.34,220.86) .. (130.55,220.86) .. controls (128.76,220.86) and (127.3,220.36) .. (127.3,219.74) -- cycle ;
 
                         % Text Node
-                        \draw (98.54,254.3) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$x$};
+                        \draw (98.54,254.3) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
                         % Text Node
-                        \draw (215.96,214.03) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$y$};
+                        \draw (215.96,214.03) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
                         % Text Node
-                        \draw (116.96,34.03) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$z$};
+                        \draw (116.96,34.03) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$z$};
                     \end{tikzpicture}
                 \caption{\(f(x,y) = \frac{x^2 + 2x^2y^2 + y^2}{x^2 + y^2}\)}
                 \label{fig:Limte0}
@@ -62,10 +62,10 @@ Usando esta notação para o exemplo anterior, \[\lim_{(x,y)\to(0,0)} \frac{x^4 
 
 A seguir formalizamos a ideia de limite na seguinte definição:
 \begin{definition}
-    Sejam \(f:D_f\subset\R^2 \to \R\), \((x_0,y_0)\) um ponto de acumulação de \(D_f\) e \(L\in\R\). Definimos \[\lim_{(x,y)\to(x_0,y_0)} f(x,y) = L\] se, para todo \(\varepsilon>0\), existe \(\delta>0\) tal que, para todo \((x,y)\in D_f\), \[(x,y)\in D_f, \text{ e } 0 < \|(x,y)-(x_0,y_0)\| < \delta \Rightarrow |f(x,y) - L| < \delta.\]\index{Limite}
+    Sejam \(f:D_f\subset\R^2 \to \R\), \((x_0,y_0)\) um ponto de acumulação de \(D_f\) e \(L\in\R\). Definimos \[\lim_{(x,y)\to(x_0,y_0)} f(x,y) = L\] se, para todo \(\varepsilon>0\), existe \(\delta>0\) tal que, para todo \((x,y)\in D_f\), \[(x,y)\in D_f, \text{ e } 0 < \|(x,y)-(x_0,y_0)\| < \delta \Rightarrow |f(x,y) - L| < \delta.\]\index{Funções de duas variáveis a valores reais! Limite}
             \begin{figure}[htbp]
                 \centering
-                    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+                    \begin{tikzpicture}[x=1pt,y=1pt,yscale=-1,xscale=1]
                         %Shape: Polygon Curved [id:ds9927915703986574] 
                         \draw  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=0.25 ][dash pattern={on 0.84pt off 2.51pt}] (144.59,126.75) .. controls (149.43,101.16) and (243.34,121.7) .. (215.68,149.36) .. controls (188.02,177.02) and (188.02,190.85) .. (215.68,232.35) .. controls (243.34,273.84) and (100.33,292.02) .. (72.67,250.53) .. controls (45.01,209.04) and (98.26,215.26) .. (24.96,154.41) .. controls (-48.35,93.55) and (139.75,152.33) .. (144.59,126.75) -- cycle ;
                         %Shape: Ellipse [id:dp13909363038935796] 
@@ -94,31 +94,31 @@ A seguir formalizamos a ideia de limite na seguinte definição:
                         \draw [shift={(414.67,91.47)}, rotate = 112.06] [color={rgb, 255:red, 139; green, 87; blue, 42 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
 
                         % Text Node
-                        \draw (320.61,245.13) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$x$};
+                        \draw (320.61,245.13) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
                         % Text Node
-                        \draw (66.17,8.48) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$y$};
+                        \draw (66.17,8.48) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
                         % Text Node
-                        \draw (403.81,33.99) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$\mathbb{R}$};
+                        \draw (403.81,33.99) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\mathbb{R}$};
                         % Text Node
-                        \draw (28.23,102.42) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$\textcolor[rgb]{0.96,0.65,0.14}{D_{f}}$};
+                        \draw (28.23,102.42) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.96,0.65,0.14}{D_{f}}$};
                         % Text Node
-                        \draw (160.78,136.27) node [anchor=north west][inner sep=0.75pt]  [font=\tiny,color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ]  {$( x_{0} ,y_{0})$};
+                        \draw (160.78,136.27) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ]  {$( x_{0} ,y_{0})$};
                         % Text Node
-                        \draw (159.55,159.71) node [anchor=north west][inner sep=0.75pt]  [font=\tiny,color={rgb, 255:red, 139; green, 87; blue, 42 }  ,opacity=1 ]  {$( x,y)$};
+                        \draw (159.55,159.71) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 139; green, 87; blue, 42 }  ,opacity=1 ]  {$( x,y)$};
                         % Text Node
-                        \draw (152.44,140.49) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$\delta $};
+                        \draw (152.44,140.49) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\delta $};
                         % Text Node
-                        \draw (432.8,114.47) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$L$};
+                        \draw (432.8,114.47) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$L$};
                         % Text Node
                         \draw (429.07,57.07) node [anchor=north west][inner sep=0.75pt]  [rotate=-90]  {$($};
                         % Text Node
                         \draw (410.53,193.73) node [anchor=north west][inner sep=0.75pt]  [rotate=-270]  {$($};
                         % Text Node
-                        \draw (435.47,183.13) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$L-\varepsilon $};
+                        \draw (435.47,183.13) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$L-\varepsilon $};
                         % Text Node
-                        \draw (433.8,55.07) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$L+\varepsilon $};
+                        \draw (433.8,55.07) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$L+\varepsilon $};
                         % Text Node
-                        \draw (425.88,87.73) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize,color={rgb, 255:red, 139; green, 87; blue, 42 }  ,opacity=1 ]  {$f( x,y)$};
+                        \draw (425.88,87.73) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 139; green, 87; blue, 42 }  ,opacity=1 ]  {$f( x,y)$};
                     \end{tikzpicture}
                 \caption{Limte}
                 \label{fig:Limte}
@@ -352,7 +352,7 @@ Mas a definiçao de limite se refere somente à distância entre \((x,y)\) e \((
 \end{example}
 
 \begin{exercise}
-    Calcule, se existir \(\lim_{(x,y)\to(0,0)} \frac{x-y}{2x+y}\).
+    Calcule, se existir, \(\lim_{(x,y)\to(0,0)} \frac{x-y}{2x+y}\).
 \end{exercise}
 
 
@@ -360,7 +360,7 @@ Mas a definiçao de limite se refere somente à distância entre \((x,y)\) e \((
 
 As propriedades a seguir podem simplificar o cálculo do limite e suas demonstrações são análogas às demonstrações para funções de uma variável.
 \begin{enumerate}
-    \item (Teorema do sanduíche): Se \(f(x,y) \leq g(x,y) \leq h(x,y)\) para \(0 < \|(x,y) - (x_0,y_0)\| < r\) e \[\lim_{(x,y)\to(x_0,y_0)} f(x,y) = L = \lim_{(x,y)\to (x_0,y_0)} h(x,y),\] então \(\lim_{(x,y)\to(x_0,y_0)} g(x,y) = L\).
+    \item (Teorema do sanduíche)\index{Teorema! do Sanduíche (Confronto)}: Se \(f(x,y) \leq g(x,y) \leq h(x,y)\) para \(0 < \|(x,y) - (x_0,y_0)\| < r\) e \[\lim_{(x,y)\to(x_0,y_0)} f(x,y) = L = \lim_{(x,y)\to (x_0,y_0)} h(x,y),\] então \(\lim_{(x,y)\to(x_0,y_0)} g(x,y) = L\).
     \item Se \(\lim_{(x,y)\to(x_0,y_0)} f(x,y) = 0\) e \(|g(x,y)| \leq M\) para \(0 < \|(x,y) - (x_0,y_0)\| < r\), então \[\lim_{(x,y)\to(x_0,y_0)} f(x)\cdot g(x) = 0.\]
     \item \(\lim_{(x,y)\to(x_0,y_0)} f(x,y) = 0 \Leftrightarrow \lim_{(x,y)\to(x_0,y_0)} |f(x,y)| = 0\).
     \item \(\lim_{(x,y)\to(x_0,y_0)} f(x,y) = L \Leftrightarrow \lim_{(x,y)\to(x_0,y_0)} (f(x,y) - L) = 0 \).
@@ -372,7 +372,7 @@ As propriedades a seguir podem simplificar o cálculo do limite e suas demonstra
             \item \(\lim_{(x,y)\to(x_0,y_0)} f(x,y)\cdot g(x,y) = L\cdot M\).
             \item \(\lim_{(x,y)\to(x_0,y_0)} \frac{f(x,y)}{g(x,y)} = \frac{L}{M}\).
         \end{enumerate}
-    \item (Cnservação do sinal): Se \(\lim_{(x,y)\to(x_0,y_0)} f(x,y) = L\) e \(L > 0\) {\cb (\(L<0\))}, então existe \(\delta>0\) tal que, para todo \((x,y)\in D_f\) tal que \(0 < \|(x,y) - (x_0,y_0)\| < \delta\), \(f(x,y) > 0\) {\cb (\(f(x,y) < 0\))}.
+    \item (Conservação do sinal)\index{Teorema! Conservação do sinal}: Se \(\lim_{(x,y)\to(x_0,y_0)} f(x,y) = L\) e \(L > 0\) {\cb (\(L<0\))}, então existe \(\delta>0\) tal que, para todo \((x,y)\in D_f\) tal que \(0 < \|(x,y) - (x_0,y_0)\| < \delta\), \(f(x,y) > 0\) {\cb (\(f(x,y) < 0\))}.
 \end{enumerate}
 
 \begin{example}
@@ -390,7 +390,6 @@ As propriedades a seguir podem simplificar o cálculo do limite e suas demonstra
 
 \begin{proposition}\label{prop.composta}
     Se \(f\) é uma função de uma variável, contínua num ponto \(a\in\R\), e \(g(x,y)\) é tal que \(\displaystyle\lim_{\substack{x\to x_0 \\ y\to y_0}} g(x,y) = a\), então \[\displaystyle\lim_{\substack{x\to x_0 \\ y\to y_0}} f(g(x,y)) = f \left( \displaystyle\lim_{\substack{x\to x_0 \\ y\to y_0}} g(x,y) \right) = f(a). \]
-
     \begin{figure}[htbp]
     \centering
     \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
@@ -438,15 +437,15 @@ As propriedades a seguir podem simplificar o cálculo do limite e suas demonstra
         % Text Nodes
         \draw (204.2,214.8) node [anchor=north west, inner sep=0.75pt, font=\normalsize] {$x$};
         \draw (47.17,79.26) node [anchor=north west, inner sep=0.75pt, font=\normalsize] {$y$};
-        \draw (447.2,203.78) node [anchor=north west, inner sep=0.75pt, font=\footnotesize] {$\mathbb{R}$};
+        \draw (447.2,203.78) node [anchor=north west, inner sep=0.75pt, font=\normalsize] {$\mathbb{R}$};
         \draw (412.05,218.97) node [anchor=north west, inner sep=0.75pt, rotate=-180.22] {$($};
         \draw (287.45,199.91) node [anchor=north west, inner sep=0.75pt, rotate=-0.22] {$($};
         \draw (344.15,216.93) node [anchor=north west, inner sep=0.75pt, font=\normalsize, color={rgb, 255:red, 139; green, 87; blue, 42}, opacity=1] {$a$};
-        \draw (122.84,153.16) node [anchor=north west, inner sep=0.75pt, font=\tiny, color={rgb, 255:red, 65; green, 117; blue, 5}, opacity=1] {$(x_{0}, y_{0})$};
-        \draw (111.94,141.93) node [anchor=north west, inner sep=0.75pt, font=\tiny] {$\delta$};
+        \draw (122.84,153.16) node [anchor=north west, inner sep=0.75pt, font=\normalsize, color={rgb, 255:red, 65; green, 117; blue, 5}, opacity=1] {$(x_{0}, y_{0})$};
+        \draw (111.94,141.93) node [anchor=north west, inner sep=0.75pt, font=\normalsize] {$\delta$};
         \draw (269.2,216.65) node [anchor=north west, inner sep=0.75pt, font=\normalsize, color={rgb, 255:red, 139; green, 87; blue, 42}, opacity=1] {$a-\delta_{1}$};
         \draw (389.54,216.98) node [anchor=north west, inner sep=0.75pt, font=\normalsize, color={rgb, 255:red, 139; green, 87; blue, 42}, opacity=1] {$a+\delta_{1}$};
-        \draw (679.2,203.18) node [anchor=north west, inner sep=0.75pt, font=\footnotesize] {$\mathbb{R}$};
+        \draw (679.2,203.18) node [anchor=north west, inner sep=0.75pt, font=\normalsize] {$\mathbb{R}$};
         \draw (644.05,218.37) node [anchor=north west, inner sep=0.75pt, rotate=-180.22] {$($};
         \draw (519.45,199.31) node [anchor=north west, inner sep=0.75pt, rotate=-0.22] {$($};
         \draw (568.15,182.73) node [anchor=north west, inner sep=0.75pt, font=\normalsize, color={rgb, 255:red, 245; green, 166; blue, 35}, opacity=1] {$f(a)$};
@@ -479,7 +478,7 @@ As propriedades a seguir podem simplificar o cálculo do limite e suas demonstra
 Lembre que para funções de uma variável, dizemos que \(f\) é contínua em \(x_0\in D_f\) se \[\lim_{x\to x_0} f(x) = f(x_0).\]
 
 \begin{definition}
-    Sejam \(f: D_f\subset \R^2 \to \R\) e \((x_0,y_0)\in D_f\) um ponto de acumulação de \(D_f\). Dizemos que \(f\) é contínua \index{Funções! Contínua} em \((x_0,y_0)\) se \[\displaystyle\lim_{\substack{x\to x_0 \\ y\to y_0}} f(x,y) = f(x_0,y_0). \]
+    Sejam \(f: D_f\subset \R^2 \to \R\) e \((x_0,y_0)\in D_f\) um ponto de acumulação de \(D_f\). Dizemos que \(f\) é contínua \index{Funções de duas variáveis a valores reais! Contínua} em \((x_0,y_0)\) se \[\displaystyle\lim_{\substack{x\to x_0 \\ y\to y_0}} f(x,y) = f(x_0,y_0). \]
 \end{definition}
 
 \begin{remark}

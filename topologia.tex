@@ -53,9 +53,9 @@ A partir das operações sobre vetores, esta identificação sugere como \textit
     \begin{definition}
         Sejam \((x,y)\) e \((s,t)\) dois elementos quaisquer de \(\R^2\) e \(\lambda\in\R\) qualquer.
             \begin{enumerate}
-                \item A \textbf{soma} (adição) de \((x,y)\) com \((s,t)\) é dada por \[(x,y) + (s,t) = (x+s,y+t),\]\index{Adição de pares ordenados}
-                \item A multiplicação por escalar é definida por \[\lambda \cdot (x,y) = (\lambda\cdot x,\lambda\cdot y),\] \index{Multiplicação de um par ordenado por um escalar}
-                \item A \textbf{diferença} é \[(x,y) - (s,t) = (x,y) + (-1)(s,t),\]
+                \item A \textbf{soma}\index{Vetores! Soma} (adição) de \((x,y)\) com \((s,t)\) é dada por \[(x,y) + (s,t) = (x+s,y+t),\]
+                \item A multiplicação por escalar é definida por \[\lambda \cdot (x,y) = (\lambda\cdot x,\lambda\cdot y),\] \index{Vetores! Multiplicação de um par ordenado por um escalar}
+                \item A \textbf{diferença}\index{Vetores! Diferença} é \[(x,y) - (s,t) = (x,y) + (-1)(s,t),\]
                 \item \[(x,y) = (s,t) \Leftrightarrow x=s \text{ e } y=t.\]
             \end{enumerate}
     \end{definition}
@@ -87,7 +87,7 @@ A partir da definição acima é possível verificar as seguintes propriedades:
 \section{Produto escalar e perpendicularismo}
 
 \begin{definition}
-    Definimos o \textbf{produto escalar}\index{Produto escalar} entre dois vetores \((a_1,b_1)\) e \((a_2,b_2)\) por \[(a_1,b_1) \bullet (a_2,b_2) = a_1\cdot a_2 + b_1\cdot b_2.\]
+    Definimos o \textbf{produto escalar}\index{Vetores! Produto escalar} entre dois vetores \((a_1,b_1)\) e \((a_2,b_2)\) por \[(a_1,b_1) \bullet (a_2,b_2) = a_1\cdot a_2 + b_1\cdot b_2.\]
 \end{definition}
 
 \begin{proposition}\label{prop.prodescalar}
@@ -104,10 +104,10 @@ A partir da definição acima é possível verificar as seguintes propriedades:
     Mostre que valem as propriedades na Proposição \ref{prop.prodescalar}.
 \end{exercise}
 
-Para definirmos \textit{perpendicularismo} ou \textit{ortogonalismo} entre vetores de \(\R^2\) notamos que, para \(\overrightarrow{u} = (a_1,b_1)\) e \(\overrightarrow{v} = (a_2,b_2)\) aplicados no ponto \(P = (x,y)\in\R^2\), ou seja,
+Para definirmos \textit{perpendicularismo} ou \textit{ortogonalismo} entre vetores de \(\R^2\) notamos que, para \(\overrightarrow{u} = (a_1,b_1)\) e \(\overrightarrow{v} = (a_2,b_2)\) aplicados no ponto \(P = (x,y)\in\R^2\), ou seja, podemos mostrar que (veja \cite{guidorizzi}[pg. 103]) \[\cos(\theta) = \frac{a_1a_2 + b_1b_2}{\sqrt{a_1^2 + b_1^2}\sqrt{a_2^2b_2^2}} = \frac{(a_1,b_1)\bullet(a_2,b_2)}{\sqrt{a_1^2 + b_1^2}\sqrt{a_2^2b_2^2}}.\]
     \begin{figure}[htbp]
             \centering
-                \begin{tikzpicture}[x=1pt,y=1pt,yscale=-1,xscale=1]
+                \begin{tikzpicture}[x=0.55pt,y=0.55pt,yscale=-1,xscale=1]
                    %Straight Lines [id:da8958163654346065] 
                     \draw    (124.71,290) -- (124.7,32.83) ;
                     \draw [shift={(124.7,30.83)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
@@ -145,24 +145,25 @@ Para definirmos \textit{perpendicularismo} ou \textit{ortogonalismo} entre vetor
             \caption{\(\overrightarrow{u}\) e \(\overrightarrow{v}\) no ponto \(P\)}
             \label{fig:prodescalar}
     \end{figure}
-podemos mostrar que (veja \cite{guidorizzi}[pg. 103]) \[\cos(\theta) = \frac{a_1a_2 + b_1b_2}{\sqrt{a_1^2 + b_1^2}\sqrt{a_2^2b_2^2}} = \frac{(a_1,b_1)\bullet(a_2,b_2)}{\sqrt{a_1^2 + b_1^2}\sqrt{a_2^2b_2^2}}.\] Assim, é natural a seguinte definição
+Assim, é natural a seguinte definição
 \begin{definition}
-    Dizemos que dois vetores \((a_1,b_1)\) e \((a_2,b_2)\) são \textbf{perpendiculares} (ou ortogonais) \index{Vetores ortogonais}
+    Dizemos que dois vetores \((a_1,b_1)\) e \((a_2,b_2)\) são \textbf{perpendiculares} (ou ortogonais) \index{Vetores!  Ortogonais}
 \end{definition} se \[(a_1,b_1)\bullet(a_2,b_2) = 0.\]
 
 \section{Norma de um vetor}
 
 \begin{definition}
-    A \textbf{norma}\index{Norma de um vetor} de um vetor \((x,y)\) é definida por \[\|(x,y)\| = \sqrt{x^2 + y^2}\]
+    A \textbf{norma}\index{Vetores! Norma} de um vetor \((x,y)\) é definida por \[\|(x,y)\| = \sqrt{x^2 + y^2}\]
 \end{definition}
 
 \begin{remark}
+    Observe que
     \begin{enumerate}
         \item \(\|(x,y)\| = \sqrt{(x,y)\bullet(x,y)}\).
         \item A norma de \((x,y)\) é o comprimento do vetor \(\overrightarrow{OP}\)
             \begin{figure}[htbp]
             \centering
-                \begin{tikzpicture}[x=0.25pt,y=0.25pt,yscale=-1,xscale=1]
+                \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
                    %Straight Lines [id:da8646878519160449] 
                     \draw    (124.71,290) -- (124.7,32.83) ;
                     \draw [shift={(124.7,30.83)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
@@ -200,7 +201,7 @@ podemos mostrar que (veja \cite{guidorizzi}[pg. 103]) \[\cos(\theta) = \frac{a_1
 
 Podemos mostra os seguintes resultados relacionados à norma de um vetor.
 
-\begin{theorem}[Desigualdade de Schwarz]
+\begin{theorem}[Desigualdade de Schwarz]\index{Teorema! Desigualdade de Schwarz}
     Dados dois vetores \(\overrightarrow{u}\) e \(\overrightarrow{v}\) de \(\R^2\) quaisquer, temos \[|\overrightarrow{u}\bullet\overrightarrow{v}| \leq \|\overrightarrow{u}\|\cdot\|\overrightarrow{v}\|.\]
 \end{theorem}
 (Prova: \cite{guidorizzi}[pg. 109])
@@ -222,10 +223,9 @@ Note que a norma \(\|\cdot\|\) em \(\R^2\) se comporta como o módulo \(|\cdot|\
 \begin{definition}
     Sejam \((x_0,y_0)\) um ponto de \(\R^2\) e \(r>0\) um número real. Chamamos o conjunto \[B_r(x_0,y_0) = \{(x,y)\in\R^2 : \|(x,y) - (x_0,y_0)\| < r\}\] de \textbf{bola aberta}\index{Bola aberta} de centro \((x_0,y_0)\) e raio \(r\).
 \end{definition}
-
 \begin{figure}[htbp]
             \centering
-                \begin{tikzpicture}[x=0.5pt,y=0.5pt,yscale=-1,xscale=1]
+                \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
                     %Straight Lines [id:da8642114304094755] 
                     \draw    (246.26,267.18) -- (246.26,57.49) ;
                     \draw [shift={(246.26,55.49)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
@@ -337,42 +337,42 @@ Note que \(B_r(x_0,y_0)\) é o conjunto de todos os pontos ``internos'' à circu
     Toda bola aberta é um conjunto aberto.
         
     Sejam \((x_0,y_0)\in\R^2\) e \(r>0\). Considere \(A = B_r(x_0,y_0)\) a bola aberta de centro \((x_0,y_0)\) e raio \(r\). Queremos mostrar que \(A\) é um conjunto aberto.
-            \begin{figure}[htbp]
-                \centering
-                    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-                        %Straight Lines [id:da28796787454131734] 
-                        \draw    (62.26,279.18) -- (62.26,69.49) ;
-                        \draw [shift={(62.26,67.49)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
-                        %Straight Lines [id:da4814275315650154] 
-                        \draw    (41.67,256.53) -- (245.22,256.53) ;
-                        \draw [shift={(247.22,256.53)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
-                        %Shape: Ellipse [id:dp6181786099110514] 
-                        \draw  [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][fill={rgb, 255:red, 184; green, 233; blue, 134 }  ,fill opacity=0.25 ][dash pattern={on 0.84pt off 2.51pt}] (86.91,161.17) .. controls (86.91,124.58) and (116.57,94.92) .. (153.16,94.92) .. controls (189.75,94.92) and (219.41,124.58) .. (219.41,161.17) .. controls (219.41,197.76) and (189.75,227.42) .. (153.16,227.42) .. controls (116.57,227.42) and (86.91,197.76) .. (86.91,161.17) -- cycle ;
-                        %Straight Lines [id:da4126209940686475] 
-                        \draw    (153.16,161.17) -- (177.41,99.55) ;
-                        %Shape: Circle [id:dp5305891025346435] 
-                        \draw  [draw opacity=0][fill={rgb, 255:red, 126; green, 211; blue, 33 }  ,fill opacity=1 ] (150.96,161.17) .. controls (150.96,159.95) and (151.94,158.97) .. (153.16,158.97) .. controls (154.37,158.97) and (155.36,159.95) .. (155.36,161.17) .. controls (155.36,162.38) and (154.37,163.37) .. (153.16,163.37) .. controls (151.94,163.37) and (150.96,162.38) .. (150.96,161.17) -- cycle ;
-                        %Shape: Circle [id:dp32711059701265044] 
-                        \draw  [draw opacity=0][fill={rgb, 255:red, 126; green, 211; blue, 33 }  ,fill opacity=1 ] (119.71,141.67) .. controls (119.71,140.45) and (120.69,139.47) .. (121.91,139.47) .. controls (123.12,139.47) and (124.11,140.45) .. (124.11,141.67) .. controls (124.11,142.88) and (123.12,143.87) .. (121.91,143.87) .. controls (120.69,143.87) and (119.71,142.88) .. (119.71,141.67) -- cycle ;
-                        %Straight Lines [id:da8554113665932703] 
-                        \draw    (121.91,141.67) -- (153.16,161.17) ;
+        \begin{figure}[htbp]
+            \centering
+                \begin{tikzpicture}[x=1pt,y=1pt,yscale=-1,xscale=1]
+                    %Straight Lines [id:da28796787454131734] 
+                    \draw    (62.26,279.18) -- (62.26,69.49) ;
+                    \draw [shift={(62.26,67.49)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+                    %Straight Lines [id:da4814275315650154] 
+                    \draw    (41.67,256.53) -- (245.22,256.53) ;
+                    \draw [shift={(247.22,256.53)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+                    %Shape: Ellipse [id:dp6181786099110514] 
+                    \draw  [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][fill={rgb, 255:red, 184; green, 233; blue, 134 }  ,fill opacity=0.25 ][dash pattern={on 0.84pt off 2.51pt}] (86.91,161.17) .. controls (86.91,124.58) and (116.57,94.92) .. (153.16,94.92) .. controls (189.75,94.92) and (219.41,124.58) .. (219.41,161.17) .. controls (219.41,197.76) and (189.75,227.42) .. (153.16,227.42) .. controls (116.57,227.42) and (86.91,197.76) .. (86.91,161.17) -- cycle ;
+                    %Straight Lines [id:da4126209940686475] 
+                    \draw    (153.16,161.17) -- (177.41,99.55) ;
+                    %Shape: Circle [id:dp5305891025346435] 
+                    \draw  [draw opacity=0][fill={rgb, 255:red, 126; green, 211; blue, 33 }  ,fill opacity=1 ] (150.96,161.17) .. controls (150.96,159.95) and (151.94,158.97) .. (153.16,158.97) .. controls (154.37,158.97) and (155.36,159.95) .. (155.36,161.17) .. controls (155.36,162.38) and (154.37,163.37) .. (153.16,163.37) .. controls (151.94,163.37) and (150.96,162.38) .. (150.96,161.17) -- cycle ;
+                    %Shape: Circle [id:dp32711059701265044] 
+                    \draw  [draw opacity=0][fill={rgb, 255:red, 126; green, 211; blue, 33 }  ,fill opacity=1 ] (119.71,141.67) .. controls (119.71,140.45) and (120.69,139.47) .. (121.91,139.47) .. controls (123.12,139.47) and (124.11,140.45) .. (124.11,141.67) .. controls (124.11,142.88) and (123.12,143.87) .. (121.91,143.87) .. controls (120.69,143.87) and (119.71,142.88) .. (119.71,141.67) -- cycle ;
+                    %Straight Lines [id:da8554113665932703] 
+                    \draw    (121.91,141.67) -- (153.16,161.17) ;
 
-                        % Text Node
-                        \draw (253.4,250.33) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$x$};
-                        % Text Node
-                        \draw (57.38,47.42) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$y$};
-                        % Text Node
-                        \draw (134.11,162.72) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$( x_{0} ,y_{0})$};
-                        % Text Node
-                        \draw (161.87,106.15) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$r$};
-                        % Text Node
-                        \draw (103.61,126.47) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$( x_{1} ,y_{1})$};
-                        % Text Node
-                        \draw (127.65,150.95) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\alpha $};
-                \end{tikzpicture}
-            \caption{\(A = B_r(x_0,y_0).\)}
-            \label{fig:bolaaberta1}
-            \end{figure}
+                    % Text Node
+                    \draw (253.4,250.33) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+                    % Text Node
+                    \draw (57.38,47.42) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+                    % Text Node
+                    \draw (134.11,162.72) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$( x_{0} ,y_{0})$};
+                    % Text Node
+                    \draw (161.87,106.15) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$r$};
+                    % Text Node
+                    \draw (103.61,126.47) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$( x_{1} ,y_{1})$};
+                    % Text Node
+                    \draw (127.65,150.95) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\alpha $};
+            \end{tikzpicture}
+        \caption{\(A = B_r(x_0,y_0).\)}
+        \label{fig:bolaaberta1}
+        \end{figure}
     Seja \((x_1,y_1)\in B_r(x_0,y_0)\), vamos mostrar que \((x_1,y_1)\) é um ponto interior de \(B_r(x_0,y_0)\). Seja \(\alpha\) a distância de \((x_1,y_1)\) a \((x_0,y_0)\), ou seja \[\alpha = \|(x_1,y_1) - (x_0,y_0)\|\] e tome \(0 < r_1 < r-\alpha\). Afirmamos que \(B_{r_1}(x_1,y_1) \subset B_r(x_0,y_0)\). De fato, se \((x,y)\in B_{r_1}(x_1,y_1)\), então
             \begin{align*}
                 \|(x,y) - (x_0,y_0)\|

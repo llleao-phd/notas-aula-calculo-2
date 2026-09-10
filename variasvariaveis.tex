@@ -22,11 +22,11 @@ A maioria das relações que ocorrem na física, economia e, de modo geral, na n
 
 A seguir estudamos funções reais de duas variáveis reais. A generalização para mais variáveis é simples.
 
-\begin{definition}
-    Uma função de duas variáveis reais a valores reais é uma função \(F: D_F \subset \R^2 \to \R\). Ou seja, a cada \((x,y)\in D_F\), \(F\) associa um único valor real \(z = f(x,y)\in\R\).\index{Funções}
+\begin{definition}\index{Funções de duas variáveis a valores reais}
+    Uma função de duas variáveis reais a valores reais é uma função \(F: D_F \subset \R^2 \to \R\). Ou seja, a cada \((x,y)\in D_F\), a regra \(F\) associa um único valor real \(z = f(x,y)\in\R\).
 \end{definition}
 
-A seguir para uma função \(F: D_F\subset\R^2 \to \R\), \(D_F\) é chamado \textbf{domínio}\index{Funções! Domínio} de \(F\) e \[\operatorname{Im}_F = \{z = f(x,y) \in \R : (x,y)\in D_F\}\] é a \textbf{imagem}\index{Funções! Imagem} de \(F\). Além disso, \(x\) e \(y\) são chamadas de \textbf{variáveis independentes} e \(z\) a \textbf{variável dependente}.
+A seguir para uma função \(F: D_F\subset\R^2 \to \R\), \(D_F\) é chamado \textbf{domínio}\index{Funções de duas variáveis a valores reais! Domínio} de \(F\) e \[\operatorname{Im}_F = \{z = f(x,y) \in \R : (x,y)\in D_F\}\] é a \textbf{imagem}\index{Funções de duas variáveis a valores reais! Imagem} de \(F\). Além disso, \(x\) e \(y\) são chamadas de \textbf{variáveis independentes} e \(z\) a \textbf{variável dependente}.
 
 \begin{figure}[htbp]
     \centering 
@@ -79,7 +79,7 @@ A seguir para uma função \(F: D_F\subset\R^2 \to \R\), \(D_F\) é chamado \tex
         \draw  [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (429.3,109.45) .. controls (429.3,109.62) and (429.3,109.78) .. (429.3,109.95) ;
         %Curve Lines [id:da02270658119899094] 
         \draw    (147.3,132.95) .. controls (187.1,103.1) and (310.06,50.48) .. (424.08,107.09) ;
-        \draw [shift={(425.8,107.95)}, rotate = 206.86] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+        \draw [shift={(425.8,107.95)}, rotate = 206.86] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle;
 
         % Text Node
         \draw (240.24,155.88) node [anchor=north west][inner sep=0.75pt]    {$x$};
@@ -267,19 +267,19 @@ A seguir para uma função \(F: D_F\subset\R^2 \to \R\), \(D_F\) é chamado \tex
 A seguir temos algumas definições que também são exemplos de funções de duas variáveis reais a valores reais.
 
 \begin{definition}
-    Uma \textbf{função polinomial}\index{Funções! Polinomial} de duas variáveis reais a valores reais é uma função \(f:\R^2 \to \R\) dada por \[f(x,y) = \sum_{m+n\leq p} a_{m,n}x^m y^n,\] no qual \(p\in\N\) é fixo (chamado \textbf{grau do polinômio}) e \(a_{m,n}\in\R\) são dados.
+    Uma \textbf{função polinomial}\index{Funções de duas variáveis a valores reais! Polinomial} de duas variáveis reais a valores reais é uma função \(f:\R^2 \to \R\) dada por \[f(x,y) = \sum_{m+n\leq p} a_{m,n}x^m y^n,\] no qual \(p\in\N\) é fixo (chamado \textbf{grau do polinômio}) e \(a_{m,n}\in\R\) são dados.
 \end{definition}
 
 \begin{example}
     \begin{enumerate}
         \item \(f(x,y) = 3x^3 y^2 - \frac{1}{3} x y + \sqrt{2}\) é uma função polinomial de grau 5.
-        \item \(f(x,y) = ax + by + c\), com \(a,b,c\in\R\) é uma função polinomial de grau 1. Chamamos tal função de \textbf{função afim}\index{Funções! Afim}.
-        \item \(f(x,y) = ax + by\), com \(a,b\in\R\) é uma função polinomial (mais ainda, é uma função afim) e tal função é chamada \textbf{função linear}\index{Funções! Linear}.
+        \item \(f(x,y) = ax + by + c\), com \(a,b,c\in\R\) é uma função polinomial de grau 1. Chamamos tal função de \textbf{função afim}\index{Funções de duas variáveis a valores reais! Afim}.
+        \item \(f(x,y) = ax + by\), com \(a,b\in\R\) é uma função polinomial (mais ainda, é uma função afim) e tal função é chamada \textbf{função linear}\index{Funções de duas variáveis a valores reais! Linear}.
     \end{enumerate}
 \end{example}
 
 \begin{definition}
-    Toda função \(f:D_f \subset\R^2 \to \R\) dada por \[f(x,y) = \frac{p(x,y)}{q(x,y)},\] com \(p\) e \(q\) funções polinomiais, é chamada \textbf{função racional}\index{Funções! Racional} e \[\{D_f = (x,y)\in\R^2 : q(x,y)\neq 0\}.\]
+    Toda função \(f:D_f \subset\R^2 \to \R\) dada por \[f(x,y) = \frac{p(x,y)}{q(x,y)},\] com \(p\) e \(q\) funções polinomiais, é chamada \textbf{função racional}\index{Funções de duas variáveis a valores reais! Racional} e \[\{D_f = (x,y)\in\R^2 : q(x,y)\neq 0\}.\]
 \end{definition}
 
 \begin{example}
@@ -290,7 +290,7 @@ A seguir temos algumas definições que também são exemplos de funções de du
 \end{example}
 
 \begin{definition}
-    Uma função \(f:D_f \subset \R^2 \to \R\) se chama \textbf{função homogênea} de grau \(\lambda\) se \[f(tx,ty) = t^\lambda f(x,y)\] para todo \(t>0\) e todo \((x,y)\in D_f\) tais que \((tx,ty)\in D_f\).
+    Uma função \(f:D_f \subset \R^2 \to \R\) se chama \textbf{função homogênea}\index{Funções de duas variáveis a valores reais! Homogêneas} de grau \(\lambda\) se \[f(tx,ty) = t^\lambda f(x,y)\] para todo \(t>0\) e todo \((x,y)\in D_f\) tais que \((tx,ty)\in D_f\).
 \end{definition}
 
 \begin{example}
@@ -306,13 +306,12 @@ A seguir temos algumas definições que também são exemplos de funções de du
                     & = t^2 f(x,y)
             \end{align*}
         portanto \(f\) é homogênea de grau \(2\).
-        \item \(f(x,y) = \frac{xe^{\frac{x}{y}}}{x^2 + y^2}\) é homogênea de grau \(-1\). De fato, \[D_f = (x,y)\in\R^2 : y\neq 0\] e, para todo \(t>0\) e \((x,y)\in D_f\), temos \((tx,ty)\in D_f\). Além disso,
+        \item \(f(x,y) = \frac{xe^{\frac{x}{y}}}{x^2 + y^2}\) é homogênea de grau \(-1\). De fato, \(D_f = \{(x,y)\in\R^2 : y\neq 0\}\) e, para todo \(t>0\) e \((x,y)\in D_f\), temos \((tx,ty)\in D_f\). Além disso,
             \begin{align*}
                 f(tx,ty)
                     & = \frac{(tx)e^{\frac{(tx)}{(ty)}}}{(tx)^2 + (ty)^2} \\
                     & = t \frac{xe^{\frac{x}{y}}}{t^2x^2 + t^2y^2} \\
-                    & = \frac{xe^{\frac{x}{y}}}{t(x^2 + y^2)} \\
-                    & = \frac{1}{t} \frac{xe^{\frac{x}{y}}}{x^2 + y^2} = t^{-1} f(x,y).
+                    & = \frac{xe^{\frac{x}{y}}}{t(x^2 + y^2)} = \frac{1}{t} \frac{xe^{\frac{x}{y}}}{x^2 + y^2} = t^{-1} f(x,y).
             \end{align*}
     \end{enumerate}
 \end{example}
@@ -324,54 +323,54 @@ A seguir temos algumas definições que também são exemplos de funções de du
 \section{Gráficos e Curvas de nível}
 
 Lembre que o gráfico de uma função \(f:I\subset\R \to \R\) é uma curva \(C\) com equação \(y = f(x)\), ou seja \[C = \{(x,y)\in\R^2 : y = f(x), x\in I\}.\]
-        \begin{figure}[htbp]
-            \centering
-                \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-                    %Straight Lines [id:da2642326786185505] 
-                    \draw    (50.4,180.6) -- (248.4,180.6) ;
-                    \draw [shift={(250.4,180.6)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-                    %Straight Lines [id:da8917343736599169] 
-                    \draw    (150.4,273.6) -- (150.4,75.6) ;
-                    \draw [shift={(150.4,73.6)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-                    %Curve Lines [id:da6261892147437338] 
-                    \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (66.16,147.2) .. controls (82.16,92) and (206.96,162.4) .. (232.16,121.2) ;
-                    %Shape: Free Drawing [id:dp09709473855176909] 
-                    \draw  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (130.72,126.8) .. controls (130.72,126.8) and (130.72,126.8) .. (130.72,126.8) ;
-                    %Straight Lines [id:da7274654232721021] 
-                    \draw    (129.92,176) -- (129.92,184.8) ;
-                    %Straight Lines [id:da22804172354165553] 
-                    \draw    (148.63,127.65) -- (153.13,127.82) ;
+        % \begin{figure}[htbp]
+        %     \centering
+        %         \begin{tikzpicture}[x=1pt,y=1pt,yscale=-1,xscale=1]
+        %             %Straight Lines [id:da2642326786185505] 
+        %             \draw    (50.4,180.6) -- (248.4,180.6) ;
+        %             \draw [shift={(250.4,180.6)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+        %             %Straight Lines [id:da8917343736599169] 
+        %             \draw    (150.4,273.6) -- (150.4,75.6) ;
+        %             \draw [shift={(150.4,73.6)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+        %             %Curve Lines [id:da6261892147437338] 
+        %             \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (66.16,147.2) .. controls (82.16,92) and (206.96,162.4) .. (232.16,121.2) ;
+        %             %Shape: Free Drawing [id:dp09709473855176909] 
+        %             \draw  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (130.72,126.8) .. controls (130.72,126.8) and (130.72,126.8) .. (130.72,126.8) ;
+        %             %Straight Lines [id:da7274654232721021] 
+        %             \draw    (129.92,176) -- (129.92,184.8) ;
+        %             %Straight Lines [id:da22804172354165553] 
+        %             \draw    (148.63,127.65) -- (153.13,127.82) ;
 
-                    % Text Node
-                    \draw (260.24,175.88) node [anchor=north west][inner sep=0.75pt]    {$x$};
-                    % Text Node
-                    \draw (146.24,49.88) node [anchor=north west][inner sep=0.75pt]    {$y$};
-                    % Text Node
-                    \draw (227.12,69.04) node [anchor=north west][inner sep=0.75pt]    {$\mathbb{R}^{2}$};
-                    % Text Node
-                    \draw (236.72,103.24) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{C}$};
-                    % Text Node
-                    \draw (122.32,115.24) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$\textcolor[rgb]{0.29,0.56,0.89}{( x,y)}$};
-                    % Text Node
-                    \draw (124.32,182.44) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$x$};
-                    % Text Node
-                    \draw (155.6,117.2) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$y$};
-                \end{tikzpicture}                    
-            \caption{Gráfico de uma função real}
-            \label{fig:grafico1}
-        \end{figure}
+        %             % Text Node
+        %             \draw (260.24,175.88) node [anchor=north west][inner sep=0.75pt]    {$x$};
+        %             % Text Node
+        %             \draw (146.24,49.88) node [anchor=north west][inner sep=0.75pt]    {$y$};
+        %             % Text Node
+        %             \draw (227.12,69.04) node [anchor=north west][inner sep=0.75pt]    {$\mathbb{R}^{2}$};
+        %             % Text Node
+        %             \draw (236.72,103.24) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{C}$};
+        %             % Text Node
+        %             \draw (122.32,115.24) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.29,0.56,0.89}{( x,y)}$};
+        %             % Text Node
+        %             \draw (124.32,182.44) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+        %             % Text Node
+        %             \draw (155.6,117.2) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+        %         \end{tikzpicture}                    
+        %     \caption{Gráfico de uma função real}
+        %     \label{fig:grafico1}
+        % \end{figure}
 
 Qual seria o gráfico de uma função de duas variáveis \(f: D_f \subset\R^2 \to \R\)?
 
 \begin{definition}
-    Seja \(f:D_f\subset\R^2 \to \R\) uma função de duas variáveis reais a valores reais. O conjunto \[G_f = \{(x,y,z)\in\R^3 : z = f(x,y),\, (x,y)\in D_f\}\] é chamado \textbf{gráfico} de \(f\)\index{Funções! Gráfico}.
+    Seja \(f:D_f\subset\R^2 \to \R\) uma função de duas variáveis reais a valores reais. O conjunto \[G_f = \{(x,y,z)\in\R^3 : z = f(x,y),\, (x,y)\in D_f\}\] é chamado \textbf{gráfico} de \(f\)\index{Funções de duas variáveis a valores reais! Gráfico}.
 \end{definition}
 
 Em outras palavras, o gráfico de uma função de duas variáveis reais é uma superfície \(
 S\) com equação \(z = f(x,y)\).
         \begin{figure}[htbp]
             \centering
-                \begin{tikzpicture}[x=0.5pt,y=0.5pt,yscale=-1,xscale=1]
+                \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
                     %Straight Lines [id:da2642326786185505] 
                     %Straight Lines [id:da8554379595110243] 
                     \draw    (290.62,182.37) -- (289.89,35.25) ;
@@ -396,9 +395,9 @@ S\) com equação \(z = f(x,y)\).
                     % Text Node
                     \draw (391.59,221.03) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$D_{f}$};
                     % Text Node
-                    \draw (314.45,212.19) node [anchor=north west][inner sep=0.75pt]  [font=\tiny,color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ]  {$( x,y)$};
+                    \draw (314.45,212.19) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ]  {$( x,y)$};
                     % Text Node
-                    \draw (341.53,100.91) node [anchor=north west][inner sep=0.75pt]  [font=\tiny,color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ]  {$z\ =\ f( x,y)$};
+                    \draw (341.53,100.91) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ]  {$z\ =\ f( x,y)$};
                 \end{tikzpicture}                    
             \caption{Gráfico de uma função de várias variáveis reais}
             \label{fig:grafico2}
@@ -428,7 +427,7 @@ Note que \(S\) é uma superfície que está diretamente acima ou abaixo do seu d
         \end{itemize}
         \begin{figure}[htbp]
             \centering
-            \includegraphics[width=0.6\textwidth]{Gráfico de f(x,y) = 6 - 3x - 2y.png}               
+            \includegraphics[width=0.7\textwidth]{Gráfico de f(x,y) = 6 - 3x - 2y.png}               
             \caption{Gráfico de \(f(x,y) = 6 -3x - 2y\)}
             \label{fig:grafico4}
         \end{figure}
@@ -446,7 +445,7 @@ Note que \(S\) é uma superfície que está diretamente acima ou abaixo do seu d
     Já vimos que \(D_g = \{(x,y)\in\R^2 : x^2 + y^2 \leq 9 \} \) e \(\operatorname{Im}_g = [0,3]\). Assim, o gráfico de \(g\) tem equação \[z = \sqrt{9 -x^2 - y^2}\] ou ainda \[z^2 = 9 - x^2 - y^2 \Leftrightarrow x^2 + y^2 + z^2 = 3^2.\]
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.6\textwidth]{Gráfico de f(x,y) = sqrt(9-x^2-y^2).png}               
+        \includegraphics[width=0.75\textwidth]{Gráfico de f(x,y) = sqrt(9-x^2-y^2).png}               
         \caption{Gráfico de \(f(x,y) = \sqrt{9-x^2-y^2}\)}
         \label{fig:grafico5}
     \end{figure}
@@ -472,7 +471,7 @@ Note que \(S\) é uma superfície que está diretamente acima ou abaixo do seu d
         \end{itemize}
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.6\textwidth]{Gráfico de f(x,y) = x^2 + y^2.png}               
+        \includegraphics[width=0.7\textwidth]{Gráfico de f(x,y) = x^2 + y^2.png}               
         \caption{Gráfico de \(f(x,y) = x^2 + y^2\)}
         \label{fig:grafico6}
     \end{figure}
@@ -492,7 +491,7 @@ Note que \(S\) é uma superfície que está diretamente acima ou abaixo do seu d
         \end{itemize}
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.6\textwidth]{Gráfico de f(x,y) = 4x^2 + y^2.png}
+        \includegraphics[width=0.7\textwidth]{Gráfico de f(x,y) = 4x^2 + y^2.png}
         \caption{Gráfico de \(f(x,y) = 4x^2 + y^2\)}
         \label{fig:grafico7}
     \end{figure}
@@ -523,7 +522,7 @@ Para exemplos de outras superfícies cilíndricas veja \cite[Seção 12.6]{stewa
 A representação geométrica do gráfico de uma função de duas variáveis (muitas vezes) pode não ser fácil. Assim, quando queremos ter uma visão geométrica da função podemos usar um método que chamamos de \textbf{curvas de nível}.
 
 \begin{definition}
-    Sejam \(z = f(x,y)\) uma função de duas variáveis e \(k\in\operatorname{Im}_f\). O conjunto de todos os pontos \((x,y)\in D_f\) tais que \(f(x,y) = k\) é chamado \textbf{curva de nível}\index{Curva de nível} de \(f\) correspondente ao nível \(k\).
+    Sejam \(z = f(x,y)\) uma função de duas variáveis e \(k\in\operatorname{Im}_f\). O conjunto de todos os pontos \((x,y)\in D_f\) tais que \(f(x,y) = k\) é chamado \textbf{curva de nível}\index{Funções de duas variáveis a valores reais! Curva de nível} de \(f\) correspondente ao nível \(k\).
 \end{definition}
 
 % \begin{remark}[Curiosidade]
@@ -537,7 +536,7 @@ Ou ainda, as curvas de nível \(f(x,y) = k\) são apenas traços do gráfico de 
 Assim, se traçarmos as curvas de nível de uma função e as vizualizamos elevadas para a superfície na altura indicada podemos ``imaginar'' o gráfico da função.
     \begin{figure}[htbp]
         \centering
-            \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+            \begin{tikzpicture}[x=1.5pt,y=1.5pt,yscale=-1,xscale=1]
                 %Straight Lines [id:da9147647358123466] 
                 \draw    (81.2,210) -- (81.2,132) ;
                 \draw [shift={(81.2,130)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (6.56,-1.97) .. controls (4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84) .. (6.56,1.97)   ;
@@ -580,7 +579,7 @@ Assim, se traçarmos as curvas de nível de uma função e as vizualizamos eleva
 
         \begin{figure}[htbp]
             \centering
-                \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+                \begin{tikzpicture}[x=1.25pt,y=1.25pt,yscale=-1,xscale=1]
     %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
                     %Straight Lines [id:da8990723361816482] 
                     \draw    (192,208.67) -- (192,90.67) ;
@@ -617,29 +616,29 @@ Assim, se traçarmos as curvas de nível de uma função e as vizualizamos eleva
                     \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (426.8,113.23) -- (431.13,112.9) ;
 
                     % Text Node
-                    \draw (296.4,181.67) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$x$};
+                    \draw (296.4,181.67) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
                     % Text Node
-                    \draw (186.4,72.13) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$y$};
+                    \draw (186.4,72.13) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
                     % Text Node
-                    \draw (194,212.07) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$\textcolor[rgb]{0.82,0.01,0.11}{k=6}$};
+                    \draw (194,212.07) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.82,0.01,0.11}{k=6}$};
                     % Text Node
-                    \draw (218.67,206.07) node [anchor=north west][inner sep=0.75pt]  [font=\tiny,color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$\textcolor[rgb]{0.96,0.65,0.14}{k=4}$};
+                    \draw (218.67,206.07) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$\textcolor[rgb]{0.96,0.65,0.14}{k=4}$};
                     % Text Node
-                    \draw (230,197.07) node [anchor=north west][inner sep=0.75pt]  [font=\tiny,color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$\textcolor[rgb]{0.49,0.83,0.13}{k=2}$};
+                    \draw (230,197.07) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$\textcolor[rgb]{0.49,0.83,0.13}{k=2}$};
                     % Text Node
-                    \draw (243.56,176.88) node [anchor=north west][inner sep=0.75pt]  [font=\tiny,color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$\textcolor[rgb]{0.74,0.06,0.88}{k=0}$};
+                    \draw (243.56,176.88) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$\textcolor[rgb]{0.74,0.06,0.88}{k=0}$};
                     % Text Node
-                    \draw (533.07,184.67) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$x$};
+                    \draw (533.07,184.67) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
                     % Text Node
-                    \draw (423.07,75.13) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$y$};
+                    \draw (423.07,75.13) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
                     % Text Node
-                    \draw (490.8,195.3) node [anchor=north west][inner sep=0.75pt]  [font=\tiny,color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$\textcolor[rgb]{0.74,0.06,0.88}{k=0}$};
+                    \draw (490.8,195.3) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$\textcolor[rgb]{0.74,0.06,0.88}{k=0}$};
                     % Text Node
-                    \draw (474.17,163.3) node [anchor=north west][inner sep=0.75pt]  [font=\tiny,color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$\textcolor[rgb]{0.49,0.83,0.13}{k=2}$};
+                    \draw (474.17,163.3) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$\textcolor[rgb]{0.49,0.83,0.13}{k=2}$};
                     % Text Node
-                    \draw (453.51,137.97) node [anchor=north west][inner sep=0.75pt]  [font=\tiny,color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$\textcolor[rgb]{0.96,0.65,0.14}{k=4}$};
+                    \draw (453.51,137.97) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$\textcolor[rgb]{0.96,0.65,0.14}{k=4}$};
                     % Text Node
-                    \draw (432.27,105.3) node [anchor=north west][inner sep=0.75pt]  [font=\tiny,color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$\textcolor[rgb]{0.82,0.01,0.11}{k=6}$};
+                    \draw (432.27,105.3) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$\textcolor[rgb]{0.82,0.01,0.11}{k=6}$};
                 \end{tikzpicture}
             \caption{Curvas de nível e gráfico da função \(f(x,y) = 6 - 3x - 2y\).}
             \label{fig:curvasdenivel1}
@@ -658,7 +657,7 @@ Assim, se traçarmos as curvas de nível de uma função e as vizualizamos eleva
         \end{itemize}
         \begin{figure}[htbp]
             \centering
-                \begin{tikzpicture}[x=0.5pt,y=0.5pt,yscale=-1,xscale=1]
+                \begin{tikzpicture}[x=1.25pt,y=1.25pt,yscale=-1,xscale=1]
     %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
                     %Straight Lines [id:da9005421899192951] 
                     \draw    (200,229.8) -- (200,111.8) ;
@@ -697,21 +696,21 @@ Assim, se traçarmos as curvas de nível de uma função e as vizualizamos eleva
                     \draw  [draw opacity=0][fill={rgb, 255:red, 189; green, 16; blue, 224 }  ,fill opacity=1 ] (399.02,138.37) .. controls (399.02,137.22) and (399.95,136.29) .. (401.1,136.29) .. controls (402.25,136.29) and (403.18,137.22) .. (403.18,138.37) .. controls (403.18,139.52) and (402.25,140.45) .. (401.1,140.45) .. controls (399.95,140.45) and (399.02,139.52) .. (399.02,138.37) -- cycle ;
 
                     % Text Node
-                    \draw (269.6,174.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$x$};
+                    \draw (269.6,174.8) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
                     % Text Node
-                    \draw (194,95.27) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$y$};
+                    \draw (194,95.27) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
                     % Text Node
-                    \draw (344.4,218.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$x$};
+                    \draw (344.4,218.4) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
                     % Text Node
-                    \draw (395.07,63.53) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$z$};
+                    \draw (395.07,63.53) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$z$};
                     % Text Node
-                    \draw (193.7,183.85) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$\textcolor[rgb]{0.74,0.06,0.88}{k=3}$};
+                    \draw (193.7,183.85) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.74,0.06,0.88}{k=3}$};
                     % Text Node
-                    \draw (193.2,165.8) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$\textcolor[rgb]{0.49,0.83,0.13}{k=2}$};
+                    \draw (193.2,165.8) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.49,0.83,0.13}{k=2}$};
                     % Text Node
-                    \draw (193.45,153.5) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$\textcolor[rgb]{0.82,0.01,0.11}{k=1}$};
+                    \draw (193.45,153.5) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.82,0.01,0.11}{k=1}$};
                     % Text Node
-                    \draw (190.95,142) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$\textcolor[rgb]{0.29,0.56,0.89}{k=0}$};
+                    \draw (190.95,142) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.29,0.56,0.89}{k=0}$};
                     % Text Node
                     \draw (504.53,170.53) node [anchor=north west][inner sep=0.75pt]    {$y$};
 
@@ -727,7 +726,7 @@ Assim, se traçarmos as curvas de nível de uma função e as vizualizamos eleva
     É claro que \(D_f = \{(x,y)\in\R^2 : (x,y)\neq (0,0)\}\) e \[\operatorname{Im}_f = \{z=f(x,y) : (x,y)\in D_f\} = \left\{ x = \frac{1}{x^2 + y^2} : (x,y)\neq(0,0) \right\} = (0,\infty).\] Além disso, para \(k>0\) temos \[\frac{1}{x^2 + y^2} = k \Rightarrow x^2 + y^2 = \frac{1}{k},\] portanto as curvas de nível são circunferências concêntricas de raio \(\sqrt{\frac{1}{k}}\). Observe que quando \(k\) é pequeno, o raio da circunferência é grande, e quando \(k\) é grande, o raio é pequeno. Além disso, note que, se \(x=0\), então \(z = \frac{1}{y^2}\) é uma hiperbole no plano yz; agora se \(y=0\), \(z = \frac{1}{x^2}\) é uma hiperbole no plano xz. Com essas informações podemos esboçar as curvas de nível e o gráfico de \(f\).
 \begin{figure}[htbp]
             \centering
-                \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+                \begin{tikzpicture}[x=1.25pt,y=1.25pt,yscale=-1,xscale=1]
     %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
                     %Straight Lines [id:da24437428975701714] 
                     \draw    (80.67,206.8) -- (80.67,88.8) ;
@@ -766,17 +765,17 @@ Assim, se traçarmos as curvas de nível de uma função e as vizualizamos eleva
                     % Text Node
                     \draw (150.27,151.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$x$};
                     % Text Node
-                    \draw (74.67,72.27) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$y$};
+                    \draw (74.67,72.27) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
                     % Text Node
-                    \draw (227.73,205.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$x$};
+                    \draw (227.73,205.4) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
                     % Text Node
-                    \draw (276.4,50.53) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$z$};
+                    \draw (276.4,50.53) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$z$};
                     % Text Node
-                    \draw (124.15,129.09) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$\textcolor[rgb]{0.49,0.83,0.13}{k=2}$};
+                    \draw (124.15,129.09) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.49,0.83,0.13}{k=2}$};
                     % Text Node
-                    \draw (124.12,119.36) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$\textcolor[rgb]{0.82,0.01,0.11}{k=1}$};
+                    \draw (124.12,119.36) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.82,0.01,0.11}{k=1}$};
                     % Text Node
-                    \draw (123.9,96.14) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$\textcolor[rgb]{0.29,0.56,0.89}{k=\frac{1}{2}}$};
+                    \draw (123.9,96.14) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.29,0.56,0.89}{k=\frac{1}{2}}$};
                     % Text Node
                     \draw (385.87,157.53) node [anchor=north west][inner sep=0.75pt]    {$y$};
                 \end{tikzpicture}
@@ -799,18 +798,18 @@ Assim, se traçarmos as curvas de nível de uma função e as vizualizamos eleva
 
 \section{Funções de 3 variáveis e superfícies de nível}
 
-\begin{definition}
-    Uma função de três variáveis a valores reais , definida em \(D_f \subset\R^3\), é uma função que associa a cada terna ordenada \((x,y,z)\in D_f\) a um único número real \(w = f(x,y,z)\).
+\begin{definition}\index{Funções de três variáveis reais a valores reais}
+    Uma \textbf{função de três variáveis a valores reais}, definida em \(D_f \subset\R^3\), é uma função que associa a cada terna ordenada \((x,y,z)\in D_f\) a um único número real \(w = f(x,y,z)\).
 \end{definition}
 
-\begin{definition}
-    O gráfico de uma função de 3 variáveis é o conjunto \[G_f = \{(x,y,z,w)\in\R^4 : w = f(x,y,z),\, (x,y,z)\in D_f\}.\]
+\begin{definition}\index{Funções de três variáveis reais a valores reais! Gráfico}
+    O \textbf{gráfico} de uma função de 3 variáveis é o conjunto \[G_f = \{(x,y,z,w)\in\R^4 : w = f(x,y,z),\, (x,y,z)\in D_f\}.\]
 \end{definition}
 
-Infelizmente não conseguimos nem ao menos imaginar o gráfico de uma função de três variáveis. Para ganharmos um pouco de intuição acerca de seu comportamento, desenhamos suas superfícies de nível.
+% Infelizmente não conseguimos nem ao menos imaginar o gráfico de uma função de três variáveis. Para ganharmos um pouco de intuição acerca de seu comportamento, desenhamos suas superfícies de nível.
 
-\begin{definition}
-    Sejam \(f:D_f\subset\R^3 \to \R\) uma função e \(k\in\operatorname{Im}_f\). O conjunto dos pontos \((x,y,z)\in D_f\) tais que \(f(x,y,z) = k\) é chamado de superfície de nível \(k\) de \(f\).\index{Superfície de nível}
+\begin{definition}\index{Funções de três variáveis reais a valores reais! Superfícies de nível}
+    Sejam \(f:D_f\subset\R^3 \to \R\) uma função e \(k\in\operatorname{Im}_f\). O conjunto dos pontos \((x,y,z)\in D_f\) tais que \(f(x,y,z) = k\) é chamado de superfície de nível \(k\) de \(f\).
 \end{definition}
 
 Observe que se um ponto se move ao longo de uma superfície de nível, o valor de \(f(x,y,z)\) permanece fixo.
@@ -819,10 +818,9 @@ Observe que se um ponto se move ao longo de uma superfície de nível, o valor d
     Determine as superfícies de nível de \(f(x,y,z) = x^2 + y^2 + z^2\).
 
     Temos \(D_f = \R^3\) e \[\operatorname{Im}_f = \{ w = x^2 + y^2 + z^2 : (x,y,z)\in\R^3 \} = \{w\geq\} = [0,\infty).\] Portanto, para \(k\geq 0\) temos \[f(x,y,z) = k \Leftrightarrow x^2 + y^2 + z^2 = k,\] ou seja, as superfícies de nível de \(f\) são esferas concêntricas de raio \(\sqrt{k}\) centradas na origem.
-
         \begin{figure}[htbp]
             \centering
-                \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+                \begin{tikzpicture}[x=0.5pt,y=0.5pt,yscale=-1,xscale=1]
                     %Straight Lines [id:da14017589294902055] 
                     \draw    (310.62,189.37) -- (421.33,189.37) ;
                     \draw [shift={(423.33,189.37)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
@@ -849,7 +847,7 @@ Observe que se um ponto se move ao longo de uma superfície de nível, o valor d
                     % Text Node
                     \draw (309.33,70.4) node [anchor=north west][inner sep=0.75pt]    {$z$};
                     % Text Node
-                    \draw (273.57,134.43) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$\sqrt{k}$};
+                    \draw (273.57,134.43) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\sqrt{k}$};
                 \end{tikzpicture}
             \caption{Superfícies de nível da função \(f(x,y,z) = x^2+y^2+z^2\).}
             \label{fig:superficiedenivel}

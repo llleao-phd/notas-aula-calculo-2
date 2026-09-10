@@ -2,7 +2,7 @@
 
 Sejam \(f:D_f\subset\R^2 \to \R\) e \((x_0,y_0)\in D_f\). Fixado \(y=y_0\), podemos considerar a função de uma variável \(g(x) = f(x,y_0)\). Assim
 \begin{definition}
-    Se \(g'(x_0)\) existe, então \[\frac{\partial f}{\partial x} f(x_0,y_0) = g'(x_0)\] é a derivada parcial de \(f\) em relação a \(x\) no ponto \((x_0,y_0)\). \index{Derivada parcial}
+    Se \(g'(x_0)\) existe, então \[\frac{\partial f}{\partial x} f(x_0,y_0) = g'(x_0)\] é a \textbf{derivada parcial} de \(f\) em relação a \(x\) no ponto \((x_0,y_0)\). \index{Derivada parcial}
 \end{definition}
 
 Note que \[\frac{\partial f}{\partial x} (x_0,y_0) = g'(x_0) = \lim_{x\to x_0} \frac{g(x) - g(x_0)}{x-x_0} = \lim_{x\to x_0} \frac{f(x,y_0) - f(x_0,y_0)}{x-x_0} = \lim_{h\to 0} \frac{f(x_0 + h,y_0) - f(x_0,y_0)}{h}.\]
@@ -10,7 +10,7 @@ Note que \[\frac{\partial f}{\partial x} (x_0,y_0) = g'(x_0) = \lim_{x\to x_0} \
 Note que o gráfico da função \(g(x) = f(x,y_0)\) é a interseção do plano \(y = y_0\) com o gráfico de \(f\).
     \begin{figure}[htbp]
         \centering
-        \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+        \begin{tikzpicture}[x=1pt,y=1pt,yscale=-1,xscale=1]
            %Curve Lines [id:da6266193197651527] 
             \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=0.25 ]   (136.27,144.27) .. controls (179.6,81.6) and (238.27,82.93) .. (268.27,90.27) .. controls (298.27,97.6) and (302.27,118.93) .. (311.6,140.27) .. controls (320.93,161.6) and (231.6,81.6) .. (224.27,140.27) .. controls (216.93,198.93) and (198.93,116.27) .. (136.27,144.27) -- cycle ;
             %Shape: Rectangle [id:dp819297825887712] 
@@ -47,13 +47,13 @@ Note que o gráfico da função \(g(x) = f(x,y_0)\) é a interseção do plano \
             % Text Node
             \draw (114.5,144.6) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.96,0.65,0.14}{G}\textcolor[rgb]{0.96,0.65,0.14}{_{f}}$};
             % Text Node
-            \draw (266.25,77.6) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize,color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ]  {$T$};
+            \draw (266.25,77.6) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ]  {$T$};
             % Text Node
-            \draw (274.2,105.33) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\textcolor[rgb]{0.96,0.65,0.14}{C}$};
+            \draw (274.2,105.33) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.96,0.65,0.14}{C}$};
             % Text Node
-            \draw (211.5,246.2) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
+            \draw (211.5,246.2) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
             % Text Node
-            \draw (222,55.7) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,f}\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
+            \draw (222,55.7) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,f}\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
             % Text Node
             \draw (204.59,108.43) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.82,0.01,0.11}{\alpha }$};
         \end{tikzpicture}
@@ -69,7 +69,7 @@ Note que o gráfico da função \(g(x) = f(x,y_0)\) é a interseção do plano \
         \begin{itemize}
             \item Fixamos \(x = x_0\);
             \item tomamos \(h(y) = f(x_0,y)\);
-            \item definimos \[\frac{\partial f}{\partial y}(x_0,y_0) = h'(y_0) = \lim_{y\to y_0} \frac{h(y) - h(y_0)}{y-y_0} = \lim_{y\to y_0} \frac{f(x_0,y) - f(x_0,y_0)}{y-y_0} = \lim_{h\to 0} \frac{f(x_0,y_0 + h) - f(x_0,y_0)}{h}. \]
+            \item definimos \[\frac{\partial f}{\partial y}(x_0,y_0) = \lim_{y\to y_0} \frac{h(y) - h(y_0)}{y-y_0} = \lim_{y\to y_0} \frac{f(x_0,y) - f(x_0,y_0)}{y-y_0} = \lim_{h\to 0} \frac{f(x_0,y_0 + h) - f(x_0,y_0)}{h}. \]
         \end{itemize}
 
 \begin{exercise}
@@ -129,11 +129,10 @@ Note que o gráfico da função \(g(x) = f(x,y_0)\) é a interseção do plano \
                 & \Leftrightarrow \frac{x^2}{4-k} + \frac{y^2}{\left( \frac{4-k}{2} \right)} = 1 \\
                 & \Leftrightarrow \frac{x^2}{(\sqrt{2-k})^2} + \frac{y^2}{\left( \frac{\sqrt{4-k}}{\sqrt{2}} \right)^2} = 1,
         \end{align*}
-    portanto as curvas de nível de \(f\) são elipses concêntricas.  
-
+    portanto as curvas de nível de \(f\) são elipses concêntricas.
     \begin{figure}[htbp]
             \centering
-                \begin{tikzpicture}[x=0.5pt,y=0.5pt,yscale=-1,xscale=1]
+                \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
                     %Straight Lines [id:da6780406550785627] 
                     \draw    (509.65,187.67) -- (509.65,33.89) ;
                     \draw [shift={(509.65,31.89)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
@@ -194,17 +193,17 @@ Note que o gráfico da função \(g(x) = f(x,y_0)\) é a interseção do plano \
                     % Text Node
                     \draw (627.6,182.98) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
                     % Text Node
-                    \draw (431.2,241.62) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$2$};
+                    \draw (431.2,241.62) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$2$};
                     % Text Node
-                    \draw (467.03,209) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$1$};
+                    \draw (467.03,209) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$1$};
                     % Text Node
-                    \draw (534.11,175) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$1$};
+                    \draw (534.11,175) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$1$};
                     % Text Node
                     \draw (523.26,223.03) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{1,1}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
                     % Text Node
                     \draw (463.19,130.45) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{f}\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{1,1}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
                     % Text Node
-                    \draw (553.15,67.78) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize,color={rgb, 255:red, 208; green, 2; blue, 27 }  ,opacity=1 ]  {$T$};
+                    \draw (553.15,67.78) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 208; green, 2; blue, 27 }  ,opacity=1 ]  {$T$};
                     % Text Node
                     \draw (598.33,127.66) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{1,1,f}\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{1,1}\textcolor[rgb]{0.25,0.46,0.02}{)}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
                     % Text Node
@@ -261,7 +260,7 @@ Note que o gráfico da função \(g(x) = f(x,y_0)\) é a interseção do plano \
 
 \section{Derivadas de funções definidas implicitamente}
 
-Dada a equação \[z = \sqrt{1 - x^2 - y^2},\; x^2 + y^2 < 1\] dizemos que \(z\) é uma \textbf{função explícita} de \((x,y)\), pois podemos escrever \(z = f(x,y)\), com \(f(x,y) = \sqrt{1 - x^2 - y^2}\) e \(D_f = \{(x,y)\in\R^2 : x^2 + y^2 < 1\}\).
+Dada a equação \[z = \sqrt{1 - x^2 - y^2},\; x^2 + y^2 < 1\] dizemos que \(z\) é uma \textbf{função explícita}\index{Funções de duas variáveis a valores reais! Implícita} de \((x,y)\), pois podemos escrever \(z = f(x,y)\), com \(f(x,y) = \sqrt{1 - x^2 - y^2}\) e \(D_f = \{(x,y)\in\R^2 : x^2 + y^2 < 1\}\).
 
 No entanto, a equação
 \begin{equation}\label{eq.esfera}
@@ -276,7 +275,7 @@ define a mesma função \(f\), uma vez que isolando \(z\) em função de \(x\) e
 \end{remark}
 
 \begin{definition}
-    Uma função \(z = f(x,y)\) é \textbf{definida implicitamente} pela equação \(g(x,y,z) = 0\) se, para todo \((x,y)\in D_f\), \(g(x,y,f(x,y)) = 0.\)
+    Uma função \(z = f(x,y)\) é definida \textbf{implicitamente}\index{Funções de duas variáveis reais! Definida implicitamente} pela equação \(g(x,y,z) = 0\) se, para todo \((x,y)\in D_f\), \(g(x,y,f(x,y)) = 0.\)
 \end{definition}
 
 \begin{remark}
@@ -392,7 +391,7 @@ Observe que no exemplo acima, \[\frac{\partial^2 f}{\partial x \partial y}(x,y) 
 
 O exemplo anterior nos mostra que a igualde \(\frac{\partial^2 f}{\partial x \partial y}(x,y) = \frac{\partial^2 F}{\partial y \partial x}(x,y)\) nem sempre acontece. O próximo resultado nos diz em que condições esta propriedade acontece.
 
-\begin{theorem}[Schwarz]
+\begin{theorem}[Schwarz]\index{Teorema! Schwarz}
     Seja \(f:D_f\subset\R^2 \to \R^2\) com \(D_f\) aberto. Se todas as derivadas parciais de 2º ordem existem e são contínuas em \(D_f\), então \[\frac{\partial^2 f}{\partial x \partial y}(x_0,y_0) = \frac{\partial^2 F}{\partial y \partial x}(x_0,y_0),\; \forall (x_0,y_0)\in D_f.\]
 \end{theorem}
 
@@ -422,7 +421,7 @@ Note que esta forma ainda não é adequada para a generalização, pois se \(f\)
 Agora, como \[\lim_{h\to 0} \frac{G(h)}{h} = 0 \Leftrightarrow \lim_{h\to 0} \frac{G(h)}{|h|} = 0,\] temos que \[\lim_{h\to 0} \frac{f(x_0 + h) - f(x_0) - ah}{h} = 0 \Leftrightarrow \lim_{h\to 0} \frac{f(x_0+h) - f(x_0) - ah}{|h|} = 0.\] Ou seja, \[\lim_{h\to 0} \frac{f(x_0 + h) - f(x_0)}{h} = a \Leftrightarrow \lim_{h\to 0} \frac{f(x_0+h) - f(x_0) - ah}{|h|} = 0.\] Ou ainda, \(f\) é diferenciável em \(x_0\) se, e somente se, existe \(a\in\R\) tal que \[\lim_{h\to 0} \frac{f(x_0 + h)-f(x_0) - ah}{|h|} = 0.\] Neste sentido podemos generalizar a definição de diferenciabilidade, pois dividir por \(\|(h,k)\|\) faz sentido.
 
 \begin{definition}
-    Sejam \(f:A \subset \R^2 \to \R\), \(A\) aberto e \((x_0,y_0)\in A\). Dizemos que \(f\) é \textbf{diferenciável} em \((x_0,y_0)\) se existir \((a,b)\in\R^2\) tal que \[\lim_{(h,k)\to(0,0)} \frac{f(x_0 + h, y_0 + k) - f(x_0,y_0) - ah - bk}{\|(h,k)\|} = 0.\] 
+    Sejam \(f:A \subset \R^2 \to \R\), \(A\) aberto e \((x_0,y_0)\in A\). Dizemos que \(f\) é \textbf{diferenciável}\index{Funções de duas variáveis reais! Diferenciáveis} em \((x_0,y_0)\) se existir \((a,b)\in\R^2\) tal que \[\lim_{(h,k)\to(0,0)} \frac{f(x_0 + h, y_0 + k) - f(x_0,y_0) - ah - bk}{\|(h,k)\|} = 0.\] 
 \end{definition}
 
 \begin{theorem}\label{DiferenciabilidadeImplicaContinuidade}
@@ -669,7 +668,7 @@ Portanto, se \(f\) é diferenciável (em \(x_0\)), seu gráfico é \textit{suave
 De forma semelhante, se \(f:A\subset\R^2\to\R\) é uma função de duas variáveis e é diferenciável em \((x_0,y_0)\), gostaríamos que \(f\) possuísse um \textit{plano tangente} no ponto \((x_0,y_0,f(x_0,y_0))\) como uma boa aproximação de \(f\) perto de \((x_0,y_0)\).
     \begin{figure}[htbp]
         \centering
-        \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+        \begin{tikzpicture}[x=1pt,y=1pt,yscale=-1,xscale=1]
            %Curve Lines [id:da5076778366507674] 
             \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=0.25 ]   (189.27,136.47) .. controls (232.6,73.8) and (291.27,75.13) .. (321.27,82.47) .. controls (351.27,89.8) and (355.27,111.13) .. (364.6,132.47) .. controls (373.93,153.8) and (284.6,73.8) .. (277.27,132.47) .. controls (269.93,191.13) and (251.93,108.47) .. (189.27,136.47) -- cycle ;
             %Shape: Rectangle [id:dp491117251315511] 
@@ -706,7 +705,7 @@ De forma semelhante, se \(f:A\subset\R^2\to\R\) é uma função de duas variáve
             % Text Node
             \draw (264.5,238.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
             % Text Node
-            \draw (275,47.9) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,f}\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
+            \draw (275,47.9) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,f}\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
             % Text Node
             \draw (396.06,66.01) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{Plano\ tangente\ em\ ( x_{0} ,y_{0} ,f( x_{0} ,y_{0}))}$};
         \end{tikzpicture}
@@ -746,52 +745,52 @@ se aproxima de \(f(x,y)\) ``mais rápido'' do que \((x,y)\) se aproxima de \((x_
         \centering
         \begin{tikzpicture}[x=1pt,y=1pt,yscale=-1,xscale=1]
            %Curve Lines [id:da5081208451428394] 
-\draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=0.25 ]   (156.27,176.47) .. controls (199.6,113.8) and (258.27,115.13) .. (288.27,122.47) .. controls (318.27,129.8) and (322.27,151.13) .. (331.6,172.47) .. controls (340.93,193.8) and (251.6,113.8) .. (244.27,172.47) .. controls (236.93,231.13) and (218.93,148.47) .. (156.27,176.47) -- cycle ;
-%Shape: Rectangle [id:dp35376324575695384] 
-\draw  [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][fill={rgb, 255:red, 126; green, 211; blue, 33 }  ,fill opacity=0.15 ][dash pattern={on 0.84pt off 2.51pt}] (194.8,119.7) -- (345.42,119.7) -- (303.25,150.52) -- (152.63,150.52) -- cycle ;
-%Straight Lines [id:da5101184508116017] 
-\draw    (219.37,217.58) -- (219.37,88.31) ;
-\draw [shift={(219.37,86.31)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da8653210540101278] 
-\draw    (219.37,217.58) -- (356.89,217.58) ;
-\draw [shift={(358.89,217.58)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da13799627094392886] 
-\draw    (219.37,217.58) -- (168.05,268.9) ;
-\draw [shift={(166.64,270.31)}, rotate = 315] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Curve Lines [id:da4201115811082572] 
-\draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (229,168.88) .. controls (254.5,124.52) and (235.5,134.38) .. (294,140.38) ;
-%Shape: Circle [id:dp9063607750638142] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (246.93,135.11) .. controls (246.93,133.96) and (247.87,133.02) .. (249.02,133.02) .. controls (250.18,133.02) and (251.11,133.96) .. (251.11,135.11) .. controls (251.11,136.26) and (250.18,137.2) .. (249.02,137.2) .. controls (247.87,137.2) and (246.93,136.26) .. (246.93,135.11) -- cycle ;
-%Shape: Circle [id:dp8660643871104224] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (247.93,257.61) .. controls (247.93,256.46) and (248.87,255.52) .. (250.02,255.52) .. controls (251.18,255.52) and (252.11,256.46) .. (252.11,257.61) .. controls (252.11,258.76) and (251.18,259.7) .. (250.02,259.7) .. controls (248.87,259.7) and (247.93,258.76) .. (247.93,257.61) -- cycle ;
-%Curve Lines [id:da21512896735519182] 
-\draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (248,129.65) .. controls (237.55,113.03) and (247.41,110.84) .. (256.56,102.95) ;
-\draw [shift={(258,101.65)}, rotate = 136.55] [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
-%Curve Lines [id:da6908023834762943] 
-\draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (217.07,149.03) .. controls (257.07,119.03) and (258.89,148.23) .. (259.74,149.19) ;
-%Straight Lines [id:da2453156650659094] 
-\draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (206.25,149.68) -- (289.75,121.68) ;
-%Straight Lines [id:da8901995589851396] 
-\draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (183.77,134.76) -- (314.27,135.46) ;
+            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=0.25 ]   (156.27,176.47) .. controls (199.6,113.8) and (258.27,115.13) .. (288.27,122.47) .. controls (318.27,129.8) and (322.27,151.13) .. (331.6,172.47) .. controls (340.93,193.8) and (251.6,113.8) .. (244.27,172.47) .. controls (236.93,231.13) and (218.93,148.47) .. (156.27,176.47) -- cycle ;
+            %Shape: Rectangle [id:dp35376324575695384] 
+            \draw  [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][fill={rgb, 255:red, 126; green, 211; blue, 33 }  ,fill opacity=0.15 ][dash pattern={on 0.84pt off 2.51pt}] (194.8,119.7) -- (345.42,119.7) -- (303.25,150.52) -- (152.63,150.52) -- cycle ;
+            %Straight Lines [id:da5101184508116017] 
+            \draw    (219.37,217.58) -- (219.37,88.31) ;
+            \draw [shift={(219.37,86.31)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da8653210540101278] 
+            \draw    (219.37,217.58) -- (356.89,217.58) ;
+            \draw [shift={(358.89,217.58)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da13799627094392886] 
+            \draw    (219.37,217.58) -- (168.05,268.9) ;
+            \draw [shift={(166.64,270.31)}, rotate = 315] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Curve Lines [id:da4201115811082572] 
+            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (229,168.88) .. controls (254.5,124.52) and (235.5,134.38) .. (294,140.38) ;
+            %Shape: Circle [id:dp9063607750638142] 
+            \draw  [draw opacity=0][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (246.93,135.11) .. controls (246.93,133.96) and (247.87,133.02) .. (249.02,133.02) .. controls (250.18,133.02) and (251.11,133.96) .. (251.11,135.11) .. controls (251.11,136.26) and (250.18,137.2) .. (249.02,137.2) .. controls (247.87,137.2) and (246.93,136.26) .. (246.93,135.11) -- cycle ;
+            %Shape: Circle [id:dp8660643871104224] 
+            \draw  [draw opacity=0][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (247.93,257.61) .. controls (247.93,256.46) and (248.87,255.52) .. (250.02,255.52) .. controls (251.18,255.52) and (252.11,256.46) .. (252.11,257.61) .. controls (252.11,258.76) and (251.18,259.7) .. (250.02,259.7) .. controls (248.87,259.7) and (247.93,258.76) .. (247.93,257.61) -- cycle ;
+            %Curve Lines [id:da21512896735519182] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (248,129.65) .. controls (237.55,113.03) and (247.41,110.84) .. (256.56,102.95) ;
+            \draw [shift={(258,101.65)}, rotate = 136.55] [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+            %Curve Lines [id:da6908023834762943] 
+            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (217.07,149.03) .. controls (257.07,119.03) and (258.89,148.23) .. (259.74,149.19) ;
+            %Straight Lines [id:da2453156650659094] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (206.25,149.68) -- (289.75,121.68) ;
+            %Straight Lines [id:da8901995589851396] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (183.77,134.76) -- (314.27,135.46) ;
 
-% Text Node
-\draw (145.98,260.2) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
-% Text Node
-\draw (198.48,75.25) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$z$};
-% Text Node
-\draw (364.37,209.04) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
-% Text Node
-\draw (134.5,161.8) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.96,0.65,0.14}{G}\textcolor[rgb]{0.96,0.65,0.14}{_{f}}$};
-% Text Node
-\draw (286.25,109.8) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize,color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ]  {$r$};
-% Text Node
-\draw (231.5,263.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
-% Text Node
-\draw (242,87.9) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,f}\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
-% Text Node
-\draw (314.24,124.53) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{s}$};
-% Text Node
-\draw (341.8,102.04) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.49,0.83,0.13}{z\ =\ T( x,y)}$};
+            % Text Node
+            \draw (145.98,260.2) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (198.48,75.25) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$z$};
+            % Text Node
+            \draw (364.37,209.04) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            % Text Node
+            \draw (134.5,161.8) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.96,0.65,0.14}{G}\textcolor[rgb]{0.96,0.65,0.14}{_{f}}$};
+            % Text Node
+            \draw (286.25,109.8) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ]  {$r$};
+            % Text Node
+            \draw (231.5,263.4) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
+            % Text Node
+            \draw (242,87.9) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,f}\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
+            % Text Node
+            \draw (314.24,124.53) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{s}$};
+            % Text Node
+            \draw (341.8,102.04) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.49,0.83,0.13}{z\ =\ T( x,y)}$};
         \end{tikzpicture}
         \caption{Plano tangente ao gráfico de uma função de duas variáveis}
         \label{fig:PlanoTangente2}
@@ -809,7 +808,7 @@ As observações acima motivam a seguinte definição.
         \begin{equation}\label{eqn.PlanoTangente3}
             z = f(x_0,y_0) + \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0)
         \end{equation}
-    é chamado \textbf{plano tangente} ao gráfico de \(f\) no ponto \((x_0,y_0,f(x_0,y_0))\).
+    é chamado \textbf{plano tangente}\index{Plano tangente} ao gráfico de \(f\) no ponto \((x_0,y_0,f(x_0,y_0))\).
 \end{definition}
 
 \begin{remark}
@@ -819,7 +818,7 @@ As observações acima motivam a seguinte definição.
 Em notação de produto interno, podemos reescrever \eqref{eqn.PlanoTangente3} como \[\left( \frac{\partial f}{\partial x}(x_0,y_0), \frac{\partial f}{\partial y}(x_0,y_0), -1 \right)\bullet\left[ (x,y,z) - (x_0,y_0,z_0) \right] = 0,\] o que implica que o plano tangente em \((x_0,y_0,f(x_0,y_0))\) é perpendicular à direção do vetor \[\left( \frac{\partial f}{\partial x}(x_0,y_0), \frac{\partial f}{\partial y}(x_0,y_0), -1 \right) = \xrightarrow{\eta}.\]
 
 \begin{definition}
-    A reta que passa pelo ponto \((x_0,y_0,f(x_0,y_0))\) e é paralela ao vetor \(\xrightarrow{\eta}\) é chamada de \textbf{reta normal} ao gráfico de \(f\) em \((x_0,y_0,f(x_0,y_0))\). A equação dessa reta é \[(x,y,z) = (x_0,y_0,f(x_0,y_0)) + \lambda\left( \frac{\partial f}{\partial x}(x_0,y_0), \frac{\partial f}{\partial y}(x_0,y_0), -1 \right).\]
+    A reta que passa pelo ponto \((x_0,y_0,f(x_0,y_0))\) e é paralela ao vetor \(\xrightarrow{\eta}\) é chamada de \textbf{reta normal}\index{Reta normal} ao gráfico de \(f\) em \((x_0,y_0,f(x_0,y_0))\). A equação dessa reta é \[(x,y,z) = (x_0,y_0,f(x_0,y_0)) + \lambda\left( \frac{\partial f}{\partial x}(x_0,y_0), \frac{\partial f}{\partial y}(x_0,y_0), -1 \right).\]
     \begin{figure}[htbp]
         \centering
         \begin{tikzpicture}[x=1pt,y=1pt,yscale=-1,xscale=1]
@@ -859,9 +858,9 @@ Em notação de produto interno, podemos reescrever \eqref{eqn.PlanoTangente3} c
             % Text Node
             \draw (79.5,137.8) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.96,0.65,0.14}{G}\textcolor[rgb]{0.96,0.65,0.14}{_{f}}$};
             % Text Node
-            \draw (176.5,239.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
+            \draw (176.5,239.4) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
             % Text Node
-            \draw (281.5,118.65) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,f}\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
+            \draw (281.5,118.65) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,f}\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
             % Text Node
             \draw (286.8,78.04) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.49,0.83,0.13}{Plano\ tangente}$};
             % Text Node
@@ -934,7 +933,7 @@ Assim, se \(z = f(x,y)\) e denotamos \[\Delta T = T(x_0+h,y_0+k) - T(x_0,y_0) \t
 
 
 \begin{definition}
-Dizemos que \(L(h,k) = \frac{\partial f}{\partial x}(x_0,y_0)h + \frac{\partial f}{\partial y}(x_0,y_0)k\) é a \textbf{diferencial} de \(f\) em \((x_0,y_0)\) com relação aos acréscimos \(h\) e \(k\).
+Dizemos que \(L(h,k) = \frac{\partial f}{\partial x}(x_0,y_0)h + \frac{\partial f}{\partial y}(x_0,y_0)k\) é a \textbf{diferencial}\index{Diferencial} de \(f\) em \((x_0,y_0)\) com relação aos acréscimos \(h\) e \(k\).
 \end{definition}
 
 Seja \(z = f(x,y)\) uma função diferenciável. A \textit{diferencial} de \(f\) em \((x,y)\) com relação aos acréscimos \(dx\) e \(dy\) é a função linear
@@ -971,7 +970,7 @@ Por outro lado, a variação de \(f\) quando passamos de \((x,y)\) para \((x+dx,
 \section{Vetor gradiente}
 
 \begin{definition}
-    Seja \(z = f(x,y)\) uma função que admite derivadas parciais em \((x_0,y_0)\). O vetor \[\nabla f(x_0,y_0) = \left( \frac{\partial f}{\partial x}(x_0,y_0), \frac{\partial f}{\partial y}(x_0,y_0) \right)\] é chamado \textbf{vetor gradiente} de \(f\) em \((x_0,y_0)\).
+    Seja \(z = f(x,y)\) uma função que admite derivadas parciais em \((x_0,y_0)\). O vetor \[\nabla f(x_0,y_0) = \left( \frac{\partial f}{\partial x}(x_0,y_0), \frac{\partial f}{\partial y}(x_0,y_0) \right)\] é chamado \textbf{vetor gradiente}\index{Vetor gradiente} de \(f\) em \((x_0,y_0)\).
 \end{definition}
 
 Geometricamente, interpretamos \(\nabla f(x_0,y_0)\) como um vetor aplicado no ponto \((x_0,y_0)\).
@@ -1058,11 +1057,10 @@ Denotaremos por \(\gamma: I \subset \R \to \R^2\) a função (curva em \(\R^2\))
 
 \begin{example}
     \(\gamma(t) = (\cos(t),\sin(t))\), com \(t\in[0,2\pi)\) é a circunferência centrada na origem de raio \(1\).
-
     \begin{figure}[htbp]
         \centering
             \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
-            \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+            \begin{tikzpicture}[x=0.5pt,y=0.5pt,yscale=-1,xscale=1]
             %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
             %Straight Lines [id:da9629358395304484] 
             \draw    (189.78,249.54) -- (189.78,67.82) ;
@@ -1089,7 +1087,494 @@ Denotaremos por \(\gamma: I \subset \R \to \R^2\) a função (curva em \(\R^2\))
     \end{figure}
 \end{example}
 
-% \section{Teorema da função implícita}
+Podemos mostrar que \(\gamma\) é diferenciável em \(t_0\in I\) se, e somente se, \(x(t)\) e \(y(t)\) são diferenciáveis em \(t_0\) e \[\gamma'(t_0) = (x'(t_0),y'(t_0)).\] Logo, \(F(t) = f(\gamma(t))\) e a fórmula \eqref{eqn.RegraDaCadeia} acima fica
+    \begin{equation}\label{eqn.RegraDaCadeia1}
+        F'(t) = \nabla f(\gamma(t))\bullet\gamma'(t).
+    \end{equation}
+
+\begin{remark}
+    É interessante notar que a composta \(F(t) = f(\gamma(t))\) nos fornece os valores que \(f\) assume nos pontos da curva \(\gamma(t) = (x(t),y(t))\).
+\end{remark}
+
+\begin{theorem}[Regra da Cadeia]\label{thm.RegraDaCadeiaFraca}\index{Regra da Cadeia}
+    Sejam \(f:A\subset \R^2 \to \R\), \(A\) aberto, e \(\gamma: I \to \R^2\) tais que \(\gamma(t)\in A\), para todo \(t\in I\). Se \(\gamma\) é diferenciável em \(t_0\) e \(f\) é diferenciável em \(\gamma(t_0) = \mathbf{X_0}\), então \(F(t) = f(\gamma(t))\) é diferenciável em \(t_0\) e vale a \textit{regra da cadeia}\index{Regra da Cadeia} \[F'(t_0) = \nabla f(\gamma(t_0))\bullet \gamma'(t_0).\]
+\end{theorem}
+
+\begin{proof}
+    Como \(f\) é diferenciável em \(\mathbf{X_0}\), para \(\mathbf{X}\in A\), \[\lim_{\mathbf{X}\to\mathbf{X_0}} \frac{f(\mathbf{X}) - f(\mathbf{X_0}) - \nabla f(\mathbf{X_0})(\mathbf{X} - \mathbf{X_0})}{\|\mathbf{X} - \mathbf{X_0}\|} = 0.\] Logo, podemos escrever \[ f(\mathbf{X}) - f(\mathbf{X_0}) = \nabla f(\mathbf{X_0})(\mathbf{X} - \mathbf{X_0}) + E(\mathbf{X}), \] com \(\lim_{\mathbf{X}\to\mathbf{X_0}} \frac{E(\mathbf{X})}{\|\mathbf{X} - \mathbf{X_0}\|} = 0\).
+
+    Substituindo, \(\mathbf{X} = \gamma(t)\) e \(\mathbf{X_0} = \gamma(t_0)\) na expressão acima temos \[\frac{f(\gamma(t)) - f(\gamma(t_0))}{t - t_0} = \nabla f(\gamma(t_0)) \frac{\gamma(t) - \gamma(t_0)}{t-t_0} + \frac{E(\gamma(t))}{t-t_0},\] e como \[\lim_{t\to t_0} \frac{E(\gamma(t))}{t-t_0} = \lim_{t\to t_0} \left( \frac{\|\gamma(t) - \gamma(t_0)\|}{t-t_0} \frac{E(\gamma(t))}{\|\gamma(t) - \gamma(t_0)\|} \right) = \|\gamma'(t)\| \cdot 0 = 0,\] concluímos que \[\lim_{t\to t_0} \frac{f(\gamma(t)) - f(\gamma(t_0))}{t-t_0} = \lim_{t\to t_0} \nabla f(\gamma(t_0)) \frac{\gamma(t) - \gamma(t_0)}{t-t_0} + \frac{E(\gamma(t))}{t-t_0} = \nabla f(\gamma(t_0))\bullet \gamma'(t_0),\] portanto \[\lim_{t\to t_0} \frac{F(t) - F(t_0)}{t-t_0} = \nabla f(\gamma(t_0))\bullet \gamma'(t_0),\] ou ainda \[F'(t_0) = \nabla f(\gamma(t_0))\bullet \gamma'(t_0).\]
+\end{proof}
+
+Segue do Teorema \ref{thm.RegraDaCadeiaFraca} que se \(f\) é diferenciável em \(A\) e \(\gamma\) é diferenciável em \(I\), então a composta \(F(t) = f(\gamma(t))\) é diferenciável em \(I\) com \[F'(t) = \nabla f(\gamma(t))\bullet \gamma'(t),\; \forall\, t\in I.\] Podemos resumir esta conclusão no seguinte teorema.
+
+\begin{theorem}[Regra da Cadeia]\label{thm.RegraDaCadeiaStrong}\index{Regra da Cadeia}
+    Sejam \(f:A\subset\R^2 \to \R\) uma função, \(A\) aberto, e \(x = x(t)\) e \(y = y(t)\) curvas definidas num intervalo \(I\subset\R\) tal que \((x(t),y(t))\in A\), para todo \(t\in I\). Se \(f, x\) e \(y\) são diferenciáveis, então a composta \(F(T) = f(x(t),y(t))\) é diferenciável e vale a \textit{regra da cadeia} \[F'(t) = \nabla f(x(t),y(t))\bullet(x'(t),y'(t))\]
+\end{theorem}
+
+Em outras palavras,
+    \begin{align*}
+        \frac{d F}{dt}(t)
+            & = \left( \frac{\partial f}{\partial x} (x(t),y(t)), \frac{\partial f}{\partial y} (x(t),y(t)) \right) \bullet (x'(t),y'(t)) \\
+            & = \frac{\partial f}{\partial x} (x(t),y(t))\cdot x'(t) + \frac{\partial f}{\partial y} (x(t),y(t))\cdot y'(t) \\
+            & = \frac{\partial f}{\partial x} (x(t),y(t)) \frac{dx}{dt} + \frac{\partial f}{\partial y} (x(t),y(t))\cdot \frac{dy}{dt}.
+    \end{align*}
+Em geral, escrevemos \[\frac{dF}{dt} = \frac{\partial f}{\partial x} \cdot \frac{dx}{dt} + \frac{\partial f}{\partial y} \cdot \frac{dy}{dt},\] ou ainda \[\frac{dz}{dt} = \frac{\partial z}{\partial x} \cdot \frac{dx}{dt} + \frac{\partial z}{\partial y} \cdot \frac{dy}{dt}.\]
+
+\begin{remark}
+    Tome cuidado com a notação! \[\frac{dz}{dt} = \frac{d}{dt} f(x,y) = \frac{d}{dt} f(x(t),y(t)).\]
+\end{remark}
+
+\begin{example}
+    Seja \(F(t) = f(\gamma(t))\), com \(f(x,y) = x\cdot y\) e \(\gamma(t) = (t^3,t^2)\). Calcule \(F'(t)\).
+
+    Pela regra da cadeia, \[F'(t) = \nabla f(\gamma(t))\bullet \gamma'(t).\] Agora, \[\nabla f(x,y) = \left( \frac{\partial f}{\partial x} (x,y), \frac{\partial f}{\partial y} (x,y) \right) = (y,x),\] portanto \[\nabla f(\gamma(t)) = \nabla f(t^3,t^2) = (t^2,t^3).\] Além disso, \(\gamma'(t) = (3t^2,2t)\), daí \[F'(t) = \nabla f(\gamma(t))\bullet \gamma'(t) = (t^2,t^3)\bullet (3t^2,2t) = 3t^4 + 2t^4 = 5t^4.\]
+
+    Podemos também usar que \(F(t) = f(t^3,t^2)\), de forma que
+        \begin{align*}
+            F'(t)
+                & = \frac{d}{dt} f(t^3,t^2) \\
+                & = \frac{\partial f}{\partial x} \cdot \frac{dx}{dt} + \frac{\partial f}{\partial y} \cdot \frac{dy}{dt} \\
+                & = y \cdot 3t^2 + x\cdot 2t \\
+                & = t^2\cdot 3t^2 + t^3\cdot 2t = 5t^4.
+        \end{align*}
+
+    Por fim, também podemos notar que \(F(t) = f(t^3,t^2) = t^3\cdot t^2 = t^5\), logo \(F'(t) = 5t^4.\)
+\end{example}
+
+\begin{example}
+    Sejam \(z = x^2y\), \(x = e^{t^2}\) e \(y = 2t+1\). Calcule \(\frac{dz}{dt}\) e determine \(\frac{dz}{dt}\big|_{\{t=0\}}\).
+
+    Podemos calcular \(\frac{dz}{dt}\) de duas formas:
+        \begin{enumerate}
+            \item Temos que \[z = x^2 y = (e^{t^2})^2(2t + 1) = e^{2t^2}(2t + 1)\] portanto \[\frac{dz}{dt} 4t\cdot e^{2t^2}\cdot (2t + 1) + e^{t^2}\cdot 2 = 2e^{2t^2}[4t^2 + 2t + 1].\]
+            \item Temos que \(z = z(x,y) = x^2 y\), com \(x = e^{t^2}\) e \(y = 2t + 1\). Assim, usando a regra de cadeia,
+                \begin{align*}
+                    \frac{dz}{dt}
+                        & = \frac{\partial f}{\partial x} \cdot \frac{dx}{dt} + \frac{\partial f}{\partial y} \cdot \frac{dy}{dt} \\
+                        & 2xy \cdot 2t\cdot e^{t^2} + x^2\cdot 2 \\
+                        & 2e^{t^2}\cdot(2t + 1)\cdot 2te^{t^2} + e^{2t^2}\cdot 2 \\
+                        & 2e^{2t^2}[4t^2 + 2t + 1].
+                \end{align*}
+        \end{enumerate}
+    
+    Finalmente, \[\frac{dz}{dt}\bigg|_{t=0} = 2\cdot e^{2(0)^2}[4(0)^2 + 2(0) + 1] = 2.\]
+\end{example}
+
+\begin{exercise}
+    Sejam \(z = x^2 y + 3x y^4\), \(x = \sin(2t)\) e \(y = \cos(t)\). Use a regra da cadeia para determinar \(\frac{dz}{dt}\big|_{t=0}\).
+\end{exercise}
+
+\begin{theorem}[Regra da Cadeia - 2]\label{thm.RegraDaCadeia2}\index{Regra da Cadeia}
+    Suponha que \(z = f(x,y)\) seja uma função diferenciável de \(x\) e \(y\), com \(x = x(s,t)\) e \(y = y(s,t)\) funções diferenciáveis de \(s\) e \(t\). Então \(z = f(x(s,t),y(s,t))\) e \[\frac{\partial z}{\partial s} = \frac{\partial z}{\partial x}\cdot\frac{\partial x}{\partial s} + \frac{\partial z}{\partial y}\cdot\frac{\partial y}{\partial s} \text{ e } \frac{\partial z}{\partial t} = \frac{\partial z}{\partial x}\cdot\frac{\partial x}{\partial t} + \frac{\partial z}{\partial y}\cdot\frac{\partial y}{\partial t}\]
+\end{theorem}
+(Prova: \cite{guidorizzi}[pg. 218])
+
+Podemos também usar as seguintes notações para a regra da cadeia
+    \begin{enumerate}
+        \item Se \(z = f(x(s,t),y(s,t))\): \[\frac{\partial z}{\partial s} = \frac{\partial f}{\partial x}\cdot\frac{\partial x}{\partial s} + \frac{\partial f}{\partial y}\cdot\frac{\partial y}{\partial s} \text{ e } \frac{\partial f}{\partial t} = \frac{\partial f}{\partial x}\cdot\frac{\partial x}{\partial t} + \frac{\partial z}{\partial y}\cdot\frac{\partial y}{\partial t}\]
+        \item Se \(F(s,t) = f(x(s,t),y(s,t))\): \[\frac{\partial F}{\partial s} = \frac{\partial f}{\partial x}\cdot\frac{\partial x}{\partial s} + \frac{\partial f}{\partial y}\cdot\frac{\partial y}{\partial s} \text{ e } \frac{\partial F}{\partial t} = \frac{\partial f}{\partial x}\cdot\frac{\partial x}{\partial t} + \frac{\partial z}{\partial y}\cdot\frac{\partial y}{\partial t}\]
+    \end{enumerate}
+
+\begin{remark}
+    Muitas vezes pode ser mais conveniente olharmos para uma função \(f(x,y)\) como a composta \(f(x(s,t),y(s,t))\).
+
+    Por exemplo: Seja \(f(x,y)\) com \(x = r\cos(\theta)\) e \(y = r\sin(\theta)\), \(0\leq r \leq 1\) e \(0\leq \theta\leq 2\pi\).
+    \begin{figure}[htbp]
+        \centering
+            \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+            \begin{tikzpicture}[x=0.65pt,y=0.65pt,yscale=-1,xscale=1]
+            %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+            %Straight Lines [id:da9629358395304484] 
+            \draw    (260.31,226.1) -- (260.31,107.46) ;
+            \draw [shift={(260.31,105.46)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da933912057656217] 
+            \draw    (203.58,169.83) -- (322.22,169.83) ;
+            \draw [shift={(324.22,169.83)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Shape: Circle [id:dp5522369189829185] 
+            \draw  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=0.45 ] (212.7,169.83) .. controls (212.7,143.48) and (234.06,122.11) .. (260.42,122.11) .. controls (286.77,122.11) and (308.14,143.48) .. (308.14,169.83) .. controls (308.14,196.19) and (286.77,217.55) .. (260.42,217.55) .. controls (234.06,217.55) and (212.7,196.19) .. (212.7,169.83) -- cycle ;
+            %Straight Lines [id:da42739349807976323] 
+            \draw    (50.62,230.43) -- (50.62,81.77) ;
+            \draw [shift={(50.62,79.77)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da18631508535550367] 
+            \draw    (30.27,209.65) -- (128.85,209.65) ;
+            \draw [shift={(130.85,209.65)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Shape: Rectangle [id:dp0735292513004685] 
+            \draw  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=0.45 ] (51.01,110.64) -- (102.05,110.64) -- (102.05,209.48) -- (51.01,209.48) -- cycle ;
+            %Curve Lines [id:da7181170056693775] 
+            \draw    (113.33,132) .. controls (130.1,101.11) and (181.23,89.04) .. (212.4,130.72) ;
+            \draw [shift={(213.33,132)}, rotate = 234.28] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+            % Text Node
+            \draw (326.08,152.93) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (263.38,84.54) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            % Text Node
+            \draw (306.94,172.11) node [anchor=north west][inner sep=0.75pt]    {$1$};
+            % Text Node
+            \draw (242.29,105.1) node [anchor=north west][inner sep=0.75pt]    {$1$};
+            % Text Node
+            \draw (294.36,109.64) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.96,0.65,0.14}{\gamma }\textcolor[rgb]{0.96,0.65,0.14}{(}\textcolor[rgb]{0.96,0.65,0.14}{t}\textcolor[rgb]{0.96,0.65,0.14}{)}\textcolor[rgb]{0.96,0.65,0.14}{\ =\ }\textcolor[rgb]{0.96,0.65,0.14}{(}\textcolor[rgb]{0.96,0.65,0.14}{\cos}\textcolor[rgb]{0.96,0.65,0.14}{t,}\textcolor[rgb]{0.96,0.65,0.14}{\sin}\textcolor[rgb]{0.96,0.65,0.14}{t}\textcolor[rgb]{0.96,0.65,0.14}{)}$};
+            % Text Node
+            \draw (132.66,192.51) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (52.61,62.19) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            % Text Node
+            \draw (96.05,213.99) node [anchor=north west][inner sep=0.75pt]    {$1$};
+            % Text Node
+            \draw (23.97,104.57) node [anchor=north west][inner sep=0.75pt]    {$2\pi $};
+            % Text Node
+            \draw (154.67,80.73) node [anchor=north west][inner sep=0.75pt]    {$\gamma $};
+            \end{tikzpicture}
+        \caption{Mudança de variáveis}
+        \label{fig:MudancaDeVariaveis}
+    \end{figure}
+    A função \(\gamma(r,\theta) = (r\cos(\theta),r\sin(\theta)) = (x,y)\) leva o retângulo de base \(1\) e altura \(2\pi\) no círculo de centro na origem e raio \(1\).
+
+    \(\gamma(t) = (\cos(t),\sin(t))\), com \(t\in[0,2\pi)\) é a circunferência centrada na origem de raio \(1\).
+    
+
+    E algumas situações podem ser ``simplificadas'' olhando para a região retangular ao invés da circular. Por exemplo, no estudo de integração. Neste caso, olhamos \(f\) como uma função de \(r\) e \(\theta\) e não de \(x\) e \(y\), ou seja \(f(x(r,\theta),y(r,\theta))\).
+\end{remark}
+
+\begin{example}
+    Seja \(z = e^x\sin y\), com \(x = st^2\) e \(y = s^2t\). Determine \(\frac{\partial z}{\partial s}\) e \(\frac{\partial z}{\partial t}\).
+
+    Temos
+        \begin{align*}
+            \frac{\partial z}{\partial s} 
+                & = \frac{\partial f}{\partial x}\cdot\frac{\partial x}{\partial s} + \frac{\partial f}{\partial y}\cdot\frac{\partial y}{\partial s} \\
+                & = e^x \sin y \cdot t^2 + e^x\cos y\cdot 2s t\\
+                & = e^{st^2}\sin(s^2 t)\cdot t^2 + e^{st^2}\cos(s^2 t)\cdot 2st \\
+                & = t^2 e^{st^2}\sin(s^2 t) + 2ste^{st^2}\cos(s^2t).
+        \end{align*}
+        \begin{align*}
+            \frac{\partial z}{\partial t} 
+                & = \frac{\partial f}{\partial x}\cdot\frac{\partial x}{\partial t} + \frac{\partial f}{\partial y}\cdot\frac{\partial y}{\partial t} \\
+                & = \dots \text{ (exercício)}.
+        \end{align*}
+\end{example}
+
+\begin{example}
+    Seja \(z = f(x,y)\) uma função diferenciável, com \(x = s^2 + t^2\) e \(y = st\). Expresse \(\frac{\partial z}{\partial s}\) e \(\frac{\partial z}{\partial t}\) em termos das derivadas parciais de \(f\).
+
+        \begin{align*}
+            \frac{\partial z}{\partial s} 
+                & = \frac{\partial f}{\partial x}\cdot\frac{\partial x}{\partial s} + \frac{\partial f}{\partial y}\cdot\frac{\partial y}{\partial s} \\
+                & = \frac{\partial f}{\partial x}(x,y)\cdot 2s + \frac{\partial f}{\partial y}(x,y)\cdot t \\
+                & = 2s\frac{\partial f}{\partial x}(s^2 + t^2, st) + t\frac{\partial f}{\partial y}(s^2+t^2,st)
+        \end{align*}
+\end{example}
+
+Para a próxima observação introduzimos brevemente o conceito geométrico de reta tangente a uma curva \(\gamma\) em um ponto \(\gamma(t_0)\).
+
+Inicialmente, seja \(\gamma:I\subset\R \to \R^2\) uma curva em \(\R^2\) diferenciável em \(t_0\in I\). Geometricamente, vemos \(\gamma'(t_0)\) como um \textit{vetor tangente à} \(\gamma\) em \(\gamma(t_0)\).
+    \begin{figure}[htbp]
+        \centering
+            \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+            \begin{tikzpicture}[x=0.65pt,y=0.65pt,yscale=-1,xscale=1]
+            %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+            %Straight Lines [id:da2507184871235898] 
+            \draw    (220.22,270.86) -- (220.22,48.06) ;
+            \draw [shift={(220.22,46.06)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da9974415798552948] 
+            \draw    (188.85,239.86) -- (429.6,239.86) ;
+            \draw [shift={(431.6,239.86)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da537316632421861] 
+            \draw    (80.02,273.6) -- (80.02,50.8) ;
+            \draw [shift={(80.02,48.8)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Curve Lines [id:da46751355406911754] 
+            \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (191.6,180.27) .. controls (277.6,13.6) and (401.6,243.6) .. (434.93,148.27) ;
+            %Straight Lines [id:da9899349984014484] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (220.27,239.6) -- (259.64,120.17) ;
+            \draw [shift={(260.27,118.27)}, rotate = 108.25] [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da6203921295078106] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (220.27,239.6) -- (369.16,161.2) ;
+            \draw [shift={(370.93,160.27)}, rotate = 152.23] [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da10820280025105178] 
+            \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (260.27,118.27) -- (369.06,159.56) ;
+            \draw [shift={(370.93,160.27)}, rotate = 200.78] [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da47411336246247027] 
+            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (260.27,118.27) -- (307.63,109.31) ;
+            \draw [shift={(309.6,108.93)}, rotate = 169.29] [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da36591296253621586] 
+            \draw    (70.67,230) -- (90.27,230.27) ;
+            %Straight Lines [id:da8917802400444608] 
+            \draw    (71,101) -- (90.6,101.27) ;
+            %Straight Lines [id:da7963282020694974] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (70,199.33) -- (89.6,199.6) ;
+            %Straight Lines [id:da14178190075039432] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (70,160) -- (89.6,160.27) ;
+            %Curve Lines [id:da5299450645929898] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (96,140.67) .. controls (135.2,111.27) and (171.45,121.18) .. (194.6,139.53) ;
+            \draw [shift={(196,140.67)}, rotate = 219.58] [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+            % Text Node
+            \draw (437.24,234.02) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (226.14,23.57) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            % Text Node
+            \draw (85.94,26.31) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\mathbb{R}$};
+            % Text Node
+            \draw (441.33,123.4) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{\gamma ( t)}$};
+            % Text Node
+            \draw (244,164.73) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{\overrightarrow{\gamma ( t_{0})}}$};
+            % Text Node
+            \draw (304.67,194.73) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{\overrightarrow{\gamma ( t)}}$};
+            % Text Node
+            \draw (332.67,110.73) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.82,0.01,0.11}{\overrightarrow{\gamma ( t)} \ -\ \overrightarrow{\gamma ( t_{0})}}$};
+            % Text Node
+            \draw (307.33,85.73) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.96,0.65,0.14}{\gamma '( t_{0})}$};
+            % Text Node
+            \draw (50.67,191.07) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{t_{0}}$};
+            % Text Node
+            \draw (53.67,151.07) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{t}$};
+            % Text Node
+            \draw (138,98.73) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{\gamma }$};
+            \end{tikzpicture}
+        \caption{Reta tangente à uma curva}
+        \label{fig:RetaTangente}
+    \end{figure}
+
+De fato, dado \(t\in I\), vemos que \[\gamma'(t_0) \leftarrow \frac{\overrightarrow{\gamma(t)} - \overrightarrow{\gamma(t_0)}}{t-t_0} // \overrightarrow{\gamma(t)} - \overrightarrow{\gamma(t_0)} \rightarrow \text{ vetor tangente à } \gamma \text{ em } \gamma(t_0).\] Isto motiva a seguinte definição:
+
+\begin{definition}\index{Vetor tangente}
+    Seja \(\gamma: I \subset \R \to \R^n\) um caminho diferenciável em \(t_0\in I\), com \(\gamma'(t_0)\neq \overrightarrow{0}\). Dizemos que \(\gamma'(t_0)\) é um \textbf{vetor tangente} à \(\gamma\) em \(\gamma(t_0)\). A reta \[\mathbf{X} = \gamma(t_0) + \lambda \gamma'(t_0),\; \lambda\in\R\] é chamada \textbf{reta tangente}\index{Reta tangente} à \(\gamma\) em \(\gamma(t_0)\).
+\end{definition}
+
+A definição acima juntamente com o conhecimento da regra da cadeia nos auxilia a provar a seguinte observação:
+\begin{remark}
+    Sejam \(f(x,y)\) diferenciável em \((x_0,y_0)\) e \(\gamma(x(t),y(t),z(t))\) uma curva diferenciável em \(t_0\) cuja imagem esteja contida no gráfico de \(f\). Seja \(\gamma(t_0) = (x_0,y_0,z_0)\). Então a reta tangente à \(\gamma\) no ponto \(\gamma(t_0)\) está contida no plano tangente ao gráfico de \(f\) no ponto \(\gamma(t_0)\).
+    \begin{figure}[htbp]
+        \centering
+            \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+            \begin{tikzpicture}[x=0.65pt,y=0.65pt,yscale=-1,xscale=1]
+            %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+            %Curve Lines [id:da17670005241740594] 
+            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=0.25 ]   (84.25,178.89) .. controls (146.12,89.42) and (229.88,91.32) .. (272.71,101.79) .. controls (315.54,112.26) and (321.25,142.72) .. (334.58,173.18) .. controls (347.9,203.64) and (220.36,89.42) .. (209.89,173.18) .. controls (199.42,256.94) and (173.72,138.91) .. (84.25,178.89) -- cycle ;
+            %Shape: Rectangle [id:dp7346487441902103] 
+            \draw  [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][fill={rgb, 255:red, 126; green, 211; blue, 33 }  ,fill opacity=0.15 ][dash pattern={on 0.84pt off 2.51pt}] (139.26,97.85) -- (354.3,97.85) -- (294.1,141.84) -- (79.06,141.84) -- cycle ;
+            %Straight Lines [id:da05448578509719837] 
+            \draw    (174.34,208.59) -- (174.34,23.17) ;
+            \draw [shift={(174.34,21.17)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da6591357556624786] 
+            \draw    (174.34,208.59) -- (346.6,208.59) ;
+            \draw [shift={(348.6,208.59)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da5286688818467165] 
+            \draw    (174.34,208.59) -- (116.01,266.92) ;
+            \draw [shift={(114.6,268.33)}, rotate = 315] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Curve Lines [id:da3433346970353224] 
+            \draw [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,draw opacity=1 ]   (188.09,168.06) .. controls (224.5,104.72) and (197.37,118.81) .. (280.9,127.37) ;
+            %Shape: Ellipse [id:dp7953694428081411] 
+            \draw  [draw opacity=0][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (213.7,119.85) .. controls (213.7,118.2) and (215.03,116.86) .. (216.68,116.86) .. controls (218.33,116.86) and (219.66,118.2) .. (219.66,119.85) .. controls (219.66,121.49) and (218.33,122.83) .. (216.68,122.83) .. controls (215.03,122.83) and (213.7,121.49) .. (213.7,119.85) -- cycle ;
+            %Shape: Ellipse [id:dp6407760093137244] 
+            \draw  [draw opacity=0][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (215.13,265.74) .. controls (215.13,264.1) and (216.46,262.76) .. (218.11,262.76) .. controls (219.75,262.76) and (221.09,264.1) .. (221.09,265.74) .. controls (221.09,267.39) and (219.75,268.72) .. (218.11,268.72) .. controls (216.46,268.72) and (215.13,267.39) .. (215.13,265.74) -- cycle ;
+            %Curve Lines [id:da31145646024948903] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (215.22,112.05) .. controls (200.06,87.94) and (180.28,65.8) .. (191.1,52.74) ;
+            \draw [shift={(192.4,51.35)}, rotate = 136.55] [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+            %Straight Lines [id:da7304532116258952] 
+            \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (176.54,154.6) -- (255.31,86.4) ;
+            \draw [shift={(256.82,85.09)}, rotate = 139.11] [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=0.75]    (7.65,-3.43) .. controls (4.86,-1.61) and (2.31,-0.47) .. (0,0) .. controls (2.31,0.47) and (4.86,1.61) .. (7.65,3.43)   ;
+
+            % Text Node
+            \draw (116.6,271.73) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (147.08,8.63) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$z$};
+            % Text Node
+            \draw (350.6,211.99) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            % Text Node
+            \draw (60.88,175.63) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.96,0.65,0.14}{G}\textcolor[rgb]{0.96,0.65,0.14}{_{f}}$};
+            % Text Node
+            \draw (199.58,276.19) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
+            % Text Node
+            \draw (193.83,38.62) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,f}\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
+            % Text Node
+            \draw (367.31,75.88) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.49,0.83,0.13}{z\ =\ T}\textcolor[rgb]{0.49,0.83,0.13}{(}\textcolor[rgb]{0.49,0.83,0.13}{x,y}\textcolor[rgb]{0.49,0.83,0.13}{)}$};
+            % Text Node
+            \draw (274.71,105.19) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,opacity=1 ]  {$\gamma ( t)$};
+            % Text Node
+            \draw (259.4,69.1) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{\gamma '( t_{0})}$};
+            \end{tikzpicture}
+        \caption{A reta tangente à uma curva está contida no plano tangente}
+        \label{fig:RetaTangenteNoPlanoTangente}
+    \end{figure}
+
+    De fato, lembre que \[(x,y,z)\in G_f \Leftrightarrow z = f(x,y).\] Como \(\gamma(t) = (x(t),y(t),z(t))\) está contida no gráfico de \(f\), então \[z(t) = f(x(t),y(t)).\]
+
+    Por outro lado, como \(f\) é diferenciável em \((x_0,y_0) = (x(t_0),y(t_0))\) e \(x(t)\) e \(y(t)\) são diferenciáveis em \(t_0\), segue da regra da cadeia que
+        \begin{equation}\label{eqn.RegraDaCadeia2}
+            z'(t) = \frac{\partial f}{\partial x}(x_0,y_0)\cdot x'(t) + \frac{\partial f}{\partial y}(x_0,y_0)\cdot y'(t_0).
+        \end{equation}
+    Agora, sabemos que a equação da reta tangente à \(\gamma\) em \(\gamma'(t_0)\) é \[(x,y,z) = \gamma(t_0) + \lambda \gamma'(t_0) = (x_0 + \lambda x'(t_0), y_0 + \lambda y'(t_0), f(x_0,y_0) + \lambda z'(t_0)),\; \lambda\in\R.\] Precisamos mostrar que, para todo \(\lambda\in\R\), o ponto \[(x_0 + \lambda x'(t_0), y_0 + \lambda y'(t_0), f(x_0,y_0) + \lambda z'(t_0))\] pertence ao plano tangente
+        \begin{equation}\label{eqn.PlanoTangente4}
+            z = f(x_0,y_0) + \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y - y_0).
+        \end{equation}
+    Ou seja, fazendo \(x = x_0 + \lambda x'(t_0)\) e \(y = y_0 + \lambda y'(t_0)\) em \eqref{eqn.PlanoTangente4}, devemos obter que \[z = f(x_0,y_0) + \lambda z'(t_0).\]
+
+    De fato, fazendo \(x = x_0 + \lambda x'(t_0)\) e \(y = y_0 + \lambda y'(t_0)\) em \eqref{eqn.PlanoTangente4} obtemos
+        \begin{align*}
+            z
+                & = f(x_0,y_0) + \frac{\partial f}{\partial x}(x_0,y_0) \lambda x'(t_0) + \frac{\partial}{\partial y}(x_0,y_0) \lambda y'(t_0) \\
+                & = f(x_0,y_0) + \lambda\left( \frac{\partial f}{\partial x}(x_0,y_0) x'(t_0) + \frac{\partial}{\partial y}(x_0,y_0)  y'(t_0) \right) \\
+                & = f(x_0,y_0) + \lambda z'(t_0).
+        \end{align*}
+    Portanto, a reta tangente à \(\gamma\) em \(\gamma(t_0)\) está contida no plano tangente ao gráfico de \(f\) no ponto \(\gamma(t_0) = (x_0,y_0,f(x_0,y_0))\).
+\end{remark}
+
+Note que na observação acima mostramos que o plano tangente ao gráfico de \(f\) em \((x_0,y_0,f(x_0,y_0))\) contem ``todas'' as retas tangentes a este ponto.
+
+\section{Derivadas de funções dadas implicitamente}
+
+\subsection{Caso 1}
+    \subsubsection{(a)} Sabemos que a função \(y = g(x)\)  é \textit{definida implicitamente} pela equação \(f(x,y) = 0\) se, para todo \(x\in D_g\), \[f(x,g(x)) = 0.\] Assim, se \(f\) e \(g\) diferenciáveis, temos que \[\frac{d}{dx} f(x,g(x)) = 0.\] Da regra da cadeia, obtemos \[\frac{\partial f}{\partial x}(x,g(x)) \frac{d}{dx} + \frac{\partial f}{\partial y} (x,g(x)) \frac{dy}{dx} = 0,\] logo
+        \begin{equation}\label{eqn.TeoremaDaFuncaoImplicita}
+            \frac{dy}{dx} = \frac{-\frac{\partial f}{\partial x}(x,g(x))}{\frac{\partial f}{\partial y}(x,g(x))} = - \frac{\frac{\partial f}{\partial x}(x,y)}{\frac{\partial f}{\partial y}(x,y)} 
+        \end{equation}
+    desde que \(\frac{\partial f}{\partial y}(x,g(x)) \neq 0\).
+
+    \subsubsection{(b)} Analogamente, a função \(x = h(y)\) é definida implicitamente pela equação \(f(x,y) = 0\) se, para todo \(y\in D_h\), \[f(h(y),y) = 0.\] Se \(f\) e \(h\) são diferenciáveis, então \[\frac{d}{dy} f(h(y),y) = 0,\] portanto, da regra da cadeia, \[\frac{\partial f}{\partial x}(h(y),y) \frac{dx}{dy} + \frac{\partial f}{\partial y}(h(y),y)\frac{dy}{dy} = 0,\] logo
+        \begin{equation}\label{eqn.TeoremaDaFuncaImplicita1}
+            \frac{dx}{dy} = \frac{-\frac{\partial f}{\partial y}(h(y),y)}{\frac{\partial f}{\partial x}(h(y),y)} = - \frac{\frac{\partial f}{\partial y}(x,y)}{\frac{\partial f}{\partial x}(x,y)}
+        \end{equation}
+    desde que \(\frac{\partial f}{\partial x}(h(y),y) \neq 0\).
+
+\begin{example}
+    Considere \(y = y(x)\) definida implicitamente pela equação \[y^3 + xy + x^3 = 3.\] Expresse \(\frac{dy}{dx}\) em termos de \(x\) e \(y\).
+
+    Temos que \[y^3 + xy + x^3 - 3 = 0\] define \(y = y(x)\) implicitamente, portanto, por \eqref{eqn.TeoremaDaFuncaoImplicita} \[\frac{dy}{dx} = -\frac{\frac{\partial f}{\partial x}(x,y)}{\frac{\partial f}{\partial y}(x,y)} = - \frac{y+3x^2}{3y^2 + x},\] para todo \(x\in D_g\), com \(3y^2 + x = 3y^2(x) + x \neq 0\).
+
+    De outra forma, \[\frac{d}{dx}(y^3 + xy + x^3) = \frac{d}{dx}(3) \Rightarrow 3y^2 \frac{dy}{dx} + y + x \frac{dy}{dx} + 3x^2 = 0 \Rightarrow \frac{dy}{dx} = - \frac{y+3x^2}{3y^2 + x},\] dado que \(3y^2 + x \neq 0\).
+\end{example}
+
+\subsection{Caso 2}
+    \subsubsection{(a)} A função \(z = g(x,y)\) é definida implicitamente pela equação \(f(x,y,z) = 0\) se, para todo \((x,y)\in D_g\), \[f(x,y,g(x,y)) = 0.\] Suponha que \(f\) e \(g\) são diferenciáveis e que \[\frac{d}{dx}(f(x,y,g(x,y))) = 0,\] daí \[\frac{\partial f}{\partial x}(x,y,z) \frac{\partial x}{\partial x} + \frac{\partial f}{\partial y}(x,y,z)\frac{\partial y}{\partial x} + \frac{\partial f}{\partial z}(x,y,z)\frac{\partial z}{\partial x} = 0,\] ou ainda
+        \begin{equation}\label{eqn.TeoremaDaFuncaImplicita2}
+            \frac{\partial z}{\partial x} = \frac{- \frac{\partial f}{\partial x}(x,y,z)}{\frac{\partial f}{\partial z}(x,y,z)} = - \frac{\frac{\partial f}{\partial x}(x,y,g(x,y))}{\frac{\partial f}{\partial z}(x,y,g(x,y))},
+        \end{equation}
+    desde que \(\frac{\partial f}{\partial z}(x,y,g(x,y))\neq 0.\)
+
+    Agora, se \(f\) e \(g\) são diferenciáveis e \[\frac{\partial}{\partial y}(f(x,y,g(x,y))) = 0,\] então \[\frac{\partial f}{\partial x}(x,y,z) \frac{\partial x}{\partial y} + \frac{\partial f}{\partial y}(x,y,z)\frac{\partial y}{\partial y} + \frac{\partial f}{\partial z}(x,y,z)\frac{\partial z}{\partial y} = 0,\] portanto
+        \begin{equation}\label{eqn.TeoremaDaFuncaImplicita3}
+            \frac{\partial z}{\partial y} = \frac{-\frac{\partial f}{\partial y}(x,y,z)}{\frac{\partial f}{\partial z}(x,y,z)} = - \frac{\frac{\partial f}{\partial y}(x,y,g(x,y))}{\frac{\partial f}{\partial z}(x,y,g(x,y))},
+        \end{equation}
+    desde que \(\frac{\partial f}{\partial z}(x,y,z) \neq 0.\)
+
+    \subsubsection{(b)} Um raciocínio análogo vale para \(x = h(y,z)\) e \(y = k(x,z)\) definidas implicitamente pela equação \(f(x,y,z) = 0\).
+
+\begin{example}
+    A função diferenciável \(z = z(x,y)\) é dada implicitamente pela equação \[xyz + x^3 + y^3 + z^3 = 5.\] Expresse \(\frac{\partial z}{\partial x}\) em termos de \(x, y\) e \(z\).
+
+    Temos que \(z = z(x,y)\) é dada implicitamente por \[ xyz + x^3 + y^3 + z^3 - 5 = 0, \] logo, por \eqref{eqn.TeoremaDaFuncaImplicita2}, \[\frac{\partial z}{\partial x} = \frac{- \frac{\partial f}{\partial x}(x,y,z)}{\frac{\partial f}{\partial z}(x,y,z)} = - \frac{yz+3x^2}{xy + 3z^2}.\] Também podemos obter \(\frac{\partial z}{\partial x}\) usando derivação implícita \[\frac{\partial}{\partial x}(xyz + x^3 + y^3 + z^3) = \frac{\partial}{\partial x}(5) \Rightarrow yz + xy \frac{\partial z}{\partial x} + 3x^2 + 3z\frac{\partial z}{\partial x} = 0 \Rightarrow \frac{\partial z}{\partial x} = - \frac{yz+3x^2}{xy + 3z^2}.\]
+\end{example}
+
+\subsection{Caso 3}
+    Sejam \(y = y(x)\) e \(z = z(x)\) definidas no intervalo \(I\). Dizer que \(y = y(x)\) e \(z = z(x)\) estão definidas implicitamente pelo sistema
+        \[\begin{cases}
+            F(x,y,z) = 0,\\
+            G(x,y,z) = 0
+        \end{cases}\]
+    com \(F\) e \(G\) diferenciáveis num aberto de \(\R^3\) significa que, para todo \(x\in I\), \[F(x,y(x),z(x)) = 0 = G(x,y(x),z(x)),\] ou seja, a imagem da curva \(\gamma(t) = (x,y(t),z(t))\) está contida na interseção das superfícies \(F(x,y,z) = 0\) e \(G(x,y,z) = 0\).
+
+    Se \(y = y(x)\) e \(z = z(x)\) são diferenciáveis em \(I\), então
+        \[\begin{cases}
+            \frac{d}{dx} F(x,y,z) = 0,\\
+            \frac{d}{dx} G(x,y,z) = 0
+        \end{cases}\]
+    ou seja
+        \[\begin{cases}
+            \frac{\partial F}{\partial x} \frac{dx}{dx} + \frac{\partial F}{\partial y} \frac{dy}{dx} + \frac{\partial F}{\partial z} \frac{dz}{dx} = 0, \\
+            \frac{\partial G}{\partial x} \frac{dx}{dx} + \frac{\partial G}{\partial y} \frac{dy}{dx} + \frac{\partial G}{\partial z} \frac{dz}{dx} = 0.
+        \end{cases}\]
+    Assim,
+        \[\begin{cases}
+            \frac{\partial F}{\partial y} \frac{dy}{dx} + \frac{\partial F}{\partial z} \frac{dz}{dx} = - \frac{\partial F}{\partial x}, \\
+            \frac{\partial F}{\partial y} \frac{dy}{dx} + \frac{\partial F}{\partial z} \frac{dz}{dx} = - \frac{\partial G}{\partial x}.
+        \end{cases}\]
+    Pela regra de Crammer,
+        \[\frac{dy}{dx} = -\frac{\left|\begin{matrix}
+            \frac{\partial F}{\partial x} & \frac{\partial F}{\partial z} \\ \frac{\partial G}{\partial x} & \frac{\partial G}{\partial z}
+        \end{matrix}\right|}{\left|\begin{matrix}
+            \frac{\partial F}{\partial y} & \frac{\partial F}{\partial z} \\ \frac{\partial G}{\partial y} & \frac{\partial G}{\partial z}
+        \end{matrix}\right|} 
+        \text{ e } 
+        \frac{dz}{dx} = -\frac{\left|\begin{matrix}
+            \frac{\partial F}{\partial y} & \frac{\partial F}{\partial z} \\ \frac{\partial G}{\partial y} & \frac{\partial G}{\partial x}
+        \end{matrix}\right|}{\left|\begin{matrix}
+            \frac{\partial F}{\partial y} & \frac{\partial F}{\partial z} \\ \frac{\partial G}{\partial y} & \frac{\partial G}{\partial z}
+        \end{matrix}\right|},\; \forall\, x\in I \text{ tal que } \left|\begin{matrix}
+            \frac{\partial F}{\partial y} & \frac{\partial F}{\partial z} \\ \frac{\partial G}{\partial y} & \frac{\partial G}{\partial z}
+        \end{matrix}\right| \neq 0.\]
+
+    A partir de agora, denotamos \[ \frac{\partial(F,G)}{\partial(y,z)} = \left|\begin{matrix}
+            \frac{\partial F}{\partial y} & \frac{\partial F}{\partial z} \\ \frac{\partial G}{\partial y} & \frac{\partial G}{\partial z}
+        \end{matrix}\right|, \frac{\partial(F,G)}{\partial(x,z)} = \left|\begin{matrix}
+            \frac{\partial F}{\partial x} & \frac{\partial F}{\partial z} \\ \frac{\partial G}{\partial x} & \frac{\partial G}{\partial z}
+        \end{matrix}\right| \text{ e } \frac{\partial(F,G)}{\partial(y,x)} = \left|\begin{matrix}
+            \frac{\partial F}{\partial y} & \frac{\partial F}{\partial z} \\ \frac{\partial G}{\partial y} & \frac{\partial G}{\partial x}
+        \end{matrix}\right|,\] com essa notação,
+            \begin{equation}\label{eqn.DerivadaImplicita}
+                \frac{dy}{dx} = \frac{-\frac{\partial(F,G)}{\partial(x,z)}}{\frac{\partial(F,G)}{\partial(y,z)}} \text{ e } \frac{dz}{dx} = \frac{-\frac{\partial(F,G)}{\partial(y,x)}}{\frac{\partial(F,G)}{\partial(y,z)}}.
+            \end{equation}
+        
+        \begin{example}
+            Sejam \(y = y(x)\) e \(z = z(x)\) diferenciáveis em \(\R\) e dadas implicitamente pelo sistema
+                \[\begin{cases}
+                    2x + y - z = 3 \\
+                    x + y + z = 1
+                \end{cases}.\]
+            Calcule \(\frac{dy}{dx}\) e \(\frac{dz}{dx}\) e determine um par de funções \(y=y(x)\) e \(z = z(x)\) que sejam dadas implicitamente pelo sistema acima.
+
+            Para calcular as derivadas solicitadas, podemos reescreve o sistema como
+                \[\begin{cases}
+                    2x + y - z - 3 = 0\;\; (F(x,y,z))\\
+                    x + y + z - 1 = 0\;\; (G(x,y,z))
+                \end{cases}\]
+            e, usando \eqref{eqn.DerivadaImplicita} obtemos
+                \[\frac{dy}{dx} = \frac{-\frac{\partial(F,G)}{\partial(x,z)}}{\frac{\partial(F,G)}{\partial(y,z)}} = -\frac{\left|\begin{matrix}
+                    2 & -1 \\ 1 & 1
+                \end{matrix}\right|}{\left|\begin{matrix}
+                    1 & -1 \\ 1 & 1
+                \end{matrix}\right|} = -\frac{3}{2} \text{ e } \frac{dz}{dx} = -\frac{-\frac{\partial(F,G)}{\partial(y,x)}}{\frac{\partial(F,G)}{\partial(y,z)}} = \frac{\left|\begin{matrix}
+                    1 & 2 \\ 1 & 1
+                \end{matrix}\right|}{\left|\begin{matrix}
+                    1 & -1 \\ 1 & 1
+                \end{matrix}\right|} = -\frac{(-1)}{2} = \frac{1}{2}.\]
+
+            Além disso, o sistema dado equivale a
+                \[\begin{cases}
+                    y - z = 3 - 2x \\
+                    y + z = 1 - x
+                \end{cases},\] somando a primeira e a segunda linhas, obtemos que \(2y = 4 - 3x\), portanto \(y = y(x) = 2 - \frac{3}{2}x\). Agora, substituindo \(y\) na segunda linha, obtemos \(z = -1 + \frac{1}{2}x\).
+        \end{example}
+
+    \subsection{Os teoremas da Função Implícita}
+
+\begin{remark}
+    Note que no Caso 1 (a), supomos que \(y = g(x)\) é diferenciável e é definida implicitamente pela equação \(F(x,y) = 0\). Mas nem sempre sabemos quando isso acontece, por exemplo, a equação \(x^2 + y^2 + 3 = 0\) não define implicitamente nenhuma função (Por quê?)
+\end{remark}
+
+O próximo teorema nos garante condições para que \(F(x,y) = 0\) de fato defina implicitamente \(y = y(x)\).
+
+\begin{theorem}[Teorema da Função Implícita - \(F(x,y) = 0\)]\index{Teorema! Função Implícita}
+    Sejam \(F(x,y)\) definida num aberto \(A\subset\R^2\) e \((x_0,y_0)\in A\) tal que \(F(x_0,y_0) = 0\). Se \(\frac{\partial F}{\partial y}(x_0,y_0) \neq 0\) e \(\frac{\partial F}{\partial x}\) e \(\frac{\partial F}{\partial y}\) são contínuas em \(A\), então a equação \(F(x,y) = 0\) define implicitamente \(y\) como função de \(x\) (ou seja, \(y = y(x)\)) próximo de \((x_0,y_0)\), com \(y(x_0) = y_0\) e \[\frac{dy}{dx} = - \frac{\frac{\partial F}{\partial x}(x,y)}{\frac{\partial F}{\partial y}(x,y)} = - \frac{\frac{\partial F}{\partial x}(x,y(x))}{\frac{\partial F}{\partial y}(x,y(x))}.\]
+\end{theorem}
+\textbf{Prova. } \cite{guidorizzi}[pg.235]
+
+\begin{exercise}
+    Enuncie um teorema semelhante para que \(F(x,y) = 0\) defina implicitamente \(x = x(y)\).
+\end{exercise}
+
+\begin{theorem}[Função Implícita - \(F(x,y,z) = 0\)]\index{Teorema! Função Implícita}
+    Sejam \(F(x,y,z)\) definida num aberto \(A\subset\R^3\) e \((x_0,y_0,z_0)\in A\) tal que \(F(x_0,y_0,z_0) = 0\). Se \(\frac{\partial F}{\partial x}, \frac{\partial F}{\partial y}\) e \(\frac{\partial F}{\partial z}\) são contínuas em \(A\) e \(\frac{\partial F}{\partial z}(x_0,y_0,z_0) \neq 0\), então \(F(x,y,z) = 0\) define implicitamente \(z = z(x,y)\) e \[\frac{\partial z}{\partial x} = \frac{- \frac{\partial f}{\partial x}(x,y,z)}{\frac{\partial f}{\partial z}(x,y,z)} \text{ e } \frac{\partial z}{\partial y} = \frac{-\frac{\partial f}{\partial y}(x,y,z)}{\frac{\partial f}{\partial z}(x,y,z)}\]
+\end{theorem}
+
+\begin{exercise}
+    Enuncie teoremas semelhantes para que \(F(x,y,z) = 0\) defina implicitamente \(x = x(y,z)\) e \(y = y(x,z)\).
+\end{exercise}
+
+\begin{remark}
+    Vale um teorema similar para o Caso 3.
+\end{remark}
 
 % \section{Gradiente e derivada direcional}
 
