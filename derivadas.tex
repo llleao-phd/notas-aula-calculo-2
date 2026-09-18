@@ -1576,9 +1576,505 @@ O próximo teorema nos garante condições para que \(F(x,y) = 0\) de fato defin
     Vale um teorema similar para o Caso 3.
 \end{remark}
 
-% \section{Gradiente e derivada direcional}
+\section{Gradiente e derivada direcional}
 
-% \section{Fórmula de Taylor}S
+\subsection{Interpretação geométrica do gradiente}
+
+\subsubsection{Funções de duas variáveis}
+
+Sejam \(f(x,y)\) definida num aberto \(A\subset\R^2\) e \((x_0,y_0)\in A\) tais que
+    \begin{itemize}
+        \item \(\frac{\partial f}{\partial x}\) e \(\frac{\partial f}{\partial y}\) sejam contínuas em \(A\);
+        \item \((x_0,y_0)\) seja um ponto da curva de nível \(f(x,y)=c\) (ou seja, \(f(x_0,y_0)=c\));
+        \item \(\nabla f(x_0,y_0) \neq (0,0)\) (portanto \(\frac{\partial f}{\partial x}(x_0,y_0) \neq 0\) ou \(\frac{\partial f}{\partial y}(x_0,y_0)\neq 0\)).
+    \end{itemize}
+
+Nas condições acima, segue pelo Teorema da Função Implícita que existe uma curva diferenciável \(\gamma: I\subset\R \to\R^2\) tal que
+    \begin{itemize}
+        \item \(\gamma(t) \in A\), para todo \(t\in I\),
+        \item \(\gamma(t_0) = (x_0,y_0)\),
+        \item \(f(\gamma(t)) = c\), para todo \(t\in I\), ou seja, a imagem de \(\gamma\) está contida na curva de nível \(f(x,y) = c\).
+    \end{itemize}
+Assim, como \(f(\gamma(t)) = c\), para todo \(t\in I\), \[\frac{d}{dt}f(\gamma(t)) = \frac{d}{dt}(c) = 0,\; \forall t\in I\] daí, pela Regra da Cadeia, \[\nabla f(\gamma(t))\bullet \gamma'(t) = 0\; \forall t\in I.\] Em particular, para \(t = t_0\), \[\nabla f(\gamma(t_0))\bullet \gamma'(t_0) = 0,\] ou seja \[\nabla f(x_0,y_0)\bullet \gamma'(t_0) = 0,\] geometricamente, concluímos que \(\nabla f(x_0,y_0)\) é \textit{perpendicular} à \(\gamma\) no ponto \(\gamma(t_0) = (x_0,y_0)\) e, portanto, perpendicular à curva de nível \(f(x,y) = c\) em \((x_0,y_0)\).
+    \begin{figure}[htbp]
+        \centering
+            \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+            \begin{tikzpicture}[x=0.65pt,y=0.65pt,yscale=-1,xscale=1]
+            %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+            %Straight Lines [id:da2765635866208771] 
+            \draw    (311.22,271.26) -- (311.22,48.46) ;
+            \draw [shift={(311.22,46.46)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da19617396162483047] 
+            \draw    (279.85,240.26) -- (520.6,240.26) ;
+            \draw [shift={(522.6,240.26)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da4353942796900455] 
+            \draw    (171.02,274) -- (171.02,51.2) ;
+            \draw [shift={(171.02,49.2)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da19343237711279604] 
+            \draw    (161.67,230.4) -- (181.27,230.67) ;
+            %Straight Lines [id:da21908560673991184] 
+            \draw    (162,101.4) -- (181.6,101.67) ;
+            %Straight Lines [id:da8892994673482743] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (161,199.73) -- (180.6,200) ;
+            %Straight Lines [id:da131206142265465] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (161,160.4) -- (180.6,160.67) ;
+            %Curve Lines [id:da8700562187218198] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (187,141.07) .. controls (226.2,111.67) and (262.45,121.58) .. (285.6,139.93) ;
+            \draw [shift={(287,141.07)}, rotate = 219.58] [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Shape: Polygon Curved [id:ds856368570884289] 
+            \draw  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=0.1 ][dash pattern={on 0.84pt off 2.51pt}] (376,57.9) .. controls (393,25.9) and (413.89,58.94) .. (442,55.9) .. controls (470.11,52.86) and (498.2,63) .. (478.2,83) .. controls (458.2,103) and (466.29,125.13) .. (478.2,143) .. controls (490.11,160.87) and (513.2,185.25) .. (470.2,219.25) .. controls (427.2,253.25) and (376.9,201.35) .. (345.7,185.25) .. controls (314.5,169.15) and (285.57,117.76) .. (296,87.9) .. controls (306.43,58.04) and (359,89.9) .. (376,57.9) -- cycle ;
+            %Curve Lines [id:da03925525240272154] 
+            \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (327,72.9) .. controls (465,92.9) and (462.2,173.75) .. (467.2,221.75) ;
+            %Shape: Circle [id:dp04739505022924473] 
+            \draw  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=1 ] (407.97,100.44) .. controls (407.97,99.42) and (408.79,98.6) .. (409.8,98.6) .. controls (410.82,98.6) and (411.64,99.42) .. (411.64,100.44) .. controls (411.64,101.45) and (410.82,102.27) .. (409.8,102.27) .. controls (408.79,102.27) and (407.97,101.45) .. (407.97,100.44) -- cycle ;
+            %Straight Lines [id:da010861432240874214] 
+            \draw    (410,230) -- (410,251) ;
+            %Straight Lines [id:da3828663159006106] 
+            \draw    (300,100) -- (320,100) ;
+            %Curve Lines [id:da22715682291951655] 
+            \draw [color={rgb, 255:red, 0; green, 54; blue, 119 }  ,draw opacity=1 ]   (380.4,85.44) .. controls (406,96.02) and (417,101.62) .. (435.2,120.64) ;
+            %Straight Lines [id:da14839944742441014] 
+            \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ] [dash pattern={on 4.5pt off 4.5pt}]  (330.11,45.45) -- (489.41,151.75) ;
+            %Straight Lines [id:da12202771671994306] 
+            \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (409.8,98.6) -- (373.46,74.38) ;
+            \draw [shift={(371.8,73.27)}, rotate = 33.68] [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+            %Straight Lines [id:da25674456315500305] 
+            \draw [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,draw opacity=1 ]   (409.76,98.6) -- (429.52,72.21) ;
+            \draw [shift={(430.72,70.61)}, rotate = 126.83] [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,draw opacity=1 ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+            %Shape: Square [id:dp15520262414722386] 
+            \draw   (408.42,89.72) -- (413.55,93.47) -- (409.8,98.6) -- (404.67,94.85) -- cycle ;
+            %Shape: Circle [id:dp8293039668865099] 
+            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (408.67,94.16) .. controls (408.67,93.92) and (408.87,93.72) .. (409.11,93.72) .. controls (409.35,93.72) and (409.55,93.92) .. (409.55,94.16) .. controls (409.55,94.4) and (409.35,94.6) .. (409.11,94.6) .. controls (408.87,94.6) and (408.67,94.4) .. (408.67,94.16) -- cycle ;
+
+            % Text Node
+            \draw (528.24,234.42) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (317.14,23.97) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            % Text Node
+            \draw (176.94,26.71) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\mathbb{R}$};
+            % Text Node
+            \draw (141.67,191.47) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{t}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}$};
+            % Text Node
+            \draw (144.67,151.47) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{t}$};
+            % Text Node
+            \draw (229,99.13) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{\gamma }$};
+            % Text Node
+            \draw (481.2,196.4) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{f( x,y) \ =\ c}$};
+            % Text Node
+            \draw (380.7,249.5) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$x_{0} \ =\ x( t_{0})$};
+            % Text Node
+            \draw (236.2,78.9) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$y_{0} \ =\ y( t_{0})$};
+            % Text Node
+            \draw (396.07,107.33) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 0; green, 54; blue, 119 }  ,opacity=1 ]  {$\textcolor[rgb]{0,0.21,0.47}{\gamma }$};
+            % Text Node
+            \draw (504.6,144.4) node [anchor=north west][inner sep=0.75pt]    {$ \begin{array}{l}
+            \textcolor[rgb]{0.82,0.01,0.11}{Reta\ tangente\ à\ }\\
+            \textcolor[rgb]{0.82,0.01,0.11}{f( x,y) \ =\ c\ em\ ( x_{0} ,y_{0})}
+            \end{array}$};
+            % Text Node
+            \draw (380.6,57.4) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$\textcolor[rgb]{0.82,0.01,0.11}{\gamma '( t_{0})}$};
+            % Text Node
+            \draw (431.08,67.34) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$\textcolor[rgb]{0.56,0.07,1}{\nabla f( x_{0} ,y_{0})}$};
+            \end{tikzpicture}
+        \caption{Interpretação geométrica do gradiente}
+        \label{fig:InterpretacaoGradiente}
+    \end{figure}
+
+Nas condições acima, definimos
+\begin{definition}
+    Dizemos que \(\nabla f(x_0,y_0)\) é um \textbf{vetor normal} à curva de nível \(f(x,y) = c\) em \((x_0,y_0)\).
+\end{definition}
+
+\begin{definition}
+    A reta que passa por \((x_0,y_0)\) e é perpendicular à \(\nabla f(x_0,y_0)\) se chama \textbf{reta tangente} à curva de nível \(f(x,y) = c\) em \((x_0,y_0)\). A equação dessa reta é dada por \[\nabla f(x_0,y_0)\bullet[(x,y) - (x_0,y_0)] = 0,\] ou ainda \[(x,y) = (x_0,y_0) + \lambda\overrightarrow{v},\; \lambda\in\R\] com \(\overrightarrow{v} // \gamma'(t_0).\)
+\end{definition}
+
+\begin{example}
+    Seja \(\gamma: I\subset\R \to \R\) uma curva tal que \(\gamma(t)\) passa pelo ponto \((1,2)\) e \(f(\gamma(t)) = 6\), para todo \(t\in I\), e \(f(x,y) = x^3 y^3 - xy\).
+
+    Suponha que \(\gamma(t_0) = (1,2)\) e \(\gamma'(t_0)\neq\overrightarrow{0}\).
+
+    Determine a equação da reta tangente \(\gamma\) em \((1,2)\).
+
+    Primeiro note que, por hipótese, \[f(\gamma(t)) = 6,\; \forall t\in I,\] o que implica que \(\gamma(t)\in D_f = \R^2\), para todo \(t\in I\) e que \(Im_\gamma\) está contida na curva de nível \(f(x,y) = 6\).
+    \begin{figure}[htbp]
+        \centering
+            \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+            \begin{tikzpicture}[x=0.65pt,y=0.65pt,yscale=-1,xscale=1]
+            %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+            %Straight Lines [id:da7340119791402004] 
+            \draw    (331.22,285.16) -- (331.22,62.36) ;
+            \draw [shift={(331.22,60.36)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da3777766518096842] 
+            \draw    (299.85,254.16) -- (540.6,254.16) ;
+            \draw [shift={(542.6,254.16)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da8812527264132952] 
+            \draw    (191.02,287.9) -- (191.02,65.1) ;
+            \draw [shift={(191.02,63.1)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da262691205966351] 
+            \draw    (181.67,244.3) -- (201.27,244.57) ;
+            %Straight Lines [id:da7086922317202445] 
+            \draw    (182,115.3) -- (201.6,115.57) ;
+            %Straight Lines [id:da986507823544732] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (181,174.3) -- (200.6,174.57) ;
+            %Curve Lines [id:da2926789238356128] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (207,154.97) .. controls (246.2,125.57) and (282.45,135.48) .. (305.6,153.83) ;
+            \draw [shift={(307,154.97)}, rotate = 219.58] [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Curve Lines [id:da64134661629674] 
+            \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (347,86.8) .. controls (485,106.8) and (482.2,187.65) .. (487.2,235.65) ;
+            %Shape: Circle [id:dp5339135657002511] 
+            \draw  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=1 ] (427.97,114.34) .. controls (427.97,113.32) and (428.79,112.5) .. (429.8,112.5) .. controls (430.82,112.5) and (431.64,113.32) .. (431.64,114.34) .. controls (431.64,115.35) and (430.82,116.18) .. (429.8,116.18) .. controls (428.79,116.18) and (427.97,115.35) .. (427.97,114.34) -- cycle ;
+            %Straight Lines [id:da596397939323745] 
+            \draw    (430,243.9) -- (430,264.9) ;
+            %Straight Lines [id:da6395322201884418] 
+            \draw    (320,113.9) -- (340,113.9) ;
+            %Curve Lines [id:da5789294008770999] 
+            \draw [color={rgb, 255:red, 0; green, 54; blue, 119 }  ,draw opacity=1 ]   (400.4,99.34) .. controls (426,109.92) and (437,115.52) .. (455.2,134.54) ;
+            %Straight Lines [id:da7866990083584378] 
+            \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ] [dash pattern={on 4.5pt off 4.5pt}]  (350.11,59.35) -- (509.41,165.65) ;
+            %Straight Lines [id:da9794842187840677] 
+            \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (429.8,112.5) -- (393.46,88.28) ;
+            \draw [shift={(391.8,87.18)}, rotate = 33.68] [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+            %Straight Lines [id:da7873991351501629] 
+            \draw [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,draw opacity=1 ]   (429.76,112.5) -- (449.52,86.11) ;
+            \draw [shift={(450.72,84.51)}, rotate = 126.83] [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,draw opacity=1 ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+            %Shape: Square [id:dp71343078268427] 
+            \draw   (428.42,103.62) -- (433.55,107.37) -- (429.8,112.5) -- (424.67,108.75) -- cycle ;
+            %Shape: Circle [id:dp6255218946742338] 
+            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (428.67,108.06) .. controls (428.67,107.82) and (428.87,107.62) .. (429.11,107.62) .. controls (429.35,107.62) and (429.55,107.82) .. (429.55,108.06) .. controls (429.55,108.3) and (429.35,108.5) .. (429.11,108.5) .. controls (428.87,108.5) and (428.67,108.3) .. (428.67,108.06) -- cycle ;
+
+            % Text Node
+            \draw (548.24,248.32) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (337.14,37.87) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            % Text Node
+            \draw (196.94,40.61) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\mathbb{R}$};
+            % Text Node
+            \draw (161.67,167.37) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{t}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}$};
+            % Text Node
+            \draw (249,113.03) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{\gamma }$};
+            % Text Node
+            \draw (501.2,210.3) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{f}\textcolor[rgb]{0.29,0.56,0.89}{(}\textcolor[rgb]{0.29,0.56,0.89}{x,y}\textcolor[rgb]{0.29,0.56,0.89}{)}\textcolor[rgb]{0.29,0.56,0.89}{\ =\ 6}$};
+            % Text Node
+            \draw (424,269.3) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$1$};
+            % Text Node
+            \draw (308.2,99.8) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$2$};
+            % Text Node
+            \draw (416.07,121.23) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 0; green, 54; blue, 119 }  ,opacity=1 ]  {$\textcolor[rgb]{0,0.21,0.47}{\gamma }$};
+            % Text Node
+            \draw (524.6,158.3) node [anchor=north west][inner sep=0.75pt]    {$ \begin{array}{l}
+            \textcolor[rgb]{0.82,0.01,0.11}{Reta\ tangente\ \'a\ }\\
+            \textcolor[rgb]{0.82,0.01,0.11}{f}\textcolor[rgb]{0.82,0.01,0.11}{(}\textcolor[rgb]{0.82,0.01,0.11}{x,y}\textcolor[rgb]{0.82,0.01,0.11}{)}\textcolor[rgb]{0.82,0.01,0.11}{\ =\ c\ em\ }\textcolor[rgb]{0.82,0.01,0.11}{(}\textcolor[rgb]{0.82,0.01,0.11}{x}\textcolor[rgb]{0.82,0.01,0.11}{_{0}}\textcolor[rgb]{0.82,0.01,0.11}{,y}\textcolor[rgb]{0.82,0.01,0.11}{_{0}}\textcolor[rgb]{0.82,0.01,0.11}{)}
+            \end{array}$};
+            % Text Node
+            \draw (400.6,71.3) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$\textcolor[rgb]{0.82,0.01,0.11}{\gamma '}\textcolor[rgb]{0.82,0.01,0.11}{(}\textcolor[rgb]{0.82,0.01,0.11}{t}\textcolor[rgb]{0.82,0.01,0.11}{_{0}}\textcolor[rgb]{0.82,0.01,0.11}{)}$};
+            % Text Node
+            \draw (451.08,81.24) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$\textcolor[rgb]{0.56,0.07,1}{\nabla f}\textcolor[rgb]{0.56,0.07,1}{( 1,2}\textcolor[rgb]{0.56,0.07,1}{)}$};
+            \end{tikzpicture}
+        \caption{Interpretação geométrica do gradiente da função \(f(x,y) = x^3y^3 - xy\)}
+        \label{fig:InterpretacaoGradiente1}
+    \end{figure}
+
+    Note ainda que a equação da reta tangente à \(\gamma\) em \(\gamma(t_0) = (1,2)\) coincide com a reta tangente à curva de nível \(f(x,y) = 6\) em \((1,2)\). Logo, a equação dessa reta é dada por \[\nabla f(1,2) \bullet [(x,y) - (1,2)] = 0.\]
+
+    Agora \[\nabla f(x,y) = \left( \frac{\partial f}{\partial x}(x,y), \frac{\partial f}{\partial y} = (3x^2y^3 - y, 3x^3y^2 - x) \right),\] em particular \[\nabla f(1,2) = (3(1)^2(2)^3 - 2, 3(1)^3(2)^2 - 1) = (22,11),\] portanto \[(22,11)\bullet(x-1,y-2) = 0 \Leftrightarrow 2(x-1) + (y-2) = 0 \Leftrightarrow y = 4-2x.\] Em notação vetorial, note que \((-11,22)\) é perpendicular à \(\nabla f(1,2) = (22,11)\), portanto podemos escrever a equação da reta tangente à \(\gamma\) em \(\gamma(t_0)\) como \[(x,y) = (1,2) + \lambda(-11,22),\; \lambda\in\R.\]
+\end{example}
+
+\begin{remark}
+    Podemos utilizar o gradiente de uma função de 2 variáveis para obter a reta tangente e a reta normal ao gráfico de uma função de 1 variável \(y = g(x)\).
+
+    De fato, suponha que a função diferenciável \(y = g(x)\) seja dada implicitamente pela equação \(F(x,y) = 0\), com \(F\) diferenciável e \(\nabla F(x_0,y_0) \neq \overrightarrow{0}\), com \(y_0 = g(x_0)\).
+
+    Então, sabemos que \[F(x,g(x)) = 0,\; \forall x\in D_g,\] ou seja, a imagem da curva \(\gamma(x) = (x,g(x))\) está contida na curva de nível \(F(x,y) = 0.\) Assim, \(\nabla F(x_0,y_0)\) é \textit{normal} ao gráfico de \(g\) no ponto \((x_0,y_0)\).
+\end{remark}
+
+\begin{example}
+    Seja \(y = f(x)\) uma função diferenciável definida implicitamente pela equação \(y^3 + xy + x^3 = 3x\). Determine as equações das retas tangentes e normal do gráfico de \(f\) no ponto \((1,1)\).
+
+    Temos que \[y^3 + xy + x^3 = 3x \Leftrightarrow y^3 + xy + x^3 - 3x = 0\] e sabemos que \(\nabla F(1,,1)\) é perpendicular ao gráfico de \(f\) em \((1,1)\).
+
+    Agora, \(\nabla F(x,y) = (y + 3x^2 - 3, 3y^2 + x)\). Logo \(\nabla F(1,1) = (1,4)\) e a reta tangente é dada por \[\nabla F(1,1)\bullet[(x,y) - (1,1)] = 0 \Leftrightarrow (1,4)\bullet(x-1,y-1) = 0 \Leftrightarrow y = -\frac{1}{4}x + \frac{5}{4},\] e a reta normal tem equação \[(x,y) = (1,1) + \lambda(1,4),\; \lambda\in\R.\]
+\end{example}
+
+\subsubsection{Funções de três variáveis}
+
+Sejam \(f(x,y,z)\) definida num aberto \(A\subset\R^3\) e \((x_0,y_0,z_0)\in A\) tais que
+    \begin{itemize}
+        \item \(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\) e \(\frac{\partial f}{\partial z}\) sejam contínuas em \(A\);
+        \item \((x_0,y_0)\) seja um ponto da superfície de nível \(f(x,y,z)=c\) (ou seja, \(f(x_0,y_0,z_0)=c\));
+        \item \(\nabla f(x_0,y_0,z_0) \neq (0,0,0)\) (portanto \(\frac{\partial f}{\partial x}(x_0,y_0,z_0) \neq 0\) ou \(\frac{\partial f}{\partial y}(x_0,y_0,z_0)\neq 0\) ou \(\frac{\partial f}{\partial z}(x_0,y_0,z_0)\neq 0\)).
+    \end{itemize}
+
+Nas condições acima, segue pelo Teorema da Função Implícita que existe uma curva diferenciável \(\gamma: I\subset\R \to\R^3\) tal que
+    \begin{itemize}
+        \item \(\gamma(t) \in A\), para todo \(t\in I\),
+        \item \(\gamma(t_0) = (x_0,y_0,z_0)\),
+        \item \(f(\gamma(t)) = c\), para todo \(t\in I\), ou seja, a imagem de \(\gamma\) está contida na curva de nível \(f(x,y,z) = c\).
+    \end{itemize}
+
+Veremos a seguir que \(\nabla f(x_0,y_0,z_0)\) é perpendicular a ``toda'' curva \(\gamma\) nas condições acima.
+
+Note que, como \(f(\gamma(t)) = c\), para todo \(t\in I\), então \[\frac{d}{dt} f(\gamma(t)) = \frac{d}{dt}(c) = 0,\; \forall t\in I,\] o que implica, pela \textit{regra da cadeia} que \[\nabla f(\gamma(t))\bullet \gamma'(t) = 0,\; \forall t\in I.\] Em particular, para \(t = t_0\), \[\nabla f(\gamma(t))\bullet \gamma'(t_0) = 0,\] para qualquer curva diferenciável \(\gamma\) passando por \(\gamma(t_0) = (x_0,y_0,z_0)\) e contida na superfície de nível \(f(x,y,z) = c\).
+    \begin{figure}[htbp]
+        \centering
+            \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+            \begin{tikzpicture}[x=0.65pt,y=0.65pt,yscale=-1,xscale=1]
+            %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+            %Curve Lines [id:da38281027371458787] 
+            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=0.25 ]   (104.25,166.1) .. controls (166.12,76.63) and (249.88,78.53) .. (292.71,89) .. controls (335.54,99.47) and (341.25,129.93) .. (354.58,160.39) .. controls (367.9,190.85) and (240.36,76.63) .. (229.89,160.39) .. controls (219.42,244.15) and (193.72,126.12) .. (104.25,166.1) -- cycle ;
+            %Shape: Rectangle [id:dp048047931297456103] 
+            \draw  [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][fill={rgb, 255:red, 126; green, 211; blue, 33 }  ,fill opacity=0.15 ][dash pattern={on 0.84pt off 2.51pt}] (159.26,85.06) -- (374.3,85.06) -- (314.1,129.06) -- (99.06,129.06) -- cycle ;
+            %Straight Lines [id:da3724758443799837] 
+            \draw    (194.34,195.8) -- (194.34,10.38) ;
+            \draw [shift={(194.34,8.38)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da08505055982893439] 
+            \draw    (194.34,195.8) -- (366.6,195.8) ;
+            \draw [shift={(368.6,195.8)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da6279037815986882] 
+            \draw    (194.34,195.8) -- (136.01,254.13) ;
+            \draw [shift={(134.6,255.54)}, rotate = 315] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Curve Lines [id:da259586560093657] 
+            \draw [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,draw opacity=1 ]   (208.09,155.27) .. controls (244.5,91.93) and (217.37,106.02) .. (300.9,114.58) ;
+            %Shape: Ellipse [id:dp9422298941716731] 
+            \draw  [draw opacity=0][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (233.7,107.06) .. controls (233.7,105.41) and (235.03,104.07) .. (236.68,104.07) .. controls (238.33,104.07) and (239.66,105.41) .. (239.66,107.06) .. controls (239.66,108.7) and (238.33,110.04) .. (236.68,110.04) .. controls (235.03,110.04) and (233.7,108.7) .. (233.7,107.06) -- cycle ;
+            %Shape: Ellipse [id:dp9108194927766678] 
+            \draw  [draw opacity=0][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (235.13,252.95) .. controls (235.13,251.31) and (236.46,249.97) .. (238.11,249.97) .. controls (239.75,249.97) and (241.09,251.31) .. (241.09,252.95) .. controls (241.09,254.6) and (239.75,255.94) .. (238.11,255.94) .. controls (236.46,255.94) and (235.13,254.6) .. (235.13,252.95) -- cycle ;
+            %Straight Lines [id:da520907831374384] 
+            \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (236.68,107.06) -- (275.31,73.61) ;
+            \draw [shift={(276.82,72.3)}, rotate = 139.11] [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=0.75]    (7.65,-3.43) .. controls (4.86,-1.61) and (2.31,-0.47) .. (0,0) .. controls (2.31,0.47) and (4.86,1.61) .. (7.65,3.43)   ;
+            %Straight Lines [id:da5738493531773717] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (236.68,107.06) -- (236.54,47.43) ;
+            \draw [shift={(236.53,45.43)}, rotate = 89.86] [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+            % Text Node
+            \draw (136.6,258.94) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (174.42,8.51) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$z$};
+            % Text Node
+            \draw (370.6,199.2) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            % Text Node
+            \draw (219.58,263.4) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
+            % Text Node
+            \draw (379.31,67.1) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.49,0.83,0.13}{T}$};
+            % Text Node
+            \draw (294.71,92.4) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,opacity=1 ]  {$\gamma ( t)$};
+            % Text Node
+            \draw (279.4,56.31) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{\gamma '}\textcolor[rgb]{0.29,0.56,0.89}{(}\textcolor[rgb]{0.29,0.56,0.89}{t}\textcolor[rgb]{0.29,0.56,0.89}{_{0}}\textcolor[rgb]{0.29,0.56,0.89}{)}$};
+            % Text Node
+            \draw (219.8,26.07) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$\textcolor[rgb]{0.25,0.46,0.02}{\nabla f( x_{0} ,y_{0} ,z_{0})}$};
+            % Text Node
+            \draw (351.47,119.87) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.96,0.65,0.14}{f( x,y,z) \ =\ c}$};
+            \end{tikzpicture}
+        \caption{Interpretação geométrica do gradiente de uma função de três variáveis}
+        \label{fig:InterpretacaoGradiente2}
+    \end{figure}
+
+Dessa forma, temos que \(\nabla f(x_0,y_0,z_0)\) é perpendicular à \(\gamma\) no ponto \(\gamma(t_0) = (x_0,y_0,z_0)\) e, portanto, perpendicular ao plano tangente \(T\) à superfície de nível \(f(x,y,z) = c\) em \((x_0,y_0,z_0)\) (pois sabemos que \(\gamma'(t_0)\subset T\).)
+
+Neste caso temos as seguintes definições:
+\begin{definition}
+    Dizemos que \(\nabla f(x_0,y_0,z_0)\) é um \textbf{vetor normal} à superfície de nível \(f(x,y,z) = c\) em \((x_0,y_0,z_0)\). Neste caso, a \textbf{reta normal} a esta superfície em \((x_0,y_0,z_0)\) é \[(x,y,z) = (x_0,y_0,z_0) + \lambda\nabla f(x_0,y_0,z_0),\; \lambda\in\R.\]
+\end{definition}
+
+\begin{definition}
+    O plano que passa por \((x_0,y_0,z_0)\) e é perpendicular a \(\nabla f(x_0,y_0,z_0)\) é chamado \textbf{plano tangente} à superfície de nível \(f(x,y,z) = c\) em \((x_0,y_0,z_0)\). A equação desse plano é dada por \[\nabla f(x_0,y_0,z_0)\bullet[(x,y,z) - (x_0,y_0,z_0)] = 0.\]
+\end{definition}
+
+\begin{example}
+    Determine as equações do plano tangente e da reta normal à superfície \[xyz + x^3 + y^3 + z^3 = 3z,\] no ponto \((1,-1,2)\).
+
+    Temos que \[xyz + x^3 + y^3 + z^3 = 3z \Leftrightarrow xyz + x^3 + y^3 + z^3 - 3z = 0\] e \[\nabla f(x,y,z) = \left( \frac{\partial f}{\partial x}(x,y,z), \frac{\partial f}{\partial y}(x,y,z), \frac{\partial f}{\partial z}(x,y,z) \right) = (yz + 3x^2, xz + 3y^2, xy + 3z^2 - 3),\] logo \(\nabla f(1,-1,2) = (1,5,8)\), portanto o plano tangente em \((1,-1,2)\), \[\nabla f(1,-1,2)\bullet[(x,y,z) - (1,-1,2)] = 0 \Leftrightarrow (1,5,8)\bullet(x-1,y+1,z-2) = 0 \Leftrightarrow (x-1) + 5(y+1) + 8(z-2) = 0,\] e a reta normal em \((1,-1,2)\) é \[(x,y,z) = (1,-1,2) + \lambda \nabla f(1,-1,2) = (1,-1,2) + \lambda(1,5,8),\; \lambda\in\R.\]
+\end{example}
+
+\begin{remark}
+    Podemos utilizar o gradiente de uma função de três variáveis para obter o plano tangente e a reta normal ao gráfico de uma função de duas variáveis \(z = g(x,y)\).
+
+    De fato, suponha que a função diferenciável \(z = g(x,y)\) seja dada implicitamente pela equação \(F(x,y,z) = 0\), com \(F\) diferenciável, \(\nabla F(x_0,y_0,z_0) \neq \overrightarrow{0}\) e \(z_0 = g(x_0,y_0)\).
+
+    Dessa forma, \[F(x,y,g(x,y)) = 0,\; \forall (x,y)\in D_g,\] ou seja, a imagem da curva \(\gamma(x,y) = (x,y,g(x,y))\) está contida na superfície de nível \(F(x,y,z) = 0\). Assim \(\nabla F(x_0,y_0,z_0)\) é \textit{normal} ao gráfico de \(g\) no ponto \((x_0,y_0,z_0)\).
+\end{remark}
+
+\begin{exercise}
+    Seja \(z = f(x,y)\) dada por \(f(x,y) = \sqrt{8-3x^2 - y^2}\). Use a observação acima para encontrar o plano tangente ao gráfico de \(f\) em \((1,1,f(1,1))\).
+\end{exercise}
+
+\begin{remark}
+    Se \(\gamma\) é uma curva diferenciável com imagem contida na interseção das superfícies \(F(x,y,z) = 0\) e \(G(x,y,z) = 0\), com \(F\) e \(G\) diferenciáveis num aberto de \(\R^3\) e \(\nabla F(x_0,y_0,z_0) \times \nabla G(x_0,y_0,z_0) \neq \overrightarrow{0}\), então o vetor \(\gamma'(t_0)\), tangente a \(\gamma\) em \(\gamma(t_0) = (x_0,y_0,z_0)\), é paralelo a \[\nabla F(x_0,y_0,z_0)\times \nabla G(x_0,y_0,z_0).\]
+
+    (Justifique porque!)
+\end{remark}
+
+\begin{exercise}
+    A imagem da curva \(\gamma(t)\) está contida na interseção das superfícies \[x^2 + 2y^2 + z = 4 \text{ e } x^2 + y + z = 3.\] Suponha que \(\gamma(t_0) = (1,1,1)\) e \(\gamma'(t_0) \neq \overrightarrow{0}\).
+        \begin{enumerate}
+            \item Determine a reta tangente à \(\gamma\) em \(\gamma(t_0)\).
+            \item Determine uma curva \(\gamma\) nas condições acima.
+        \end{enumerate}
+\end{exercise}
+
+\subsection{Derivada direcional}
+
+Sejam \(z = f(x,y)\) uma função de duas variáveis e \((x_0,y_0)\in D_f\). Quando calculamos as derivadas parciais \[\frac{\partial f}{\partial x}(x_0,y_0) = \lim_{h\to 0} \frac{f(x_0+h,y_0) - f(x_0,y_0)}{h} \text{ e } \frac{\partial f}{\partial y}(x_0,y_0) = \lim_{h\to 0} \frac{f(x_0,y_0+h) - f(x_0,y_0)}{h}\] temos informações sobre a taxa de variação instantânea de \(f\) na ``direção'' dos eixos \(x\) e \(y\), respectivamente em \((x_0,y_0)\).
+
+Mas existem infinitas direções em que podemos considerar a taxa de variação de \(f\) (ou seja, com que rapidez a função está variando).
+
+Seja \(\overrightarrow{u} = (a,b)\) um \textit{vetor unitário} (ou seja, \(\|\overrightarrow{u}\| = \|(a,b)\| = \sqrt{a^2 + b^2} = 1\)) e suponha que exista \(r>0\) tal que os pontos da reta \[(x,y) = (x_0,y_0) + (a,b)t = (x_0 + at, y_0 + bt),\; -r < t < r,\] pertençam a \(D_f\).
+    \begin{figure}[htbp]
+        \centering
+            \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+            \begin{tikzpicture}[x=0.65pt,y=0.65pt,yscale=-1,xscale=1]
+            %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+            %Straight Lines [id:da7608318296822073] 
+            \draw    (165.22,250.26) -- (165.22,75.47) ;
+            \draw [shift={(165.22,73.47)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da808340894492615] 
+            \draw    (133.85,229.26) -- (374.6,229.26) ;
+            \draw [shift={(376.6,229.26)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Shape: Polygon Curved [id:ds4217078589548253] 
+            \draw  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=0.1 ][dash pattern={on 4.5pt off 4.5pt}] (168.27,103.6) .. controls (188.27,93.6) and (274.27,82.27) .. (320.93,86.27) .. controls (367.6,90.27) and (413.6,296.27) .. (325.6,234.27) .. controls (237.6,172.27) and (172.27,257.6) .. (152.27,227.6) .. controls (132.27,197.6) and (148.27,113.6) .. (168.27,103.6) -- cycle ;
+            %Shape: Circle [id:dp16253465640642928] 
+            \draw  [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (269,160.58) .. controls (269,159.71) and (269.71,159) .. (270.58,159) .. controls (271.45,159) and (272.15,159.71) .. (272.15,160.58) .. controls (272.15,161.45) and (271.45,162.15) .. (270.58,162.15) .. controls (269.71,162.15) and (269,161.45) .. (269,160.58) -- cycle ;
+            %Straight Lines [id:da8538691297819486] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (221.99,111.99) -- (271.59,161.59) -- (319.16,209.16) ;
+            \draw [shift={(320.58,210.58)}, rotate = 225] [fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (7.2,-1.8) -- (0,0) -- (7.2,1.8) -- cycle    ;
+            \draw [shift={(220.58,110.58)}, rotate = 45] [fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (7.2,-1.8) -- (0,0) -- (7.2,1.8) -- cycle    ;
+            %Straight Lines [id:da18492466507555638] 
+            \draw    (270.58,224.16) -- (270.58,234.58) ;
+            %Straight Lines [id:da19193702462290474] 
+            \draw    (160.58,160.58) -- (170.18,160.62) ;
+            %Straight Lines [id:da626747563315915] 
+            \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (270.58,160.58) -- (241.62,131.87) ;
+            \draw [shift={(240.2,130.46)}, rotate = 44.75] [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=0.75]    (6.56,-1.97) .. controls (4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84) .. (6.56,1.97)   ;
+            %Shape: Circle [id:dp09738730380427718] 
+            \draw  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=1 ] (299.22,190.27) .. controls (299.22,189.77) and (299.63,189.37) .. (300.13,189.37) .. controls (300.63,189.37) and (301.03,189.77) .. (301.03,190.27) .. controls (301.03,190.77) and (300.63,191.18) .. (300.13,191.18) .. controls (299.63,191.18) and (299.22,190.77) .. (299.22,190.27) -- cycle ;
+
+            % Text Node
+            \draw (382.24,223.42) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (171.14,54.16) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            % Text Node
+            \draw (336,68.07) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{D_{f}}$};
+            % Text Node
+            \draw (261.53,238.6) node [anchor=north west][inner sep=0.75pt]    {$x_{0}$};
+            % Text Node
+            \draw (139.87,150.33) node [anchor=north west][inner sep=0.75pt]    {$y_{0}$};
+            % Text Node
+            \draw (241.68,110.92) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.82,0.01,0.11}{\vec{u}}$};
+            % Text Node
+            \draw (271.95,141.45) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.82,0.01,0.11}{P( x_{0} ,y_{0})}$};
+            % Text Node
+            \draw (300.84,170.96) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.96,0.65,0.14}{Q\ =\ ( x_{0} +at,y_{0} +bt)}$};
+            \end{tikzpicture}
+        \caption{Reta na direção \(\overrightarrow{u}\)}
+        \label{fig:DerivadaDirecional}
+    \end{figure}
+Note que \(t\) é a distância (com sinal) de \(P\) a \(Q\):
+    \begin{itemize}
+        \item Se \(t>0\), \(t\overrightarrow{u}\) tem a mesma direção de \(\overrightarrow{u}\).
+        \item Se \(t<0\), \(t\overrightarrow{u}\) tem a direção oposta de \(\overrightarrow{u}\).
+    \end{itemize}
+
+Além disso, temos que \[\|Q - P\| = \| (x_0 + at, y_0 + bt) - (x_0,y_0) \| = \|t(a,b)\| = |t|.\]
+
+\begin{definition}
+    A \textbf{taxa média de variação} de \(f\) na direção de \(\overrightarrow{u}\) e \((x_0+at,y_0+bt)\) é dada por \[\frac{f(x_0+at,y_0+bt) - f(x_0,y_0)}{t}.\]
+\end{definition}
+
+\begin{definition}
+    Definimos \[\frac{\partial f}{\partial \overrightarrow{u}}(x_0,y_0) = \lim_{t\to 0} \frac{f(x_0+at,y_0+bt) - f(x_0,y_0)}{t},\] quando o limite existe e é finito. Nesse caso chamamos \(\frac{\partial f}{\partial \overrightarrow{u}}\) de \textbf{derivada direcional} \index{Derivada direcional} de \(f\) no ponto \((x_0,y_0)\) e na direção do vetor \(\overrightarrow{u} = (a,b)\), com \(\overrightarrow{u}\) unitário.
+\end{definition}
+
+\begin{remark}
+    \begin{enumerate}
+        \item \(\frac{\partial f}{\partial \overrightarrow{u}}(x_0,y_0)\) também é chamada taxa de variação de \(f\) no ponto \((x_0,y_0)\) e na direção do vetor \(\overrightarrow{u}\).
+        \item Como antes, podemos concluir que \[\frac{\partial f}{\partial \overrightarrow{u}}(x_0,y_0) \sim \frac{f(x_0+at,y_0+bt) - f(x_0,y_0)}{t}\] e a aproximação é melhor quanto menor for \(|t|\).
+        \item Sejam \(\overrightarrow{i} = (1,0)\) e \(\overrightarrow{j} = (0,1)\). Então \[\frac{\partial f}{\partial \overrightarrow{i}}(x_0,y_0) = \lim_{t\to 0} \frac{f(x_0 + t,y_0) - f(x_0,y_0)}{t} = \frac{\partial f}{\partial x}(x_0,y_0)\] e \[\frac{\partial f}{\partial \overrightarrow{j}}(x_0,y_0) = \lim_{t\to 0} \frac{f(x_0,y_0+t) - f(x_0,y_0)}{t} = \frac{\partial f}{\partial y}(x_0,y_0). \] Ou seja, \(\frac{\partial f}{\partial x}(x_0,y_0)\) e \(\frac{\partial f}{\partial y}(x_0,y_0)\) são, respectivamente, as derivadas direcionais de \(f\) no ponto \((x_0,y_0)\) e nas direções de \(\overrightarrow{i}\) e \(\overrightarrow{j}\).
+    \end{enumerate}
+\end{remark}
+
+    \begin{figure}[htbp]
+        \centering
+            \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+            \begin{tikzpicture}[x=0.65pt,y=0.65pt,yscale=-1,xscale=1]
+            %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+            %Straight Lines [id:da5054229585169298] 
+            \draw    (214.34,163.8) -- (214.34,31.2) ;
+            \draw [shift={(214.34,29.2)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da6070917309032418] 
+            \draw    (214.34,163.8) -- (386.6,163.8) ;
+            \draw [shift={(388.6,163.8)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da1846049846827359] 
+            \draw    (214.34,163.8) -- (97.36,280.79) ;
+            \draw [shift={(95.94,282.2)}, rotate = 315] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Shape: Polygon Curved [id:ds3033815008287223] 
+            \draw  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=0.25 ][dash pattern={on 4.5pt off 4.5pt}] (306.47,40.8) .. controls (324.47,48.8) and (405.47,74.8) .. (378.47,70.8) .. controls (351.47,66.8) and (285.47,162.8) .. (305.47,175.8) .. controls (325.47,188.8) and (196.47,189.8) .. (176.47,159.8) .. controls (156.47,129.8) and (288.47,32.8) .. (306.47,40.8) -- cycle ;
+            %Straight Lines [id:da19596720097367482] 
+            \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ] [dash pattern={on 4.5pt off 4.5pt}]  (285.34,163.8) -- (166.94,282.2) ;
+            %Straight Lines [id:da1285830024686767] 
+            \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=1.5]    (341,9.9) -- (171,277.9) ;
+            %Curve Lines [id:da8434270537061965] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (260,182.9) .. controls (268,78.9) and (314,77.9) .. (349,58) ;
+            %Shape: Arc [id:dp35760429283109785] 
+            \draw  [draw opacity=0] (205.54,222.95) .. controls (205.6,222.92) and (205.65,222.89) .. (205.7,222.85) .. controls (209.93,220.28) and (215.98,222.51) .. (219.21,227.83) .. controls (219.6,228.47) and (219.93,229.12) .. (220.2,229.78) -- (211.55,232.48) -- cycle ; \draw  [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ] (205.54,222.95) .. controls (205.6,222.92) and (205.65,222.89) .. (205.7,222.85) .. controls (209.93,220.28) and (215.98,222.51) .. (219.21,227.83) .. controls (219.6,228.47) and (219.93,229.12) .. (220.2,229.78) ;  
+            %Straight Lines [id:da22743573669587303] 
+            \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (232.31,216.93) -- (254.69,194.14) ;
+            \draw [shift={(256.09,192.71)}, rotate = 134.47] [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=0.75]    (6.56,-1.97) .. controls (4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84) .. (6.56,1.97)   ;
+            %Shape: Ellipse [id:dp1995253278528507] 
+            \draw  [draw opacity=0][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (278.46,102.35) .. controls (278.46,100.7) and (279.79,99.37) .. (281.44,99.37) .. controls (283.09,99.37) and (284.42,100.7) .. (284.42,102.35) .. controls (284.42,104) and (283.09,105.33) .. (281.44,105.33) .. controls (279.79,105.33) and (278.46,104) .. (278.46,102.35) -- cycle ;
+            %Shape: Ellipse [id:dp012408369592848412] 
+            \draw  [draw opacity=0][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (278.46,222.35) .. controls (278.46,220.7) and (279.79,219.37) .. (281.44,219.37) .. controls (283.09,219.37) and (284.42,220.7) .. (284.42,222.35) .. controls (284.42,224) and (283.09,225.33) .. (281.44,225.33) .. controls (279.79,225.33) and (278.46,224) .. (278.46,222.35) -- cycle ;
+            %Shape: Ellipse [id:dp5749531873544383] 
+            \draw  [draw opacity=0][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (317.46,71.75) .. controls (317.46,70.1) and (318.79,68.77) .. (320.44,68.77) .. controls (322.09,68.77) and (323.42,70.1) .. (323.42,71.75) .. controls (323.42,73.4) and (322.09,74.73) .. (320.44,74.73) .. controls (318.79,74.73) and (317.46,73.4) .. (317.46,71.75) -- cycle ;
+
+            % Text Node
+            \draw (77.6,268.94) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (217.42,12.51) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$z$};
+            % Text Node
+            \draw (390.6,167.2) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            % Text Node
+            \draw (286.74,202.07) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
+            % Text Node
+            \draw (217.3,205.45) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.82,0.01,0.11}{\alpha }$};
+            % Text Node
+            \draw (240.98,178.71) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.82,0.01,0.11}{\vec{u}}$};
+            % Text Node
+            \draw (350,10.4) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{T}$};
+            % Text Node
+            \draw (159.41,78.73) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0} ,f}\textcolor[rgb]{0.25,0.46,0.02}{( x_{0} ,y_{0}))}$};
+            % Text Node
+            \draw (367.33,42.07) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{Curva\ c}$};
+            % Text Node
+            \draw (327.44,73.93) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{+at,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{+bt,f}\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{+at,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0} +bt}\textcolor[rgb]{0.25,0.46,0.02}{)}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
+            \end{tikzpicture}
+        \caption{Interpretação geométrica da derivada direcional}
+        \label{fig:DerivadaDirecional1}
+    \end{figure}
+
+Em palavras, fixamos a direção \(\overrightarrow{u}\) no plano-xy. Então, o plano vertical que passa por \((x_0,y_0,f(x_0,y_0))\) na direção de \(\overrightarrow{u}\), intersepta o gráfico de \(f\) numa curva \(c\). Então \[\frac{\partial f}{\partial\overrightarrow{u}}(x_0,y_0) = \lim_{t\to 0}\frac{f(x_0+at,y_0+bt) - f(x_0,y_0)}{t}\] é o coeficiente angular da reta tangente \(T\) à curva \(c\) em \((x_0,y_0,f(x_0,y_0))\).
+
+\begin{example}
+    Seja \(f(X,y) = x^2 + y^2\). Calcule a derivada direcional de \(f\) no ponto \((1,1)\) na direção do vetor \(\overrightarrow{v} = (-1,1)\).
+
+    Note primeiro que \(\|\overrightarrow{v}\| = \sqrt{1 + 1} = \sqrt{2}\), portanto devemos tomar \(\overrightarrow{u} = \frac{\overrightarrow{v}}{\|\overrightarrow{v}\|} = \frac{1}{\sqrt{2}}(-1,1)\). Assim
+        \begin{align*}
+            \frac{\partial f}{\partial\overrightarrow{u}}(1,1)
+                & = \lim_{t\to 0}\left[ \frac{f(1 - \frac{1}{\sqrt{2}}t,1 + \frac{1}{\sqrt{2}}t) - f(1,1)}{t} \right] \\
+                & = \lim_{t\to 0} \left[ \frac{\left( 1 - \frac{t}{\sqrt{2}} \right)^2 + \left( 1 + \frac{t}{\sqrt{2}} \right)^2 - (1^2 + 1^2)}{t} \right] \\
+                & = \lim_{t\to 0} \frac{\frac{2t^2}{2}}{t} = \lim_{t\to 0} t = 0.
+        \end{align*}
+
+    Ou seja, a taxa de variação de \(f\) na direção de \(\overrightarrow{u}\) (e portanto de \(\overrightarrow{v}\)) é nula.
+\end{example}
+
+\begin{remark}
+    No exemplo acima, é fácil ver que \(\overrightarrow{u}\) é tangente à curva de nível \(f(x,y) = 2\) no ponto \((1,1)\).
+    
+    De fato, temos que \(\nabla f(x,y) = (2x,2y)\). Logo \((1,1)\) pertence à curva de nível \(f(x,y) = 2\) e \[\nabla f(1,1)\bullet\overrightarrow{u} = (2,2)\bullet \frac{1}{\sqrt{2}}(-1,1) = 0,\] o que implica que \(\overrightarrow{u}\) é tangente à curva de nível \(f(x,y) = 2\) em \((1,1)\).
+    
+\end{remark}
+
+% \section{Fórmula de Taylor}
 
 % \section{Máximos e mínimos}
 
