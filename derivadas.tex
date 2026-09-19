@@ -2054,7 +2054,7 @@ Além disso, temos que \[\|Q - P\| = \| (x_0 + at, y_0 + bt) - (x_0,y_0) \| = \|
 Em palavras, fixamos a direção \(\overrightarrow{u}\) no plano-xy. Então, o plano vertical que passa por \((x_0,y_0,f(x_0,y_0))\) na direção de \(\overrightarrow{u}\), intersepta o gráfico de \(f\) numa curva \(c\). Então \[\frac{\partial f}{\partial\overrightarrow{u}}(x_0,y_0) = \lim_{t\to 0}\frac{f(x_0+at,y_0+bt) - f(x_0,y_0)}{t}\] é o coeficiente angular da reta tangente \(T\) à curva \(c\) em \((x_0,y_0,f(x_0,y_0))\).
 
 \begin{example}
-    Seja \(f(X,y) = x^2 + y^2\). Calcule a derivada direcional de \(f\) no ponto \((1,1)\) na direção do vetor \(\overrightarrow{v} = (-1,1)\).
+    Seja \(f(x,y) = x^2 + y^2\). Calcule a derivada direcional de \(f\) no ponto \((1,1)\) na direção do vetor \(\overrightarrow{v} = (-1,1)\).
 
     Note primeiro que \(\|\overrightarrow{v}\| = \sqrt{1 + 1} = \sqrt{2}\), portanto devemos tomar \(\overrightarrow{u} = \frac{\overrightarrow{v}}{\|\overrightarrow{v}\|} = \frac{1}{\sqrt{2}}(-1,1)\). Assim
         \begin{align*}
@@ -2071,8 +2071,208 @@ Em palavras, fixamos a direção \(\overrightarrow{u}\) no plano-xy. Então, o p
     No exemplo acima, é fácil ver que \(\overrightarrow{u}\) é tangente à curva de nível \(f(x,y) = 2\) no ponto \((1,1)\).
     
     De fato, temos que \(\nabla f(x,y) = (2x,2y)\). Logo \((1,1)\) pertence à curva de nível \(f(x,y) = 2\) e \[\nabla f(1,1)\bullet\overrightarrow{u} = (2,2)\bullet \frac{1}{\sqrt{2}}(-1,1) = 0,\] o que implica que \(\overrightarrow{u}\) é tangente à curva de nível \(f(x,y) = 2\) em \((1,1)\).
-    
+    \begin{figure}[htbp]
+        \centering
+            \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+            \begin{tikzpicture}[x=0.65pt,y=0.65pt,yscale=-1,xscale=1]
+            %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+            %Straight Lines [id:da5863534308161691] 
+            \draw    (147.64,245.85) -- (147.64,75.47) ;
+            \draw [shift={(147.64,73.47)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da6162830905497751] 
+            \draw    (66.58,165.44) -- (263.6,165.44) ;
+            \draw [shift={(265.6,165.44)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (7.65,-2.3) .. controls (4.86,-0.97) and (2.31,-0.21) .. (0,0) .. controls (2.31,0.21) and (4.86,0.98) .. (7.65,2.3)   ;
+            %Shape: Ellipse [id:dp9825465899459217] 
+            \draw  [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=0.45 ] (79.61,165.45) .. controls (79.61,127.79) and (110.14,97.26) .. (147.8,97.26) .. controls (185.46,97.26) and (215.99,127.79) .. (215.99,165.45) .. controls (215.99,203.11) and (185.46,233.64) .. (147.8,233.64) .. controls (110.14,233.64) and (79.61,203.11) .. (79.61,165.45) -- cycle ;
+            %Straight Lines [id:da5233781142015427] 
+            \draw    (449.5,230.84) -- (449.27,58.72) ;
+            \draw [shift={(449.26,56.72)}, rotate = 89.92] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+            %Straight Lines [id:da26118348351082354] 
+            \draw    (449.5,230.84) -- (528.8,230.65) ;
+            \draw [shift={(530.8,230.65)}, rotate = 179.87] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+            %Straight Lines [id:da8705810990784034] 
+            \draw    (449.5,230.84) -- (410.21,270.23) ;
+            \draw [shift={(408.8,271.65)}, rotate = 314.92] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+            %Curve Lines [id:da4999000558753144] 
+            \draw [draw opacity=0][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=0.7 ]   (389,95.6) .. controls (440.8,275.55) and (457.5,276.6) .. (509,95.6) ;
+            %Flowchart: Connector [id:dp057292697669875436] 
+            \draw  [draw opacity=0][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=1 ] (389,95.6) .. controls (389,87.59) and (415.71,81.1) .. (448.65,81.1) .. controls (481.59,81.1) and (508.3,87.59) .. (508.3,95.6) .. controls (508.3,103.61) and (481.59,110.1) .. (448.65,110.1) .. controls (415.71,110.1) and (389,103.61) .. (389,95.6) -- cycle ;
+            %Flowchart: Connector [id:dp16726487229644993] 
+            \draw  [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ] (409.5,161.65) .. controls (409.5,156.68) and (427.14,152.65) .. (448.9,152.65) .. controls (470.66,152.65) and (488.3,156.68) .. (488.3,161.65) .. controls (488.3,166.62) and (470.66,170.65) .. (448.9,170.65) .. controls (427.14,170.65) and (409.5,166.62) .. (409.5,161.65) -- cycle ;
+            %Flowchart: Connector [id:dp2623780460713082] 
+            \draw  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ] (446.3,230.84) .. controls (446.3,230.22) and (447.76,229.71) .. (449.55,229.71) .. controls (451.34,229.71) and (452.8,230.22) .. (452.8,230.84) .. controls (452.8,231.46) and (451.34,231.96) .. (449.55,231.96) .. controls (447.76,231.96) and (446.3,231.46) .. (446.3,230.84) -- cycle ;
+            %Straight Lines [id:da33314105296688057] 
+            \draw    (216.33,160.33) -- (216.33,170.33) ;
+            %Shape: Circle [id:dp5247052465840055] 
+            \draw  [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (188.53,111.58) .. controls (188.53,110.8) and (189.17,110.17) .. (189.95,110.17) .. controls (190.73,110.17) and (191.37,110.8) .. (191.37,111.58) .. controls (191.37,112.37) and (190.73,113) .. (189.95,113) .. controls (189.17,113) and (188.53,112.37) .. (188.53,111.58) -- cycle ;
+            %Straight Lines [id:da13890396461674448] 
+            \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=1.5]    (191.37,111.58) -- (164.09,91.29) ;
+            \draw [shift={(161.68,89.5)}, rotate = 36.65] [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=1.5]    (11.37,-3.42) .. controls (7.23,-1.45) and (3.44,-0.31) .. (0,0) .. controls (3.44,0.31) and (7.23,1.45) .. (11.37,3.42)   ;
+            %Straight Lines [id:da21995587186890297] 
+            \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=1.5]    (189.95,111.58) -- (208.63,90.1) ;
+            \draw [shift={(210.6,87.83)}, rotate = 131.01] [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=1.5]    (11.37,-3.42) .. controls (7.23,-1.45) and (3.44,-0.31) .. (0,0) .. controls (3.44,0.31) and (7.23,1.45) .. (11.37,3.42)   ;
+            %Shape: Square [id:dp016645873853123216] 
+            \draw   (188.94,103.4) -- (193.54,106.99) -- (189.95,111.58) -- (185.35,107.99) -- cycle ;
+            %Shape: Circle [id:dp8868943697256978] 
+            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (189.05,107.49) .. controls (189.05,107.27) and (189.23,107.1) .. (189.45,107.1) .. controls (189.66,107.1) and (189.84,107.27) .. (189.84,107.49) .. controls (189.84,107.71) and (189.66,107.88) .. (189.45,107.88) .. controls (189.23,107.88) and (189.05,107.71) .. (189.05,107.49) -- cycle ;
+            %Straight Lines [id:da7102330741727628] 
+            \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (448.9,170.65) -- (507.2,169.34) ;
+            \draw [shift={(509.2,169.3)}, rotate = 178.72] [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=0.75]    (8.74,-2.63) .. controls (5.56,-1.12) and (2.65,-0.24) .. (0,0) .. controls (2.65,0.24) and (5.56,1.12) .. (8.74,2.63)   ;
+
+            % Text Node
+            \draw (265.2,145.56) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (154.6,46.83) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            % Text Node
+            \draw (417.54,265.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$x$};
+            % Text Node
+            \draw (534.96,225.13) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$y$};
+            % Text Node
+            \draw (435.96,45.13) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$z$};
+            % Text Node
+            \draw (215.67,170.4) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{\sqrt{2}}$};
+            % Text Node
+            \draw (203.2,106.4) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{1,1}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
+            % Text Node
+            \draw (165,70.4) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,opacity=1 ]  {$\vec{u}$};
+            % Text Node
+            \draw (218,71.4) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,opacity=1 ]  {$\nabla f( 1,1)$};
+            % Text Node
+            \draw (517,159.4) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,opacity=1 ]  {$\vec{u}$};
+            \end{tikzpicture}
+        \caption{Interpretação geométrica da derivada direcional da função \(f(x,y) = x^2 + y^2\) }
+        \label{fig:DerivadaDirecional1}
+    \end{figure}
+    Portanto, como \(f\) permanece constante na curva de nível e \(\overrightarrow{u}\) é tangente à curva de nível, é natural esperar que a taxa de variação de \(f\) na direção de \(\overrightarrow{u}\) seja nula.
 \end{remark}
+
+\begin{example}
+    Seja \[f(x,y) = \begin{cases}
+        \frac{x^3}{x^2 + y^2},\; (x,y) \neq (0,0) \\
+        0,\; (x,y) = (0,0).
+    \end{cases}\]
+
+    Calcule \(\frac{\partial f}{\partial \overrightarrow{u}}(0,0)\), com \(\overrightarrow{u} = (a,b)\) é um vetor unitário.
+
+    Temos que
+        \begin{align*}
+            \frac{\partial f}{\partial \overrightarrow{u}}(0,0)
+                & = \lim_{t\to 0} \frac{f(0+at, 0+bt) - f(0,0)}{t}\\
+                & = \lim_{t\to 0} \frac{f(at,bt)}{t} \\
+                & = \lim_{t\to 0} \frac{\left( \frac{(at)^3}{(at)^2+(bt)^2} \right)}{t} \\
+                & = \lim_{t\to 0} \frac{a^3 t^3}{a^2 t^2 + b^2 t^2} \frac{1}{t} \\
+                & = \lim_{t\to 0} \frac{a^3 t^3}{(a^2 + b^2)t^3} \\
+                & = \lim_{t\to 0} \frac{a^3}{a^2 + b^2} = a^3.
+        \end{align*}
+
+    Lembre que já vimos que esta função é contínua em \((0,0)\), mas não é diferenciável em \((0,0)\). Este exemplo mostra que uma função pode ser contínua num ponto, ter todas as derivadas direcionas neste ponto e, ainda assim, não ser diferenciável neste ponto.
+\end{example}
+
+\textbf{Pergunta: } Sempre precisamos calcular a derivada direcional pela definição?
+
+\begin{theorem}\label{thm.DerivadaDirecional}
+    Sejam \(f: A \subset\R^2 \to \R\), \(A\) aberto, \((x_0,y_0)\in A\) e \(\overrightarrow{u} = (a,b)\) um vetor unitário. Se \(f\) é diferenciável em \((x_0,y_0)\), então \(\frac{\partial f}{\partial\overrightarrow{u}}(x_0,y_0)\) existe e \[\frac{\partial f}{\partial\overrightarrow{u}}(x_0,y_0) = \nabla f(x_0,y_0)\bullet\overrightarrow{u}.\]
+\end{theorem}
+
+\begin{proof}
+    Seja \(g\) a função dada por \[g(t) = f(x_0 + at, y_0 + bt).\] Como \(f\) é diferenciável em \((x_0,y_0)\) e \(x = x_0 + at\) e \(y = y_0 + bt\) são diferenciáveis em \(t=0\), pela regra da cadeia,
+        \begin{align*}
+            g'(0)
+                & = \frac{\partial f}{\partial x}(x_0 + a\cdot 0, y_0 + b\cdot 0)\frac{dx}{dt}\big|_{t=0} + \frac{\partial f}{\partial y}(x_0 + a\cdot 0, y_0 + b\cdot 0)\frac{dy}{dt}\big|_{t=0} \\
+                & = \frac{\partial f}{\partial x}(x_0,y_0)\cdot a + \frac{\partial f}{\partial y}(x_0,y_0)\cdot b \\
+                & = \left( \frac{\partial f}{\partial x}(x_0,y_0), \frac{\partial f}{\partial y}(x_0,y_0) \right)\bullet (a,b) \\
+                & = \nabla f(x_0,y_0)\bullet \overrightarrow{u}.
+        \end{align*}
+
+    Por outro lado, \(g'(0) = \lim_{t\to 0} \frac{g(t) - g(0)}{t} = \frac{\partial f}{\partial \overrightarrow{u}}(x_0,y_0)\). Do anterior, \[\frac{\partial f}{\partial\overrightarrow{u}}(x_0,y_0) = \nabla f(x_0,y_0)\bullet\overrightarrow{u}.\]
+\end{proof}
+
+\begin{example}
+    Seja \(f(x,y) = x^2 + y^2\). Calcule a derivada direcional de \(f\) no ponto \((1,1)\) na direção do vetor \(\overrightarrow{v} = -\overrightarrow{i} + \overrightarrow{j}\).
+
+    Note que \(\overrightarrow{v} = -\overrightarrow{i} + \overrightarrow{j} = (-1,1)\) não é unitário, portanto devemos tomar \(\overrightarrow{u} = \frac{\overrightarrow{v}}{\|\overrightarrow{v}\|} = \frac{1}{\sqrt{2}}(-1,1)\). Além disso, \(f\) é diferenciável e \(\frac{\partial f}{\partial x}(x,y) = 2x\) e \(\frac{\partial f}{\partial y}(x,y) = 2y\) são contínuas em \(\R^2\), em particular, diferenciável em \((-1,1)\). Assim \[\frac{\partial f}{\partial\overrightarrow{u}}(1,1) = \nabla f(1,1)\bullet\overrightarrow{u} = (2,2)\bullet \frac{1}{\sqrt{2}}(-1,1) = -\frac{2}{\sqrt{2}} + \frac{2}{\sqrt{2}} = 0.\]
+\end{example}
+
+\begin{example}
+    Seja \(f(x,y) = x^2 + xy\). Calcule \(\frac{\partial f}{\partial \overrightarrow{u}}(1,2)\), no qual \(\overrightarrow{u}\) é o versor de \(\overrightarrow{v} = (3,4)\).
+
+    Note que
+        \begin{itemize}
+            \item \(\overrightarrow{u} = \frac{\overrightarrow{v}}{\|\overrightarrow{v}\|} = \frac{(3,4)}{\sqrt{3^2 + 4^2}} = \left( \frac{3}{5},\frac{4}{5} \right)\)
+            \item \(\nabla f(x,y) = \left( \frac{\partial f}{\partial x},\frac{\partial f}{\partial y} \right) = (2x + y,x)\).
+        \end{itemize}
+    Assim, como \(f\) é diferenciável em \((1,2)\), \[\frac{\partial f}{\partial \overrightarrow{u}}(1,2) = \nabla f(1,2)\bullet\overrightarrow{u} = (4,1)\bullet\left( \frac{3}{5},\frac{4}{5} \right) = \frac{12}{5} + \frac{4}{5} = \frac{16}{5}.\]
+\end{example}
+
+\begin{remark}
+    Não se esqueça que para aplicarmos a fórmula do Teorema \ref{thm.DerivadaDirecional}, \(f\) deve ser diferenciável em \((x_0,y_0)\). Caso contrário, devemos utilizar a definição.
+\end{remark}
+
+\textbf{Pergunta: } Estando em \((x_0,y_0)\), qual a direção e sentido devemos tomar para que \(f\) cresça mais rapidamente?
+
+Antes de respondermos esta pergunta, é importante apresentarmos uma consequência da Desigualdade de Schwarz.
+
+\begin{remark}
+    Sabemos da Desigualdade de Schwarz que dados dois vetores quaiquer \(\overrightarrow{u}\) e \(\overrightarrow{v}\) de \(\R^2\), então \[|\overrightarrow{u}\bullet\overrightarrow{v}| \leq \|\overrightarrow{u}\| \|\overrightarrow{v}\|.\] Isto implica que \[-1 \leq \frac{\overrightarrow{u}\bullet\overrightarrow{v}}{\|\overrightarrow{u}\| \|\overrightarrow{v}\|} \leq 1,\] portanto existe um único \(\theta\in [0,\pi]\) tal que \[\cos\theta = \frac{\overrightarrow{u}\bullet\overrightarrow{v}}{\|\overrightarrow{u}\| \|\overrightarrow{v}\|} \text{ ou } \overrightarrow{u}\bullet\overrightarrow{v} = \|\overrightarrow{u}\| \|\overrightarrow{v}\| \cos\theta.\]
+
+    Chamamos \(\theta\) de \textbf{ângulo} entre \(\overrightarrow{u}\) e \(\overrightarrow{v}\).
+\end{remark}
+
+\begin{theorem}\label{thm.MaiorCrescimentos}
+    Sejam \(A\) aberto e \(f: A \subset \R^2 \to \R\) diferenciável em \((x_0,y_0)\in A\) tal que \(\nabla f(x_0,y_0)\neq 0\). Então o valor máximo de \(\frac{\partial f}{\partial \overrightarrow{u}}(x_0,y_0)\) ocorre quando \(\overrightarrow{u} = \frac{\nabla f(x_0,y_0)}{\|\nabla f(x_0,y_0)\|}\) e o valor máximo de \(\frac{\partial f}{\partial\overrightarrow{u}}(x_0,y_0)\) é \(\|\nabla f(x_0,y_0)\|\).
+\end{theorem}
+
+\begin{proof}
+    Seja \(\theta\) o ângulo entre \(\nabla f(x_0,y_0)\) e \(\overrightarrow{u}\). Do Teorema \ref{thm.DerivadaDirecional} e da Desigualdade de Schwarz, \[\frac{\partial f}{\partial \overrightarrow{u}}(x_0,y_0) = \nabla f(x_0,y_0)\bullet\overrightarrow{u} = \|\nabla f(x_0,y_0)\| \|\overrightarrow{u}\| \cos\theta = \|\nabla f(x_0,y_0)\| \cos\theta.\] Ou seja, \[\frac{\partial f}{\partial \overrightarrow{u}}(x_0,y_0) = \|\nabla f(x_0,y_0)\| \cos\theta,\; \theta\in[0,\pi].\] Portanto, \(\frac{\partial f}{\partial \overrightarrow{u}}(x_0,y_0)\) terá valor máximo quando \(\theta = 0\). Neste caso, \(\overrightarrow{u}\) é o versor de \(\nabla f(x_0,y_0)\), isto é \[\overrightarrow{u} = \frac{\nabla f(x_0,y_0)}{\|\nabla f(x_0,y_0)\|}\] e \(\frac{\partial f}{\partial \overrightarrow{u}} = \|\nabla f(x_0,y_0)\|\).
+\end{proof}
+
+O teorema acima nos mostra que, estando em \((x_0,y_0)\), a direção e sentido que devemos tomar para que \(f\) cresça mais rapidamente é a do vetor gradiente \(\nabla f(x_0,y_0)\).
+
+\textbf{Pergunta: } Podemos concluir do Teorema \ref{thm.MaiorCrescimentos} também a direção e sentido que \(f\) descresce mais rapidamente?
+
+Observe que se \(f\) é diferenciável em \((x_0,y_0)\) e \(\nabla f(x_0,y_0)\neq\overrightarrow{0}\), então
+    \begin{itemize}
+        \item \(\nabla f(x_0,y_0)\) é perpendicular à curva de nível \(f(x,y) = k\) que passa por \((x_0,y_0)\);
+        \item Quando nos movemos numa curva de nível, o valor de \(f\) permanece constante.
+    \end{itemize}
+
+Portanto, é intuitivo o fato de que a taxa de variação de \(f\), na direção da reta tangente, seja nula e, portanto, que na direção de \(\nabla f(x_0,y_0)\) \(f\) tenha maior crescimento.
+
+\begin{example}
+    Se considerarmos o mapa topográfico de um morro e se \(f(x,y)\) representa a altura acima do nível do mar do ponto \((x,y)\), então a curva de maior crescimento pode ser desenhada fazendo-a perpendicular a todas as curvas de nível.
+\end{example}
+
+\begin{example}
+    Seja \(f(x,y) = x^2\cdot y\).
+        \begin{enumerate}
+            \item Determine \(\overrightarrow{u}\) de modo que \(\frac{\partial f}{\partial \overrightarrow{u}}(1,1)\) seja máximo.
+            \item Qual o valor máximo de \(\frac{\partial f}{\partial \overrightarrow{u}}(1,1)\)?
+            \item Estando em \((1,1)\) que direção e sentido devemos tomar para que \(f\) cresça mais rapidamente? E para que \(f\) decresça mais rapidamente?
+        \end{enumerate}
+
+    Note primeiro que \(\nabla f(x,y) = (2xy,x^2)\), portanto \(\nabla f(1,1) = (2,1)\).
+        \begin{enumerate}
+            \item Como \(f\) é diferenciável em \((1,1)\) e \(\nabla f(1,1)\neq(0,0)\), portanto, do Teorema \ref{thm.MaiorCrescimentos}, para que \(\frac{\partial f}{\partial\overrightarrow{u}}(1,1)\) seja máximo, devemos tomar \(\overrightarrow{u} = \frac{\nabla f(1,1)}{\|\nabla f(1,1)\|} = \frac{1}{\sqrt{5}} (2,1)\).
+            \item O valor máximo de \(\frac{\partial f}{\partial \overrightarrow{u}}(1,1)\) é \[\frac{\partial f}{\partial \overrightarrow{u}}(1,1) = \|\nabla f(1,1)\| = 5.\]
+            \item Estando em \((1,1)\), a direção e sentido que \(f\) mais cresce é \(\nabla f(1,1) = (2,1)\). E a direção de maio decrescimento é \(-\nabla f(1,1) = (-2,-1)\),
+        \end{enumerate}
+\end{example}
+
+\begin{remark}
+    Tudo o que fizemos sobre derivadas direcionais se generaliza para funções de três ou mais variáveis.
+\end{remark}
+
+\begin{example}
+    Seja \(f(x,y,z) = x\cdot y\cdot z\). Calcule \(\frac{\partial f}{\partial \overrightarrow{u}}(1,1,3)\), com \(\overrightarrow{u}\) sendo o versor de \(\overrightarrow{v} = \overrightarrow{i} + \overrightarrow{j} + \overrightarrow{k}\).
+
+    Temos que
+        \begin{itemize}
+            \item \(\overrightarrow{u} = \frac{\overrightarrow{v}}{\|\overrightarrow{v}\|} = \frac{(1,1,1)}{\|(1,1,1)\|} = \frac{1}{\sqrt{3}}(1,1,1) \).
+            \item \(\nabla f(x,y,z) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right) = (yz, xz, xy)\).
+        \end{itemize}
+    
+    Como \(f\) é diferenciável, pelo Teorema \ref{thm.DerivadaDirecional} \[\frac{\partial f}{\partial \overrightarrow{u}}(1,1,3) = \nabla f(1,1,3)\bullet\overrightarrow{u} = (3,3,1)\bullet \frac{1}{\sqrt{3}}(1,1,1) = \frac{7\sqrt{3}}{3}.\]
+\end{example}
 
 % \section{Fórmula de Taylor}
 
