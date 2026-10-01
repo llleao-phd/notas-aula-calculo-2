@@ -2274,9 +2274,218 @@ Portanto, é intuitivo o fato de que a taxa de variação de \(f\), na direção
     Como \(f\) é diferenciável, pelo Teorema \ref{thm.DerivadaDirecional} \[\frac{\partial f}{\partial \overrightarrow{u}}(1,1,3) = \nabla f(1,1,3)\bullet\overrightarrow{u} = (3,3,1)\bullet \frac{1}{\sqrt{3}}(1,1,1) = \frac{7\sqrt{3}}{3}.\]
 \end{example}
 
-% \section{Fórmula de Taylor}
+\section{Fórmula de Taylor}
 
-% \section{Máximos e mínimos}
+Vamos começar lembrando o conceito de Fórmula de Taylor para funções de uma variável real.
+
+Seja \(f: D_f \subset \R \to \R\) uma função de uma variável real, diferenciável em \(x_0\) e considere \[T(x) = f(x_0) + f'(x_0)(x-x_0).\] O gráfico de \(T\) é a reta tangente ao gráfico de \(f\) em \((x_0,f(x_0))\).
+\begin{figure}[htbp]
+    \centering
+        \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+        \begin{tikzpicture}[x=0.85pt,y=0.85pt,yscale=-1,xscale=1]
+            %Shape: Axis 2D [id:dp8066285336258183] 
+            \draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][line width=1.5]  (222.27,224.9) -- (493.62,224.9)(244.98,42.11) -- (244.98,249.88) (486.62,219.9) -- (493.62,224.9) -- (486.62,229.9) (239.98,49.11) -- (244.98,42.11) -- (249.98,49.11)  ;
+            %Straight Lines [id:da7751554499091238] 
+            \draw  [dash pattern={on 0.84pt off 2.51pt}]  (306.8,100.07) -- (306.8,226.73) ;
+            %Straight Lines [id:da655584242718175] 
+            \draw  [dash pattern={on 0.84pt off 2.51pt}]  (306.8,100.07) -- (245.47,100.07) ;
+            %Shape: Circle [id:dp21772476408140373] 
+            \draw  [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (304.89,100.2) .. controls (304.89,99.22) and (305.69,98.42) .. (306.67,98.42) .. controls (307.65,98.42) and (308.45,99.22) .. (308.45,100.2) .. controls (308.45,101.18) and (307.65,101.98) .. (306.67,101.98) .. controls (305.69,101.98) and (304.89,101.18) .. (304.89,100.2) -- cycle ;
+            %Curve Lines [id:da5670370798994872] 
+            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (228.6,185.27) .. controls (233,-34.6) and (404,207.4) .. (439,174.4) ;
+            %Straight Lines [id:da939447849258731] 
+            \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (201.4,46.07) -- (411.94,154.33) ;
+
+            % Text Node
+            \draw (298.2,234) node [anchor=north west][inner sep=0.75pt]    {$x_{0}$};
+            % Text Node
+            \draw (191.2,93.4) node [anchor=north west][inner sep=0.75pt]    {$f( x_{0})$};
+            % Text Node
+            \draw (405.4,184.6) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.96,0.65,0.14}{y\ =\ f( x)}$};
+            % Text Node
+            \draw (398.6,126.6) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{T}$};
+        \end{tikzpicture}
+    \caption{Gráfico de \(T\)}
+    \label{fig:FormulaTaylor}
+\end{figure}
+Dessa forma, sabemos que \[f(x) = f(x_0) + f'(x_0)(x-x_0) + E_1(x),\; x\in D_f,\] com \[\lim_{x\to x_0} \frac{E_1(x)}{x-x_0} = \lim_{x\to x_0} \frac{f(x) - f(x_0)}{x-x_0} - f'(x_0) = 0.\] Ou seja, \(E_1(x) \to 0\) mais rápido do que \(x-x_0 \to 0\), quando \(x\to x_0\). Mais que isso, \(T(x)\) é a melhor aproximação de \(f\) em torno de \(x_0\).
+
+Agora, notando que \(T(x)\) é um polinômio de grau no máximo 1, podemos dizer que \(T\) é o polinômio de grau (no máximo) 1 que melhor aproxima \(f\) em \(x_0\).
+
+O polinômio \[P_1(x) = f(x_0) + f'(x_0)(x-x_0)\] se chama \textbf{polinômio de Taylor de ordem 1} de \(f\) em torno de \(x = x_0\).
+
+Assim,\[f(x) = P_1(x) + E_1(x),\] com \(f(x_0) = P_1(x_0)\) e \(f'(x_0) = P'_1(x_0)\).
+
+O teorema para encontrar o erro é o seguinte:
+\begin{theorem}
+    Sejam \(f\) diferenciável até segunda ordem em \(I\) e \(x, x_0\in I\). Então existe \(\bar{x}\in(x_0,x)\) tal que \[f(x) = P_1(x) + E_1(x),\] com \(E_1(x) = \frac{f''(\bar{x})}{2}(x-x_0)^2.\)
+
+    Ou seja, \[f(x) = f(x_0) + f'(x_0)(x-x_0) + \frac{f''(\bar{x})}{2} (x-x_0)^2.\]
+\end{theorem}
+
+Em seguida, procuramos por um polinômio \(P_2\) de grau (no máximo) 2 tal que \[P_2(x_0) = f(x_0),\; P'_2(x_0) = f'(x_0),\text{ e } P''_2(x_0) = f''(x_0)\] e aproxime \(f\) em torno de \(x_0\) e encontramos \[P_2(x) = f(x_0) + f'(x_0)(x-x_0) + \frac{f''(x_0)}{2}(x-x_0)^2.\] Chamamos \(P_2(x)\) de \textbf{polinômio de Taylor de ordem 2} de \(f\) em torno de \(x_0\). 
+
+Assim, \[f(x) = P_2(x) + E_2(x)\] e o teorema para encontrar o erro é o seguinte:
+\begin{theorem}
+    Sejam \(f\) diferenciável até terceira ordem em \(I\) e \(x,x_0\in I\). Então existe \(\bar{x}\in(x,x_0)\) tal que \[f(x) = P_2(x) + E_2(x),\] com \(E_2(x) = \frac{f'''(\bar{x})}{3!}(x-x_0)^3.\) 
+    
+    Ou seja \[f(x) = f'(x_0)(x-x_0) + \frac{f''(x_0)}{2}(x-x_0)^2 + \frac{f'''(\bar{x})}{3!}(x-x_0)^3.\]
+\end{theorem}
+
+Em geral, se \(f\) é diferenciável até ordem \(n\) em \(I\) e \(x_0\in I\), \[P_n(x) = f(x_0) + f'(x_0)(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + \dots + \frac{f^{(n)}}{n!}(x-x_0)^n\] é o \textbf{polinômio de Taylor de ordem n} de \(f\) em torno de \(x_0\).
+
+Como antes, \(P_n(x)\) é o único polinômio de grau (no máximo) \(n\) que aproxima \(f\) em torno de \(x_0\) tal que \(E_n(x) \to 0\) mais rápido do que \((x-x_0)^n \to 0\), quando \((x\to x_0)\). Mais especificamente:
+\begin{theorem}
+    Sejam \(f\) diferenciável até ordem \(n+1\) em \(I\) e \(x,x_0\in I\). Então, existe \(\bar{x}\in(x,x_0)\) tal que \[f(x) = P_n(x) + E_n(x),\] com \(E_n(x) = \frac{f^{(n+1)(\bar{x})}}{(n+1)!}(x-x_0)^{n+1}\). 
+    
+    Ou seja \[ f(x) = f(x_0) + f'(x_0)(x-x_0) + \frac{f''(x_0)}{2}(x-x_0)^2 + \dots + \frac{f^{(n)(x_0)}}{n!}(x-x_0)^n + \frac{f^{(n+1)}(\bar{x})}{(n+1)!}(x-x_0)^{n+1}.\]
+\end{theorem}
+
+Vejamos agora o caso de funções de duas variáveis.
+
+Seja \(f: A\subset\R^2 \to \R\), com \(A\) aberto, tal que as derivadas parciais de segunda ordem de \(f\) existem e são contínuas em \(A\). Sejam \((x_0,y_0)\in A\) e \((h,k)\neq(0,0)\) tais que o segmento de extremidades \((x_0,y_0)\) e \((x_0+h,y_0+k)\) esteja contido em \(A\), ou seja \[(x,y) = (x_0,y_0) + t(h,k) = (x_0+ht,y_0+kt)\in A,\; \forall t\in[0,1].\]
+
+Seja ainda, \(g\) a função dada por \[g(t) = f(x_0 + ht, y_0 + kt),\; t\in[0,1].\] Note que \(g\) fornece os valores que \(f\) assume nos pontos do segmento de extremidades \((x_0,y_0)\) e \((x_0+h,y_0+k)\).
+
+Pela Fórmula de Taylor para funções de uma variável (de ordem 1 em torno de \(t = 0\)), temos, para \(t\in[0,1]\), \[g(t) = g(0) + g'(0)(t-0) + \frac{g''(\bar{t})}{2}(t-0)^2,\] para algum \(\bar{t} \in (0,t)\).
+
+Em particular,
+    \begin{equation}\label{eqn.g(1)}
+        g(1) = g(0) + g'(0) + \frac{g''(\bar{t})}{2},
+    \end{equation}
+para algum \(\bar{t}\in(0,1)\).
+
+Agora, temos que
+    \begin{align*}
+        g'(t)
+            & = \frac{d}{dt}(f(x_0+ht,y_0+kt)) \\
+            & = \frac{\partial f}{\partial x}(x_0+ht,y_0+kt)\cdot\frac{dx}{dt} + \frac{\partial f}{\partial y}(x_0+ht,y_0+kt)\cdot\frac{dy}{dt} \\
+            & = \frac{\partial f}{\partial x}(x_0+ht,y_0+kt) h + \frac{\partial f}{\partial y}(x_0+ht,y_0+kt) k \\
+        g''(t)
+            & = \frac{d}{dt} \left( \frac{\partial f}{\partial x}(x_0+ht,y_0+kt) h \right) + \frac{d}{dt}\left( \frac{\partial f}{\partial y}(x_0+ht,y_0+kt) k \right) \\
+            & = \left[ \frac{\partial^2 f}{\partial x^2}(x_0+ht,y_0+kt) \cdot \frac{dx}{dt} + \frac{\partial^2 f}{\partial y \partial x}(x_0+ht,y_0+kt)\cdot\frac{dy}{dt} \right] h \\
+                & \quad + \left[ \frac{\partial^2 f}{\partial x \partial y}(x_0+ht,y_0+kt)\cdot\frac{dx}{dt} + \frac{\partial^2 f}{\partial y^2}(x_0+ht,y_0+kt) \cdot \frac{dy}{dt} \right] k \\
+            & = \frac{\partial^2 f}{\partial x^2}(x_0+ht,y_0+kt) \cdot h^2 + 2 \frac{\partial^2 f}{\partial y \partial x}(x_0+ht,y_0+kt)\cdot hk + \frac{\partial^2 f}{\partial y^2}(x_0+ht,y_0+kt) \cdot k^2.
+    \end{align*}
+
+Assim,
+    \begin{enumerate}
+        \item \(g(1) = f(x_0 + h, y_0 + k)\)
+        \item \(g(0) = f(x_0,y_0)\)
+        \item \(g'(0) = \frac{\partial f}{\partial x}(x_0,y_0) h + \frac{\partial f}{\partial y}(x_0,y_0)k\)
+        \item \(g''(\bar{t}) = \frac{\partial^2 f} {\partial x^2}(x_0+h\bar{t}, y_0 + k\bar{t}) h^2 + 2\frac{\partial^2 f}{\partial x \partial y} (x_0 + h\bar{t}, y_0 + k\bar{t}) hk + \frac{\partial^2 f}{\partial y}(x_0+h\bar{t},y_0+k\bar{t}) k^2 \\ \quad = \frac{\partial^2 f} {\partial x^2}(\bar{x},\bar{y}) h^2 + 2\frac{\partial^2 f}{\partial x \partial y} (\bar{x},\bar{y}) hk + \frac{\partial^2 f}{\partial y}(\bar{x},\bar{y}) k^2\),
+    \end{enumerate}
+substituindo em \eqref{eqn.g(1)}
+    \begin{equation}\label{eqn.g(1)'}
+        f(x_0+h,y_0+k) = f(x_0,y_0) + \frac{\partial f}{\partial x}(x_0,y_0) + \frac{\partial f}{\partial y}(x_0,y_0)k + E_1(h,k),
+    \end{equation}
+no qual \(E_1(h,k) = \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}f(\bar{x},\bar{y}) h^2 + 2\frac{\partial^2 f}{\partial x \partial y} (\bar{x},\bar{y}) hk + \frac{\partial^2 f}{\partial y^2}(\bar{x},\bar{y})k^2  \right]\) para algum \((\bar{x},\bar{y})\) no segmento de extremidades \((x_0,y_0)\) e \((x_0+h,y_0+h)\).
+
+Fazendo a mudança \(x = x_0+h\) e \(y = y_0+h\) em \eqref{eqn.g(1)'}, \[f(x,y) = f(x_0,y_0) + \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0) + E_1(x,y),\] no qual \[E_1(x,y) = \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}(\bar{x},\bar{y})(x-x_0)^2 + 2\frac{\partial^2 f}{\partial x \partial y}(\bar{x},\bar{y})(x-x_0)(y-y_0) + \frac{\partial^2 f}{\partial y^2}(x_0,y_0)(y-y_0)^2 \right],\] para algum \((\bar{x},\bar{y})\) no segmento de extremidades \((x_0,y_0)\) e \((x,y)\).
+
+O polinômio \[P_1(x,y) = f(x_0,y_0) + \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0)\] é chamado \textbf{polinômio de taylor de ordem 1}\index{Fórmula de Taylor! 1ª ordem} de \(f(x,y)\) em torno de \((x_0,y_0)\).
+
+O anterior mostra o seguinte teorema
+\begin{theorem}[Fórmula de Taylor com resto de Lagrange]\index{Teorema! Fórmula de Taylor com resto de Lagrange}
+    Sejam \(f:A\subset\R^2\to\R\), com \(A\) aberto, uma função tal que suas derivadas de 2ª ordem existem e são contínuas em \(A\) e \((x,y),(x_0,y_0)\in A\). Então, existe \((\bar{x},\bar{y})\) no segmento de extremidades \((x_0,y_0)\) e \((x,y)\) tal que \[f(x,y) = P_1(x,y) + E_1(x,y),\] no qual \[E_1(x,y) = \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}(\bar{x},\bar{y})(x-x_0)^2 + 2\frac{\partial^2 f}{\partial x \partial y}(\bar{x},\bar{y})(x-x_0)(y-y_0) + \frac{\partial^2 f}{\partial y^2}(x_0,y_0)(y-y_0)^2 \right].\]
+\end{theorem}
+
+\begin{remark}
+    Observe que
+        \begin{enumerate}
+            \item O gráfico de \(P_1(x,y)\) é o \textit{plano tangente} ao gráfico de \(f\) em \((x_0,y_0,f(x_0,y_0))\).
+            \item \(E_1(x,y)\) é o erro que se comete na aproximação de \(f(x,y)\) por \(P_1(x,y)\).
+            \item \(P_1(x,y)\) é o polinômio de grau (no máximo) 1 que melhor aproxima \(f(x,y)\) em torno de \((x_0,y_0)\).
+            \item Chamamos \(E_1(x,y)\) de \textbf{Resto de Lagrange}\index{Fórmula de Taylor!Erro de Lagrange}.
+        \end{enumerate}
+\end{remark}
+
+Usando o mesmo raciocínio, vemos que
+    \begin{align*}
+        P_2(x,y) 
+            & = f(x_0,y_0) + \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0) \\
+                & \quad \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}(\bar{x},\bar{y})(x-x_0)^2 + 2\frac{\partial^2 f}{\partial x \partial y}(\bar{x},\bar{y})(x-x_0)(y-y_0) + \frac{\partial^2 f}{\partial y^2}(x_0,y_0)(y-y_0)^2 \right]
+    \end{align*}
+é o polinômio de grau (no máximo) 2 que melhor aproxima \(f(x,y)\) em torno de \((x_0,y_0)\).
+
+Chamamos \(P_2(x,y)\) de \textbf{polinômio de Taylor de ordem 2}\index{Polinômio de Taylor!2ª ordem} de \(f(x,y)\) em torno de \((x_0,y_0)\). O erro na aproximação de \(f(x,y)\) por \(P_2(x,y)\) é dado no próximo teorema.
+\begin{theorem}[Fórmula de Taylor com resto de Lagrange]\index{Teorema! Fórmula de Taylor com resto de Lagrange}
+    Sejam \(f:A\subset\R^2\to\R\), \(A\) aberto, tal que as derivadas parciais de 3ª ordem existem e são contínuas em \(A\) e \((x_0,y_0),(x,y)\in A\). Então, existe \((\bar{x},\bar{y})\) no segmento de extremidades \((x_0,y_0)\) e \((x,y)\) tal que \[f(x,y) = P_2(x,y) + E_2(x,y),\] no qual
+        \begin{align*}
+            E_2(x,y)
+                & = \frac{1}{3!} \left[ \frac{\partial^3 f}{\partial x^3}(\bar{x},\bar{y})(x-x_0)^3 + 3\frac{\partial^3 f}{\partial x^2 \partial y} (\bar{x},\bar{y})(x-x_0)^2(y-y_0) \right.\\
+                    & \quad \left. + 3\frac{\partial^3 f}{\partial x\partial y^2}(\bar{x},\bar{y})(x-x_0)(y-y_0)^3 + \frac{\partial^3 f}{\partial y^3}(\bar{x},\bar{y})(y-y_0)^3 \right]
+        \end{align*}
+\end{theorem}
+
+\begin{exercise}
+    Defina o polinômio de Taylor de ordem (no máximo) \(n\) de \(f\) em torno de \((x_0,y_0)\) e enuncie o teorema que apresenta o resto de Lagrange para este polinômio.
+\end{exercise}
+
+\begin{example}
+    Seja \(f(x,y) = \ln(x+y)\)
+        \begin{enumerate}
+            \item Encontre o polinômio de Taylor de ordem 1 de \(f\) em torno de \((\frac{1}{2},\frac{1}{2})\).
+            \item Calcule o erro na aproximação de \(f\) por seu polinômio de Taylor em torno de \((\frac{1}{2},\frac{1}{2})\).
+            \item Estime o erro na aproximação de \(f\) por seu polinômio de Taylor de ordem 1 para \(x = 0,51\) e \(y = 0,51\).
+        \end{enumerate}
+
+    Inicialmente note que
+        \begin{align*}
+            \frac{\partial f}{\partial x}(x,y) = \frac{1}{x+y}\quad &\quad \frac{\partial f}{\partial y}(x,y) = \frac{1}{x+y} \\
+            \frac{\partial^2 f}{\partial x^2}(x,y) = -\frac{1}{(x+y)^2} \quad &\quad \frac{\partial^2 f}{\partial y^2}(x,y) = -\frac{1}{(x+y)^2} \\
+            \frac{\partial^2 f}{\partial y \partial x}(x,y) = -\frac{1}{(x+y)^2} \quad &\quad \frac{\partial^2 f}{\partial x \partial y}(x,y) = -\frac{1}{(x^2+y^2)}
+        \end{align*}
+    logo as derivadas parciais existem e são contínuas numa vizinhança de \((\frac{1}{2},\frac{1}{2})\). Portanto, podemos escrever
+        \begin{align*}
+            P_1(x,y)
+                & = f(\frac{1}{2},\frac{1}{2}) + \frac{\partial f}{\partial x}(\frac{1}{2},\frac{1}{2})(x-\frac{1}{2}) + \frac{\partial f}{\partial y}(\frac{1}{2},\frac{1}{2})(y-\frac{1}{2}) \\
+                & = \ln(1) + \frac{1}{\frac{1}{2} + \frac{1}{2}}(x-\frac{1}{2}) + \frac{1}{\frac{1}{2} + \frac{1}{2}}(y-\frac{1}{2}) \\
+                & = x + y + 1.
+        \end{align*}
+
+    Assim, sabendo que \(\ln(x+y) = P_1(x,y) + E_1(x,y)\), no qual
+        \begin{align*}
+            E_1(x,y)
+                & = \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}(\bar{x},\bar{y})(x-\frac{1}{2})^2 + 2\frac{\partial^2 f}{\partial x \partial y}(\bar{x},\bar{y})(x-\frac{1}{2})(y-\frac{1}{2}) + \frac{\partial^2 f}{\partial y^2}(x_0,y_0)(y-\frac{1}{2})^2 \right] \\
+            & = \frac{1}{2} \frac{-1}{(\bar{x}+\bar{y})}\left[ (x-\frac{1}{2})^2 + 2(x-\frac{1}{2})(y-\frac{1}{2}) + (y-\frac{1}{2})^2 \right],
+        \end{align*}
+    para algum \((\bar{x},\bar{y})\) no segmento de extremidades \((\frac{1}{2},\frac{1}{2})\) e \((x,y)\).
+
+    Agora, para \((x,y)=(0.51,0.51)\), como \((\bar{x},\bar{y})\) pertence ao segmento de extremidades \((\frac{1}{2},\frac{1}{2})\) e \((x,y)\), devemos ter \(\bar{x}>\frac{1}{2}\) e \(\bar{y}>\frac{1}{2}\), logo \(\bar{x} + \bar{y} > \frac{1}{2} + \frac{1}{2} = 1\), o que implica que \((\bar{x}+\bar{y})^2 > 1\), que por sua vez garante que \(\frac{1}{(x^2+y^2)} < 1\). Segue assim que
+        \begin{align*}
+            |E_1(0.51,0.51)|
+                & = \frac{1}{2} \frac{-1}{(\bar{x}+\bar{y})}\left| (0.51 -\frac{1}{2})^2 + 2(0.51-\frac{1}{2})(0.51-\frac{1}{2}) + (0.51-\frac{1}{2})^2 \right| \\
+                & = \frac{1}{2}\cdot 4\cdot (0.01)^2 = 2\cdot10^{-4}.
+        \end{align*}
+\end{example}
+
+\begin{example}
+    Encontre o polinômio de Taylor de ordem 1 da função \(f(x,y) = e^{x+5y}\) em torno de \((x_0,y_0) = (0,0)\) e o resto de Lagrange para esta aproximação. Em seguida, calcule o erro na aproximação para \((x,y) = (0.01,0.01)\).
+
+    Iniciamos calculando
+        \begin{align*}
+            \frac{\partial f}{\partial x}(x,y) = e^{x+5y} \quad & \quad \frac{\partial f}{\partial y}(x,y) = 5e^{x+5y} \\
+            \frac{\partial^2 f}{\partial x^2}(x,y) = e^{x+5y} \quad & \quad \frac{\partial^2 f}{\partial y^2}(x,y) = 25e^{x+5y} \\
+            \frac{\partial^2 f}{\partial x \partial y}(x,y) = 5e^{x+5y} \quad & \quad  \frac{\partial^2 f}{\partial y \partial x} = 5e^{x+5y},
+        \end{align*}
+    o que mostra que as derivadas parcias existem e são contínuas numa vizinhança de \((0,0)\). Portanto podemos escrever \[P_1(x,y) = f(0,0) + \frac{\partial f}{\partial x}(0,0)(x-0) + \frac{\partial f}{\partial y}(0,0)(y-0) = 1 + x + 5y.\] Além disso, sabemos que \[e^{x+5y} = P_1(x,y) + E_1(x,y),\] no qual
+        \begin{align*}
+            E_1(x,y)
+                & = \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}(\bar{x},\bar{y})(x-0)^2 + \frac{\partial^2 f}{\partial x \partial y}(\bar{x},\bar{y})(x-0)(y-0) + \frac{\partial^2 f}{\partial y^2}(\bar{x},\bar{y})(y-0)^2 \right] \\
+                & = \frac{1}{2}\left[ e^{\bar{x}+5\bar{y}}x^2 + 10e^{\bar{x}+5\bar{y}}xy + 25e^{\bar{x}+5\bar{y}}y^2 \right] \\
+                & = \frac{e^{\bar{x}+5\bar{y}}}{2}[x^2 + 10xy + 25y^2] = \frac{e^{\bar{x}+5\bar{y}}}{2}(x+5y)^2,
+        \end{align*}
+    para algum \((\bar{x},\bar{y})\) no segmento de extremidades \((0,0)\) e \((x,y)\).
+
+    Finalmente, se \((x,y) = (0.01,0.01)\), temos \[P_1(0.01,0.01) = 0.01 + 5\cdot0.01 + 1 = 1.06,\] e \[f(0.01,0.01) = P_1(0.01,0.01) + E_1(0.01,0.01),\] ou seja, \[e^{0.06} = 1.06 + E_1(0.01,0.01).\] Além disso, se \((\bar{x},\bar{y})\) é um ponto no segmento de extremidades \((0,0)\) e \((0.01,0.01)\), então \(\bar{x} < 0.01\) e \(5\bar{y} < 0.05\), portanto \(\bar{x} + 5\bar{y} < 0.01 + 0.05 - 0.06 < 1\), daí, \[|E_1(0.01,0.01)| = \frac{e^{\bar{x}+5\bar{y}}}{2} (0.01 + 5\cdot0.01)^2 < \frac{e}{2} 6\cdot (10^{-2})^2 = 18e\cdot 10^{-1}.\]
+\end{example}
+
+\section{Máximos e mínimos}
+
+\begin{definition}
+    Sejam \(f:D_f\subset\R^2\to\R\) e \((x_0,y_0)\in A \subset D_f\). Dizemos que \((x_0,y_0)\) é \textbf{ponto de máximo {\co(mínimo)}}\index{Ponto de máximo/mínimo} de \(f\) em \(A\) se \[f(x,y) \leq f(x_0,y_0) \leq f(x_0,y_0) {\co (f(x,y) \geq f(x_0,y_0))},\; \forall (x,y)\in A.\] Neste caso, dizemos que \((x_0,y_0)\) é um ponto de máximo {\co (mínimo)} de \(f\) em \(A\).
+\end{definition}
 
 % \section{Máximos e mínimos em conjuntos compactos}
 
