@@ -2484,8 +2484,660 @@ Chamamos \(P_2(x,y)\) de \textbf{polinômio de Taylor de ordem 2}\index{Polinôm
 \section{Máximos e mínimos}
 
 \begin{definition}
-    Sejam \(f:D_f\subset\R^2\to\R\) e \((x_0,y_0)\in A \subset D_f\). Dizemos que \((x_0,y_0)\) é \textbf{ponto de máximo {\co(mínimo)}}\index{Ponto de máximo/mínimo} de \(f\) em \(A\) se \[f(x,y) \leq f(x_0,y_0) \leq f(x_0,y_0) {\co (f(x,y) \geq f(x_0,y_0))},\; \forall (x,y)\in A.\] Neste caso, dizemos que \((x_0,y_0)\) é um ponto de máximo {\co (mínimo)} de \(f\) em \(A\).
+    Sejam \(f:D_f\subset\R^2\to\R\) e \((x_0,y_0)\in A \subset D_f\). Dizemos que \((x_0,y_0)\) é \textbf{ponto de máximo {\co(mínimo)}}\index{Ponto de máximo/mínimo} de \(f\) em \(A\) se \[f(x,y) \leq f(x_0,y_0) \leq f(x_0,y_0) {\co (f(x,y) \geq f(x_0,y_0))},\; \forall (x,y)\in A.\] Neste caso, dizemos que \(f(x_0,y_0)\) é o \textbf{valor máximo {\co (mínimo)}}\index{Valor máximo/mínimo} de \(f\) em \(A\).
+
 \end{definition}
+
+\begin{definition}
+    Seja \(f: D_f \subset\R^2 \to \R\). Dizemos que \((x_0,y_0)\in D_f\) é um \textbf{ponto de máximo {\co (mínimo)} global}\index{Ponto de máximo/mínimo! Global} de \(f\) se \[f(x,y) \leq f(x_0,y_0) \leq f(x_0,y_0) {\co (f(x,y) \geq f(x_0,y_0))},\; \forall (x,y)\in D_f.\] Neste caso, dizemos que \(f(x_0,y_0)\) é o \textbf{valor máximo {\co (mínimo) global}}\index{Valor máximo/mínimo! Global} de \(f\).
+\end{definition}
+
+\begin{definition}
+    Seja \(f:D_f \subset \R^2 \to \R\). Dizemos que \((x_0,y_0)\in D_f\) é um \textbf{ponto de máximo {\co(mínimo)} local}\index{Ponto de máximo/mínimo! Local} de \(f\) se existir uma bola aberta \(B_R(x_0,y_0)\) tal que \[f(x,y) \leq f(x_0,y_0) \leq f(x_0,y_0) {\co (f(x,y) \geq f(x_0,y_0))},\; \forall (x,y)\in B_R(x_0,y_0)\cap D_f.\]
+\end{definition}
+
+\begin{remark}
+    Podemos chamar os pontos de máximo/mínimo de uma função \(f\) de \textbf{extremos (extremantes)} de \(f\).
+\end{remark}
+
+\begin{example}
+    O ponto \((0,0)\) é um ponto de mínimo global de \(f(x,y) = x^2 + y^2\)
+
+    De fato, temos que \(D_f = \R^2\) e \[f(x,y) = x^2 + y^2 \geq 0 = f(0,0),\; \forall (x,y)\in\R^2,\] ou seja, \(f(x,y) \geq f(0,0),\; (x,y)\in D_f \).
+    \begin{figure}[htbp]
+        \centering
+        \begin{tikzpicture}[x=0.55pt,y=0.55pt,yscale=-1,xscale=1]
+            %Straight Lines [id:da7636904241935191] 
+            \draw    (250.5,201.84) -- (250.27,29.72) ;
+            \draw [shift={(250.26,27.72)}, rotate = 89.92] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+            %Straight Lines [id:da6599313815262359] 
+            \draw    (250.5,201.84) -- (329.8,201.65) ;
+            \draw [shift={(331.8,201.65)}, rotate = 179.87] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+            %Straight Lines [id:da505227752903949] 
+            \draw    (250.5,201.84) -- (211.21,241.23) ;
+            \draw [shift={(209.8,242.65)}, rotate = 314.92] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+            %Curve Lines [id:da19952193924587136] 
+            \draw [draw opacity=0][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=0.7 ]   (190,66.6) .. controls (241.8,246.55) and (258.5,247.6) .. (310,66.6) ;
+            %Flowchart: Connector [id:dp7504388134519588] 
+            \draw  [draw opacity=0][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=1 ] (190,66.6) .. controls (190,58.59) and (216.71,52.1) .. (249.65,52.1) .. controls (282.59,52.1) and (309.3,58.59) .. (309.3,66.6) .. controls (309.3,74.61) and (282.59,81.1) .. (249.65,81.1) .. controls (216.71,81.1) and (190,74.61) .. (190,66.6) -- cycle ;
+            %Curve Lines [id:da24262205952245863] 
+            \draw    (250.5,201.84) .. controls (253.78,207.09) and (231.84,221.4) .. (272.59,217.37) ;
+            \draw [shift={(274.5,217.17)}, rotate = 173.85] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Shape: Circle [id:dp7898193452441681] 
+            \draw  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=1 ] (247.5,201.84) .. controls (247.5,200.18) and (248.84,198.84) .. (250.5,198.84) .. controls (252.15,198.84) and (253.5,200.18) .. (253.5,201.84) .. controls (253.5,203.49) and (252.15,204.84) .. (250.5,204.84) .. controls (248.84,204.84) and (247.5,203.49) .. (247.5,201.84) -- cycle ;
+            %Shape: Circle [id:dp20477105977220922] 
+            \draw  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=1 ] (268.16,123.17) .. controls (268.16,121.51) and (269.51,120.17) .. (271.16,120.17) .. controls (272.82,120.17) and (274.16,121.51) .. (274.16,123.17) .. controls (274.16,124.83) and (272.82,126.17) .. (271.16,126.17) .. controls (269.51,126.17) and (268.16,124.83) .. (268.16,123.17) -- cycle ;
+            %Curve Lines [id:da529847069599615] 
+            \draw    (275.16,131.17) .. controls (278.45,136.42) and (263.27,152.05) .. (304.22,148.06) ;
+            \draw [shift={(306.13,147.87)}, rotate = 173.85] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+            % Text Node
+            \draw (218.54,236.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$x$};
+            % Text Node
+            \draw (335.96,196.13) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$y$};
+            % Text Node
+            \draw (236.96,16.13) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$z$};
+            % Text Node
+            \draw (276,209.73) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{f( 0,0)}$};
+            % Text Node
+            \draw (309.33,139.07) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{f}\textcolor[rgb]{0.29,0.56,0.89}{(x,y)}\textcolor[rgb]{0.29,0.56,0.89}{ \ =\ x^{2} \ +\ y^{2}}$};
+        \end{tikzpicture}
+    \caption{Mínimo de \(f(x,y) = x^2 + y^2\)}
+    \label{fig:PontoMinimo}
+    \end{figure}
+\end{example}
+
+\begin{example}
+    Seja \(f(x,y) = 2x-y\) e seja \[A = \{(x,y)\in\R^2 : x\geq 0,\, y\geq 0,\, x+y\leq 3 \text{ e } y\geq x\}.\]
+
+    Estude os pontos e máximo e mínimo de \(f\) em \(A\).
+
+    Note primeiro que \(D_f = \R^2\) e que \(A\subset\R\). Além disso, para o esboço do conjunto \(A\), é importante estudarmos o ponto de interseção das retas que aparecem em \(A\): \[y = 3-x \text{ e } y=x,\] temos \[3-x = x \Leftrightarrow 2x = 3 \Leftrightarrow x = \frac{3}{2} = y,\] ou seja, \(\left( \frac{3}{2},\frac{3}{2} \right)\) é o ponto de interseção e o conjunto \(A\) é o seguinte
+        \begin{figure}[htbp]
+            \centering
+            \begin{tikzpicture}[x=0.55pt,y=0.55pt,yscale=-1,xscale=1]
+                %Shape: Axis 2D [id:dp14996748339454324] 
+                \draw  (152.2,243.7) -- (434,243.7)(180.38,10.15) -- (180.38,269.65) (427,238.7) -- (434,243.7) -- (427,248.7) (175.38,17.15) -- (180.38,10.15) -- (185.38,17.15)  ;
+                %Straight Lines [id:da27839799180251534] 
+                \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ] [dash pattern={on 0.84pt off 2.51pt}]  (280.2,149.3) -- (298.42,131.08) ;
+                %Straight Lines [id:da43082259572254256] 
+                \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ] [dash pattern={on 0.84pt off 2.51pt}]  (280.2,149.3) -- (307.03,176.13) ;
+                %Straight Lines [id:da4327120882962361] 
+                \draw  [dash pattern={on 0.84pt off 2.51pt}]  (279.98,149.3) -- (279.98,243.65) ;
+                %Straight Lines [id:da5657584190725664] 
+                \draw  [dash pattern={on 0.84pt off 2.51pt}]  (280.2,149.3) -- (180.42,149.3) ;
+                %Flowchart: Merge [id:dp9392854392848939] 
+                \draw  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=0.25 ] (180.4,243.7) -- (180.4,54.9) -- (280.2,149.3) -- cycle ;
+
+                % Text Node
+                \draw (298.2,115.9) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.96,0.65,0.14}{y\ =\ x}$};
+                % Text Node
+                \draw (309.03,179.53) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$x+y=\ 3$};
+                % Text Node
+                \draw (473.53,252.4) node [anchor=north west][inner sep=0.75pt]    {$x$};
+                % Text Node
+                \draw (192.7,3.9) node [anchor=north west][inner sep=0.75pt]    {$y$};
+                % Text Node
+                \draw (273.7,251.9) node [anchor=north west][inner sep=0.75pt]    {$\frac{3}{2}$};
+                % Text Node
+                \draw (164.2,129.3) node [anchor=north west][inner sep=0.75pt]    {$\frac{3}{2}$};
+                % Text Node
+                \draw (162.4,46.07) node [anchor=north west][inner sep=0.75pt]    {$3$};
+                % Text Node
+                \draw (369.07,244.73) node [anchor=north west][inner sep=0.75pt]    {$3$};
+                % Text Node
+                \draw (195.07,111.4) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$A$};
+            \end{tikzpicture}
+        \caption{Região \(A\)}
+        \label{fig:RegiaoA}
+        \end{figure}
+    
+    Agora analisamos a imagem de \(f\) em \(A\). Neste caso, temos que \(z =  2x - y,\; (x,y)\in A\), mas para \((x,y)\in A\), do que foi visto acima,
+        \begin{enumerate}
+            \item \(x\geq \frac{3}{2} \Rightarrow z = 2x - y = x + x - y \leq \frac{3}{2}\)
+            \item \(y\leq 3 \Rightarrow -y \geq -3 \Rightarrow z = 2x - y \geq -3\).
+        \end{enumerate}
+    
+    Assim, \(-3\leq z \leq \frac{3}{2}\), ou seja \(Im_f = [-3,\frac{3}{2}]\) em \(A\).
+
+    Com isso, façamos o estudo dos máximos e mínimos em \(A\) geometricamente, ou seja, através das curvas de nível de \(f\).
+
+    Para as curvas de nível, fazemos \(f(x,y) = k\), para \(k\in[-3,\frac{3}{2}]\)
+    \begin{itemize}
+        \item Para \(k=-3\), temos \[2x - y = -3 \Leftrightarrow y = 2x+3\]
+        \item Para \(k=-2\), temos \[2x - y = -2 \Leftrightarrow y = 2x+2\]
+        \item Para \(k=-1\), temos \[2x - y = -1 \Leftrightarrow y = 2x+1\]
+        \item Para \(k=0\), temos \[2x - y = 0 \Leftrightarrow y = 2x\]
+        \item Para \(k=\frac{3}{2}\), temos \[2x - y = \frac{3}{2} \Leftrightarrow y = 2x-\frac{3}{2}\]
+    \end{itemize}
+    \begin{figure}[htbp]
+            \centering
+            \begin{tikzpicture}[x=0.55pt,y=0.55pt,yscale=-1,xscale=1]
+                %Shape: Axis 2D [id:dp4770119392271903] 
+                \draw  (172.2,254.7) -- (454,254.7)(200.38,21.15) -- (200.38,280.65) (447,249.7) -- (454,254.7) -- (447,259.7) (195.38,28.15) -- (200.38,21.15) -- (205.38,28.15)  ;
+                %Straight Lines [id:da07234806337310185] 
+                \draw  [dash pattern={on 0.84pt off 2.51pt}]  (299.98,160.3) -- (299.98,254.65) ;
+                %Straight Lines [id:da9957905416889904] 
+                \draw  [dash pattern={on 0.84pt off 2.51pt}]  (300.2,160.3) -- (200.42,160.3) ;
+                %Flowchart: Merge [id:dp4041696803894387] 
+                \draw  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=0.25 ] (200.4,254.7) -- (200.4,65.9) -- (300.2,160.3) -- cycle ;
+                %Straight Lines [id:da10191397612639685] 
+                \draw    (200.38,379.5) -- (200.38,254.7) ;
+                %Straight Lines [id:da8061896557645022] 
+                \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (366.2,40.5) -- (199.18,351.05) ;
+                %Straight Lines [id:da028969142674056814] 
+                \draw [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ]   (315.2,41.5) -- (144.2,358.5) ;
+                %Straight Lines [id:da740970042816858] 
+                \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (282.2,40.5) -- (107.2,358.5) ;
+                %Straight Lines [id:da09771081333735443] 
+                \draw [color={rgb, 255:red, 189; green, 16; blue, 224 }  ,draw opacity=1 ]   (245.2,40.5) -- (73.2,357.5) ;
+                %Straight Lines [id:da6199637574277478] 
+                \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (213.2,39.5) -- (38.2,357.5) ;
+
+                % Text Node
+                \draw (493.53,263.4) node [anchor=north west][inner sep=0.75pt]    {$x$};
+                % Text Node
+                \draw (177.7,15.9) node [anchor=north west][inner sep=0.75pt]    {$y$};
+                % Text Node
+                \draw (293.7,262.9) node [anchor=north west][inner sep=0.75pt]    {$\frac{3}{2}$};
+                % Text Node
+                \draw (184.2,140.3) node [anchor=north west][inner sep=0.75pt]    {$\frac{3}{2}$};
+                % Text Node
+                \draw (182.4,57.07) node [anchor=north west][inner sep=0.75pt]    {$3$};
+                % Text Node
+                \draw (389.07,255.73) node [anchor=north west][inner sep=0.75pt]    {$3$};
+                % Text Node
+                \draw (215.07,122.4) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$A$};
+                % Text Node
+                \draw (205.7,328.9) node [anchor=north west][inner sep=0.75pt]    {$-\frac{3}{2}$};
+                % Text Node
+                \draw (372,18.4) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,opacity=1 ]  {$k\ =\ \frac{3}{2}$};
+                % Text Node
+                \draw (300,23.4) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,opacity=1 ]  {$k\ =0$};
+                % Text Node
+                \draw (266,9.4) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{k=-1}$};
+                % Text Node
+                \draw (47.18,366.45) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 189; green, 16; blue, 224 }  ,opacity=1 ]  {$\textcolor[rgb]{0.74,0.06,0.88}{k=-2}$};
+                % Text Node
+                \draw (37,240.4) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{k=-3}$};
+            \end{tikzpicture}
+        \caption{Curvas de nível de \(f(x,y) = 2x-y\) em \(A\)}
+        \label{fig:CurvasdeNivel}
+    \end{figure}
+
+    Assim, em \(A\), temos
+        \begin{enumerate}
+            \item O menor valor de \(z = f(x,y)\) é \[z = -3 \Rightarrow y = 3x+3\] e o único ponto dessa reta que está em \(A\) é \((0,3)\) e \(f(0,3) - -3\).
+            \item O maior valor de \(z = f(x,y)\) é \[z = \frac{3}{2} \Rightarrow y = 2x - \frac{3}{2}\] e o único ponto dessa reta que está em \(A\) é \(\left( \frac{3}{2},\frac{3}{2} \right)\) e \(f\left( \frac{3}{2},\frac{3}{2} \right) = \frac{3}{2}\).
+        \end{enumerate}
+
+    Vimos, geometricamente, que \((0,3)\) é o ponto de mínimo de \(f\) em \(A\), enquanto que \(\left( \frac{3}{2},\frac{3}{2} \right)\) é o ponto de máximo de \(f\) em \(A\).
+
+    Agora, para \((x,y)\in A\), temos
+        \begin{enumerate}
+            \item \(f(x,y) - f(0,3) = 2x - y -(-3) = 2x - y + 3 = 3x + (3-x-y) \geq 0\), ou seja, \(f(x,y) \geq f(0,3)\), para todo \((x,y)\in A\). Portanto \((0,3)\) é, de fato, o ponto de mínimo de \(f\) em \(A\).
+            \item \(f(x,y) - f\left( \frac{3}{2},\frac{3}{2} \right) = 2x - y - \frac{3}{2} = - \left( \frac{3}{2} - x \right) - (y-x) \leq 0\). Portanto \(f(x,y)\leq f\left( \frac{3}{2},\frac{3}{2} \right)\) é, de fato, ponto de máximo de \(f\) em \(A\).
+        \end{enumerate}
+\end{example}
+
+O estudo dos extremos de uma função pode não ser fácil. Assim, é importante buscarmos ferramentas que nos auxiliem nesse estudo.
+
+Nesse sentido, o próximo teorema nos ajuda a escolher, entre os pontos interiores de \(D_f\), candidatos a extremos locais.
+
+\begin{theorem}\label{thm.PontosCriticos}
+    Seja \((x_0,y_0)\) um ponto interior de \(D_f\) e suponha que \(\partial_x f(x_0,y_0)\) e \(\partial_y f(x_0,y_0)\) existem. Se \((x_0,y_0)\) é um extremo local de \(f\), então \(\partial_x f(x_0,y_0) = 0 \partial_y f(x_0,y_0)\), ou seja \(\nabla f(x_0,y_0) = (0,0)\).
+\end{theorem}
+
+\begin{proof}
+    Exercício \cite{guidorizzi}[pg. 309]
+\end{proof}
+
+\textbf{Pergunta: } Já poderiamos esperar o resultado do Teorema \ref{thm.PontosCriticos}?
+
+Para respondermos à pergunta, vamos pensar no que acontece com o plano tangente ao gráfico de uma função \(f\) diferenciável no ponto \((x_0,y_0,f(x_0,y_0))\), com \((x_0,y_0)\) sendo um extremo local.
+    \begin{figure}[htbp]
+        \centering
+            \begin{tikzpicture}[x=0.55pt,y=0.55pt,yscale=-1,xscale=1]
+            %Straight Lines [id:da5407533386581954] 
+            \draw    (214.34,195.8) -- (214.34,10.38) ;
+            \draw [shift={(214.34,8.38)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da0021594964071267597] 
+            \draw    (214.34,195.8) -- (386.6,195.8) ;
+            \draw [shift={(388.6,195.8)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da6815984143657149] 
+            \draw    (214.34,195.8) -- (156.01,254.13) ;
+            \draw [shift={(154.6,255.54)}, rotate = 315] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Shape: Arc [id:dp9070793389936127] 
+            \draw  [draw opacity=0][dash pattern={on 0.84pt off 2.51pt}] (128.52,137.12) .. controls (134.2,119.95) and (186.24,106.5) .. (249.6,106.5) .. controls (316.76,106.5) and (371.2,121.61) .. (371.2,140.25) .. controls (371.2,140.5) and (371.19,140.75) .. (371.17,140.99) -- (249.6,140.25) -- cycle ; \draw  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}] (128.52,137.12) .. controls (134.2,119.95) and (186.24,106.5) .. (249.6,106.5) .. controls (316.76,106.5) and (371.2,121.61) .. (371.2,140.25) .. controls (371.2,140.5) and (371.19,140.75) .. (371.17,140.99) ;  
+            %Shape: Arc [id:dp9574106992854772] 
+            \draw  [draw opacity=0] (371.2,140) .. controls (371.2,140.08) and (371.2,140.17) .. (371.2,140.25) .. controls (371.2,158.89) and (316.77,174) .. (249.63,174) .. controls (182.49,174) and (128.06,158.89) .. (128.06,140.25) .. controls (128.06,138.91) and (128.34,137.59) .. (128.89,136.29) -- (249.63,140.25) -- cycle ; \draw  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ] (371.2,140) .. controls (371.2,140.08) and (371.2,140.17) .. (371.2,140.25) .. controls (371.2,158.89) and (316.77,174) .. (249.63,174) .. controls (182.49,174) and (128.06,158.89) .. (128.06,140.25) .. controls (128.06,138.91) and (128.34,137.59) .. (128.89,136.29) ;  
+            %Curve Lines [id:da36988921511963935] 
+            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (128.89,136.29) .. controls (168.89,106.29) and (218,51.73) .. (239.33,54.4) ;
+            %Shape: Parallelogram [id:dp7493910722229967] 
+            \draw  [color={rgb, 255:red, 184; green, 233; blue, 134 }  ,draw opacity=1 ][fill={rgb, 255:red, 184; green, 233; blue, 134 }  ,fill opacity=0.25 ] (163.86,204.22) -- (202.13,204.22) -- (176.14,217.92) -- (137.87,217.92) -- cycle ;
+            %Curve Lines [id:da3640692518590476] 
+            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ] [dash pattern={on 0.84pt off 2.51pt}]  (170,211.07) .. controls (210,181.07) and (206,137.07) .. (246,107.07) ;
+            %Shape: Parallelogram [id:dp16048267196529764] 
+            \draw  [color={rgb, 255:red, 184; green, 233; blue, 134 }  ,draw opacity=1 ][fill={rgb, 255:red, 184; green, 233; blue, 134 }  ,fill opacity=0.25 ] (233.19,47.55) -- (271.46,47.55) -- (245.47,61.25) -- (207.21,61.25) -- cycle ;
+            %Shape: Parallelogram [id:dp7017559777112217] 
+            \draw  [color={rgb, 255:red, 184; green, 233; blue, 134 }  ,draw opacity=1 ][fill={rgb, 255:red, 184; green, 233; blue, 134 }  ,fill opacity=0.25 ] (285.19,85.55) -- (323.46,85.55) -- (297.47,99.25) -- (259.21,99.25) -- cycle ;
+            %Curve Lines [id:da9269039915410408] 
+            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (128.52,137.12) .. controls (125.33,151.07) and (148.5,209.77) .. (170,211.07) .. controls (191.5,212.37) and (212.67,55.07) .. (239.33,54.4) .. controls (266,53.73) and (254,91.07) .. (291.33,92.4) .. controls (328.67,93.73) and (314.67,29.73) .. (335.33,29.73) .. controls (356,29.73) and (366.17,144.74) .. (371.17,140.99) ;
+            %Curve Lines [id:da5328194567489914] 
+            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ] [dash pattern={on 0.84pt off 2.51pt}]  (225.33,107.07) .. controls (304,113.73) and (274,50.4) .. (335.33,29.73) ;
+            %Shape: Parallelogram [id:dp46366733611537236] 
+            \draw  [color={rgb, 255:red, 184; green, 233; blue, 134 }  ,draw opacity=1 ][fill={rgb, 255:red, 184; green, 233; blue, 134 }  ,fill opacity=0.25 ] (329.19,22.88) -- (367.46,22.88) -- (341.47,36.58) -- (303.21,36.58) -- cycle ;
+
+            % Text Node
+            \draw (156.6,258.94) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (194.42,8.51) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$z$};
+            % Text Node
+            \draw (390.6,199.2) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            \end{tikzpicture}
+        \caption{Interpretação geométrica dos pontos extremantes}
+        \label{fig:PontosCriticos}
+    \end{figure}
+
+Perceba que na ilustração acima, esse plano deve ser paralelo ao plano-xy, o que é uma implicação do Teorema \ref{thm.PontosCriticos}, como veremos na próxima observação.
+
+\begin{remark}
+    Segue do Teorema \ref{thm.PontosCriticos} que se \((x_0,y_0)\) é interior a \(D_f\), \(f\) é diferenciável em \((x_0,y_0)\) e \((x_0,y_0)\) é um extremo local de \(f\), então a equação do plano tangente no ponto \((x_0,y_0,f(x_0,y_0))\) fica \[z = z_0 + \frac{\partial f}{\partial x}(x_0,y_0) (x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0) = z_0.\] Logo, o plano tangente em \((x_0,y_0,f(x_0,y_0))\) é paralelo ao plano-xy.
+
+    Observe que no Teorema \ref{thm.PontosCriticos}, \(f\) não precisa ser diferenciável em \((x_0,y_0)\).
+\end{remark}
+
+\begin{definition}
+    Dizemos que \((x_0,y_0)\) é um \textbf{ponto crítico}\label{Ponto Crítico} de \(f\) se \((x_0,y_0)\) for interior a \(D_f\) e \(\nabla f(x_0,y_0) = 0\).
+\end{definition}
+
+\begin{remark}
+    Considerando a definição acima, o Teorema \ref{thm.PontosCriticos} diz que
+
+    ``Se \(f\) admite derivadas parciais em todos os pontos interiores a \(D_f\), então os únicos candidatos a extremantes locais são os pontos críticos de \(f\).''
+\end{remark}
+
+\begin{definition}
+    Um ponto \((x_0,y_0)\in A\subset\R^2\) que não é ponto interior de \(A\), se chama \textbf{ponto de fronteira}\label{Ponto de fronteira} de \(A\).
+\end{definition}
+
+\begin{remark}
+    Se \(A\) é aberto, todo ponto de \(A\) é interior.
+\end{remark}
+
+\begin{remark}
+    O Teorema \ref{thm.PontosCriticos} não se aplica aos pontos de fronteira de \(D_f\). Estes devem ser analisados separadamente.
+\end{remark}
+
+\begin{example}
+    Seja \(f(x,y) = x^2 + y^2\).
+
+    Já sabemos que \(D_f = \R^2\) é aberto (portanto todos os pontos são interiores). Além disso, \[\partial_x f(x,y) = 2x \text{ e } \partial_y f(x,y) = 2y \Rightarrow \nabla f(x,y) = (2x,2y),\] portanto \[\nabla f(x,y) = 0 \Leftrightarrow 2x =0 \text{ e } 2y = 0 \Leftrightarrow (x,y) = (0,0),\] daí, pelo Teorema \ref{thm.PontosCriticos}, o único candidato a extremante local é \((x,y) = (0,0)\).
+
+    Agora, como \(f(x,y) \geq 0 = f(0,0)\), para todo \((x,y)\in\R^2\), concluímos que \((0,0)\) é ponto de mínimo global de \(f\).
+\end{example}
+
+\begin{example}\label{ex.x^2-y^2}
+    Seja \href{https://www.geogebra.org/classic/ghhkd32q}{\(f(x,y) = x^2 - y^2\)}.
+
+    Então \(D_f = \R^2\) é aberto e \[\nabla f(x,y) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right) = (2x,-2y),\] daí concluímos que o único ponto crítico de \(f\) é \((x,y) = (0,0)\).        
+        
+    Note agora que o gráfico de \(f\) satisfaz a equação \(z = f(x,y)\), ou seja, \(z = x^2 - y^2\). Agora,
+        \begin{itemize}
+            \item se \(x = 0\), \(z = -y^2\),
+            \item se \(y = 0\), \(z = x^2\)
+        \end{itemize}
+    \begin{figure}[htbp]
+        \centering
+            \begin{tikzpicture}[x=0.55pt,y=0.55pt,yscale=-1,xscale=1]
+            %Straight Lines [id:da46808922255015417] 
+            \draw    (321.22,186.4) -- (321.22,24.2) ;
+            \draw [shift={(321.22,22.2)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da375778026886575] 
+            \draw    (321.22,186.4) -- (468.37,186.4) ;
+            \draw [shift={(470.37,186.4)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da9047061608583175] 
+            \draw    (321.22,186.4) -- (252.95,254.67) ;
+            \draw [shift={(251.53,256.09)}, rotate = 315] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Shape: Boxed Bezier Curve [id:dp7998764570703928] 
+            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (298.68,290.5) .. controls (295.01,222.57) and (311.54,134.42) .. (365.05,223.94) ;
+            %Shape: Boxed Bezier Curve [id:dp7384261621151852] 
+            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (349.51,32.75) .. controls (340.24,371.38) and (250.63,52.04) .. (245,32.75) ;
+
+            % Text Node
+            \draw (254.86,261.32) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (326.97,0.68) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$z$};
+            % Text Node
+            \draw (478.83,184.63) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            % Text Node
+            \draw (367.05,227.34) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$z\ =\ -y^{2}$};
+            % Text Node
+            \draw (356.05,39.34) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ]  {$z\ =\ x^{2}$};
+            \end{tikzpicture}
+        \caption{\(x=0\) e \(y=0\)}
+        \label{fig:graph'}
+    \end{figure}
+
+    Aqui já podemos notar que, para toda bola aberta \(B\) de centro \((0,0)\) em \(\R^2\), existem pontos \((x,y)\) e \((\bar{x},\bar{y})\) tais que \[f(x,y) \geq 0 \text{ e } f(\bar{x},\bar{y})\leq 0,\] ou seja, \((0,0)\) não é extremo local.
+    
+    Para o esboço do gráfico de \(f\) olhamos também para as curvas de nível \(z=k\), ou seja, \(x^2 - y^2 = k\), para \(k\in\R\).
+        \begin{itemize}
+            \item Se \(k=0\), \(x^2-y^2 =0 \), logo \((x,y) = (0,0)\).
+            \item Se \(k>0\), temos \(\frac{x^2}{(\sqrt{k})^2} - \frac{y^2}{(\sqrt{k})^2} = 1\), que é um hipérbole no eixo-x.
+            \item Se \(k<0\), teremos \(-\frac{x^2}{(\sqrt{k})^2} + \frac{y^2}{(\sqrt{k})^2} = 1\), que é uma hipérbole com foco no eixo-y.
+        \end{itemize}
+    \begin{figure}[htbp]
+        \centering
+            \begin{tikzpicture}[x=0.55pt,y=0.55pt,yscale=-1,xscale=1]
+            %Straight Lines [id:da4075679898567657] 
+            \draw    (340.84,281.18) -- (340.84,22.76) ;
+            \draw [shift={(340.84,20.76)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da6868798706334133] 
+            \draw    (190.67,150.55) -- (489.33,150.55) ;
+            \draw [shift={(491.33,150.55)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (7.65,-2.3) .. controls (4.86,-0.97) and (2.31,-0.21) .. (0,0) .. controls (2.31,0.21) and (4.86,0.98) .. (7.65,2.3)   ;
+            %Straight Lines [id:da01537596714237388] 
+            \draw  [dash pattern={on 0.84pt off 2.51pt}]  (451,40.55) -- (241,250.55) ;
+            %Straight Lines [id:da13773997226259438] 
+            \draw  [dash pattern={on 0.84pt off 2.51pt}]  (230,39.55) -- (440.5,250.05) ;
+            %Curve Lines [id:da21181368250964439] 
+            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (240,35.75) .. controls (350.5,135.25) and (330.5,135.25) .. (440.5,35.75) ;
+            %Shape: Boxed Bezier Curve [id:dp8434832229824132] 
+            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (441.5,264.88) .. controls (331,165.38) and (351,165.38) .. (241,264.88) ;
+            %Shape: Boxed Bezier Curve [id:dp35456353547086294] 
+            \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (455.56,49.81) .. controls (356.06,160.31) and (356.06,140.31) .. (455.56,250.31) ;
+            %Shape: Boxed Bezier Curve [id:dp1711061061475666] 
+            \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (224.94,250.31) .. controls (324.44,139.81) and (324.44,159.81) .. (224.94,49.81) ;
+            %Straight Lines [id:da21454099168980023] 
+            \draw    (336.09,110.36) -- (346.09,110.36) ;
+            %Straight Lines [id:da8551368497962276] 
+            \draw    (335.55,190.36) -- (345.55,190.36) ;
+            %Straight Lines [id:da43906072193563517] 
+            \draw    (300.09,146.09) -- (300.09,156.09) ;
+            %Straight Lines [id:da8366186309768173] 
+            \draw    (380.55,145) -- (380.55,155) ;
+
+            % Text Node
+            \draw (493.79,124.39) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (362.92,10.9) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            % Text Node
+            \draw (312.33,71.73) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\sqrt{k}$};
+            % Text Node
+            \draw (343,164.4) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$-\sqrt{k}$};
+            % Text Node
+            \draw (391,125.07) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\sqrt{k}$};
+            % Text Node
+            \draw (251.67,124.07) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$-\sqrt{k}$};
+            % Text Node
+            \draw (392,16.4) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.96,0.65,0.14}{k< 0}$};
+            % Text Node
+            \draw (263.33,248.73) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.96,0.65,0.14}{k< 0}$};
+            % Text Node
+            \draw (448,66.07) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{k >0}$};
+            % Text Node
+            \draw (197.67,216.07) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{k >0}$};
+            % Text Node
+            \draw (457.33,21.07) node [anchor=north west][inner sep=0.75pt]    {$k=0$};
+            % Text Node
+            \draw (187.33,20.07) node [anchor=north west][inner sep=0.75pt]    {$k=0$};
+            \end{tikzpicture}
+        \caption{Curvas de nível de \(f(x,y) = x^2-y^2\)}
+        \label{fig:CurvasDeNivel}
+    \end{figure}
+
+    Neste caso, dizemos que \((0,0)\) é um \textbf{ponto de sela}.
+    %     \begin{figure}[!htb]
+    %         \centering
+    %         \includegraphics[width=0.3\textwidth]{Gráfico de f(x,y) = x^2 - y^2.png}
+    %         \caption{Curvas de nível de \(f(x,y) = x^2 - y^2\)}
+    %         \label{fig:CurvasDeNivel}
+    %     \end{figure}
+\end{example}
+
+\begin{remark}
+    O Exemplo \ref{ex.x^2-y^2} mostra que um ponto crítico pode não ser um extremante de uma função. Por isso dizemos que os pontos críticos são \textit{candidatos} a extremos.
+\end{remark}
+
+\begin{example}
+    Sejam \(f(x,y) = x^2 y + 3x\) e \[ A = \{(x,y)\in\R^2 : x\geq 0 \text{ e } y\geq 0\}.\]
+
+    Então o ponto \((0,0)\) é um ponto de mínimo de \(f\) em \(A\).
+
+    De fato, \[f(x,y) = x^2 y + 3x \geq 0 = f(0,0),\; \forall (x,y)\in A.\] No entanto, \[\frac{\partial f}{\partial x}(x,y) = 2xy + 3\quad \text{ e }\quad \frac{\partial f}{\partial y}(x,y) = x^2, \] logo \(\nabla f(0,0) = (0,0)\), mas isto \textit{não contradiz} o Teorema \ref{thm.PontosCriticos}, por quê?
+\end{example}
+
+\begin{exercise}
+    Seja \(f(x,y) = x^2 + y^2 - 2x - 6y + 14\). Quais os candidatos a extremos locais de \(f\)? É possível verificar se esses cadidatos  são mesmo extremos de \(f\)/
+\end{exercise}
+
+\textbf{Pergunta: } Como decidir se um ponto crítico \((x_0,y_0)\) é, de fato, ponto extremante de uma função?
+
+Lembre que, para funções de uma variável tínhamos:
+\begin{theorem}[Teste da primeira derivada]
+    Sejam \(f: D_f \subset \R \to \R\) uma função diferenciável e \(x_0\in D_f\) um ponto crítico de \(f\).
+        \begin{enumerate}
+            \item Se \(f'(x_0) > 0\) para \(x < x_0\) e \(f'(x) < 0\) para \(x > x_0\), então \(x_0\) é um ponto de máximo local.
+            \item Se \(f'(x_0) < 0\) para \(x < x_0\) e \(f'(x) > 0\) para \(x > x_0\), então \(x_0\) é um ponto de mínimo local.
+        \end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Teste de segunda derivada]
+    Sejam \(f: D_f \subset \R \to \R\) uma função duas vezes diferenciável e \(x_0\in D_f\) um ponto crítico de \(f\).
+        \begin{enumerate}
+            \item Se \(f''(x_0) < 0\), então \(x_0\) é um ponto de máximo local.
+            \item Se \(f''(x_0) > 0\), então \(x_0\) é um ponto de mínimo local.
+        \end{enumerate}
+\end{theorem}
+
+Vamos agora estudar o que aconteceu para funções de duas variáveis.
+
+Seja \(f(x,y)\) uma função de duas variáveis tal que as derivadas parciais de 2ª ordem existem e são contínuas.
+
+\begin{definition}
+    A função \(H:\R^2 \to \R\) dada por \[H(x,y) = \left|\begin{matrix}
+        \frac{\partial^2 f}{\partial x^2}(x,y) & \frac{\partial^2 f}{\partial x \partial y}(x,y) \\
+        \frac{\partial^2 f}{\partial x \partial y}(x,y) & \frac{\partial^2 f}{\partial y^2}(x,y)
+    \end{matrix}\right|\] será chamada de \textbf{hessiana}\index{Função Hessiana} de \(f\).
+\end{definition}
+
+Para decidir se um ponto é, de fato, extremo de uma função, temos o seguinte teste:
+\begin{theorem}[Teste da 2ª Derivada]\index{Teorema! Teste da 2ª Derivdada}
+    Seja \(f: D_f \subset \R^2 \to \R \) tal que as derivadas de 2ª ordem existem e são contínuas. Se \((x_0,y_0)\in\operatorname{int} D_f\) é um ponto crítico de \(f\), então:
+        \begin{enumerate}
+            \item Se \(\frac{\partial^2 f}{\partial x^2}(x_0,y_0) > 0\) e \(H(x,y) > 0\), então \((x_0,y_0)\) é um ponto de \textit{mínimo local} de \(f\).
+            \item Se \(\frac{\partial^2 f}{\partial x^2}(x_0,y_0) < 0\) e \(H(x_0,y_0) > 0\), então \((x_0,y_0)\) é um ponto de \textit{máximo local} de \(f\).
+            \item Se \(H(x_0,y_0) < 0\), então \((x_0,y_0)\) não é extremo local. Neste caso, \((x_0,y_0)\) é um \textit{ponto de sela}.
+            \item Se \(H(x_0,y_0) = 0\), nada se pode afirmar.
+        \end{enumerate}
+\end{theorem}
+\begin{proof}
+    Exercício \cite{guidorizzi}(pg. 313)
+\end{proof}
+
+\begin{example}
+    Determine os extremos locais da e os pontos de sela da função \[f(x,y) = x^3 + y^3 - 3x + 4.\]
+
+    Temos que
+        \begin{align*}
+            \frac{\partial f}{\partial x}(x,y) = 3x^2 - 3 \quad & \quad \frac{\partial f}{\partial y}(x,y) = 3y^2 - 3 \\
+            \frac{\partial^2 f}{\partial x^2}(x,y) = 6x \quad & \quad \frac{\partial^2 f}{\partial y^2}(x,y) = 6y \\
+            \frac{\partial^2 f}{\partial x \partial y}(x,y) = 0 \quad & \quad  \frac{\partial^2 f}{\partial y \partial x} = 0,
+        \end{align*}
+    portanto as derivadas parciais de \(f\) existem e são contínua em \(\R^2\).
+
+    Para encontrar os pontos críticos de \(f\) fazemos \[\nabla f(x,y) = 0 \Leftrightarrow (3x^2 - 3,3y^2 - 3) = (0,0) \Leftrightarrow \begin{cases}
+        x^2 = 1 \\
+        y^2 = 1 
+    \end{cases} \Leftrightarrow (x,y) = (\pm 1, \pm 1).\]
+    Ou seja \[(1,1), (1,-1), (-1,1), (-1,-1)\] são candidatos a extremantes. 
+
+    Além disso, a hessiana de \(f\) é \[H(x,y) = \left|\begin{matrix}
+        \partial^2_x f(x,y) & \partial^2_{x,y} f(x,y) \\
+        \partial^2_{xy} f(x,y) & \partial^2_y f(x,y)
+    \end{matrix}\right| = \left|\begin{matrix}
+        6x & 0 \\ 0 & 6y
+    \end{matrix}\right| = 36 xy.\] Daí
+        \begin{itemize}
+            \item Para \((x,y) = (1,1)\), temos \(\partial^2_x f(1,1) = 6 > 0\) e \(H(1,1) = 36 > 0\), logo \((1,1)\) é ponto de mínimo local de \(f\).
+            \item Para \((x,y) = (-1,1)\), temos \(\partial^2_x f(1,-1) = 6 > 0\) e \(H(1,-1) = - 36 < 0\), o que implica que \((1,-1)\) é ponto de sela.
+            \item Para \((x,y) = (-1,1)\), \(\partial^2_x f(-1,1) = -6 < 0\) e \(H(-1,1) = -36 < 0\), de tal sorte que podemos concluir que \((-1,1)\) é ponto de sela.
+            \item Por fim, se \((x,y) = (-1,-1)\), \(\partial^2_x f(1,1) = -6<0\) e \(H(-1,-1) = 36 >0\), daí \((-1,-1)\) é ponto de máximo local.
+        \end{itemize}
+
+    \textbf{Pergunta: } Podemos garantir que \((1,1)\) é ponto de mínimo \textit{global} e \((-1,-1)\) é ponto de máximo \textit{global}?
+\end{example}
+
+\begin{example}
+    Seja \(f(x,y) = 3x^4 + 2y^4\).
+
+    Neste caso,
+        \begin{align*}
+            \frac{\partial f}{\partial x}(x,y) = 12x^3 \quad & \quad \frac{\partial f}{\partial y}(x,y) = 4y^3 \\
+            \frac{\partial^2 f}{\partial x^2}(x,y) = 36x^2 \quad & \quad \frac{\partial^2 f}{\partial y^2}(x,y) = 24y^2 \\
+            \frac{\partial^2 f}{\partial x \partial y}(x,y) = 0 \quad & \quad  \frac{\partial^2 f}{\partial y \partial x} = 0,
+        \end{align*}
+    o que implica que \((x,y) = (0,0)\) é o único ponto crítico de \(f\). Além disso, \[H(x,y) = \left|\begin{matrix}
+        36x^2 & 0 \\ 0 & 24y^2
+    \end{matrix}\right| = (36)(24)x^2 y^2 \geq 0,\; \forall (x,y)\in\R^2.\] Em particular \(H(0,0) = 0\), portanto o Teste da 2ª Derivada nada nos diz acerca da extremalidade de \((0,0)\). Porém, sabemos que \((0,0)\) é um ponto de mínimo global de \(f\), por quê?
+\end{example}
+
+\begin{example}
+    Deseja-se construir uma caixa sem tampa com forma de paralelepípedo retângulo e volume igual a \(1\operatorname{m}^3\). O material utilizado nas laterais custa o triplo do utilizado no fundo. Determine as dimensões da caixa que miniminiza o custo do material.
+
+    Sejam \(a, b\) e \(c\) as dimensões da caixa. Então \(a\cdot b\cdot c = 1\) e \(a\cdot b\cdot c >0\).
+
+    Nosso problema será minimizar a função \(F(a,b,c) = 3(2ac + 2bc) + ab.\) No entanto, como \(a\cdot b\cdot c = 1,\) devemos ter \(c = \frac{1}{ab}\), logo podemos minimizar a função \(F(a,b,\frac{1}{ab}) = 3\left( 2 a \frac{1}{ab} + 2b \frac{1}{ab} + ab \right) = \frac{6}{b} + \frac{6}{a} + ab := f(a,b).\)
+
+    Do anterior, é suficiente que estudemos os extremantes de \[f(a,b) = \frac{6}{b} + \frac{6}{a} + ab,\; a >0, b> 0.\]
+
+    Para isso, note que
+        \begin{align*}
+            \frac{\partial f}{\partial a}(a,b) = \frac{-6}{a^2} + b \quad & \quad \frac{\partial f}{\partial b}(a,b) = \frac{-6}{b^2} + a \\
+            \frac{\partial^2 f}{\partial a^2}(a,b) = \frac{12}{a^3} \quad & \quad \frac{\partial^2 f}{\partial b^2}(a,b) = \frac{12}{b^3} \\
+            \frac{\partial^2 f}{\partial a \partial b}(a,b) = 1 \quad & \quad  \frac{\partial^2 f}{\partial b \partial a} = 1,
+        \end{align*}
+    portanto as derivadas de 2ª ordem existem e são contínuas. Além disso, \[\nabla f(a,b) = 0 \Leftrightarrow \left( \frac{-6}{a^2} + b, \frac{-6}{b^2} = a \right) = (0,0) \Leftrightarrow \begin{cases}
+        a^2 b = 6 \\
+        a b^6 = 6
+    \end{cases} \Leftrightarrow a = b = \sqrt[3]{6},\] portanto \((a,b) = (\sqrt[3]{6}, \sqrt[3]{6})\) é o único candidato a mínimo local de \(f\).
+
+    Agora, como \[\partial^2_a f(\sqrt[3]{6},\sqrt[3]{6}) = \frac{12}{(\sqrt[3]{6})^3} = 2 > 0\] e \[H(a,b) = \left|\begin{matrix}
+        \frac{12}{a^2} & 1 \\ 1 & \frac{12}{b^3}
+    \end{matrix}\right| = \frac{12\cdot 12}{a^3\cdot b^3} = -1 \Rightarrow H(\sqrt[3]{6},\sqrt[3]{6}) = 3 >0,\] concluímos, pelo Teste da 2ª Derivada, que \((\sqrt[3]{6},\sqrt[3]{6})\) é um ponto de mínimo local de \(f\). Mais ainda, pela natureza do problema, é natural esperar que este seja ponto de mínimo global.
+
+    Do anterior, as dimensões da caixa que miniminiza o custo são \((a,b,c) = (\sqrt[3]{6},\sqrt[3]{6},\frac{1}{\sqrt[3]{6}\cdot\sqrt[3]{6}})\).
+\end{example}
+
+\subsection{Máximos e mínimos em conjuntos compactos}
+
+Para funções de uma variável tínhamos o seguinte resultado que garantia a existência de extremantes globais em um intervalo fechado \([a,b]\).
+
+\begin{theorem}
+    Seja \(f\) uma função contínua no intervalo \([a,b]\). Então, \(f\) assume seu valor máximo e seu valor mínimo (globais) em \([a,b]\).
+\end{theorem}
+
+Note que, em \(\R\), o intervalo \([a,b]\) é um conjunto fechado e limitado, o que chamamos de compacto.
+
+\begin{definition}
+    Seja \(A\subset\R^2\). Dizemos que \(A\) é um \textbf{conjunto limitado}\index{Conjunto! Limitado} se \(A\) está contido em alguma bola aberta de centro na origem. 
+\end{definition}
+
+\begin{definition}
+    Seja \(A\subset\R^2\). Dizemos que \(A\) é um \textbf{conjunto fechado}\index{Conjunto! Fechado} se seu complementar \(A^C = \{x\in\R^2 : (x,y)\neq A\}\) é aberto.
+\end{definition}
+
+\begin{definition}
+    Dizemos que \(A\subset\R^2\) é um \textbf{conjunto compacto}\index{Conjunto! Compacto} se \(
+    A\) é fechado e limitado.
+\end{definition}
+
+\begin{example}
+    A bola fechada de centro \((x_0,y_0)\) e raio \(r\), \[A = \{(x,y)\in\R^2 : \|(x,y) - (x_0,y_0)\| \leq r\}\] é compacta.
+\end{example}
+
+\begin{example}
+    O conjunto \(A = \{(x,y)\in\R^2 : y \geq x^2\}\) é fechado, mas não é limitado. Portanto \(A\) não é compacto.
+\end{example}
+
+Antes de apresentarmos o Teorema de Weierstrass para funções de duas variáveis, pensemos na função \(f(x,y) = \frac{1}{x^2 + y^2}\).
+
+Sabemos que o \url{https://www.geogebra.org/m/efpurmyf}{gráfico} desta função é
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=0.5\textwidth]{Gráfico de f(x,y) = 1_x^2 + y^2.png}
+        \caption{Gráfico de \(f(x,y) = \frac{1}{x^2+y^2}\)}
+        \label{fig:Graph2}
+    \end{figure}
+
+
+Geometricamente, é fácil ver que \(f\) não admite máximo, nem mínimo, em \(D_f = \R^2\setminus\{(0,0)\}\)
+
+\textbf{Perguntas: }
+    \begin{enumerate}
+        \item O que não deixa \(f\) ter máximo em \(D_f\)?
+        \item O que não deixa \(f\) ter mínimo em \(D_f\)?
+    \end{enumerate}
+
+A análise acima motiva o próximo resultado.
+
+\begin{theorem}[Weierstrass]\label{Teorema! Weierstrass}
+    Se \(f(x,y)\) é contínua num conjunto compacto \(A \subset D_f\), então \(f\) assume seus valores máximo e mínimo em \(A\). Ou seja, existem \((x_1,y_1)\) e \((x_2,y_2)\) em \(A\) tais que \[f(x,y) \geq f(x_1,y_1),\; \forall (x,y)\in A \text{ e } f(x,y) \leq f(x_2,y_2),\; \forall (x,y)\in A.\]
+\end{theorem}
+
+Vejamos como encontrar os pontos extremos de \(A\), garantidos pelo Teorema de Weierstrass.
+
+Suponha que existam as derivadas parciais de \(f\) nos pontos interiores de \(A\). Então, sabemos que os únicos candidatos a extremos locais são os pontos críticos. Assim, seguimos os seguintes passos:
+    \begin{enumerate}
+        \item Determinar os pontos críticos de \(f\) no interior de \(A\).
+        \item Determinar os valores de \(f\) no interior de \(A\).
+        \item Determinar os valores extremos de \(f\) na fronteira de \(A\).
+        \item O \textit{maior} dos valores nos passos 2 e 3 será o \textit{valor máximo} de \(f\) em \(A\) e o \textit{menor} valor desses valores será o \textit{valor mínimo} de \(f\) em \(A\).
+    \end{enumerate}
+
+\begin{example}
+    Determine os extremos de \[f(x,y) = x^3 + y^3 -3x - 3y\] em \(A = \{(x,y)\in\R^2 : 0\leq x \leq 2 \text{ e } |y| \leq 2\}\).
+
+    Temos que \(f\) é contínua em \(\R^2\), portanto é contínua em \(A\). Além disso, \(A\) é claramente fechado e limitado, portanto compacto.
+
+    \begin{figure}[htbp]
+        \centering
+            \begin{tikzpicture}[x=0.55pt,y=0.55pt,yscale=-1,xscale=1]
+            %Straight Lines [id:da17039758780991887] 
+            \draw    (84.34,272.93) -- (84.34,41.17) ;
+            \draw [shift={(84.34,39.17)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da0876050786019058] 
+            \draw    (52.77,164.67) -- (206.83,164.67) ;
+            \draw [shift={(208.83,164.67)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Shape: Rectangle [id:dp4856669697357173] 
+            \draw  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=0.15 ] (84.96,87.07) -- (162.2,87.07) -- (162.2,240.42) -- (84.96,240.42) -- cycle ;
+
+            % Text Node
+            \draw (214.94,142.26) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$x$};
+            % Text Node
+            \draw (90.74,16.08) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$y$};
+            % Text Node
+            \draw (164.2,167.15) node [anchor=north west][inner sep=0.75pt]    {$2$};
+            % Text Node
+            \draw (70.47,80.57) node [anchor=north west][inner sep=0.75pt]    {$2$};
+            % Text Node
+            \draw (168.5,126.8) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{L_{1}}$};
+            % Text Node
+            \draw (108,64.3) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{L}\textcolor[rgb]{0.29,0.56,0.89}{_{2}}$};
+            % Text Node
+            \draw (61,126.3) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{L}\textcolor[rgb]{0.29,0.56,0.89}{_{3}}$};
+            % Text Node
+            \draw (115,243.3) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{L}\textcolor[rgb]{0.29,0.56,0.89}{_{4}}$};
+            \end{tikzpicture}
+        \caption{O conjunto \(A\)}
+        \label{fig:SetA}
+    \end{figure}
+
+    Começamos procurando os pontos críticos de \(f\) no interior de \(A\). Para isso, note que \[\partial_x f(x,y) = 3x^2 - 3 \text{ e } \partial_y f(x,y) = 3y^2 - 3\] e \[\nabla f(x,y) = (0,0) \Leftrightarrow \begin{cases}
+        3x^2 - 3 = 0 \\
+        3y^2 - 3 = 0
+    \end{cases} \Leftrightarrow x = \pm 1 \text{ e } y = \pm 1,\] portanto os pontos críticos de \(f\) são \[(1,1), (-1,1), (1,-1) \text{ e } (-1,-1),\] mas apenas \((1,1)\) e \((1,-1)\) pertencem ao interior de \(A\). 
+\end{example}
 
 % \section{Máximos e mínimos em conjuntos compactos}
 
