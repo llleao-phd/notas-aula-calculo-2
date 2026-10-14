@@ -13,7 +13,15 @@
 % ============================================================
 % LAYOUT, MARGENS E TIPOGRAFIA
 % ============================================================
-\usepackage[top = 20mm, bottom = 20mm, left = 15mm, right = 10mm]{geometry}
+\usepackage[
+  paperwidth=210mm, paperheight=280mm,
+  top=25mm, bottom=22mm,
+  inner=22mm,          % Margem da dobra/lombada
+  outer=52mm,          % Margem externa bem larga
+  marginparwidth=42mm, % Largura útil da coluna de anotações
+  marginparsep=5mm,    % Distância entre o texto e a margem
+  bindingoffset=5mm    % Compensação para encadernação
+]{geometry}
 \usepackage{microtype} % tipografia refinada
 \usepackage{setspace}  % permite onehalfspacing
 \usepackage{fancyhdr}  % cabeçalhos
@@ -22,8 +30,14 @@
 \usepackage{makeidx}
 \makeindex
 
+\usepackage{marginnote}
+% Formatação da fonte da margem (menor e sem serifa para contraste)
+\renewcommand*{\marginfont}{\sffamily\small\color{black!75}}
+\usepackage{sidenotes}
+
 % Fonte elegante mas leve (troque se quiser outra família)
 % \usepackage{tgpagella}
+% \usepackage{newtxtext,newtxmath} % Padrão de publicações da AMS e Springer
 
 % ============================================================
 % MATEMÁTICA
@@ -165,6 +179,8 @@
 \onehalfspacing
 
 \input{capa.tex}
+
+\thispagestyle{empty}
 
 \tableofcontents
 

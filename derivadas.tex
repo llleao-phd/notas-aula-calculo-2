@@ -5,7 +5,14 @@ Sejam \(f:D_f\subset\R^2 \to \R\) e \((x_0,y_0)\in D_f\). Fixado \(y=y_0\), pode
     Se \(g'(x_0)\) existe, então \[\frac{\partial f}{\partial x} f(x_0,y_0) = g'(x_0)\] é a \textbf{derivada parcial} de \(f\) em relação a \(x\) no ponto \((x_0,y_0)\). \index{Derivada parcial}
 \end{definition}
 
-Note que \[\frac{\partial f}{\partial x} (x_0,y_0) = g'(x_0) = \lim_{x\to x_0} \frac{g(x) - g(x_0)}{x-x_0} = \lim_{x\to x_0} \frac{f(x,y_0) - f(x_0,y_0)}{x-x_0} = \lim_{h\to 0} \frac{f(x_0 + h,y_0) - f(x_0,y_0)}{h}.\]
+Note que
+    \begin{align*}
+        \frac{\partial f}{\partial x} (x_0,y_0) 
+            & = g'(x_0)\\
+            & = \lim_{x\to x_0} \frac{g(x) - g(x_0)}{x-x_0} \\
+            & = \lim_{x\to x_0} \frac{f(x,y_0) - f(x_0,y_0)}{x-x_0} \\
+            & = \lim_{h\to 0} \frac{f(x_0 + h,y_0) - f(x_0,y_0)}{h}.
+    \end{align*}
 
 Note que o gráfico da função \(g(x) = f(x,y_0)\) é a interseção do plano \(y = y_0\) com o gráfico de \(f\).
     \begin{figure}[htbp]
@@ -69,7 +76,13 @@ Note que o gráfico da função \(g(x) = f(x,y_0)\) é a interseção do plano \
         \begin{itemize}
             \item Fixamos \(x = x_0\);
             \item tomamos \(h(y) = f(x_0,y)\);
-            \item definimos \[\frac{\partial f}{\partial y}(x_0,y_0) = \lim_{y\to y_0} \frac{h(y) - h(y_0)}{y-y_0} = \lim_{y\to y_0} \frac{f(x_0,y) - f(x_0,y_0)}{y-y_0} = \lim_{h\to 0} \frac{f(x_0,y_0 + h) - f(x_0,y_0)}{h}. \]
+            \item definimos
+                \begin{align*}
+                    \frac{\partial f}{\partial y}(x_0,y_0) 
+                        & = \lim_{y\to y_0} \frac{h(y) - h(y_0)}{y-y_0} \\
+                        & = \lim_{y\to y_0} \frac{f(x_0,y) - f(x_0,y_0)}{y-y_0} \\
+                        & = \lim_{h\to 0} \frac{f(x_0,y_0 + h) - f(x_0,y_0)}{h}. 
+                \end{align*}
         \end{itemize}
 
 \begin{exercise}
@@ -84,7 +97,15 @@ Note que o gráfico da função \(g(x) = f(x,y_0)\) é a interseção do plano \
 \end{remark}
 
 \begin{example}
-    Considere \(f(x,y) = 2xy - 4y\). Então \[\partial_x f(x,y) = \lim_{h\to 0} \frac{f(x+h,y) - f(x,y)}{h} = \lim_{h\to 0} \frac{2(x+h) - 4y - (2xy - 4y)}{h} = \lim_{h\to 0}\frac{2hy}{h} = \lim_{h\to 0} 2y = 2y, \] e \[\partial_y f(x,y) = \partial_y (2xy - 4y) = 2x - 4.\]
+    Considere \(f(x,y) = 2xy - 4y\). Então
+        \begin{align*}
+            \partial_x f(x,y) 
+            & = \lim_{h\to 0} \frac{f(x+h,y) - f(x,y)}{h} \\
+            & = \lim_{h\to 0} \frac{2(x+h) - 4y - (2xy - 4y)}{h} \\
+            & = \lim_{h\to 0}\frac{2hy}{h} \\
+            & = \lim_{h\to 0} 2y = 2y, 
+        \end{align*}
+    e \[\partial_y f(x,y) = \partial_y (2xy - 4y) = 2x - 4.\]
 \end{example}
 
 \begin{example}
@@ -118,7 +139,13 @@ Note que o gráfico da função \(g(x) = f(x,y_0)\) é a interseção do plano \
 \begin{example}
     Seja \(f(x,y) = 4 - x^2 - 2y^2\). Encontre as derivadas parciais de \(f\) e faça a interpretação geométrica de \(\frac{\partial f}{\partial x}(1,1)\) e \(\frac{\partial f}{\partial y}(1,1).\)
 
-    É claro que \(D_f = \R^2\) e \[\operatorname{Im}_f = \{z = f(x,y) : (x,y)\in D_f\} = \{z = 4-x^2 - y^2 : (x,y)\in\R^2\} = (-\infty,4].\] Além disso \(\frac{\partial f}{\partial x}(x,y) = -2x\), \(\frac{\partial f}{\partial y}(x,y) = -4y\) e \(\frac{\partial f}{\partial x}(1,1) = -2\).
+    É claro que \(D_f = \R^2\) e 
+        \begin{align*}
+            \operatorname{Im}_f 
+                & = \{z = f(x,y) : (x,y)\in D_f\} \\
+                & = \{z = 4-x^2 - y^2 : (x,y)\in\R^2\} = (-\infty,4].
+        \end{align*}
+    Além disso \(\frac{\partial f}{\partial x}(x,y) = -2x\), \(\frac{\partial f}{\partial y}(x,y) = -4y\) e \(\frac{\partial f}{\partial x}(1,1) = -2\).
 
     Para a interpretação geométrica de \(\partial_xf(1,1)\) e \(\partial_yf(1,1)\), faremos o esboço do gráfico de \(f\).
 
@@ -132,7 +159,7 @@ Note que o gráfico da função \(g(x) = f(x,y_0)\) é a interseção do plano \
     portanto as curvas de nível de \(f\) são elipses concêntricas.
     \begin{figure}[htbp]
             \centering
-                \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+                \begin{tikzpicture}[x=0.45pt,y=0.45pt,yscale=-1,xscale=1]
                     %Straight Lines [id:da6780406550785627] 
                     \draw    (509.65,187.67) -- (509.65,33.89) ;
                     \draw [shift={(509.65,31.89)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
@@ -227,10 +254,10 @@ Note que o gráfico da função \(g(x) = f(x,y_0)\) é a interseção do plano \
 \end{example}
 
 \begin{example}
-    Estude as derivadas parciais de \(f(x,y) = \begin{cases}
+    Estude as derivadas parciais de \[f(x,y) = \begin{cases}
         \frac{x^3 - y^2}{x^2 + y^2},\; (x,y)\neq(0,0) \\
         0,\; (x,y)=(0,0).
-    \end{cases}\) 
+    \end{cases}\] 
 
     Vamos começar estudando \(\frac{\partial f}{\partial x}\)
         \begin{itemize}
@@ -244,7 +271,9 @@ Note que o gráfico da função \(g(x) = f(x,y_0)\) é a interseção do plano \
 
     Agora, para \(\frac{\partial f}{\partial y}\),
     \begin{itemize}
-        \item Se \((x,y)\neq(0,0)\), \[\partial_yf(x,y) = \frac{-2y(x^2+y^2)-(x^3-y^2)2y}{(x^2+y^2)^2} = \frac{-2x^2y - 2x^3y}{(x^2+y^2)^2},\]
+        \item Se \((x,y)\neq(0,0)\), \[\partial_y f(x,y) 
+        % = \frac{-2y(x^2+y^2)-(x^3-y^2)2y}{(x^2+y^2)^2} 
+        = \frac{-2x^2y - 2x^3y}{(x^2+y^2)^2},\]
         \item se \((x,y)=(0,0)\), \[\partial_yf(0,0) = \lim_{y\to 0} \frac{f(0,y)-f(0,0)}{y} = \lim_{y\to 0} -\frac{1}{y} = -\infty.\]
     \end{itemize}
     Portanto \(\partial_y f(x,y)\) está definida apenas para \((x,y)\neq(0,0)\).
@@ -269,13 +298,18 @@ No entanto, a equação
 define a mesma função \(f\), uma vez que isolando \(z\) em função de \(x\) e \(y\) temos \[z^2 = 1 - x^2 - y^2 \Rightarrow z = \sqrt{1-x^2-y^2},\; x^2 + y^2 < 1.\] Neste caso dizemos que \(z = f(x,y)\) está definida \textbf{implicitamente} pela equação \eqref{eq.esfera}.
 
 \begin{remark}
-    Note que considerando \(g(x,y,z) = x^2 + y^2 + z^2 -1\) e \(f(x,y) = \sqrt{1-x^2-y^2}\), com \(x^2 + y^2 < 1\), e substituindo \(z = f(x,y)\), com \((x,y)\in D_f\), em \(g(x,y,z)\) obtemos \[g(x,y,f(x,y)) = x^2 + y^2 + (\sqrt{1-x^2-y^2})^2 - 1 = x^2 + y^2 + 1 - x^2 - y^2 - 1 = 0.\] Ou seja, \((x,y,f(x,y))\) satisfaz a equação \[g(x,y,z) = 0.\]
+    Note que considerando \(g(x,y,z) = x^2 + y^2 + z^2 -1\) e \(f(x,y) = \sqrt{1-x^2-y^2}\), com \(x^2 + y^2 < 1\), e substituindo \(z = f(x,y)\), com \((x,y)\in D_f\), em \(g(x,y,z)\) obtemos
+        \begin{align*}
+            g(x,y,f(x,y)) & = x^2 + y^2 + (\sqrt{1-x^2-y^2})^2 - 1\\
+            & = x^2 + y^2 + 1 - x^2 - y^2 - 1 = 0.
+        \end{align*}
+    Ou seja, \((x,y,f(x,y))\) satisfaz a equação \[g(x,y,z) = 0.\]
 
     Esta é uma característica de toda função definida implicitamente por uma equação nas variáveis \(x, y\) e \(z\). Logo, em geral, temos a seguinte caracterização:
 \end{remark}
 
 \begin{definition}
-    Uma função \(z = f(x,y)\) é definida \textbf{implicitamente}\index{Funções de duas variáveis reais! Definida implicitamente} pela equação \(g(x,y,z) = 0\) se, para todo \((x,y)\in D_f\), \(g(x,y,f(x,y)) = 0.\)
+    Dizemos que uma função \(z = f(x,y)\) é definida \textbf{implicitamente}\index{Funções de duas variáveis reais! Definida implicitamente} pela equação \(g(x,y,z) = 0\) se, para todo \((x,y)\in D_f\), \(g(x,y,f(x,y)) = 0.\)
 \end{definition}
 
 \begin{remark}
@@ -298,7 +332,14 @@ também são definidas pela equação \[x^2 + y^2 + z^2 - 1 = 0.\]
 \begin{example}
     Seja \(z = f(x,y)\) dada implicitamente por \[x^2 + y^2 + z^2 = 1.\] Calcule \(\frac{\partial z}{\partial x}\) e \(\frac{\partial z}{\partial y}\).
 
-    Para calcular \(\frac{\partial z}{\partial x}\) notamos que isolando \(z\) na equação dada obtemos \[z = \sqrt{1 - x^2 - y^2},\; x^2 + y^2 < 1,\] logo \[\frac{\partial z}{\partial x} = \frac{\partial}{\partial x} \sqrt{1-x^2-y^2} = \frac{1}{2}(1-x^2-y^2)^\frac{1}{2}\cdot(2x) = -\frac{x}{\sqrt{1-x^2-y^2}},\] ou seja, \[\frac{\partial z}{\partial x} = - \frac{x}{\sqrt{1-x^2-y^2}},\; x^2 + y^2 < 1.\]
+    Para calcular \(\frac{\partial z}{\partial x}\) notamos que isolando \(z\) na equação dada obtemos \[z = \sqrt{1 - x^2 - y^2},\; x^2 + y^2 < 1,\] logo
+        \begin{align*}
+            \frac{\partial z}{\partial x} 
+                & = \frac{\partial}{\partial x} \left( \sqrt{1-x^2-y^2} \right) \\
+                & = \frac{1}{2}(1-x^2-y^2)^\frac{1}{2}\cdot(2x) \\
+                & = -\frac{x}{\sqrt{1-x^2-y^2}},
+        \end{align*}
+    ou seja, \[\frac{\partial z}{\partial x} = - \frac{x}{\sqrt{1-x^2-y^2}},\; x^2 + y^2 < 1.\]
 
     Podemos também calcular \(\frac{\partial z}{\partial x}\) trabalhando diretamente com a equação dada. Neste caso
         \begin{align*}
@@ -306,16 +347,18 @@ também são definidas pela equação \[x^2 + y^2 + z^2 - 1 = 0.\]
             \Rightarrow & \frac{\partial}{\partial x} (x^2 + y^2) + \frac{\partial}{\partial x} z^2 = 0 \\
             \Rightarrow & 2x + \frac{d}{dz}z^2\cdot\frac{\partial z}{\partial x} = 0 \\
             \Rightarrow & 2x + 2z\cdot\frac{\partial z}{\partial x} = 0 \\
-            \Rightarrow & \frac{\partial z}{\partial x} = -\frac{x}{z} = \frac{-x}{\sqrt{1-x^2-y^2}},; x^2 + y^2 < 1.
+            \Rightarrow & \frac{\partial z}{\partial x} = -\frac{x}{z} = \frac{-x}{\sqrt{1-x^2-y^2}},
         \end{align*}
+    para todo \( x^2 + y^2 < 1.\)
 
     Vamos agora calcular \(\frac{\partial z}{\partial y}\).
         \begin{align*}
             \frac{\partial}{\partial y} (x^2 + y^2 + z^2) = \frac{\partial}{\partial y}(1)
                 & \Rightarrow 2y + \frac{\partial}{\partial y}(z^2) = 0 \\
                 & \Rightarrow 2y + 2z \frac{\partial z}{\partial y} = 0 \\
-                & \Rightarrow \frac{\partial z}{\partial y} = -\frac{y}{z} = -\frac{y}{\sqrt{1-x^2-y^2}},\; x^2 + y^2 < 1.
+                & \Rightarrow \frac{\partial z}{\partial y} = -\frac{y}{z} = -\frac{y}{\sqrt{1-x^2-y^2}},
         \end{align*}
+    para todo \( x^2 + y^2 < 1.\)
 \end{example}
 
 \begin{remark}
@@ -329,7 +372,7 @@ também são definidas pela equação \[x^2 + y^2 + z^2 - 1 = 0.\]
 
     Note que, neste caso, não conseguimos isolar \(z\) na equação dada. Logo devemos trabalhar diretamente com a equação. Para \((x,y)\in D_f\)
         \begin{align*}
-            \frac{\partial}{\partial x} (e^{xyz}) = \frac{\partial}{\partial x} (x^2 + y^2 + z^2)
+            {\lefteqn{\frac{\partial}{\partial x} (e^{xyz}) = \frac{\partial}{\partial x} (x^2 + y^2 + z^2)}} \\
                 & \Rightarrow e^{xyz} \frac{\partial}{\partial x}(xyz) = \frac{\partial}{\partial x}(x^2 + y^2) + \frac{\partial}{\partial x}(z^2) \\
                 & \Rightarrow e^{xyz}\left[ \frac{\partial}{\partial x}(xy)\cdot z + xy\frac{\partial z}{\partial x} \right] = 2x + 2z \frac{\partial z}{\partial x} \\
                 & \Rightarrow e^{xyz}\left[ yz + xy\frac{\partial z}{\partial x} \right] = 2z + 2z\frac{\partial z}{\partial x} \\
@@ -348,11 +391,11 @@ Mais ainda, se \(w = f(x,y,z)\), então \(\frac{\partial w}{\partial x}\) pode s
 Em geral, se \(u = f(x_1,x_2,\dots,x_n)\), então sua derivada parcial em relação a i-ésima variável \(x_i\) é dada por \[\frac{\partial f}{\partial x_i} = \lim_{h\to 0}\frac{f(x_1,\dots,x_i+h,\dots x_n) - f(x_1,\dots,x_i,\dots,x_n)}{h}.\]
 
 \begin{example}
-    Seja \(f(x,y,z) = xy + xz + yz.\) Determine \(\partial_x f, \partial_y f\) e \(\partial_z f\). \[\partial_x f(x,y,z) = y + z,\; \partial_y f(x,y,z) = x + z \text{ and } \partial_z f(x,y,z) = x + y.\]
+    Seja \(f(x,y,z) = xy + xz + yz.\) Determine \(\partial_x f, \partial_y f\) e \(\partial_z f\). \[\partial_x f(x,y,z) = y + z,\; \partial_y f(x,y,z) = x + z \] e \[\partial_z f(x,y,z) = x + y.\]
 \end{example}
 
 \begin{example}
-    Determine as derivadas parciais da função \(f(x,y,z) = e^{x,y,z}\). \[\partial_x f(x,y,z) = e^{xyz} yz,\; \partial_y f(x,y,z) = e^{xyz} xz \text{ and } \partial_z f(x,y,z) = e^{xyz} xy.\]
+    Determine as derivadas parciais da função \(f(x,y,z) = e^{x,y,z}\). \[\partial_x f(x,y,z) = e^{xyz} yz,\; \partial_y f(x,y,z) = e^{xyz} xz\] e \[\partial_z f(x,y,z) = e^{xyz} xy.\]
 \end{example}
 
 \section{Derivadas parciais de ordem superior}
@@ -405,7 +448,7 @@ O exemplo anterior nos mostra que a igualde \(\frac{\partial^2 f}{\partial x \pa
         0,\; (x,y)=(0,0)
     \end{cases}.\] Vamos esetudar suas derivadas parciais em \((0,0)\).
 
-    Temos \[\partial_x f(0,0) = \lim_{x\to 0} \frac{f(x,0) - f(0,0)}{x} = 0 \text{ e } \partial_y f(0,0) = \lim_{y\to 0}\frac{f(0,y)-f(0,0)}{y} = 0.\] Portanto as derivadas parciais existem em \((0,0)\).
+    Temos \[\partial_x f(0,0) = \lim_{x\to 0} \frac{f(x,0) - f(0,0)}{x} = 0\] e \[ \partial_y f(0,0) = \lim_{y\to 0}\frac{f(0,y)-f(0,0)}{y} = 0.\] Portanto as derivadas parciais existem em \((0,0)\).
 
     Vamos estudar agora a continuidade de \(f\) em \((0,0)\). Se \(x=0\), então \[\lim_{(x,y)\to(0,0)} f(x,y) = \lim_{y\to 0} f(0,y) = 0,\] mas se \(y=x\), \[\lim_{(x,y)\to(0,0)} f(x,y) = \lim_{x\to 0} \frac{x^2}{2x^2} = \frac{1}{2},\] logo o limite não existe e, consequentemente, \(f\) não é contínua em \((0,0)\).
 \end{example}
@@ -414,11 +457,23 @@ No exemplo anterior temos que as derivadas parciais existem num ponto \((x_0,y_0
 
 Vamos ver agora como estender adequadamente o conceito de diferenciabilidade para funções de várias variáveis.
 
-Seja \(f:D_f\subset\R \to \R\) uma função de uma variável. Se \(f\) é diferenciável em \(x_0\), então existe \(a\in\R\) (\(a = f'(x_0)\)) tal que \[\lim_{h\to 0}\frac{f(x_0 + h) - f(x_0)}{h} = a \Leftrightarrow \lim_{h\to 0} \frac{f(x_0+h) - f(x_0) - ah}{h} = 0.\]
+Seja \(f:D_f\subset\R \to \R\) uma função de uma variável. Se \(f\) é diferenciável em \(x_0\), então existe \(a\in\R\) (\(a = f'(x_0)\)) tal que
+    \begin{align*}
+        \lim_{h\to 0}\frac{f(x_0 + h) - f(x_0)}{h} = a \\ \Leftrightarrow \lim_{h\to 0} \frac{f(x_0+h) - f(x_0) - ah}{h} = 0.
+    \end{align*}
 
 Note que esta forma ainda não é adequada para a generalização, pois se \(f\) for uma função de duas variáveis, então \(h\) será um par ordenado, portanto a razão incremental não terá sentido.
 
-Agora, como \[\lim_{h\to 0} \frac{G(h)}{h} = 0 \Leftrightarrow \lim_{h\to 0} \frac{G(h)}{|h|} = 0,\] temos que \[\lim_{h\to 0} \frac{f(x_0 + h) - f(x_0) - ah}{h} = 0 \Leftrightarrow \lim_{h\to 0} \frac{f(x_0+h) - f(x_0) - ah}{|h|} = 0.\] Ou seja, \[\lim_{h\to 0} \frac{f(x_0 + h) - f(x_0)}{h} = a \Leftrightarrow \lim_{h\to 0} \frac{f(x_0+h) - f(x_0) - ah}{|h|} = 0.\] Ou ainda, \(f\) é diferenciável em \(x_0\) se, e somente se, existe \(a\in\R\) tal que \[\lim_{h\to 0} \frac{f(x_0 + h)-f(x_0) - ah}{|h|} = 0.\] Neste sentido podemos generalizar a definição de diferenciabilidade, pois dividir por \(\|(h,k)\|\) faz sentido.
+Agora, como \[\lim_{h\to 0} \frac{G(h)}{h} = 0 \Leftrightarrow \lim_{h\to 0} \frac{G(h)}{|h|} = 0,\] temos que
+    \begin{align*}
+        \lim_{h\to 0} \frac{f(x_0 + h) - f(x_0) - ah}{h} = 0 \\ \Leftrightarrow \lim_{h\to 0} \frac{f(x_0+h) - f(x_0) - ah}{|h|} = 0.
+    \end{align*}
+Ou seja,
+    \begin{align*}
+        \lim_{h\to 0} \frac{f(x_0 + h) - f(x_0)}{h} = a \\
+        \Leftrightarrow \lim_{h\to 0} \frac{f(x_0+h) - f(x_0) - ah}{|h|} = 0.
+    \end{align*}
+Ou ainda, \(f\) é diferenciável em \(x_0\) se, e somente se, existe \(a\in\R\) tal que \[\lim_{h\to 0} \frac{f(x_0 + h)-f(x_0) - ah}{|h|} = 0.\] Neste sentido podemos generalizar a definição de diferenciabilidade, pois dividir por \(\|(h,k)\|\) faz sentido.
 
 \begin{definition}
     Sejam \(f:A \subset \R^2 \to \R\), \(A\) aberto e \((x_0,y_0)\in A\). Dizemos que \(f\) é \textbf{diferenciável}\index{Funções de duas variáveis reais! Diferenciáveis} em \((x_0,y_0)\) se existir \((a,b)\in\R^2\) tal que \[\lim_{(h,k)\to(0,0)} \frac{f(x_0 + h, y_0 + k) - f(x_0,y_0) - ah - bk}{\|(h,k)\|} = 0.\] 
@@ -442,7 +497,8 @@ Agora, como \[\lim_{h\to 0} \frac{G(h)}{h} = 0 \Leftrightarrow \lim_{h\to 0} \fr
         \begin{align*}
             \lim_{(x,y)\to(x_0,y_0)} f(x,y)
             & = \lim_{(h,k)\to(0,0)} f(x_0 + h,y_0+k) \\
-            & = \lim_{(h,k)\to(0,0)} [E(h,k) + f(x_0,y_0) + (ah+bk)] = f(x_0,y_0).
+            & = \lim_{(h,k)\to(0,0)} [E(h,k) + f(x_0,y_0) + (ah+bk) \\
+            & = f(x_0,y_0).
         \end{align*}
 
     Do anterior, \(f\) é contínua em \((x_0,y_0)\).
@@ -466,7 +522,7 @@ com \(E(h,k) = f(x_0+h,y_0+k)-f(x_0,y_0) -ah - bk.\) Em particular, segue de \eq
     \end{align*}
 portanto \(\frac{\partial f}{\partial x}(x_0,y_0)\) existe e \(\frac{\partial f}{\partial x}(x_0,y_0) = a\).
 
-De forma análoga, mostramos que \(\frac{\partial f}{\partial y}(x_0,y_0)\) existe e \(\frac{\partial f}{\partial y}(x_0,y_0)  = b\).
+De forma análoga, mostramos que \(\frac{\partial f}{\partial y}(x_0,y_0)\) existe e que deve valer \(\frac{\partial f}{\partial y}(x_0,y_0) = b\).
 \end{proof}
 
 \begin{remark}
@@ -476,13 +532,16 @@ De forma análoga, mostramos que \(\frac{\partial f}{\partial y}(x_0,y_0)\) exis
 Segue diretamente do Teorema \ref{DiferenciabilidadeImplicaDerivadasParciais} o seguinte resultado:
 
 \begin{corollary}
-    Sejam \(f:A\subset\R^2 \to \R\), com \(A\) aberto, e \((x_0,y_0)\in A\). Então \(f\) é diferenciável em \((x_0,y_0)\) se, e somente se, \(f\) tem derivadas parciais em \((x_0,y_0)\) e \[\lim_{(h,k)\to(0,0)} \frac{f(x_0+h,y_0+k) - f(x_0,y_0) - \frac{\partial f}{\partial x}(x_0,y_0)h - \frac{\partial f}{\partial y}(x_0,y_0)k}{\|(h,k)\|} = 0.\]
+    Sejam \(f:A\subset\R^2 \to \R\), com \(A\) aberto, e \((x_0,y_0)\in A\). Então \(f\) é diferenciável em \((x_0,y_0)\) se, e somente se, \(f\) tem derivadas parciais em \((x_0,y_0)\) e
+        {\small \begin{equation}\label{eqn.Limitão}
+            \lim_{\substack{h\to 0 \\ k\to 0}} \frac{f(x_0+h,y_0+k) - f(x_0,y_0) - \frac{\partial f}{\partial x}(x_0,y_0)h - \frac{\partial f}{\partial y}(x_0,y_0)k}{\|(h,k)\|} = 0.
+        \end{equation}}
 \end{corollary}
 
 \begin{remark}
     Do estudo acima, notamos que
         \begin{itemize}
-            \item Para provar que \(f\) é diferenciável em \((x_0,y_0)\), basta provar que \(\frac{\partial f}{\partial x}(x_0,y_0)\) e \(\frac{\partial f}{\partial y}(x_0,y_0)\) existem e que \[\lim_{(h,k)\to(0,0)} \frac{f(x_0+h,y_0+k) - f(x_0,y_0) - \frac{\partial f}{\partial x}(x_0,y_0)h - \frac{\partial f}{\partial y}(x_0,y_0)k}{\|(h,k)\|} = 0.\]
+            \item Para provar que \(f\) é diferenciável em \((x_0,y_0)\), basta provar que \(\frac{\partial f}{\partial x}(x_0,y_0)\) e \(\frac{\partial f}{\partial y}(x_0,y_0)\) existem e que vale o limite \eqref{eqn.Limitão}
             \item Se \(\frac{\partial f}{\partial x}(x_0,y_0)\) ou \(\frac{\partial f}{\partial y}(x_0,y_0)\) não existir, então \(f\) não será diferenciável em \((x_0,y_0)\).
             \item Se \(\frac{\partial f}{\partial x}(x_0,y_0)\) e \(\frac{\partial f}{\partial y}(x_0,y_0)\) existem, mas o limite não é zero, então \(f\) não é diferenciável.
             \item Se \(f\) não é contínua em \((x_0,y_0)\), então \(f\) não é diferenciável em \((x_0,y_0)\).
@@ -502,17 +561,17 @@ Segue diretamente do Teorema \ref{DiferenciabilidadeImplicaDerivadasParciais} o 
                 & = f(x+h,y+k) - f(x,y) - \frac{\partial f}{\partial x}(x,y) h - \frac{\partial f}{\partial y}(x,y) k \\
                 & = (x+h)^2(y+k) - x^2 y - 2xyh - x^2k \\
                 & = (x^2+2xh+h^2)(y+k) - x^2 y - 2xyh - x^2 k \\
-                & = x^2y + 2xyh + h^2y + x^2k + 2xkh + h^2 - x^2 y - 2xyh - x^2 k \\
+                % & = x^2y + 2xyh + h^2y + x^2k + 2xkh + h^2 - x^2 y - 2xyh - x^2 k \\
                 & = 2xkh + h^2y + h^2 k,
         \end{align*}
     assim,
         \begin{align*}
             \lim_{(h,k)\to(0,0)} \frac{E(h,k)}{\|(h,k)\|}
-                & \lim_{(h,k)\to 0} \frac{2xkh + h^2y + h^2 k}{\sqrt{h^2 + k^2}} \\
-                & \lim_{(h,k)\to(0,0)} \left( 2xk\frac{h}{\sqrt{h^2 + k^2}} + yh \frac{h}{\sqrt{h^2 + k^2}} + kh \frac{h}{\sqrt{h^2 + k^2}} \right) \\
+                & = \lim_{(h,k)\to 0} \frac{2xkh + h^2y + h^2 k}{\sqrt{h^2 + k^2}} \\
+                % & = \lim_{(h,k)\to(0,0)} \left( 2xk\frac{h}{\sqrt{h^2 + k^2}} + yh \frac{h}{\sqrt{h^2 + k^2}} + kh \frac{h}{\sqrt{h^2 + k^2}} \right) \\
                 & = \lim_{(h,k)\to(0,0)} (2xk + yh + kh)\frac{h}{\sqrt{h^2 + k^2}}.
         \end{align*}
-    Agora, notando que \[|h| = \sqrt{h^2} \leq \sqrt{h^2 + k^2} \Rightarrow \frac{|h|}{\sqrt{h^2 + k^2}} \leq 1,\; \forall (h,k)\neq(0,,0),\] concluímos que \(\frac{h}{\sqrt{h^2 + k^2}}\) é uma função limitada, portanto \[\lim_{(h,k)\to(0,0)} (2xk + yh + kh)\frac{h}{\sqrt{h^2 + k^2}} = 0. \] Ou seja, \[\lim_{(h,k)\to(0,0)} \frac{E(h,k)}{\|(h,k)\|} = 0,\] ou ainda \[\lim_{(h,k)\to(0,0)} \frac{f(x_0+h,y_0+k) - f(x_0,y_0) - \frac{\partial f}{\partial x}(x,y) h - \frac{\partial f}{\partial y}(x,y) k}{\|(h,k)\|} = 0,\;\forall(x,y)\in\R^2. \] Daí podemos concluir que \(f\) é diferenciável.
+    Agora, notando que \[|h| = \sqrt{h^2} \leq \sqrt{h^2 + k^2} \Rightarrow \frac{|h|}{\sqrt{h^2 + k^2}} \leq 1,\; \forall (h,k)\neq(0,,0),\] concluímos que \(\frac{h}{\sqrt{h^2 + k^2}}\) é uma função limitada, portanto \[\lim_{(h,k)\to(0,0)} (2xk + yh + kh)\frac{h}{\sqrt{h^2 + k^2}} = 0. \] Ou seja, \[\lim_{(h,k)\to(0,0)} \frac{E(h,k)}{\|(h,k)\|} = 0,\] o que implica que \eqref{eqn.Limitão} vale, portanto, podemos concluir que \(f\) é diferenciável.
 \end{example}
 
 \begin{example}
@@ -539,10 +598,17 @@ Segue diretamente do Teorema \ref{DiferenciabilidadeImplicaDerivadasParciais} o 
                 & = \frac{h^3}{h^2 + k^2} - h \\
                 & = -\frac{hk^2}{h^2+k^2},
         \end{align*}
-    assim, \[\lim_{(h,k)\to(0,0)} \frac{\left( -\frac{hk^2}{h^2+k^2} \right)}{\sqrt{h^2 + k^2}} = \lim_{(h,k)\to(0,0)} -\frac{hk^2}{h^2+k^2}\frac{1}{\sqrt{h^2+k^2}}.\] Para \(f\) ser diferenciável em \((0,0)\) devemos ter que \[\lim_{(h,k)\to(0,0)} -\frac{hk^2}{h^2+k^2}\frac{1}{\sqrt{h^2+k^2}} = 0.\] É fácil verificar que se \(h=0\) ou \(k=0\), então o limite acima é de fato \(0\). Mas, tomando \(k=h\), temos que \[\lim_{(h,k)\to(0,0)} -\frac{hk^2}{h^2+k^2}\frac{1}{\sqrt{h^2+k^2}} = \lim_{h\to 0} -\frac{h^2}{2h^2}\frac{1}{\sqrt{2h^2}} = \lim_{h\to 0} - \frac{h}{2\sqrt{2}|h|} = \begin{cases}
-        \frac{-1}{2\sqrt{2}},\; \text{ se } h\to 0^+ \\
-        \frac{1}{2\sqrt{2}},\; \text{ se } h\to 0^-,
-    \end{cases}\] portanto o limite não existe, consequentemente, \(f\) não é diferenciável em \((0,0)\).
+    assim, \[\lim_{(h,k)\to(0,0)} \frac{\left( -\frac{hk^2}{h^2+k^2} \right)}{\sqrt{h^2 + k^2}} = \lim_{(h,k)\to(0,0)} -\frac{hk^2}{h^2+k^2}\frac{1}{\sqrt{h^2+k^2}}.\] Para \(f\) ser diferenciável em \((0,0)\) devemos ter que \[\lim_{(h,k)\to(0,0)} -\frac{hk^2}{h^2+k^2}\frac{1}{\sqrt{h^2+k^2}} = 0.\] É fácil verificar que se \(h=0\) ou \(k=0\), então o limite acima é, de fato, igual a \(0\). Mas, tomando \(k=h\), temos que
+        \begin{align*}
+            \lim_{(h,k)\to(0,0)} -\frac{hk^2}{h^2+k^2}\frac{1}{\sqrt{h^2+k^2}} 
+                & = \lim_{h\to 0} -\frac{h^2}{2h^2}\frac{1}{\sqrt{2h^2}} \\
+                & = \lim_{h\to 0} - \frac{h}{2\sqrt{2}|h|} \\
+                & = \begin{cases}
+        \frac{-1}{2\sqrt{2}}, \text{ se } h>0\\
+        \frac{1}{2\sqrt{2}}, \text{ se } h<0,
+    \end{cases}
+        \end{align*}
+    portanto o limite não existe, consequentemente, \(f\) não é diferenciável em \((0,0)\).
 \end{example}
 
 \begin{remark}
@@ -579,7 +645,7 @@ Muitas vezes é mais fácil verificar a continuidade das derivadas parciais do q
     Verifique que \[\frac{\partial f}{\partial x}(x,y) = \begin{cases}
         \frac{2x^5 + 4x^3y^2}{(x^2 + y^2)^2},\; (x,y)\neq(0,0) \\
         0,\; (x,y)=(0,0)
-    \end{cases} e \begin{cases}
+    \end{cases}\] e que \[ \frac{\partial f}{\partial y} = \begin{cases}
         \frac{-2x^4y}{(x^2+y^2)^2},\; (x,y)\neq(0,0)\\
         0,\; (x,y)=(0,0)
     \end{cases}.\] Vejamos que \(\frac{\partial f}{\partial x}\) é contínua em \(\R^2\).
@@ -588,7 +654,8 @@ Muitas vezes é mais fácil verificar a continuidade das derivadas parciais do q
         \begin{align*}
             \lim_{(x,y)\to(0,0)} \frac{\partial f}{\partial x}(x,y)
                 & = \lim_{(x,y)\to(0,0)} \frac{2x^5 _ 4x^3y^2}{(x^2+y^2)^2} \\
-                & = \lim_{(x,y)\to(0,0)} \left[ 2x\frac{x^4}{(x^2+y^2)^2} + 4x\frac{x^2y^2}{(x^2+y^2)^2} \right] = 0.
+                & = \lim_{(x,y)\to(0,0)} \left[ 2x\frac{x^4}{(x^2+y^2)^2} + 4x\frac{x^2y^2}{(x^2+y^2)^2} \right]\\
+                & = 0.
         \end{align*}
     De fato, \(\frac{x^4}{(x^2+y^2)^2}\) é limitada para todo \((x,y)\neq(0,0)\) dado que \[0\leq x^2 \leq x^2+y^2 \Rightarrow 0 \leq x^4 \leq (x^2+y^2)^2 \Rightarrow 0 \leq \frac{x^4}{(x^2+y^2)^2} \leq 1.\] Assim como \(\frac{x^2y^2}{(x^2+y^2)^2}\) pois \(0\leq x^2 \leq x^2+y^2\) e \(0\leq y^2 \leq x^2+y^2\) implicam que \[0 \leq x^2 y^2 \leq (x^2+y^2)^2 \Rightarrow 0 \leq \frac{x^2y^2}{(x^2+y^2)^2} \leq 1.\] Do anterior concluímos que \[\lim_{(x,y)\to(0,0)} \frac{\partial f}{\partial x}(x,y) = 0 = \frac{\partial f}{\partial x}(0,0),\] portanto \(\frac{\partial f}{\partial x}\) é contínua em \((0,0)\).
 
@@ -618,7 +685,7 @@ Assim como para funções de uma variável, o conceito de diferenciabilidade de 
 
 Lembre que se \(f:I\to\R\) tem derivada em \(x = 0x_0\), então \(f'(x_0)\) existe e 
     \begin{align*}
-        \lim_{x\to x_0} \frac{f(x)-f(x_0)}{x-x_0} = f'(x_0)
+        {\lefteqn{\lim_{x\to x_0} \frac{f(x)-f(x_0)}{x-x_0} = f'(x_0)}} \\
             & \Rightarrow \lim_{x\to x_0} \frac{f(x)-f(x_0)-f'(x_0)(x-x_0)}{x-x_0} = 0 \\
             & \Rightarrow \lim_{x\to x_0} \frac{f(x) - \overbrace{[f(x_0) + f'(x_0)(x-x_0)]}^{\displaystyle T(x)}}{x-x_0} = 0.
     \end{align*}
@@ -707,13 +774,13 @@ De forma semelhante, se \(f:A\subset\R^2\to\R\) é uma função de duas variáve
             % Text Node
             \draw (275,47.9) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,f}\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{,y}\textcolor[rgb]{0.25,0.46,0.02}{_{0}}\textcolor[rgb]{0.25,0.46,0.02}{)}\textcolor[rgb]{0.25,0.46,0.02}{)}$};
             % Text Node
-            \draw (396.06,66.01) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{Plano\ tangente\ em\ ( x_{0} ,y_{0} ,f( x_{0} ,y_{0}))}$};
+            % \draw (396.06,66.01) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{Plano\ tangente\ em\ ( x_{0} ,y_{0} ,f( x_{0} ,y_{0}))}$};
         \end{tikzpicture}
         \caption{Plano tangente ao gráfico de uma função de duas variáveis}
         \label{fig:PlanoTangente}
     \end{figure}
 
-Agora, se \(f\) é diferenciável em \((x_0,y_0)\) sabemos que \[\lim_{(h,k)\to(0,0)} \frac{f(x_0+h,y_0+k)-f(x_0,y_0) - \partial_x f(x_0,y_0)h - \partial_y f(x_0,y_0)k}{\|(h,k)\|} = 0,\] ou ainda \[\lim_{(x,y)\to(x_0,y_0)} \frac{f(x,y) - \overbrace{[f(x_0,y_0) + \partial_x f(x_0,y_0)(x-x_0) + \partial_y f(x_0,y_0)(y-y_0)]}^{\displaystyle T(x)}}{\left\|(x,y) - (x_0,y_0)\right\|} = 0,\] portanto, o \textit{plano} que passa por \((x_0,y_0,f(x_0,y_0))\)
+Agora, se \(f\) é diferenciável em \((x_0,y_0)\) sabemos que {\small \[\lim_{\substack{h\to 0 \\ k\to 0}} \frac{f(x_0+h,y_0+k)-f(x_0,y_0) - \partial_x f(x_0,y_0)h - \partial_y f(x_0,y_0)k}{\|(h,k)\|} = 0,\]} ou ainda {\small \[\lim_{\substack{h\to 0 \\ k\to 0}} \frac{f(x,y) - \overbrace{[f(x_0,y_0) + \partial_x f(x_0,y_0)(x-x_0) + \partial_y f(x_0,y_0)(y-y_0)]}^{\displaystyle T(x)}}{\left\|(x,y) - (x_0,y_0)\right\|} = 0,\]} portanto, o \textit{plano} que passa por \((x_0,y_0,f(x_0,y_0))\)
     \begin{equation}\label{eq.PlanoTangente}
         T(x,y) = f(x_0,y_0) + \partial_x f(x_0,y_0)(x-x_0) + \partial_y f(x_0,y_0)(y-y_0)
     \end{equation}
@@ -722,7 +789,7 @@ se aproxima de \(f(x,y)\) ``mais rápido'' do que \((x,y)\) se aproxima de \((x_
 \begin{remark}
     Lembre que a equação do plano que passa por \((x_0,y_0,z_0)\) e é perpendicular a \((a,b,c)\) é dado por
         \begin{align*}
-            (x-x_0,y-y_0,z-z_0)\bullet(a,b,c) = 0       
+            {\lefteqn{(x-x_0,y-y_0,z-z_0)\bullet(a,b,c) = 0}} \\
                 & \Leftrightarrow a(x-x_0) + b(y-y_0) + c(z-z_0) = 0 \\
                 & \Leftrightarrow z = z_0 - \frac{a}{c}(x-x_0) - \frac{b}{c}(y-y_0) \\
                 & \Leftrightarrow z = z_0 + a'(x-x_0) + b'(y-y_0)
@@ -804,11 +871,11 @@ se aproxima de \(f(x,y)\) ``mais rápido'' do que \((x,y)\) se aproxima de \((x_
 As observações acima motivam a seguinte definição.
 
 \begin{definition}
-    Seja \(f\) diferenciável no ponto \((x_0,y_0)\). O plano
-        \begin{equation}\label{eqn.PlanoTangente3}
+    Seja \(f\) uma função diferenciável no ponto \((x_0,y_0)\). O plano
+        {\begin{equation}\label{eqn.PlanoTangente3}
             z = f(x_0,y_0) + \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0)
-        \end{equation}
-    é chamado \textbf{plano tangente}\index{Plano tangente} ao gráfico de \(f\) no ponto \((x_0,y_0,f(x_0,y_0))\).
+        \end{equation}}
+    será dito \textbf{plano tangente}\index{Plano tangente} ao gráfico de \(f\) no ponto \((x_0,y_0,f(x_0,y_0))\).
 \end{definition}
 
 \begin{remark}
@@ -894,12 +961,18 @@ Em notação de produto interno, podemos reescrever \eqref{eqn.PlanoTangente3} c
         0,\; (x,y)=(0,0)
     \end{cases}\). Mostre que o gráfico de \(f\) não admite plano tangente em \((0,0,f(0,0))\).
 
-    É fácil verificar que \(\partial_x f(0,0) = 0\) e \(\partial_y f(0,0) = 0\) (Exercício). Logo \[E(h,k) = f(0+h,0+k) - f(0,0) - \partial_x f(0,0)\cdot h - \partial_y f(0,0)\cdot k = f(h,k) = \frac{hk^2}{h^2+k^2}.\] Assim, \[\lim_{(h,k)\to(0,0)} \frac{E(h,K)}{\|(h,k)\|} = \lim_{(h,k)\to(0,0)} \frac{hk^2}{(h^2+k^2)\sqrt{h^2+k^2}} = (*)\]
+    É fácil verificar que \(\partial_x f(0,0) = 0\) e \(\partial_y f(0,0) = 0\) (Exercício). Logo
+        \begin{align*}
+            E(h,k) 
+                & = f(0+h,0+k) - f(0,0) - \partial_x f(0,0)\cdot h - \partial_y f(0,0)\cdot k \\
+                & = f(h,k) = \frac{hk^2}{h^2+k^2}.
+        \end{align*}
+    Assim, \[\lim_{(h,k)\to(0,0)} \frac{E(h,K)}{\|(h,k)\|} = \lim_{(h,k)\to(0,0)} \frac{hk^2}{(h^2+k^2)\sqrt{h^2+k^2}} = (*)\]
         \begin{itemize}
             \item Se \(h=0\), \[(*) = \lim_{k\to 0} 0 = 0,\]
             \item Se \(k=h\) \[(*) = \lim_{h\to 0} \frac{h^3}{2\sqrt{2}h^2\sqrt{h^2}} = \lim_{h\to 0} \frac{h}{2\sqrt{2}|h|} = \begin{cases}
-                \frac{1}{2\sqrt{2}},\; \text{ se } h\to 0^+ \\
-                -\frac{1}{2\sqrt{2}},\; \text{ se } h\to 0^-.
+                \frac{1}{2\sqrt{2}}, \text{ se } h>0 \\
+                -\frac{1}{2\sqrt{2}}, \text{ se } h<0.
             \end{cases}\]
         \end{itemize}
 portanto \(f\) não é diferenciável em \((0,0)\), consequentemente não admite plano tangente no ponto \((0,0,f(0,0))\).
@@ -920,12 +993,13 @@ Seja \(f(x,y)\) \textit{diferenciável} em \((x_0,y_0)\) e seja \(L:\R^2\to\R\) 
 
 Então, como já observamos antes, \(L(h,k)\) é a única função linear tal que \[\lim_{(h,k)\to(0,0)} \frac{f(x_0+h,y_0+k) - f(x_0,y_0) - L(h,k)}{\|(h,k)\|} = 0.\] Logo, podemos afirmar que \[f(x_0+h,y_0+k) - f(x_0,y_0) = L(h,k) + E(h,k),\] com \(\lim_{(h,k)\to(0,0)} \frac{E(h,k)}{\|(h,k)\|} = 0\). Ou seja, na aproximação de \(f(x_0+h,y_0+k) - f(x_0,y_0)\) por \(L(h,k)\), o erro \(E(h,k)\) tende a zero mais rápido do que \(\|(h,k)\|\) quando \((h,k)\to(0,0)\)
 
-Em outras palavras,    \begin{equation}\label{eqn.Aproxf}
+Em outras palavras,    
+    \begin{equation}\label{eqn.Aproxf}
         f(x_0+h,y_0+k) - f(x_0,y_0) \sim L(h,k),
     \end{equation}
 no qual a aproximação é melhor quanto menores os módulos de \(h\) e \(k\).
 
-Por outro lado, seja \[T(x,y) = f(x_0,y_0) + \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0). \] Sabemos que o gráfico de \(T\) é o plano tangente a \(f\) no ponto \((x_0,y_0,f(x_0,y_0))\). Fazendo \(x = x_0 + h\) e \(y = y_0 + k\) e notando que \(f(x_0,y_0) = T(x_0,y_0)\), obtemos \[T(x_0+h,y_0+k) - T(x_0,y_0) = \frac{\partial f}{\partial x}(x_0,y_0)h + \frac{\partial f}{\partial y}(x_0,y_0)k = L(h,k),\] ou seja
+Por outro lado, seja \[T(x,y) = f(x_0,y_0) + \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0). \] Então, o gráfico de \(T\) é o plano tangente a \(f\) no ponto \((x_0,y_0,f(x_0,y_0))\). Fazendo \(x = x_0 + h\) e \(y = y_0 + k\) e notando que \(f(x_0,y_0) = T(x_0,y_0)\), obtemos \[T(x_0+h,y_0+k) - T(x_0,y_0) = \frac{\partial f}{\partial x}(x_0,y_0)h + \frac{\partial f}{\partial y}(x_0,y_0)k = L(h,k),\] ou seja
     \begin{equation}\label{eqn.AproxT}
         T(x_0+h,y_0+k) - T(x_0,y_0) = L(h,k).
     \end{equation}
@@ -954,7 +1028,7 @@ Por outro lado, a variação de \(f\) quando passamos de \((x,y)\) para \((x+dx,
             \item Calcule o erro cometido na aproximação acima.
         \end{enumerate}
 
-    Temos que \(z = x^2 y\), logo \[dz = \partial_x f(x,y) dx + \partial_y f(x,y) dy = 2xy dx + x^2 dy.\] Para aproximar \(\Delta z\) quando passamos de \((1,2)\) para \((1.02,2.01)\) note que \[dx = 1.02 - 1 = 0.02 \text{ e } dy = 2.01 - 2 = 0.01,\] portanto \[\Delta z \sim dz = 2xy dx + x^2 dy = 2(1)(2)\cdot(0.02) + (1)^2\cdot(0.01) = 0.09.\] Por fim, dado que \[\Delta z = f(x+dx,y+dy) = (x+dx)^2(y+dy) - x^2y = (1.02)^2\cdot (2.01) - (1)^2\cdot (2) = 0.091204,\] o erro cometido na aproximação é \[E = \Delta z - dz = 0.091294 - 0.09 = 0.001204.\]
+    Temos que \(z = x^2 y\), logo \[dz = \partial_x f(x,y) dx + \partial_y f(x,y) dy = 2xy dx + x^2 dy.\] Para aproximar \(\Delta z\) quando passamos de \((1,2)\) para \((1.02,2.01)\) note que \[dx = 1.02 - 1 = 0.02 \text{ e } dy = 2.01 - 2 = 0.01,\] portanto \[\Delta z \sim dz = 2xy dx + x^2 dy = 2(1)(2)\cdot(0.02) + (1)^2\cdot(0.01) = 0.09.\] Por fim, dado que \[\Delta z = (x+dx)^2(y+dy) - x^2y = (1.02)^2\cdot (2.01) - (1)^2\cdot (2) = 0.091204,\] o erro cometido na aproximação é \[E = \Delta z - dz = 0.091294 - 0.09 = 0.001204.\]
 \end{example}
 
 \begin{example}
@@ -1022,11 +1096,11 @@ Geometricamente, interpretamos \(\nabla f(x_0,y_0)\) como um vetor aplicado no p
 
 Agora, suponha que \(f\) seja diferenciável em \((x_0,y_0)\). Então
     \begin{equation}\label{eqn.Diferenciavel}
-        \lim_{(x,y)\to(x_0,y_0)} \frac{f(x,y) - f(x_0,y_0) - \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) - \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0)}{\|(x,y)-(x_0,y_0)\|} = 0,
+        \lim_{\substack{x\to x_0 \\ y\to y_0}} \frac{f(x,y) - f(x_0,y_0) - \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) - \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0)}{\|(x,y)-(x_0,y_0)\|} = 0,
     \end{equation}
 e podemos escrever
     \begin{align*}
-        \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0) 
+        {\lefteqn{\frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0)}} \\
             & = \left( \frac{\partial f}{\partial x}(x_0,y_0),\frac{\partial f}{\partial y}(x_0,y_0) \right)\bullet (x-x_0,y-y_0) \\ 
             & = \nabla f(x_0,y_0)\bullet[(x,y)-(x_0,y_0)].
     \end{align*}
@@ -1034,12 +1108,10 @@ Assim, substituindo em \eqref{eqn.Diferenciavel} obtemos \[\lim_{(x,y)\to(x_0,y_
     \begin{equation}\label{eqn.Diferenciavel1}
         \lim_{\mathbf{x}\to\mathbf{x_0}} \frac{f(\mathbf{x}) - f(\mathbf{x_0}) - \nabla f(\mathbf{x_0})(\mathbf{x} - \mathbf{x_0})}{\|\mathbf{x} - \mathbf{x_0}\|} = 0.
     \end{equation}
-
 Por outro lado, sabemos que se uma função de uma variável \(f\) é diferenciável em \(x_0\), então \(f'(x_0)\) existe e
     \begin{equation}\label{eqn.Diferenciavel2}
         \lim_{x\to x_0} \frac{f(x) - f(x_0) - f'(x_0)(x-x_0)}{|x-x_0|} = 0.
     \end{equation}
-
 Assim, comparando \eqref{eqn.Diferenciavel1} e \eqref{eqn.Diferenciavel2}, se \(f(x,y)\) é diferenciável em \((x_0,y_0)\), é natural \textit{definir} a derivada de \(f\) em \((x_0,y_0)\) por \[f'(x_0,y_0) = \nabla f(x_0,y_0).\] Ou seja, a derivada de \(f\) em \((x_0,y_0)\) é o gradiente de \(f\) em \((x_0,y_0)\).
 
 \section{Regra da cadeia}
@@ -1103,7 +1175,13 @@ Podemos mostrar que \(\gamma\) é diferenciável em \(t_0\in I\) se, e somente s
 \begin{proof}
     Como \(f\) é diferenciável em \(\mathbf{X_0}\), para \(\mathbf{X}\in A\), \[\lim_{\mathbf{X}\to\mathbf{X_0}} \frac{f(\mathbf{X}) - f(\mathbf{X_0}) - \nabla f(\mathbf{X_0})(\mathbf{X} - \mathbf{X_0})}{\|\mathbf{X} - \mathbf{X_0}\|} = 0.\] Logo, podemos escrever \[ f(\mathbf{X}) - f(\mathbf{X_0}) = \nabla f(\mathbf{X_0})(\mathbf{X} - \mathbf{X_0}) + E(\mathbf{X}), \] com \(\lim_{\mathbf{X}\to\mathbf{X_0}} \frac{E(\mathbf{X})}{\|\mathbf{X} - \mathbf{X_0}\|} = 0\).
 
-    Substituindo, \(\mathbf{X} = \gamma(t)\) e \(\mathbf{X_0} = \gamma(t_0)\) na expressão acima temos \[\frac{f(\gamma(t)) - f(\gamma(t_0))}{t - t_0} = \nabla f(\gamma(t_0)) \frac{\gamma(t) - \gamma(t_0)}{t-t_0} + \frac{E(\gamma(t))}{t-t_0},\] e como \[\lim_{t\to t_0} \frac{E(\gamma(t))}{t-t_0} = \lim_{t\to t_0} \left( \frac{\|\gamma(t) - \gamma(t_0)\|}{t-t_0} \frac{E(\gamma(t))}{\|\gamma(t) - \gamma(t_0)\|} \right) = \|\gamma'(t)\| \cdot 0 = 0,\] concluímos que \[\lim_{t\to t_0} \frac{f(\gamma(t)) - f(\gamma(t_0))}{t-t_0} = \lim_{t\to t_0} \nabla f(\gamma(t_0)) \frac{\gamma(t) - \gamma(t_0)}{t-t_0} + \frac{E(\gamma(t))}{t-t_0} = \nabla f(\gamma(t_0))\bullet \gamma'(t_0),\] portanto \[\lim_{t\to t_0} \frac{F(t) - F(t_0)}{t-t_0} = \nabla f(\gamma(t_0))\bullet \gamma'(t_0),\] ou ainda \[F'(t_0) = \nabla f(\gamma(t_0))\bullet \gamma'(t_0).\]
+    Substituindo, \(\mathbf{X} = \gamma(t)\) e \(\mathbf{X_0} = \gamma(t_0)\) na expressão acima temos \[\frac{f(\gamma(t)) - f(\gamma(t_0))}{t - t_0} = \nabla f(\gamma(t_0)) \frac{\gamma(t) - \gamma(t_0)}{t-t_0} + \frac{E(\gamma(t))}{t-t_0},\] e como \[\lim_{t\to t_0} \frac{E(\gamma(t))}{t-t_0} = \lim_{t\to t_0} \left( \frac{\|\gamma(t) - \gamma(t_0)\|}{t-t_0} \frac{E(\gamma(t))}{\|\gamma(t) - \gamma(t_0)\|} \right) = 0,\] concluímos que
+        \begin{align*}
+            \lim_{t\to t_0} \frac{f(\gamma(t)) - f(\gamma(t_0))}{t-t_0} 
+            & = \lim_{t\to t_0} \nabla f(\gamma(t_0)) \frac{\gamma(t) - \gamma(t_0)}{t-t_0} + \frac{E(\gamma(t))}{t-t_0} \\
+            & = \nabla f(\gamma(t_0))\bullet \gamma'(t_0),
+        \end{align*}
+    portanto \[\lim_{t\to t_0} \frac{F(t) - F(t_0)}{t-t_0} = \nabla f(\gamma(t_0))\bullet \gamma'(t_0),\] ou ainda \[F'(t_0) = \nabla f(\gamma(t_0))\bullet \gamma'(t_0).\]
 \end{proof}
 
 Segue do Teorema \ref{thm.RegraDaCadeiaFraca} que se \(f\) é diferenciável em \(A\) e \(\gamma\) é diferenciável em \(I\), então a composta \(F(t) = f(\gamma(t))\) é diferenciável em \(I\) com \[F'(t) = \nabla f(\gamma(t))\bullet \gamma'(t),\; \forall\, t\in I.\] Podemos resumir esta conclusão no seguinte teorema.
@@ -1333,7 +1411,7 @@ Inicialmente, seja \(\gamma:I\subset\R \to \R^2\) uma curva em \(\R^2\) diferenc
             \draw (138,98.73) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.25,0.46,0.02}{\gamma }$};
             \end{tikzpicture}
         \caption{Reta tangente à uma curva}
-        \label{fig:RetaTangente}
+        \label{fig:RetaTangente1}
     \end{figure}
 
 De fato, dado \(t\in I\), vemos que \[\gamma'(t_0) \leftarrow \frac{\overrightarrow{\gamma(t)} - \overrightarrow{\gamma(t_0)}}{t-t_0} // \overrightarrow{\gamma(t)} - \overrightarrow{\gamma(t_0)} \rightarrow \text{ vetor tangente à } \gamma \text{ em } \gamma(t_0).\] Isto motiva a seguinte definição:
@@ -1405,7 +1483,7 @@ A definição acima juntamente com o conhecimento da regra da cadeia nos auxilia
         \begin{equation}\label{eqn.RegraDaCadeia2}
             z'(t) = \frac{\partial f}{\partial x}(x_0,y_0)\cdot x'(t) + \frac{\partial f}{\partial y}(x_0,y_0)\cdot y'(t_0).
         \end{equation}
-    Agora, sabemos que a equação da reta tangente à \(\gamma\) em \(\gamma'(t_0)\) é \[(x,y,z) = \gamma(t_0) + \lambda \gamma'(t_0) = (x_0 + \lambda x'(t_0), y_0 + \lambda y'(t_0), f(x_0,y_0) + \lambda z'(t_0)),\; \lambda\in\R.\] Precisamos mostrar que, para todo \(\lambda\in\R\), o ponto \[(x_0 + \lambda x'(t_0), y_0 + \lambda y'(t_0), f(x_0,y_0) + \lambda z'(t_0))\] pertence ao plano tangente
+    Por outro lado, sabemos que a equação da reta tangente à \(\gamma\) em \(\gamma'(t_0)\) é \[(x,y,z) = \gamma(t_0) + \lambda \gamma'(t_0) = (x_0 + \lambda x'(t_0), y_0 + \lambda y'(t_0), f(x_0,y_0) + \lambda z'(t_0)),\] para todo \(\lambda\in\R\). Precisamos, então, mostrar que, para todo \(\lambda\in\R\), o ponto \[(x_0 + \lambda x'(t_0), y_0 + \lambda y'(t_0), f(x_0,y_0) + \lambda z'(t_0))\] pertence ao plano tangente
         \begin{equation}\label{eqn.PlanoTangente4}
             z = f(x_0,y_0) + \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y - y_0).
         \end{equation}
@@ -1423,7 +1501,7 @@ A definição acima juntamente com o conhecimento da regra da cadeia nos auxilia
 
 Note que na observação acima mostramos que o plano tangente ao gráfico de \(f\) em \((x_0,y_0,f(x_0,y_0))\) contem ``todas'' as retas tangentes a este ponto.
 
-\section{Derivadas de funções dadas implicitamente}
+\section{Teorema da função implícita}
 
 \subsection{Caso 1}
     \subsubsection{(a)} Sabemos que a função \(y = g(x)\)  é \textit{definida implicitamente} pela equação \(f(x,y) = 0\) se, para todo \(x\in D_g\), \[f(x,g(x)) = 0.\] Assim, se \(f\) e \(g\) diferenciáveis, temos que \[\frac{d}{dx} f(x,g(x)) = 0.\] Da regra da cadeia, obtemos \[\frac{\partial f}{\partial x}(x,g(x)) \frac{d}{dx} + \frac{\partial f}{\partial y} (x,g(x)) \frac{dy}{dx} = 0,\] logo
@@ -1464,7 +1542,12 @@ Note que na observação acima mostramos que o plano tangente ao gráfico de \(f
 \begin{example}
     A função diferenciável \(z = z(x,y)\) é dada implicitamente pela equação \[xyz + x^3 + y^3 + z^3 = 5.\] Expresse \(\frac{\partial z}{\partial x}\) em termos de \(x, y\) e \(z\).
 
-    Temos que \(z = z(x,y)\) é dada implicitamente por \[ xyz + x^3 + y^3 + z^3 - 5 = 0, \] logo, por \eqref{eqn.TeoremaDaFuncaImplicita2}, \[\frac{\partial z}{\partial x} = \frac{- \frac{\partial f}{\partial x}(x,y,z)}{\frac{\partial f}{\partial z}(x,y,z)} = - \frac{yz+3x^2}{xy + 3z^2}.\] Também podemos obter \(\frac{\partial z}{\partial x}\) usando derivação implícita \[\frac{\partial}{\partial x}(xyz + x^3 + y^3 + z^3) = \frac{\partial}{\partial x}(5) \Rightarrow yz + xy \frac{\partial z}{\partial x} + 3x^2 + 3z\frac{\partial z}{\partial x} = 0 \Rightarrow \frac{\partial z}{\partial x} = - \frac{yz+3x^2}{xy + 3z^2}.\]
+    Temos que \(z = z(x,y)\) é dada implicitamente por \[ xyz + x^3 + y^3 + z^3 - 5 = 0, \] logo, por \eqref{eqn.TeoremaDaFuncaImplicita2}, \[\frac{\partial z}{\partial x} = \frac{- \frac{\partial f}{\partial x}(x,y,z)}{\frac{\partial f}{\partial z}(x,y,z)} = - \frac{yz+3x^2}{xy + 3z^2}.\] Também podemos obter \(\frac{\partial z}{\partial x}\) usando derivação implícita
+        \begin{align*}
+            \frac{\partial}{\partial x}(xyz + x^3 + y^3 + z^3) = \frac{\partial}{\partial x}(5) 
+                & \Rightarrow yz + xy \frac{\partial z}{\partial x} + 3x^2 + 3z\frac{\partial z}{\partial x} = 0 \\
+                & \Rightarrow \frac{\partial z}{\partial x} = - \frac{yz+3x^2}{xy + 3z^2}.
+        \end{align*}
 \end{example}
 
 \subsection{Caso 3}
@@ -1538,7 +1621,7 @@ Note que na observação acima mostramos que o plano tangente ao gráfico de \(f
                     1 & 2 \\ 1 & 1
                 \end{matrix}\right|}{\left|\begin{matrix}
                     1 & -1 \\ 1 & 1
-                \end{matrix}\right|} = -\frac{(-1)}{2} = \frac{1}{2}.\]
+                \end{matrix}\right|} = \frac{1}{2}.\]
 
             Além disso, o sistema dado equivale a
                 \[\begin{cases}
@@ -1802,7 +1885,7 @@ Sejam \(f(x,y,z)\) definida num aberto \(A\subset\R^3\) e \((x_0,y_0,z_0)\in A\)
     \begin{itemize}
         \item \(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\) e \(\frac{\partial f}{\partial z}\) sejam contínuas em \(A\);
         \item \((x_0,y_0)\) seja um ponto da superfície de nível \(f(x,y,z)=c\) (ou seja, \(f(x_0,y_0,z_0)=c\));
-        \item \(\nabla f(x_0,y_0,z_0) \neq (0,0,0)\) (portanto \(\frac{\partial f}{\partial x}(x_0,y_0,z_0) \neq 0\) ou \(\frac{\partial f}{\partial y}(x_0,y_0,z_0)\neq 0\) ou \(\frac{\partial f}{\partial z}(x_0,y_0,z_0)\neq 0\)).
+        \item \(\nabla f(x_0,y_0,z_0) \neq (0,0,0)\) %(portanto \(\frac{\partial f}{\partial x}(x_0,y_0,z_0) \neq 0\) ou \(\frac{\partial f}{\partial y}(x_0,y_0,z_0)\neq 0\) ou \(\frac{\partial f}{\partial z}(x_0,y_0,z_0)\neq 0\)).
     \end{itemize}
 
 Nas condições acima, segue pelo Teorema da Função Implícita que existe uma curva diferenciável \(\gamma: I\subset\R \to\R^3\) tal que
@@ -1883,13 +1966,25 @@ Neste caso temos as seguintes definições:
 \begin{example}
     Determine as equações do plano tangente e da reta normal à superfície \[xyz + x^3 + y^3 + z^3 = 3z,\] no ponto \((1,-1,2)\).
 
-    Temos que \[xyz + x^3 + y^3 + z^3 = 3z \Leftrightarrow xyz + x^3 + y^3 + z^3 - 3z = 0\] e \[\nabla f(x,y,z) = \left( \frac{\partial f}{\partial x}(x,y,z), \frac{\partial f}{\partial y}(x,y,z), \frac{\partial f}{\partial z}(x,y,z) \right) = (yz + 3x^2, xz + 3y^2, xy + 3z^2 - 3),\] logo \(\nabla f(1,-1,2) = (1,5,8)\), portanto o plano tangente em \((1,-1,2)\), \[\nabla f(1,-1,2)\bullet[(x,y,z) - (1,-1,2)] = 0 \Leftrightarrow (1,5,8)\bullet(x-1,y+1,z-2) = 0 \Leftrightarrow (x-1) + 5(y+1) + 8(z-2) = 0,\] e a reta normal em \((1,-1,2)\) é \[(x,y,z) = (1,-1,2) + \lambda \nabla f(1,-1,2) = (1,-1,2) + \lambda(1,5,8),\; \lambda\in\R.\]
+    Temos que \[xyz + x^3 + y^3 + z^3 = 3z \Leftrightarrow xyz + x^3 + y^3 + z^3 - 3z = 0\] e
+        \begin{align*}
+            \nabla f(x,y,z) 
+            & = \left( \frac{\partial f}{\partial x}(x,y,z), \frac{\partial f}{\partial y}(x,y,z), \frac{\partial f}{\partial z}(x,y,z) \right) \\
+            & = (yz + 3x^2, xz + 3y^2, xy + 3z^2 - 3),
+        \end{align*}
+    logo \(\nabla f(1,-1,2) = (1,5,8)\), portanto o plano tangente em \((1,-1,2)\),
+        \begin{align*}
+            {\lefteqn{\nabla f(1,-1,2)\bullet[(x,y,z) - (1,-1,2)] = 0}} \\
+            & \Leftrightarrow (1,5,8)\bullet(x-1,y+1,z-2) = 0 \\
+            & \Leftrightarrow (x-1) + 5(y+1) + 8(z-2) = 0,
+        \end{align*}
+    e a reta normal em \((1,-1,2)\) é \[(x,y,z) = (1,-1,2) + \lambda \nabla f(1,-1,2) = (1,-1,2) + \lambda(1,5,8),\; \lambda\in\R.\]
 \end{example}
 
 \begin{remark}
     Podemos utilizar o gradiente de uma função de três variáveis para obter o plano tangente e a reta normal ao gráfico de uma função de duas variáveis \(z = g(x,y)\).
 
-    De fato, suponha que a função diferenciável \(z = g(x,y)\) seja dada implicitamente pela equação \(F(x,y,z) = 0\), com \(F\) diferenciável, \(\nabla F(x_0,y_0,z_0) \neq \overrightarrow{0}\) e \(z_0 = g(x_0,y_0)\).
+    De fato, suponha que a função diferenciável \(z = g(x,y)\) seja dada implicitamente pela equação \(F(x,y,z) = 0\), na qual \(F\) é uma função diferenciável, \(\nabla F(x_0,y_0,z_0) \neq \overrightarrow{0}\) e \(z_0 = g(x_0,y_0)\).
 
     Dessa forma, \[F(x,y,g(x,y)) = 0,\; \forall (x,y)\in D_g,\] ou seja, a imagem da curva \(\gamma(x,y) = (x,y,g(x,y))\) está contida na superfície de nível \(F(x,y,z) = 0\). Assim \(\nabla F(x_0,y_0,z_0)\) é \textit{normal} ao gráfico de \(g\) no ponto \((x_0,y_0,z_0)\).
 \end{remark}
@@ -1914,7 +2009,7 @@ Neste caso temos as seguintes definições:
 
 \subsection{Derivada direcional}
 
-Sejam \(z = f(x,y)\) uma função de duas variáveis e \((x_0,y_0)\in D_f\). Quando calculamos as derivadas parciais \[\frac{\partial f}{\partial x}(x_0,y_0) = \lim_{h\to 0} \frac{f(x_0+h,y_0) - f(x_0,y_0)}{h} \text{ e } \frac{\partial f}{\partial y}(x_0,y_0) = \lim_{h\to 0} \frac{f(x_0,y_0+h) - f(x_0,y_0)}{h}\] temos informações sobre a taxa de variação instantânea de \(f\) na ``direção'' dos eixos \(x\) e \(y\), respectivamente em \((x_0,y_0)\).
+Sejam \(z = f(x,y)\) uma função de duas variáveis e \((x_0,y_0)\in D_f\). Quando calculamos as derivadas parciais \[\frac{\partial f}{\partial x}(x_0,y_0) = \lim_{h\to 0} \frac{f(x_0+h,y_0) - f(x_0,y_0)}{h}\] e \[\frac{\partial f}{\partial y}(x_0,y_0) = \lim_{h\to 0} \frac{f(x_0,y_0+h) - f(x_0,y_0)}{h}\] temos informações sobre a taxa de variação instantânea de \(f\) na ``direção'' dos eixos \(x\) e \(y\), respectivamente em \((x_0,y_0)\).
 
 Mas existem infinitas direções em que podemos considerar a taxa de variação de \(f\) (ou seja, com que rapidez a função está variando).
 
@@ -2141,7 +2236,7 @@ Em palavras, fixamos a direção \(\overrightarrow{u}\) no plano-xy. Então, o p
             \draw (517,159.4) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,opacity=1 ]  {$\vec{u}$};
             \end{tikzpicture}
         \caption{Interpretação geométrica da derivada direcional da função \(f(x,y) = x^2 + y^2\) }
-        \label{fig:DerivadaDirecional1}
+        \label{fig:DerivadaDirecional2}
     \end{figure}
     Portanto, como \(f\) permanece constante na curva de nível e \(\overrightarrow{u}\) é tangente à curva de nível, é natural esperar que a taxa de variação de \(f\) na direção de \(\overrightarrow{u}\) seja nula.
 \end{remark}
@@ -2223,7 +2318,14 @@ Antes de respondermos esta pergunta, é importante apresentarmos uma consequênc
 \end{theorem}
 
 \begin{proof}
-    Seja \(\theta\) o ângulo entre \(\nabla f(x_0,y_0)\) e \(\overrightarrow{u}\). Do Teorema \ref{thm.DerivadaDirecional} e da Desigualdade de Schwarz, \[\frac{\partial f}{\partial \overrightarrow{u}}(x_0,y_0) = \nabla f(x_0,y_0)\bullet\overrightarrow{u} = \|\nabla f(x_0,y_0)\| \|\overrightarrow{u}\| \cos\theta = \|\nabla f(x_0,y_0)\| \cos\theta.\] Ou seja, \[\frac{\partial f}{\partial \overrightarrow{u}}(x_0,y_0) = \|\nabla f(x_0,y_0)\| \cos\theta,\; \theta\in[0,\pi].\] Portanto, \(\frac{\partial f}{\partial \overrightarrow{u}}(x_0,y_0)\) terá valor máximo quando \(\theta = 0\). Neste caso, \(\overrightarrow{u}\) é o versor de \(\nabla f(x_0,y_0)\), isto é \[\overrightarrow{u} = \frac{\nabla f(x_0,y_0)}{\|\nabla f(x_0,y_0)\|}\] e \(\frac{\partial f}{\partial \overrightarrow{u}} = \|\nabla f(x_0,y_0)\|\).
+    Seja \(\theta\) o ângulo entre \(\nabla f(x_0,y_0)\) e \(\overrightarrow{u}\). Do Teorema \ref{thm.DerivadaDirecional} e da Desigualdade de Schwarz,
+        \begin{align*}
+            \frac{\partial f}{\partial \overrightarrow{u}}(x_0,y_0) 
+                & = \nabla f(x_0,y_0)\bullet\overrightarrow{u} \\
+                & = \|\nabla f(x_0,y_0)\| \|\overrightarrow{u}\| \cos\theta \\
+                & = \|\nabla f(x_0,y_0)\| \cos\theta.
+        \end{align*}
+    Ou seja, \[\frac{\partial f}{\partial \overrightarrow{u}}(x_0,y_0) = \|\nabla f(x_0,y_0)\| \cos\theta,\; \theta\in[0,\pi].\] Portanto, \(\frac{\partial f}{\partial \overrightarrow{u}}(x_0,y_0)\) terá valor máximo quando \(\theta = 0\). Neste caso, \(\overrightarrow{u}\) é o versor de \(\nabla f(x_0,y_0)\), isto é \[\overrightarrow{u} = \frac{\nabla f(x_0,y_0)}{\|\nabla f(x_0,y_0)\|}\] e \(\frac{\partial f}{\partial \overrightarrow{u}} = \|\nabla f(x_0,y_0)\|\).
 \end{proof}
 
 O teorema acima nos mostra que, estando em \((x_0,y_0)\), a direção e sentido que devemos tomar para que \(f\) cresça mais rapidamente é a do vetor gradiente \(\nabla f(x_0,y_0)\).
@@ -2279,35 +2381,35 @@ Portanto, é intuitivo o fato de que a taxa de variação de \(f\), na direção
 Vamos começar lembrando o conceito de Fórmula de Taylor para funções de uma variável real.
 
 Seja \(f: D_f \subset \R \to \R\) uma função de uma variável real, diferenciável em \(x_0\) e considere \[T(x) = f(x_0) + f'(x_0)(x-x_0).\] O gráfico de \(T\) é a reta tangente ao gráfico de \(f\) em \((x_0,f(x_0))\).
-\begin{figure}[htbp]
-    \centering
-        \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
-        \begin{tikzpicture}[x=0.85pt,y=0.85pt,yscale=-1,xscale=1]
-            %Shape: Axis 2D [id:dp8066285336258183] 
-            \draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][line width=1.5]  (222.27,224.9) -- (493.62,224.9)(244.98,42.11) -- (244.98,249.88) (486.62,219.9) -- (493.62,224.9) -- (486.62,229.9) (239.98,49.11) -- (244.98,42.11) -- (249.98,49.11)  ;
-            %Straight Lines [id:da7751554499091238] 
-            \draw  [dash pattern={on 0.84pt off 2.51pt}]  (306.8,100.07) -- (306.8,226.73) ;
-            %Straight Lines [id:da655584242718175] 
-            \draw  [dash pattern={on 0.84pt off 2.51pt}]  (306.8,100.07) -- (245.47,100.07) ;
-            %Shape: Circle [id:dp21772476408140373] 
-            \draw  [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (304.89,100.2) .. controls (304.89,99.22) and (305.69,98.42) .. (306.67,98.42) .. controls (307.65,98.42) and (308.45,99.22) .. (308.45,100.2) .. controls (308.45,101.18) and (307.65,101.98) .. (306.67,101.98) .. controls (305.69,101.98) and (304.89,101.18) .. (304.89,100.2) -- cycle ;
-            %Curve Lines [id:da5670370798994872] 
-            \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (228.6,185.27) .. controls (233,-34.6) and (404,207.4) .. (439,174.4) ;
-            %Straight Lines [id:da939447849258731] 
-            \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (201.4,46.07) -- (411.94,154.33) ;
+    \begin{figure}[htbp]
+        \centering
+            \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+            \begin{tikzpicture}[x=0.85pt,y=0.85pt,yscale=-1,xscale=1]
+                %Shape: Axis 2D [id:dp8066285336258183] 
+                \draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][line width=1.5]  (222.27,224.9) -- (493.62,224.9)(244.98,42.11) -- (244.98,249.88) (486.62,219.9) -- (493.62,224.9) -- (486.62,229.9) (239.98,49.11) -- (244.98,42.11) -- (249.98,49.11)  ;
+                %Straight Lines [id:da7751554499091238] 
+                \draw  [dash pattern={on 0.84pt off 2.51pt}]  (306.8,100.07) -- (306.8,226.73) ;
+                %Straight Lines [id:da655584242718175] 
+                \draw  [dash pattern={on 0.84pt off 2.51pt}]  (306.8,100.07) -- (245.47,100.07) ;
+                %Shape: Circle [id:dp21772476408140373] 
+                \draw  [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (304.89,100.2) .. controls (304.89,99.22) and (305.69,98.42) .. (306.67,98.42) .. controls (307.65,98.42) and (308.45,99.22) .. (308.45,100.2) .. controls (308.45,101.18) and (307.65,101.98) .. (306.67,101.98) .. controls (305.69,101.98) and (304.89,101.18) .. (304.89,100.2) -- cycle ;
+                %Curve Lines [id:da5670370798994872] 
+                \draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (228.6,185.27) .. controls (233,-34.6) and (404,207.4) .. (439,174.4) ;
+                %Straight Lines [id:da939447849258731] 
+                \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (201.4,46.07) -- (411.94,154.33) ;
 
-            % Text Node
-            \draw (298.2,234) node [anchor=north west][inner sep=0.75pt]    {$x_{0}$};
-            % Text Node
-            \draw (191.2,93.4) node [anchor=north west][inner sep=0.75pt]    {$f( x_{0})$};
-            % Text Node
-            \draw (405.4,184.6) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.96,0.65,0.14}{y\ =\ f( x)}$};
-            % Text Node
-            \draw (398.6,126.6) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{T}$};
-        \end{tikzpicture}
-    \caption{Gráfico de \(T\)}
-    \label{fig:FormulaTaylor}
-\end{figure}
+                % Text Node
+                \draw (298.2,234) node [anchor=north west][inner sep=0.75pt]    {$x_{0}$};
+                % Text Node
+                \draw (191.2,93.4) node [anchor=north west][inner sep=0.75pt]    {$f( x_{0})$};
+                % Text Node
+                \draw (405.4,184.6) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.96,0.65,0.14}{y\ =\ f( x)}$};
+                % Text Node
+                \draw (398.6,126.6) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.29,0.56,0.89}{T}$};
+            \end{tikzpicture}
+        \caption{Gráfico de \(T\)}
+        \label{fig:FormulaTaylor}
+    \end{figure}
 Dessa forma, sabemos que \[f(x) = f(x_0) + f'(x_0)(x-x_0) + E_1(x),\; x\in D_f,\] com \[\lim_{x\to x_0} \frac{E_1(x)}{x-x_0} = \lim_{x\to x_0} \frac{f(x) - f(x_0)}{x-x_0} - f'(x_0) = 0.\] Ou seja, \(E_1(x) \to 0\) mais rápido do que \(x-x_0 \to 0\), quando \(x\to x_0\). Mais que isso, \(T(x)\) é a melhor aproximação de \(f\) em torno de \(x_0\).
 
 Agora, notando que \(T(x)\) é um polinômio de grau no máximo 1, podemos dizer que \(T\) é o polinômio de grau (no máximo) 1 que melhor aproxima \(f\) em \(x_0\).
@@ -2338,7 +2440,12 @@ Como antes, \(P_n(x)\) é o único polinômio de grau (no máximo) \(n\) que apr
 \begin{theorem}
     Sejam \(f\) diferenciável até ordem \(n+1\) em \(I\) e \(x,x_0\in I\). Então, existe \(\bar{x}\in(x,x_0)\) tal que \[f(x) = P_n(x) + E_n(x),\] com \(E_n(x) = \frac{f^{(n+1)(\bar{x})}}{(n+1)!}(x-x_0)^{n+1}\). 
     
-    Ou seja \[ f(x) = f(x_0) + f'(x_0)(x-x_0) + \frac{f''(x_0)}{2}(x-x_0)^2 + \dots + \frac{f^{(n)(x_0)}}{n!}(x-x_0)^n + \frac{f^{(n+1)}(\bar{x})}{(n+1)!}(x-x_0)^{n+1}.\]
+    Ou seja
+        \begin{align*}
+            f(x) 
+                & = f(x_0) + f'(x_0)(x-x_0) + \frac{f''(x_0)}{2}(x-x_0)^2 + \dots \\
+                    & \quad + \frac{f^{(n)(x_0)}}{n!}(x-x_0)^n + \frac{f^{(n+1)}(\bar{x})}{(n+1)!}(x-x_0)^{n+1}.
+        \end{align*}
 \end{theorem}
 
 Vejamos agora o caso de funções de duas variáveis.
@@ -2365,7 +2472,8 @@ Agora, temos que
             & = \frac{d}{dt} \left( \frac{\partial f}{\partial x}(x_0+ht,y_0+kt) h \right) + \frac{d}{dt}\left( \frac{\partial f}{\partial y}(x_0+ht,y_0+kt) k \right) \\
             & = \left[ \frac{\partial^2 f}{\partial x^2}(x_0+ht,y_0+kt) \cdot \frac{dx}{dt} + \frac{\partial^2 f}{\partial y \partial x}(x_0+ht,y_0+kt)\cdot\frac{dy}{dt} \right] h \\
                 & \quad + \left[ \frac{\partial^2 f}{\partial x \partial y}(x_0+ht,y_0+kt)\cdot\frac{dx}{dt} + \frac{\partial^2 f}{\partial y^2}(x_0+ht,y_0+kt) \cdot \frac{dy}{dt} \right] k \\
-            & = \frac{\partial^2 f}{\partial x^2}(x_0+ht,y_0+kt) \cdot h^2 + 2 \frac{\partial^2 f}{\partial y \partial x}(x_0+ht,y_0+kt)\cdot hk + \frac{\partial^2 f}{\partial y^2}(x_0+ht,y_0+kt) \cdot k^2.
+            & = \frac{\partial^2 f}{\partial x^2}(x_0+ht,y_0+kt) \cdot h^2 + 2 \frac{\partial^2 f}{\partial y \partial x}(x_0+ht,y_0+kt)\cdot hk \\
+                & \quad + \frac{\partial^2 f}{\partial y^2}(x_0+ht,y_0+kt) \cdot k^2.
     \end{align*}
 
 Assim,
@@ -2381,19 +2489,30 @@ substituindo em \eqref{eqn.g(1)}
     \end{equation}
 no qual \(E_1(h,k) = \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}f(\bar{x},\bar{y}) h^2 + 2\frac{\partial^2 f}{\partial x \partial y} (\bar{x},\bar{y}) hk + \frac{\partial^2 f}{\partial y^2}(\bar{x},\bar{y})k^2  \right]\) para algum \((\bar{x},\bar{y})\) no segmento de extremidades \((x_0,y_0)\) e \((x_0+h,y_0+h)\).
 
-Fazendo a mudança \(x = x_0+h\) e \(y = y_0+h\) em \eqref{eqn.g(1)'}, \[f(x,y) = f(x_0,y_0) + \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0) + E_1(x,y),\] no qual \[E_1(x,y) = \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}(\bar{x},\bar{y})(x-x_0)^2 + 2\frac{\partial^2 f}{\partial x \partial y}(\bar{x},\bar{y})(x-x_0)(y-y_0) + \frac{\partial^2 f}{\partial y^2}(x_0,y_0)(y-y_0)^2 \right],\] para algum \((\bar{x},\bar{y})\) no segmento de extremidades \((x_0,y_0)\) e \((x,y)\).
+Fazendo a mudança \(x = x_0+h\) e \(y = y_0+h\) em \eqref{eqn.g(1)'}, \[f(x,y) = f(x_0,y_0) + \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0) + E_1(x,y),\] no qual
+    \begin{align*}
+        E_1(x,y) 
+            & = \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}(\bar{x},\bar{y})(x-x_0)^2 + 2\frac{\partial^2 f}{\partial x \partial y}(\bar{x},\bar{y})(x-x_0)(y-y_0) \right.\\
+            & \quad \left. + \frac{\partial^2 f}{\partial y^2}(\bar{x},\bar{y})(y-y_0)^2 \right],
+    \end{align*}
+para algum \((\bar{x},\bar{y})\) no segmento de extremidades \((x_0,y_0)\) e \((x,y)\).
 
 O polinômio \[P_1(x,y) = f(x_0,y_0) + \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0)\] é chamado \textbf{polinômio de taylor de ordem 1}\index{Fórmula de Taylor! 1ª ordem} de \(f(x,y)\) em torno de \((x_0,y_0)\).
 
 O anterior mostra o seguinte teorema
 \begin{theorem}[Fórmula de Taylor com resto de Lagrange]\index{Teorema! Fórmula de Taylor com resto de Lagrange}
-    Sejam \(f:A\subset\R^2\to\R\), com \(A\) aberto, uma função tal que suas derivadas de 2ª ordem existem e são contínuas em \(A\) e \((x,y),(x_0,y_0)\in A\). Então, existe \((\bar{x},\bar{y})\) no segmento de extremidades \((x_0,y_0)\) e \((x,y)\) tal que \[f(x,y) = P_1(x,y) + E_1(x,y),\] no qual \[E_1(x,y) = \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}(\bar{x},\bar{y})(x-x_0)^2 + 2\frac{\partial^2 f}{\partial x \partial y}(\bar{x},\bar{y})(x-x_0)(y-y_0) + \frac{\partial^2 f}{\partial y^2}(x_0,y_0)(y-y_0)^2 \right].\]
+    Sejam \(f:A\subset\R^2\to\R\), com \(A\) aberto, uma função tal que suas derivadas de 2ª ordem existem e são contínuas em \(A\) e \((x,y),(x_0,y_0)\in A\). Então, existe \((\bar{x},\bar{y})\) no segmento de extremidades \((x_0,y_0)\) e \((x,y)\) tal que \[f(x,y) = P_1(x,y) + E_1(x,y),\] no qual 
+        \begin{align*}
+        E_1(x,y) 
+            & = \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}(\bar{x},\bar{y})(x-x_0)^2 + 2\frac{\partial^2 f}{\partial x \partial y}(\bar{x},\bar{y})(x-x_0)(y-y_0) \right.\\
+            & \quad \left. + \frac{\partial^2 f}{\partial y^2}(\bar{x},\bar{y})(y-y_0)^2 \right],
+    \end{align*}
 \end{theorem}
 
 \begin{remark}
     Observe que
         \begin{enumerate}
-            \item O gráfico de \(P_1(x,y)\) é o \textit{plano tangente} ao gráfico de \(f\) em \((x_0,y_0,f(x_0,y_0))\).
+            \item O gráfico de \(P_1(x,y)\) é o \textit{plano tangente} ao gráfico de \(f\) no ponto \((x_0,y_0,f(x_0,y_0))\).
             \item \(E_1(x,y)\) é o erro que se comete na aproximação de \(f(x,y)\) por \(P_1(x,y)\).
             \item \(P_1(x,y)\) é o polinômio de grau (no máximo) 1 que melhor aproxima \(f(x,y)\) em torno de \((x_0,y_0)\).
             \item Chamamos \(E_1(x,y)\) de \textbf{Resto de Lagrange}\index{Fórmula de Taylor!Erro de Lagrange}.
@@ -2404,7 +2523,8 @@ Usando o mesmo raciocínio, vemos que
     \begin{align*}
         P_2(x,y) 
             & = f(x_0,y_0) + \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0) \\
-                & \quad \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}(\bar{x},\bar{y})(x-x_0)^2 + 2\frac{\partial^2 f}{\partial x \partial y}(\bar{x},\bar{y})(x-x_0)(y-y_0) + \frac{\partial^2 f}{\partial y^2}(x_0,y_0)(y-y_0)^2 \right]
+                &\quad + \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}(\bar{x},\bar{y})(x-x_0)^2 + 2\frac{\partial^2 f}{\partial x \partial y}(\bar{x},\bar{y})(x-x_0)(y-y_0) \right.\\
+                &\quad \left. + \frac{\partial^2 f}{\partial y^2}(\bar{x},\bar{y})(y-y_0)^2 \right],
     \end{align*}
 é o polinômio de grau (no máximo) 2 que melhor aproxima \(f(x,y)\) em torno de \((x_0,y_0)\).
 
@@ -2447,14 +2567,15 @@ Chamamos \(P_2(x,y)\) de \textbf{polinômio de Taylor de ordem 2}\index{Polinôm
     Assim, sabendo que \(\ln(x+y) = P_1(x,y) + E_1(x,y)\), no qual
         \begin{align*}
             E_1(x,y)
-                & = \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}(\bar{x},\bar{y})(x-\frac{1}{2})^2 + 2\frac{\partial^2 f}{\partial x \partial y}(\bar{x},\bar{y})(x-\frac{1}{2})(y-\frac{1}{2}) + \frac{\partial^2 f}{\partial y^2}(x_0,y_0)(y-\frac{1}{2})^2 \right] \\
+                & = \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}(\bar{x},\bar{y})(x-\frac{1}{2})^2 + 2\frac{\partial^2 f}{\partial x \partial y}(\bar{x},\bar{y})(x-\frac{1}{2})(y-\frac{1}{2}) \right. \\
+                    & \quad \left. + \frac{\partial^2 f}{\partial y^2}(x_0,y_0)(y-\frac{1}{2})^2 \right] \\
             & = \frac{1}{2} \frac{-1}{(\bar{x}+\bar{y})}\left[ (x-\frac{1}{2})^2 + 2(x-\frac{1}{2})(y-\frac{1}{2}) + (y-\frac{1}{2})^2 \right],
         \end{align*}
     para algum \((\bar{x},\bar{y})\) no segmento de extremidades \((\frac{1}{2},\frac{1}{2})\) e \((x,y)\).
 
     Agora, para \((x,y)=(0.51,0.51)\), como \((\bar{x},\bar{y})\) pertence ao segmento de extremidades \((\frac{1}{2},\frac{1}{2})\) e \((x,y)\), devemos ter \(\bar{x}>\frac{1}{2}\) e \(\bar{y}>\frac{1}{2}\), logo \(\bar{x} + \bar{y} > \frac{1}{2} + \frac{1}{2} = 1\), o que implica que \((\bar{x}+\bar{y})^2 > 1\), que por sua vez garante que \(\frac{1}{(x^2+y^2)} < 1\). Segue assim que
         \begin{align*}
-            |E_1(0.51,0.51)|
+            {\lefteqn{|E_1(0.51,0.51)|}}\\
                 & = \frac{1}{2} \frac{-1}{(\bar{x}+\bar{y})}\left| (0.51 -\frac{1}{2})^2 + 2(0.51-\frac{1}{2})(0.51-\frac{1}{2}) + (0.51-\frac{1}{2})^2 \right| \\
                 & = \frac{1}{2}\cdot 4\cdot (0.01)^2 = 2\cdot10^{-4}.
         \end{align*}
@@ -2472,7 +2593,8 @@ Chamamos \(P_2(x,y)\) de \textbf{polinômio de Taylor de ordem 2}\index{Polinôm
     o que mostra que as derivadas parcias existem e são contínuas numa vizinhança de \((0,0)\). Portanto podemos escrever \[P_1(x,y) = f(0,0) + \frac{\partial f}{\partial x}(0,0)(x-0) + \frac{\partial f}{\partial y}(0,0)(y-0) = 1 + x + 5y.\] Além disso, sabemos que \[e^{x+5y} = P_1(x,y) + E_1(x,y),\] no qual
         \begin{align*}
             E_1(x,y)
-                & = \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}(\bar{x},\bar{y})(x-0)^2 + \frac{\partial^2 f}{\partial x \partial y}(\bar{x},\bar{y})(x-0)(y-0) + \frac{\partial^2 f}{\partial y^2}(\bar{x},\bar{y})(y-0)^2 \right] \\
+                & = \frac{1}{2}\left[ \frac{\partial^2 f}{\partial x^2}(\bar{x},\bar{y})(x-0)^2 + \frac{\partial^2 f}{\partial x \partial y}(\bar{x},\bar{y})(x-0)(y-0) \right. \\
+                    &\quad \left. + \frac{\partial^2 f}{\partial y^2}(\bar{x},\bar{y})(y-0)^2 \right] \\
                 & = \frac{1}{2}\left[ e^{\bar{x}+5\bar{y}}x^2 + 10e^{\bar{x}+5\bar{y}}xy + 25e^{\bar{x}+5\bar{y}}y^2 \right] \\
                 & = \frac{e^{\bar{x}+5\bar{y}}}{2}[x^2 + 10xy + 25y^2] = \frac{e^{\bar{x}+5\bar{y}}}{2}(x+5y)^2,
         \end{align*}
@@ -2493,7 +2615,7 @@ Chamamos \(P_2(x,y)\) de \textbf{polinômio de Taylor de ordem 2}\index{Polinôm
 \end{definition}
 
 \begin{definition}
-    Seja \(f:D_f \subset \R^2 \to \R\). Dizemos que \((x_0,y_0)\in D_f\) é um \textbf{ponto de máximo {\co(mínimo)} local}\index{Ponto de máximo/mínimo! Local} de \(f\) se existir uma bola aberta \(B_R(x_0,y_0)\) tal que \[f(x,y) \leq f(x_0,y_0) \leq f(x_0,y_0) {\co (f(x,y) \geq f(x_0,y_0))},\; \forall (x,y)\in B_R(x_0,y_0)\cap D_f.\]
+    Seja \(f:D_f \subset \R^2 \to \R\). Dizemos que \((x_0,y_0)\in D_f\) é um \textbf{ponto de máximo {\co(mínimo)} local}\index{Ponto de máximo/mínimo! Local} de \(f\) se existir uma bola aberta \(B_R(x_0,y_0)\) tal que \[f(x,y) \leq f(x_0,y_0) \leq f(x_0,y_0) {\co (f(x,y) \geq f(x_0,y_0))},\] para todo \((x,y)\in B_R(x_0,y_0)\cap D_f.\)
 \end{definition}
 
 \begin{remark}
@@ -2685,7 +2807,7 @@ O estudo dos extremos de uma função pode não ser fácil. Assim, é importante
 Nesse sentido, o próximo teorema nos ajuda a escolher, entre os pontos interiores de \(D_f\), candidatos a extremos locais.
 
 \begin{theorem}\label{thm.PontosCriticos}
-    Seja \((x_0,y_0)\) um ponto interior de \(D_f\) e suponha que \(\partial_x f(x_0,y_0)\) e \(\partial_y f(x_0,y_0)\) existem. Se \((x_0,y_0)\) é um extremo local de \(f\), então \(\partial_x f(x_0,y_0) = 0 \partial_y f(x_0,y_0)\), ou seja \(\nabla f(x_0,y_0) = (0,0)\).
+    Seja \((x_0,y_0)\) um ponto interior de \(D_f\) e suponha que as derivadas parciais \(\partial_x f(x_0,y_0)\) e \(\partial_y f(x_0,y_0)\) existem. Se \((x_0,y_0)\) é um extremo local de \(f\), então \[\partial_x f(x_0,y_0) = 0 = \partial_y f(x_0,y_0),\] ou seja \(\nabla f(x_0,y_0) = (0,0)\).
 \end{theorem}
 
 \begin{proof}
@@ -2969,8 +3091,7 @@ Para decidir se um ponto é, de fato, extremo de uma função, temos o seguinte 
     Para encontrar os pontos críticos de \(f\) fazemos \[\nabla f(x,y) = 0 \Leftrightarrow (3x^2 - 3,3y^2 - 3) = (0,0) \Leftrightarrow \begin{cases}
         x^2 = 1 \\
         y^2 = 1 
-    \end{cases} \Leftrightarrow (x,y) = (\pm 1, \pm 1).\]
-    Ou seja \[(1,1), (1,-1), (-1,1), (-1,-1)\] são candidatos a extremantes. 
+    \end{cases}\] portanto \((x,y) = (\pm 1, \pm 1).\) Ou seja \[(1,1), (1,-1), (-1,1), (-1,-1)\] são candidatos a extremantes. 
 
     Além disso, a hessiana de \(f\) é \[H(x,y) = \left|\begin{matrix}
         \partial^2_x f(x,y) & \partial^2_{x,y} f(x,y) \\
@@ -3003,6 +3124,7 @@ Para decidir se um ponto é, de fato, extremo de uma função, temos o seguinte 
 \end{example}
 
 \begin{example}
+    
     Deseja-se construir uma caixa sem tampa com forma de paralelepípedo retângulo e volume igual a \(1\operatorname{m}^3\). O material utilizado nas laterais custa o triplo do utilizado no fundo. Determine as dimensões da caixa que miniminiza o custo do material.
 
     Sejam \(a, b\) e \(c\) as dimensões da caixa. Então \(a\cdot b\cdot c = 1\) e \(a\cdot b\cdot c >0\).
@@ -3019,8 +3141,8 @@ Para decidir se um ponto é, de fato, extremo de uma função, temos o seguinte 
         \end{align*}
     portanto as derivadas de 2ª ordem existem e são contínuas. Além disso, \[\nabla f(a,b) = 0 \Leftrightarrow \left( \frac{-6}{a^2} + b, \frac{-6}{b^2} = a \right) = (0,0) \Leftrightarrow \begin{cases}
         a^2 b = 6 \\
-        a b^6 = 6
-    \end{cases} \Leftrightarrow a = b = \sqrt[3]{6},\] portanto \((a,b) = (\sqrt[3]{6}, \sqrt[3]{6})\) é o único candidato a mínimo local de \(f\).
+        a b^6 = 6,
+    \end{cases}\] portanto \((a,b) = (\sqrt[3]{6}, \sqrt[3]{6})\) é o único candidato a mínimo local de \(f\).
 
     Agora, como \[\partial^2_a f(\sqrt[3]{6},\sqrt[3]{6}) = \frac{12}{(\sqrt[3]{6})^3} = 2 > 0\] e \[H(a,b) = \left|\begin{matrix}
         \frac{12}{a^2} & 1 \\ 1 & \frac{12}{b^3}
@@ -3164,10 +3286,10 @@ Suponha que existam as derivadas parciais de \(f\) nos pontos interiores de \(A\
 
             Além disso, \(g(-1) = f(0,-1) = 2\), \(g(1) = f(0,1) = -2\), \(g(-2) = f(0,-2) = -2\) e \(g(2) = f(0,2) = 2\). Portanto, o valor máximo de \(f\) em \(L_3\) é atingido nos pontos \((0,-1)\) e \((0,2)\) com \(f(0,-1) = 2 = f(0,2)\), e o valor mínimo de \(f\) em \(L_3\) é atingido nos pontos \((0,1)\) e \((0,-2)\) com \(f(0,1) = 2 = f(0,-2)\).
 
-            \item Em \(L_4\) temos \(y = -2\) e \[g(x) = f(x,-2) = x^3 - 3x - 2,; 0\leq x\leq 2\] é contínua em \([0,2]\) e, por Weierstrass, possui ponto de máximo e mínimo em \([0,2]\). Note que \(g'(x) = 3x^2 - 3\), portanto \(x=1\) é o único ponto crítico de \(g\) em \((0,2)\), mais que isso, \(g'(x) < 0\) se \(x\in(0,1)\), e \(g'(x) > 0\) se \(x\in(1,2)\), portanto \(x=1\) é ponto de mínimo local. Além disso, \[g(1) = f(1,-2) = -4,\; g(0) = f(0,-2) = -2 \text{ e } g(2) = f(2,-2) = 0.\] Do anterior, o valor máximo de \(f\) em \(L_4\) é atingido em \((2,-2)\) com \(f(2,-2) = 0\) e o valor mínimo é atingido em \((1,-2)\), no qual \(f(1,-2)= -4\).
+            \item Em \(L_4\) temos \(y = -2\) e \[g(x) = f(x,-2) = x^3 - 3x - 2,; 0\leq x\leq 2\] é contínua em \([0,2]\) e, por Weierstrass, possui ponto de máximo e mínimo em \([0,2]\). Note que \(g'(x) = 3x^2 - 3\), portanto \(x=1\) é o único ponto crítico de \(g\) em \((0,2)\), mais que isso, \(g'(x) < 0\) se \(x\in(0,1)\), e \(g'(x) > 0\) se \(x\in(1,2)\), portanto \(x=1\) é ponto de mínimo local. Além disso, \[g(1) = f(1,-2) = -4,\; g(0) = f(0,-2) = -2, g(2) = f(2,-2) = 0.\] Do anterior, o valor máximo de \(f\) em \(L_4\) é atingido em \((2,-2)\) com \(f(2,-2) = 0\) e o valor mínimo é atingido em \((1,-2)\), no qual \(f(1,-2)= -4\).
         \end{itemize}
 
-    Por fim, comparamos os resultados obtidos anteriormente, concluímos que o valor máximo de \(f\) em \(A\) é atingido nos pontos \((2,-1)\) e \((2,2)\) e vale \(f(2,-1) = 4 = f(2,2),\) além disso, os valor mínimo de \(f\) em \(A\) é atingido nos pontos \((1,1)\) e \((1,-2)\) com \(f(1,1) = -4 = f(-1,2)\).
+        Por fim, comparamos os resultados obtidos anteriormente, concluímos que o valor máximo de \(f\) em \(A\) é atingido nos pontos \((2,-1)\) e \((2,2)\) e vale \(f(2,-1) = 4 = f(2,2),\) além disso, os valor mínimo de \(f\) em \(A\) é atingido nos pontos \((1,1)\) e \((1,-2)\) com \(f(1,1) = -4 = f(-1,2)\).
 \end{example}
 
 \begin{example}
@@ -3384,5 +3506,186 @@ Os \(\lambda\in\R\) que satisfazem o sistema acima se chamam \textit{multiplicad
 \begin{example}
     Estude os extremantes da função \(f(x,y) = y + x^3\) com a restrição \(y - x^3 = 0\).
 
-    Notamos primeiro que \(D_f = \R^2\) e \[\frac{}{}\]
+    Notamos primeiro que \(D_f = \R^2\) e \[\frac{\partial f}{\partial x}(x,y) = 3x^2 \text{ e } \frac{\partial f}{\partial y}(x,y) = 1\] são contínuas em \(\R^2\) e, portanto, \(f\) é diferenciável em \(\R^2\).
+
+    Seja agora \(g(x,y) = y-x^3\). Queremos estudar os extremos de \(f\) em \[B = \{(x,y)\in\R^2 : y-x^3 = 0\} = \{(x,y)\in\R^2 : y = x^3\}.\] Além disso, \(\partial_x g(x,y) = -3x^2\) e \(\partial_y g(x,y) = 1\) são contínuas em \(\R^2\) e \[\nabla g(x,y) = (-3x^2, 1) \neq (0,0),\; \forall (x,y)\in B.\] Logo, os candidatos a extremos locais satisfazem o sistema \[\begin{cases}
+        \nabla f(x,y) = \lambda \nabla g(x,y) \\
+        g(x,y) = 0
+    \end{cases}\] ou seja, \[\begin{cases}
+        (3x^2,1) = \lambda (-3x^2,1),\\
+        y-x^3 = 0.
+    \end{cases} \Leftrightarrow \begin{cases}
+        3x^2 = -3\lambda x^2, \\
+        1 = \lambda, \\
+        y = x^3.
+    \end{cases}\] Substituindo o valor de \(\lambda\) na primeira equação, obtemos \[3x^2 = -3x^2 \Leftrightarrow x = 0 \text{ e } y=0,\] ou seja, \((0,0)\) é o único candidato a extremos de \(f\) em \(B\). Mas note que \((0,0)\) não é extremo em \(B\) dado que \[f(-1,-1) < 0 < f(1,1).\]
+
+    Este exemplo reforça que o Teorema \ref{thm.MultiplicadoresLagrange} fornece apenas \textit{candidatos} a extremos locais.
+\end{example}
+
+\begin{example}
+    Encontre o ponto da curva \(xy = 1\), com \(x>0\) e \(y>0\), que se encontra mais próximo da origem.
+
+    Note que aqui, queremos minimizar a função \(d(x,y) = \sqrt{x^2 + y^2}\) com a restrição \(xy = 1\). Para isto, basta minimizar \(f(x,y) = x^2 + y^2\) com a restrição \(xy = 1\).
+
+    Temos que \(D_f = \R^2\) e \[\frac{\partial f}{\partial x}(x,y) = 2x \text{ e } \frac{\partial f}{\partial y}(x,y) = 2y\] são contínuas em \(\R^2\), portanto \(f\) é diferenciável em \(\R^2\).
+
+    Além disso, para \(g(x,y) = xy-1\), queremos minimizar \(f\) em \[B = \{(x,y)\in\R^2 : g(x,y) = 0\} = \{(x,y)\in\R^2 : y = \frac{1}{x}\}.\] Como \(\partial_x g(x,y) = y\) e \(\partial_y g(x,y) = x\) são contínuas em \(\R^2\) e \[\nabla g(x,y) = (y,x) \neq (0,0),\; \forall (x,y)\in B.\] Logo, os candidatos a extremos locais satisfazem o sistema \[\begin{cases}
+        \nabla f(x,y) = \lambda \nabla g(x,y), \\
+        g(x,y) = 0,
+    \end{cases}\] ou seja \[\begin{cases}
+        (2x,2y) = \lambda (x,y)\\
+        xy - 1 = 0
+    \end{cases} \Leftrightarrow \begin{cases}
+        2x = \lambda y \\
+        2y = \lambda x \\
+        xy = 1
+    \end{cases} \Leftrightarrow \begin{cases}
+        2x^2 = \lambda xy \\
+        2y^2 = \lambda xy \\
+        xy = 1
+    \end{cases}\] 
+    daí obtemos que \(\lambda = 2x^2\), \(\lambda = 2y^2\) e \(xy=1\), logo \(2x^2 = 2y^2\), o que implica que \(y=x\) e, como \(xy=1\), \(x = y = 1\). Do anterior, concluímos que \((1,1)\) é o único candidato a extremo local de \(f\) em \(B\).
+
+    Além disso, temos que \[ f(x,y) - f(1,1) = x^2 + y^2 - 2 = (x-y)^2 + 2xy - 2 = (x-y)^2 + 2(xy -1) \geq 0,\] para todo \((x,y)\in B\), portanto \((1,1)\) é ponto de mínimo de \(f\) em \(B\). Ou seja, (1,1) é o ponto da curva \(xy=1\) que se encontra mais próximo da origem.
+\end{example}
+
+\subsection{2º caso - Máximos e mínimos de uma função \texorpdfstring{\(f(x,y,z)\)}{f(x,y,z)} com uma restrição da forma \texorpdfstring{\(g(x,y,z) = 0\)}{g(x,y,z)=0}}
+
+Podemos repetir o argumento geométrico do primeiro caso. Porém, o ponto \((x,y,z)\) está restrito à ``superfície de nível'' \(g(x,y,z) = 0\). Assim, ao invés de considerarmos curvas de nível, como no primeiro caso, devemos considerar superfícies de nível \(f(x,y,z) = k\). Assim, se o valor extremo de \(f(x,y,z)\) com a restrição \(g(x,y,z) = 0\) é \(f(x_0,y_0,z_0) = \tilde{k}\), então a superfícies de nível \(f(x,y,z) = \tilde{k}\) é tangente à superfície de nível \(g(x,y,z) = 0\) e, portanto, seus gradientes são paralelos. Ou seja, se \(\nabla g(x_0,y_0,z_0)\neq (0,0,0)\), deve existir \(\lambda_0\in\R\) tal que \[\nabla f(x_0,y_0,z_0) = \lambda_0 \nabla g(x_0,y_0,z_0,).\] Assim, podemos concluir, geométricamente, que se \((x_0,y_0,z_0)\) é um extremo local, então \((x_0,y_0,z_0)\) satisfaz o sistema \[\begin{cases}
+    \nabla f(x,y,z) = \lambda \nabla g(x,y,z), \\
+    g(x,y,z) = 0.
+\end{cases}\]
+
+\begin{theorem}[Método dos Multiplicadores de Lagrange]\label{thm.MultiplicadoresLagrange1}\index{Teorema! Métodos dos Multiplicadores de Lagrange}
+    Sejam \(f(x,y,z)\) uma função diferenciável no aberto \(A\subset\R^3\) e \(B = \{(x,y,z)\in A: g(x,y,z) = 0\}\), no qual \(g\) é uma função cujas derivadas parciais existem e são contínuas em \(A\) e \(\nabla g(x,y,z) \neq (0,0,0)\), para todo \((x,y,z)\in B\). Se \((x_0,y_0,z_0)\in B\) é um extremo local de \(f\) em \(B\), então existe \(\lambda_0\in\R\) tal que \[\nabla f(x_0,y_0,z_0) = \lambda_0 g(x_0,y_0,z_0)\]
+\end{theorem}
+
+Em outras palavras, nas condições do Teorema \ref{thm.MultiplicadoresLagrange1}, concluímos que os \textit{candidatos a extremos} locais de \(f\) em \(B\), são os pontos \((x,y,z)\in A\) que satisfazem o sistema \[\begin{cases}
+    \nabla f(x,y,z) = \lambda \nabla g(x,y,z), \\
+    g(x,y,z) = 0.
+\end{cases}\]
+
+\begin{example}
+    Determine o ponto do elipsóide \(x^2 + 2y^2 + 3z^2 = 1\) cuja soma das coordenadas seja máxima.
+
+    Queremos maximizar a função \[f(x,y,z) = x + y + z\] com a restrição \(x^2 + 2y^2 + 3z^2 = 1\). Note primeiro que \(D_f = \R^3\) e \[\frac{\partial f}{\partial x}(x,y,z) = 1, \; \frac{\partial f}{\partial y}(x,y,z) = 1 \text{ e } \frac{\partial f}{\partial z}(x,y,z) = 1\] são contínuas em \(\R^3\) e, portanto, \(f\) é diferenciável em \(\R^3\).
+
+    Seja \(g(x,y,z) = x^2 + 2y^2 + 3z^2 - 1\). Queremos encontrar o máximo de \(f\) em \[B = \{(x,y,z)\in\R^3 : g(x,y,z) = 0\} = \{(x,y,z)\in\R^3 : x^2 + 2y^2 + 3z^2 = 1\}.\] Como \(\partial_x g(x,y,z) = 2x\), \(\partial_y g(x,y,z) = 4y\) e \(\partial_z g(x,y,z) = 6z\) são contínuas em \(\R^3\) e \(\nabla g(x,y,z) = (2x,4y,6z)\neq(0,0,0)\), para todo \((x,y,z)\in B\).
+
+    Assim, os candidatos a extremos locais satisfazem o sistema \[\begin{cases}
+        \nabla f(x,y,z) = \lambda \nabla g(x,y,z) \\
+        g(x,y,z) = 0
+    \end{cases}\] ou seja, \[\begin{cases}
+        (1,1,1) = \lambda (2x,4y,6z) \\
+        x^2 + 2y^2 + 3z^2 - 1 = 0
+    \end{cases} \Leftrightarrow \begin{cases}
+        \lambda 2x = 1 \\
+        \lambda 4y = 1 \\
+        \lambda 6z = 1 \\
+        x^2 + 2y^2 + 3z^2 - 1= 0.
+    \end{cases}\] 
+    
+    Note que não se pode ter \(\lambda = 0\). Tomando \(\lambda \neq 0\), temos \[x = \frac{1}{2\lambda},\; y = \frac{1}{4\lambda} \text{ e } z = \frac{1}{6\lambda},\] portanto \[\frac{1}{4\lambda^2} + 2\frac{1}{16\lambda^2} + 3\frac{1}{36\lambda^2} - 1 =0\] daí, \(\lambda = \pm \sqrt{\frac{11}{24}}\) e os candidatos a extremantes são \[X_1 = \left( \frac{1}{2}\sqrt{\frac{24}{11}}, \frac{1}{4}\sqrt{\frac{24}{11}}, \frac{1}{6}\sqrt{\frac{24}{11}} \right), X_2 = \left( - \frac{1}{2}\sqrt{\frac{24}{11}}, - \frac{1}{4}\sqrt{\frac{24}{11}}, - \frac{1}{6}\sqrt{\frac{24}{11}} \right).\] 
+    
+    Como \(B\) é compacto em \(\R^3\) e \(f\) é contínua em \(B\) (por quê?) segue, pelo Teorema de Weierstrass \ref{thm.Weierstrass}, que \(f\) assume máximo e mínimo em \(B\).
+
+    Além disso, como \(f(X_1) > f(X_2)\), concluímos que o ponto de \(B\) no qual \(f(x,y,z)\) assume seu valor máximo é \[X_1 = \left( \frac{1}{2}\sqrt{\frac{24}{11}}, \frac{1}{4}\sqrt{\frac{24}{11}}, \frac{1}{6}\sqrt{\frac{24}{11}} \right)\]
+\end{example}
+
+\begin{exercise}
+    Uma caixa retangular sem tampa é feita de \(12\operatorname{m}^2\) de papelão. Determine o volume máximo dessa caixa.
+
+    \textbf{Dica: } Queremos maximizar a função \(V(x,y,z) = x\cdot y\cdot z\) restrita a \(2xz + 2yz + xy = 12\).
+\end{exercise}
+
+\subsection{3º caso - Extremantes de uma função \texorpdfstring{\(f(x,y,z)\)}{f(x,y,z)} com duas restrições da forma \texorpdfstring{\(g(x,y,z) = 0\)}{g(x,y,z)=0} e \texorpdfstring{\(h(x,y,z)=0\)}{h(x,y,z)=0}}
+
+Geometricamente, estamos olhando para valores extremos de \(f\) quando \((x,y,z)\) está restrita a pertencer à curva obtida pela interseção das superfícies de nível \(g(x,y,z) = 0\) e \(h(x,y,z) = 0\).
+
+Supondo, \(\nabla g(x_0,y_0,z_0)\neq\overrightarrow{0}\), \(\nabla h(x_0,y_0,z_0)\neq\overrightarrow{0}\) e \[\nabla g(x_0,y_0,z_0) \not\parallel \nabla h(x_0,y_0,z_0),\] podemos mostra que se um valor extremo ocorre em \((x_0,y_0,z_0)\), então o vetor gradiente \(\nabla f(x_0,y_0,z_0)\) pertence ao plano determinado por \(\nabla g(x_0,y_0,z_0)\) e \(\nabla h(x_0,y_0,z_0)\).
+
+Assim, devem existir \(\lambda_0,\mu_0\in\R\) tais que \[\nabla f(x_0,y_0,z_0) = \lambda_0 \nabla g(x_0,y_0,z_0) + \mu_0 \nabla h(x_0,y_0,z_0).\] Logo, geometricamente, concluímos que se \((x_0,y_0,z_0)\) é um extremo local, então \((x_0,y_0,z_0)\) satisfaz o sistema \[\begin{cases}
+    \nabla f(x,y,z) = \lambda \nabla g(x,y,z) + \mu \nabla h(x,y,z) \\
+    g(x,y,z) = 0 \\
+    h(x,y,z) = 0
+\end{cases}\]
+
+\begin{theorem}[Método dos Multiplicadores de Lagrange]\label{thm.MultiplicadoresLagrange2}\index{Teorema! Métodos dos Multiplicadores de Lagrange}
+    Sejam \(f(x,y,z)\) uma função diferenciável no aberto \(A\subset\R^3\) e \[B = \{(x,y,z)\in A: g(x,y,z) = 0 \text{ e } h(x,y,z) = 0\},\] no qual \(g\) e \(h\) são funções cujas derivadas parciais existem e são contínuas em \(A\) e \[\nabla g(x,y,z) \times \nabla h(x,y,z) \neq \overrightarrow{0},\] para todo \((x,y,z)\in B\). Se \((x_0,y_0,z_0)\in B\) é um extremo local de \(f\) em \(B\), então existem \(\lambda_0,\mu_0\in\R\) tais que \[\nabla f(x_0,y_0,z_0) = \lambda_0 g(x_0,y_0,z_0) + \mu_0 h(x_0,y_0,z_0)\]
+\end{theorem}
+
+Em outras palavras, nas condições do Teorema \ref{thm.MultiplicadoresLagrange2}, os candidatos a extremos locais de \(f\) em \(B\) são os pontos \((x,y,z)\in A\) que satisfazem o sistema \[\begin{cases}
+    \nabla f(x,y,z) = \lambda \nabla g(x,y,z) + \mu \nabla h(x,y,z), \\
+    g(x,y,z) = 0, \\
+    h(x,y,z) = 0.
+\end{cases}\]
+
+\begin{example}
+    Determine os pontos mais afastados da origem cujas coordenadas satisfazem as restrições \[x^2 + 4y^2 + z^2 = 4 \text{ e } x + y + z =1.\]
+
+    Queremos maximizar a função \(\tilde{f}(x,y,z) = \sqrt{x^2 + y^2 + z^2}\). Sendo \(t\mapsto\sqrt{t}\) uma função crescente, é suficiente maximizar a função \(f(x,y,z) = x^2 + y^2 + z^2\), sujeita às restrições \(g(x,y,z) = 0\) e \(h(x,y,z) = 0\), no qual \[g(x,y,z) = x + y + z -1 \text{ e } h(x,y,z) = x^2 + 4y^2 + z^2 -4.\]
+
+    Temos que \[\frac{\partial f}{\partial x}(x,y) = 2x, \frac{\partial f}{\partial_y}(x,y) = 2y \text{ e } \frac{\partial f}{\partial z}(x,y) = 2z\] são contínuas em \(\R^3\), portanto \(f\) é diferenciável em \(\R^3\).
+
+    Queremos encontrar o máximo de \(f\) em \[B = \{(x,y,z)\in\R^3 : x + y + z -1 = 0 \text{ e } x^2 + 4y^2 + z^2 -4=0 \}.\] Dado que
+        \begin{align*}
+            \frac{\partial g}{\partial x}(x,y,z) = 1, \frac{\partial g}{\partial y}(x,y,z) = 1,  \frac{\partial g}{\partial z}(x,y,z) = 1 \\
+            \frac{\partial h}{\partial x}(x,y,z) = 2x,  \frac{\partial h}{\partial y}(x,y,z) = 8y,  \frac{\partial h}{\partial z}(x,y,z) = 2z
+        \end{align*}
+    são contínuas em \(\R^3\), temos \[\nabla g(x,y,z) \times \nabla h(x,y,z) = \left|\begin{matrix}
+        \overrightarrow{i} & \overrightarrow{j} & \overrightarrow{k} \\
+        1 & 1 & 1 \\
+        2x & 8y & 2z
+    \end{matrix}\right| = (2z - 8y, 2x - 2z, 8y - 2x),\] logo \(\nabla g(x,y,z) \times \nabla h(x,y,z) = \overrightarrow{0}\) se, e somente se, \((x,y,z) = (4y, y, 4y)\). Porém, se \((4y,y,4y)\in B\), então \[\begin{cases}
+        4y + y + 4y = 1 \\
+        (4y)^2 + 4y^2 + (4y)^2 = 4
+    \end{cases}\], da primeira equação concluímos que \(y = \frac{1}{9}\), substituindo na segunda equação, \[\left( \frac{4}{9} \right)^2 + 4\left( \frac{1}{9} \right)^2 + \left( \frac{4}{9} \right)^2 = 4,\] ou seja \(\frac{36}{81}=4,\) o que é absurdo, portanto \((4y,y,4y)\notin B\), ou ainda, \(\nabla g(x,y,x)\times \nabla h(x,y,z)\neq \overrightarrow{0}\).
+
+    Do anterior, os candidatos a extremos locais em \(B\) devem satisfazer o sistema \[\begin{cases}
+    \nabla f(x,y,z) = \lambda \nabla g(x,y,z) + \mu \nabla h(x,y,z), \\
+    g(x,y,z) = 0, \\
+    h(x,y,z) = 0,
+\end{cases}\] ou seja
+    \begin{align*}
+        \begin{cases}
+            (2x,2y,2z) = \lambda(1,1,1) + \mu (2x,8y,2z) \\
+            x + y + z =1 \\
+            x^2 + 4y^2 + z^2 = 4
+        \end{cases} 
+        & \Leftrightarrow \begin{cases}
+        2x = \lambda + 2\mu x \\
+        2y = \lambda + 8\mu y \\
+        2z = \lambda + 2\mu z \\
+        x + y + z =1 \\
+        x^2 + 4y^2 + z^2 = 4
+        \end{cases} \\
+            & \Leftrightarrow \begin{cases}
+            \lambda = 2x(1-\mu) \\
+            \lambda = 4y(1-\mu) \\
+            \lambda = 2z(1-\mu) \\
+            x + y + z =1 \\
+            x^2 + 4y^2 + z^2 = 4
+        \end{cases}
+    \end{align*}
+daí concluímos que \(2x(1-\mu) = 2z(1-\mu)\),
+    \begin{itemize}
+        \item se \(\mu \neq 1\), devemos ter \(z = x\), e portanto \[\begin{cases}
+            2x + y = 1 \\
+            2x^2 + 4y^2 = 4,
+        \end{cases}\] o que implica que \(y = 1-2x\), e \[2x^2 + 4(1-2x)^2 = 4 \Leftrightarrow x^2 + 2(1-4x+4x^2) = 2 \Leftrightarrow x(9x-8) = 0,\] portanto \(x=0\) ou \(x=\frac{8}{9}\), ou seja, \[(0,1,0) \text{ e } \left( \frac{8}{9},-\frac{7}{3}, \frac{8}{9} \right)\] são candidatos a extremantes.
+        \item  se \(\mu = 1\), então \(\lambda = 0\), portanto \[2y(1-4) = 0 \Rightarrow y =0\] e \[\begin{cases}
+            x + z = 1 \\
+            x^2 + y^2 = 4,
+        \end{cases}\] o que implica que \(z = 1-x\) e \(x^2 + (1-x)^2 = 4\), ou seja \(x = \frac{2\pm2\sqrt{7}}{4} = \frac{1\pm\sqrt{7}}{2}\). Daí concluímos que \[\left( \frac{1+\sqrt{7}}{2},0,\frac{1-\sqrt{7}}{2} \right) \text{ e } \left( \frac{1-\sqrt{7}}{2},0,\frac{1+\sqrt{7}}{2} \right)\] são candidatos a extremantes locais.
+    \end{itemize}
+
+    Agora, como \(B\) é compacto e \(f\) é contínua em \(B\), \(f\) admite valores de máximo e mínimo em \(B\). Portanto, devemos comparar os valores de \(f\) nos candidatos obtidos. Note que
+        \begin{itemize}
+            \item \(f(0,1,0) = 1\)
+            \item \(f \left( \frac{8}{9},-\frac{7}{3}, \frac{8}{9} \right) = \frac{171}{81}\) 
+            \item \(f\left( \frac{1+\sqrt{7}}{2},0,\frac{1-\sqrt{7}}{2} \right) = 4\) e 
+            \item \(f\left( \frac{1-\sqrt{7}}{2},0,\frac{1+\sqrt{7}}{2} \right) = 4\).
+        \end{itemize}
+    Portanto \(\left( \frac{1+\sqrt{7}}{2},0,\frac{1-\sqrt{7}}{2} \right) \text{ e } \left( \frac{1-\sqrt{7}}{2},0,\frac{1+\sqrt{7}}{2} \right)\) são os pontos de \(B\) mais afastados da origem. Mais ainda, \((0,1,0)\) é o ponto mais próximo da origem.
 \end{example}
