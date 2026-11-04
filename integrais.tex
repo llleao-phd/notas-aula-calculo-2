@@ -207,7 +207,7 @@ Suponha que podemos escolher uma região retângular \(\mathcal{W}\) tal que \(\
 \end{definition}
 
 \begin{definition}
-    Seja \(P_n = \{\mathcal{R}_1, \mathcal{R}_2, \dots, \mathcal{R}_n\}\) uma partição interior de \(\mathcal{R}\). Denotamos por \(\Delta A_k\) a área de \(\mathcal{R}_k\). Além disso, o comprimento da maior diagonal de todos os \(\mathcal{R}_k\) é a \textbf{norma} \(\|P_n\|\) da partição \(P_n\).
+    Seja \(P_n = \{\mathcal{R}_1, \mathcal{R}_2, \dots, \mathcal{R}_n\}\) uma partição interior de \(\mathcal{R}\). Denotamos por \(\Delta A_k\) a área de \(\mathcal{R}_k\). Além disso, o comprimento da maior diagonal de todos os \(\mathcal{R}_k\) é a \textbf{norma}\index{Partição!Norma} \(\|P_n\|\) da partição \(P_n\).
 \end{definition}
 
 \begin{definition}
@@ -218,7 +218,7 @@ Suponha que podemos escolher uma região retângular \(\mathcal{W}\) tal que \(\
     A \textbf{integral dupla}\index{Integral dupla} de \(f\) em \(\mathcal{R}\) é definida como \[\int\int_\mathcal{R} f(x,y) dA = \lim_{\|P_n\| \to 0} \sum_{k=1}^{n} f(u_k,v_k)\cdot\Delta A_k,\] desde que o limite exista.
 \end{definition}
 
-Em outras palavras, dado \(\varepsilon > 0\), existe \(\delta>0\) tal que se \(\|P_n\| < \delta\), então \[\left| \sum_{k=1}^{n} f(u_k,v_k)\cdot\Delta A_k - \int\int_\mathcal{R} f(x,y) dA\right| < \varepsilon.\] Neste caso, dizemos que \(f\) é \textit{integrável} sobre \(\mathcal{R}\).
+Em outras palavras, dado \(\varepsilon > 0\), existe \(\delta>0\) tal que se \(\|P_n\| < \delta\), então \[\left| \sum_{k=1}^{n} f(u_k,v_k)\cdot\Delta A_k - \int\int_\mathcal{R} f(x,y) dA\right| < \varepsilon.\] Neste caso, dizemos que \(f\) é \textbf{integrável}\index{Função integrável} sobre \(\mathcal{R}\).
 
 \begin{remark}
     Podemos provar que se \(f\) é contínua em \(\mathcal{R}\), então \(f\) é integrável em \(\mathcal{R}\).
@@ -515,7 +515,7 @@ A soma de todos esses volumes de prismas é uma \textit{aproximação} do volume
 
 O anterior motiva a seguinte definição:
 \begin{definition}\index{Volume de sólidos}
-    Seja \(f\) uma função contínua de duas variáveis tal que \(f(x,y)\geq 0\), para todo \((x,y)\in\mathcal{R}\). O \textbf{volume} \(V\) do sólido compreendido entre o gráfico de \(z = f(x,y)\) e \(\mathcal{R}\) é \[V = \int\int_\mathcal{R} f(x,y) dA.\]
+    Seja \(f\) uma função contínua de duas variáveis tal que \(f(x,y)\geq 0\), para todo \((x,y)\in\mathcal{R}\). O \textbf{volume}\index{Volume} \(V\) do sólido compreendido entre o gráfico de \(z = f(x,y)\) e \(\mathcal{R}\) é \[V = \int\int_\mathcal{R} f(x,y) dA.\]
 \end{definition}
 
 \begin{remark}
@@ -600,7 +600,7 @@ As integrais iteradas que aparecem em \ref{eqn.IntegralDuplaNumRetangulo} e \ref
         \item \(\int_a^b \left[ \int_c^d f(x,y) dx \right] dy = \int_a^b \int_c^d f(x,y) dxdy\)
     \end{itemize}
 
-\begin{theorem}[Fubini]\label{thm.Fubini}\index{Teorema! Fubini}
+\begin{theorem}[Fubini]\label{thm.Fubini}\index{Teorema!Fubini}
     Se \(f\) é contínua em \[\mathcal{R} = \{(x,y) \in\R^2 : a\leq x\leq b \text{ e } c\leq y\leq d\},\] então \[\int\int_\mathcal{R} f(x,y) dA = \int_a^b \int_c^d f(x,y) dy dx = \int_c^d \int_a^b f(x,y) dxdy.\]
 \end{theorem}
 
@@ -891,10 +891,401 @@ A seguir apresentaremos um resultado que generaliza o Teorema de Fubini \ref{thm
 
 % \section{Integrais duplas em coordenadas polares}
 
-% \section{Integrais triplas}
 
-% \section{Integrais triplas em coordenadas cilíndricas}
+\section{Integrais triplas}
 
-% \section{Integrais triplas em coordenadas esféricas}
+Podemos definir integrais triplas para uma função de três variáveis \(x, y\) e \(z\), utilizando um processo parecido de funções de duas variáveis.
+
+No caso mais simples, suponha que \(f\) seja uma função contínua em toda uma região \(\mathcal{Q}\) em forma de paralelepípedo, digamos \[\mathcal{Q} = \{(x,y,z)\in\R^3 : a\leq x \leq b, c\leq y\leq d \text{ e } e\leq z\leq f\}\]
+    {\cv FIGURA}
+
+Dividindo \(\mathcal{Q}\) em subregiões \(\mathcal{Q}_1, \mathcal{Q}_2,\dots,\mathcal{Q}_n\) por meio de planos paralelos aos 3 planos coordenados temos uma partição \(P_n = \{\mathcal{Q}_1, \mathcal{Q}_2,\dots, \mathcal{Q}_n\}\) de \(\mathcal{Q}\), no qual cada \(\mathcal{Q}_k\) também é um paralelepípedo. A \textbf{norma}\index{Partição!Norma} de \(P_n\) é o comprimento da maior diagonal de todos os \(\mathcal{Q}_k\) e será denotada por \(\|P_N\|\).
+
+Usando as notações da figura acima temos que o volume de cada \(Q_k\) é \[\Delta V_k = \Delta x_k \Delta y_k \Delta z_k.\]
+
+Uma \textbf{soma de Riemann}\index{Soma de Riemann} de \(f\) para \(P_n\) é \[S(P_n) = \sum_{k=1}^{n} f(u_k, v_k, w_k) \Delta V_k, \] em que \((u_k,v_k,w_k)\in Q_k\) é um ponto qualquer de \(\mathcal{Q}_k\).
+
+Assim, como para funções de duas variáveis temos a seguinte definição:
+
+\begin{definition}\index{Integral tripla}
+    A integral tripla de \(f\) sobre \(\mathcal{Q}\) é definida por \[\int\int\int_\mathcal{Q} f(x,y,z) dV = \lim_{\|P_n\|\to 0} \sum_{k=1}^{n} f(u_k,v_k,w_k)\Delta V_k.\]
+\end{definition}
+
+\begin{remark}
+    Se \[\mathcal{Q} = \{(x,y,z)\in\R^3 : a\leq x \leq b, c\leq y\leq d \text{ e } e\leq z\leq f\}\] é um paralelepípedo, podemos mostrar que \[\int\int\int_\mathcal{Q} f(x,y,z) dV = \int_e^f \int_c^d \int_a^b f(x,y,z)\, dx dy dz\] e \textit{não importa a ordem de integração}.
+\end{remark}
+
+\begin{example}
+    Calcule \(\int\int\int_Q (xy^2 + yz^3) dV\), no qual \[\mathcal{Q} = \{(x,y,z)\in\R^3 : -1\leq x \leq 1, 3\leq y\leq 4 \text{ e } 0\leq z\leq 2\}.\]
+
+    Das 6 possibilidades, estudaremos a seguinte
+        \begin{align*}
+            \int\int\int_\mathcal{Q} (xy^2 + yz^2) dV
+                & = \int_3^4 \int_{-1}^1 \int_0^2 (xy^2 + yz^2)\, dz dx dy \\
+                & = \int_3^4 \int_{-1}^1 \left( xyz + y \frac{z^4}{4}\bigg|_0^2 \right) dx dy \\
+                & = \int_3^4 \int_{-1}^1 2xy + 4y dxdy \\
+                & = \int_3^4 \left( 2y\frac{x^2}{2} + 4yz \right)\bigg|_{-1}^{1} dy \\
+                & = \int_3^4 (y + 4y) - (y -4y) dy \\
+                & = \int_3^4 8y dy = 8 \frac{y^2}{3}\bigg|_3^4 = 28
+        \end{align*}
+\end{example}
+
+As integrais triplas podem ser definidas sobre uma região mais complicada do que um paralelepípedo.
+
+Suponhamos, por exemplo, que \(\mathcal{R}\) seja uma região no plano-xy que possa ser dividida em regiões \(\mathcal{R}_x\) e \(\mathcal{R}_y\) e que \(\mathcal{Q}\) seja a região \[\mathcal{Q} = \{(x,y,z)\in\R^3 : (x,y)\in\mathcal{R} \text{ e } k_1(x,y) \leq k \leq k_2(x,y)\},\] em que as derivadas parciais de \(k_1\) e \(k_2\) existem e são contínuas.
+    {\cv FIGURA}
+
+Subidividindo \(\mathcal{Q}\) por planos paralelos aos três planos coordenados, os pequenos paralelepípedos resultantes \(\mathcal{Q}_1,\mathcal{Q}_2,\dots, \mathcal{Q}_n\), que estão completamente contidos em \(\mathcal{Q}\) formam uma \textbf{partição interior}\index{Partição! Interior} \(P_n\) de \(\mathcal{Q}\), isto é, \(P_n = \{\mathcal{Q}_k : k\in\{1,2,\dots,n\}\}\). 
+
+Como antes, uma \textbf{soma de Riemann}\index{Soma de Riemann} para \(P_n\) é dada por \[S(P_n) = \sum_{k=1}^{n} f(u_k,v_k,w_k)\cdot\Delta V_k,\] em que \((u_k,v_k,w_k)\) é um ponto arbitrário de \(\mathcal{Q}_k\) e \(\Delta V_k\) é o volume de \(\mathcal{Q}_k\).
+
+Logo, temos a seguinte definição:
+\begin{definition}
+    A integral tripla \index{Integral tripla} de \(f\) na região \(\mathcal{Q}\) é definida por \[\int\int\int_\mathcal{Q} f(x,y,z) dV = \lim_{\|P_n\|\to 0} \sum_{k=1}^{n} f(u_k,v_k,w_k)\cdot\Delta V_k.\]
+\end{definition}
+
+Também, como antes, podemos provar que 
+\begin{theorem}\label{thm.IntegralTriplaIterada}
+    Se \(f\) é uma função contínua em \(\mathcal{Q}\), então \[\int\int\int_\mathcal{Q} f(x,y,z) dV = \int\int_\mathcal{R} \left[ \int_{k_1(x,y)}^{k_2(x,y)} f(x,y,z) dz \right] dA. \]
+\end{theorem}
+
+\begin{remark}
+    \begin{enumerate}
+        \item[a)] Se \(\mathcal{R}\) é uma região \(\mathcal{R}_x\), o Teorema \ref{thm.IntegralTriplaIterada} diz que \[\int\int\int_\mathcal{Q} f(x,y,z)\, dV = \int_a^b \int_{g_1(x)}^{g_2(x)}\int_{k_1(x,y)}^{k_2(x,y)} f(x,y,z)\, dz dy dx.\] {\cv FIGURA}
+        \item[b)] Se \(\mathcal{R}\) é uma região \(\mathcal{R}_y\), o Teorema \ref{thm.IntegralTriplaIterada} diz que \[\int\int\int_\mathcal{Q} f(x,y,z)\, dV = \int_c^d \int_{h_1(y)}^{h_2(y)}\int_{k_1(x,y)}^{k_2(x,y)} f(x,y,z)\, dz dx dy.\] {\cv FIGURA}
+    \end{enumerate}
+
+    Qualquer uma das duas integrais acima pode ser vista como um limite de soma tripla. Mais especificamente, temos que \[\int\int\int_\mathcal{Q} f(x,y,z)\, dV = \lim_{\|P_n\|\to 0} \sum_{i=1}^{n} \sum_{j=1}^{m} \sum_{k=1}^{p} f(u_i,v_j,w_k)\cdot \Delta z_k \Delta y_j \Delta x_i.\]
+\end{remark}
+
+\begin{exercise}
+    Interprete as somas acima.
+\end{exercise}
+
+\begin{remark}
+    Notamos que, se \(f(x,y,z) = 1\) em toda a região \(\mathcal{Q}\), então \[\int\int\int_\mathcal{Q} dV = V\] é o \textbf{volume}\index{Volume} de \(\mathcal{Q}\).
+
+    Em particular, quando a região começa no plano \(z=0\) (ou seja, \(k_1(x,y) = 0\)) e \(k_2(x,y)\geq 0\), isto é o mesmo que calcularmos a integral dupla de \(k_2(x,y)\). Por quê?
+\end{remark}
+
+\begin{example}
+    Expresse \(\int\int\int_\mathcal{Q} f(x,y,z)\, dV\) como uma integral iterada, no qual \(\mathcal{Q}\) é a região limitada por \(x\geq 0\), \(y\geq 0\), \(z\geq 0\), pelo parabolóide \(z = 2 + x^2 + \frac{1}{4}y^2\) e pelo cilindro \(x^2 + y^2 = 1\).
+
+    Vamos começar esboçando a região dada. Temos que a região é delimitada pelo cilindro \(x^2 + y^2 = 1\), com \(x,y,z\geq 0\), ou seja, no 1º octante. 
+    
+    Além disso, temos o parabolóide \(z = 2 + x^2 + \frac{1}{4}y^2\). Observe que:
+        \begin{itemize}
+            \item quando \(x=0\) (ou seja, no plano-yz) temos \[z = 2 + \frac{1}{4}y^2,\]
+            \item quando \(y=0\) (ou seja, no plano-xz) temos \[z = 2 + x^2\], e
+            \item as curvas de nível \(z=k\) são elípses \(x^2 + \frac{1}{4}y^2 = 2+k\).
+        \end{itemize}
+    {\cv FIGURA}
+
+    Logo, temos
+        \[\mathcal{Q} = \left\{(x,y,z)\in\R^3 : 0\leq x\leq 1, 0\leq y\leq\sqrt{1-x^2} \text{ e } 0\leq z\leq 2 + x^2 + \frac{1}{4}y^2\right\}\]
+    portanto,
+        \[\int\int\int_\mathcal{Q} f(x,y,z)\, dV = \int_0^1 \int_0^{\sqrt{1-x^2}}\int_0^{2+x^2+\frac{1}{4}y^2} f(x,y,z)\, dz dy dx.\]
+    Ou ainda,
+        \[\mathcal{Q} = \left\{(x,y,z)\in\R^3 : 0\leq y\leq 1, 0\leq x\leq \sqrt{1-y^2} \text{ e } 0\leq z\leq 2+x^2+\frac{1}{4}y^2\right\}\]
+    daí,
+        \[\int\int\int_\mathcal{Q} f(x,y,z)\, dV = \int_0^1 \int_0^{\sqrt{1-y^2}} \int_0^{2+x^2+\frac{1}{4}y^2} f(x,y,z)\, dz dx dy.\]
+\end{example}
+
+\begin{example}
+    Encontre o volume \(V\) do sólido \(\mathcal{Q}\) do exemplo anterior.
+
+    Tomando \(f(x,y,z) = 1\), temos
+        \begin{align*}
+            V
+                & = \int\int\int_\mathcal{Q} dV \\
+                & = \int_0^1 \int_0^{\sqrt{1-x^2}} \int_0^{2+x^2+\frac{1}{4}y^2} dz dy dx \\
+                & = \int_0^1 \int_0^{\sqrt{1-x^2}} z\bigg|_0^{2+x^2+\frac{1}{4}y^2} \, dy dx \\
+                & = \int_0^1 \int_0^{\sqrt{1-x^2}} \left( 2 + x^2 + \frac{1}{4} y^2 \right) dy dx \\
+                & = \int_0^1 \left( 2y + x^2 y + \frac{1}{12}y^3 \right)\bigg|_0^{\sqrt{1-x^2}} dx \\
+                & = \int_0^1 2\sqrt{1-x^2} + x^2\sqrt{1-x^2} + \frac{1}{12}(1+x^2)^{\frac{3}{2}} dx \\
+                & = (*)
+        \end{align*}
+
+    Para calcular a integral \((*)\) acima, devemos usar substituição trigonométrica, por exemplo, para \(\int_0^1 2\sqrt{1-x^2} dx\) fazemos \(x = 1\sin\theta\), portanto \(dx = \cos\theta d\theta\), e
+        \begin{align*}
+            \int_0^1 2\sqrt{1-x^2} dx
+                & = \int_0^{\frac{\pi}{2}} 2\sqrt{1-\sin^2\theta} \cos\theta d\theta \\
+                & = 2\int_0^{\frac{\pi}{2}} \cos^2\theta d\theta \\
+                & = \int_0^{\frac{\pi}{2}} 1 + \cos(2\theta) d\theta \\
+                & = \frac{\pi}{2}.
+        \end{align*}
+
+    Resolvendo as demais integrais concluímos que \[V = \int\int\int_\mathcal{Q} dV = \frac{1}{96}\left( 7\sqrt{2} + 54\pi + 3\tanh^{-1}\left( \frac{1}{\sqrt{2}} \right) \right). \]
+\end{example}
+
+\begin{exercise}
+    Encontre o volume do sólido limitado pelo cilindro \(y=x^2\) e pelos planos \(y+z=4\) e \(z=0\).
+    {\cv FIGURA}
+\end{exercise}
+
+Se \[\mathcal{Q} = \{(x,y,z) : a\leq x\leq b, h_1(x) \leq z\leq h_2(x) \text{ e } k_1(x,z)\leq y\leq k_2(x,z)\}\] no qual \(k_1\) e \(k_2\) possuem derivadas parciais contínuas e \(h_1\) e \(h_2\) são contínuas em \[\mathcal{R} = \{(x,z) : a\leq x\leq b \text{ e } h_1(x)\leq x\leq h_2(x)\}\] podemos mostrar o seguinte resultado
+\begin{theorem}
+    Se \(f\) é contínua em \(\mathcal{Q}\), então \[\int\int\int_\mathcal{Q} f(x,y,z)\, dV = \int_a^b \int_{h_1(x)}^{h_2(x)} \int_{k_1(x,z)}^{k_2(x,z)} f(x,y,z)\, dy dz dx.\]
+        {\cv FIGURA}
+\end{theorem}
+
+De forma análoga, se \[\mathcal{Q} = \{(x,y,z) : e \leq z \leq f, g_1(z) \leq x \leq g_2(z) \text{ e } k_1(x,z)\leq y \leq k_2(x,z)\}\] em que \(g_1\) e \(g_2\) são contínuas e \(k_1\) e \(k_2\) admitem derivadas parciais contínuas em \[\mathcal{R} = \{(x,z) : e\leq z\leq f \text{ e } g_1(z)\leq x\leq g_2(z)\}\] temos
+\begin{theorem}
+    Se \(f\) é contínua em \(\mathcal{Q}\), então \[\int\int\int_\mathcal{Q} f(x,y,z)\, dV = \int_e^f \int_{g_1(z)}^{g_2(z)} \int_{k_1(x,z)}^{k_2(x,z)} f(x,y,z)\, dy dx dz.\]
+        {\cv FIGURA}
+\end{theorem}
+
+\begin{exercise}
+    Escreva a integral análoga aos teoremas anteriores considerando \(\mathcal{R} = \mathcal{R}_y\) e \(\mathcal{R} = \mathcal{R}_z\) no plano-yz e faça uma ilustração de cada caso.
+\end{exercise}
+
+\begin{example}
+    Encontre o volume da região \(\mathcal{Q}\) limitada pelos gráficos de \(z = 3x^2\), \(y = 4-x^2\), \(y = 0\) e \(z+y = 6\).
+        {\cv FIGURA}
+
+    Vejamos a interseção entre \(z = 3x^2\) e \(z = 4 - x^2\),
+        \[3x^2 = 4-x^2 \Rightarrow 4x^2 = 4 \Rightarrow x = \pm 1.\]
+    Assim temos que \[\mathcal{Q} = \{(x,y,z) : -1\leq x\leq 1, 3x^2 \leq x \leq 4-x^2 \text{ e } 0\leq y \leq 6-z\},\] logo
+        \begin{align*}
+            V
+                & = \int\int\int_\mathcal{Q} dV \\
+                & = \int_{-1}^1 \int_{3x^2}^{4-x^2} \int_0^{6-z} dy dz dx \\
+                & = \int_{-1}^1 \int_{3x^2}^{4-x^2} y\bigg|_0^{6-z} dz dx \\
+                & = \int_{-1}^1 \int_{3x^2}^{4-x^2} 6-z dz dx \\
+                & = \int_{-1}^1 \left( 6z - \frac{z^2}{2} \right)\bigg|_{3x^2}^{4-x^2} dx \\
+                & = \int_{-1}^{1} \left[ 6(4-x^2) - \frac{(4-x^2)^2}{2} \right] - \left[ 6\cdot 3x^2 - \frac{(3x^2)^2}{2} \right] dx \\
+                & = \int_{-1}^1 16 - 20x^2 + 4x^4 dx = 20,3\operatorname{u.v.}
+        \end{align*}
+\end{example}
+
+\section{Integrais triplas em coordenadas cilíndricas}
+
+Para obtermos o sistema de coordenadas cilindricas, apenas estendemos o sistema de coordenadas polares a três dimensões, da seguinte forma.
+
+Se \(P\) é um ponto qualquer do espaço, então representamos \(P = (r,\theta,z)\) em que
+    \begin{itemize}
+        \item \(r\) e \(\theta\) são as coordenadas polares da projeção \(P'\) de \(P\) ao plano-xy.
+        \item \(z\) é a coordenada retangular usual de \(P\).
+    \end{itemize}
+    {\cv FIGURA}
+
+Assim, como, para coordenadas polares, temos as seguintes relações entre coordenadas cilindricas e retangulares.
+
+\begin{theorem}
+    As coordenadas retangulares \((x,y,z)\) e as coordenadas cilindricas \((r,\theta,z)\) de um ponto \(P\) se relacionam da seguinte forma:
+        \begin{enumerate}
+            \item \(x = r \cos\theta\), \(y = r\sin\theta\) e \(\tan\theta = \frac{y}{x}\).
+            \item \(r^2 = x^2 + y^2\).
+            \item \(z = z\).
+        \end{enumerate}
+\end{theorem}
+
+\begin{example}
+    Considere as seguintes equações em coordenadas cilindricas:
+        \begin{enumerate}
+            \item \(r = a\), com \(a > 0\).
+                
+                Nesse caso temos \(r=a\) (com \(\theta\) e \(z\) arbitrários). Ou, \[x^2 + y^2 = a^2\] com \(z\in\R\). De qualquer forma, \(r=a\) representa um cilindro de raio \(a\) com eixo ao longo do eixo-z. {\cv FIGURA}
+
+            \item \(\theta = \theta_0\)
+            
+                Neste caso temos \(\theta = \theta_0\) fixado, com \(r\) e \(z\) arbitrários, ou seja, temos um plano contendo o eixo-z {\cv FIGURA}
+
+            \item \(z = z_0\)
+            
+                Temos \(r\) e \(\theta\) arbritrários, o que gera um plano paralelo ao plano-xy.
+                    {\cv FIGURA}
+
+            \item \(z^2 = r^2\)
+            
+                Note que \[z^2 = r^2 \Leftrightarrow z^2 = x^2 + y^2 \Leftrightarrow z = \pm\sqrt{x^2 + y^2}\] como \(x=0\) implica em \(z = |y|\), \(y=0\) implica \(z=|x|\), e as curvas de nível \(z = k\) são circunferências \(x^2 + y^2 = k^2\). Temos então um cone circular com eixo ao longo do eixo-z.
+
+            \item \(z = 4r^2\)
+            
+                Temos \[z = 4r^2 \Leftrightarrow z = 4(x^2 + y^2) \Leftrightarrow z = 4x^2 + 4y^2\] representa um parabolóide.
+                {\cv FIGURA}
+
+            \item \(r = 4\sin\theta\)
+            
+                Temos \[r = 4\sin\theta \Leftrightarrow \Leftrightarrow r^2 = 4r\sin\theta \Leftrightarrow x^2 + y^2 = 4y \Leftrightarrow x^2 + (y-2)^2 = 4\] representa um cilindro (\(z\) aribitrário).
+                    {\cv FIGURA}
+        \end{enumerate}
+\end{example}
+
+Às vezes é mais conveniente utilizar coordenadas cilindricas para calcular integrais triplas.
+
+A seguir daremos a \textit{ideia} para a definição para o seguinte caso mais simples.
+
+Suponha que \(f(r,\theta,z)\) seja contínua em \[\mathcal{Q} = \{(x,y,z) : a\leq r\leq b, c\leq\theta\leq d \text{ e } m\leq z\leq n\}\]
+    {\cv FIGURA}
+
+Considerando uma partição \(P_n = \{\mathcal{Q}_1,\dots,\mathcal{Q}_n\}\) de \(\mathcal{Q}\) como na figura acima. Então definimos, como antes,
+    \begin{align*}
+        \int\int\int_\mathcal{Q} f(r,\theta,z)\, dV
+            & = \lim_{\|P_n\|\to 0} \sum_{k=1}^n f(r_k,\theta_k,z_k)\cdot\Delta V_k \\
+            & = \lim_{\|P_n\|\to 0} \sum_{k=1}^n f(r_k,\theta_k,z_k) r_k \Delta r_k \Delta \theta_k \Delta z_k.
+    \end{align*}
+
+Também, podemos provar que
+    \[\int\int\int_\mathcal{Q} f(r,\theta,z)\, dV = \int_m^n \int_c^d \int_a^b f(r,\theta,z) r\, drd\theta dz\] 
+e a ordem de integração não importa.
+
+Observe que usando partições interiores, podemos definir integrais triplas em coordenadas cilindricas em regiões mais complicadas.
+
+Por exemplo, se \(\mathcal{R}\) é a região polar do tipo \[\mathcal{R} = \mathcal{R}_\theta = \{(r,\theta) : \alpha \leq \theta \leq \beta \text{ e } g_1(\theta)\leq r \leq g_2(\theta)\}\] {\cv FIGURA} e \[\mathcal{Q} = \{(r,\theta,z) : (r,\theta)\in\mathcal{R}_\theta \text{ e } k_1(r,\theta) \leq z \leq k_2(r,\theta)\}\] em que as derivadas parciais de \(k_1\) e \(k_2\) existem e são contínuas, podemos provar que vale
+\begin{theorem}[Coordenadas Cilindricas]
+    Se \(f\) é contínua em \(\mathcal{Q}\), então
+        \begin{align*}
+            \int\int\int_\mathcal{Q} f(r,\theta,z)\, dV
+                & = \int\int_\mathcal{R}\left[ \int_{k_1(r,\theta)}^{k_2(r,\theta)} f(r,\theta,z) dz \right] dA \\
+                & = \int_\alpha^\beta \int_{g_1(\theta)}^{g_2(\theta)} \int_{k_1(r,\theta)}^{k_2(r,\theta)} f(r,\theta,z) r\, dz dr d\theta.
+        \end{align*}
+\end{theorem}
+
+Lembre que
+    \begin{enumerate}
+        \item A região polar pode ser \(\mathcal{R} = \mathcal{R}_r\).
+        \item Podemos também considerar a região polar nos planos xz ou yz.
+    \end{enumerate}
+
+\begin{example}
+    Calcule \(\int\int\int_\mathcal{Q} z\, dV\) em coordenadas cilindricas, no qual \(\mathcal{Q}\) é o sólido limitado por \(z=0\) e a parte superior da esfera de raio \(a\).
+        {\cv FIGURA}
+
+    Em coordenadas cilindricas temos
+        \[\mathcal{Q} = \{(r,\theta,z) : 0\leq \theta\leq 2\pi, 0\leq r\leq a \text{ e } a\leq z\leq \sqrt{a^2 - r^2}\}.\] Logo
+            \begin{align*}
+                \int\int\int_\mathcal{Q} z\, dV
+                    & = \int_0^{2\pi} \int_0^a \int_0^{\sqrt{a^2 - r^2}} z r \, dz dr d\theta \\
+                    & = \int_0^{2\pi} \int_0^a r \frac{z^2}{2}\bigg|_0^{\sqrt{a^2 - r^2}} \, dr d\theta \\
+                    & = \int_0^{2\pi} \int_0^a \frac{r}{2} (a^2 - r^2)\, dr d\theta \\
+                    & = \int_0^{2\pi} \int_0^a \left( \frac{a^2}{2}r - \frac{r^3}{2} \right) \, dr d\theta \\
+                    & = \int_0^{2\pi} \left( \frac{a^2}{2} \frac{r^2}{2} - \frac{1}{2} \frac{r^4}{4} \right)\bigg|_0^a d\theta \\
+                    & = \int_0^{2\pi} \frac{a^4}{4} - \frac{a^4}{8} d\theta \\
+                    & = \frac{a^4}{8} \theta\bigg|_0^{2\pi} \\
+                    & = \frac{\pi}{4} a^4.
+            \end{align*}
+\end{example}
+
+\section{Integrais triplas em coordenadas esféricas}
+
+As \textit{coordenadas esféricas} de um ponto \(P\) são dadas por uma terna ordenada \((\rho,\phi,\theta)\) em que
+    \begin{itemize}
+        \item \(\rho = \|\overrightarrow{OP}\|\), \(\rho\geq 0\).
+        \item \(\phi\) é o ângulo entre \(\overrightarrow{OP}\) e o vetor \(\overrightarrow{k}\) (ou seja, o eixo-z positivo), \(0\leq \phi\leq \pi\).
+        \item \(\theta\) é um ângulo polar associado à projeção \(P'\) de \(P\) sobre o plano-xy, \(0\leq \theta\leq 2\pi\).
+    \end{itemize}
+{\cv FIGURA}
+
+\begin{example}
+    Considere as seguintes equações em coordenadas esféricas.
+
+        \begin{enumerate}
+            \item \(\rho = \rho_0\), com \(\rho_0 > 0\).
+            
+                Nesse caso, \(0\leq \theta\leq 2\pi\) e \(0\leq \phi\leq \pi\) são arbitrários, portanto temos uma esfera de raio \(\rho_0\).
+                    {\cv FIGURA}
+
+                Observe que se \(\rho_0 = 0\), então \(\rho = 0\) consiste num único ponto, a origem.
+
+            \item \(\phi = \phi_0\), com \(0<\phi_0<\pi\) e \(\phi_0 \neq \frac{\pi}{2}\).
+            
+                Agora, temos \(\rho \geq 0\) e \(0 \leq \theta \leq 2\pi\) são arbitrários. Daí obtemos um cone de vértice na origem.
+                    {\cv FIGURA}
+
+                Em particular, se \(\phi = 0\), temos apenas a parte não-negativa do eixo-z, e se \(\phi = \pi\), temos a parte não-positiva do eixo-z. {\cv FIGURA}
+
+            \item \(\theta = \theta_0\).
+            
+                Sendo \(\rho \geq 0\) e \(0\leq \phi \leq \pi\) arbitrários, \(\theta = \theta_0\) representa um semi-plano contendo o eixo-z.
+        \end{enumerate}
+\end{example}
+
+Podemos estabelecer as seguintes relações entre as coordenadas esféricas e retangulares de um ponto \(P\).
+    \begin{itemize}
+        \item \(x = \|\overrightarrow{OP}\| \cos\theta\),
+        \item \(y = \|\overrightarrow{OP}\| \sin\theta\),
+        \item \(\|\overrightarrow{OP}\| = \|\overrightarrow{QP}\| = \rho\sin\phi\),
+        \item \(\|\overrightarrow{OQ}\| = \rho\cos\phi\).
+    \end{itemize}
+
+Isto implica no seguinte resultado que fornece as relações entre as coordenadas esféricas e retangulares.
+\begin{theorem}
+    As coordenadas retangulares \((x,y,z)\) e as coordenadas esféricas \((\rho,\phi,\theta)\) de um ponto \(P\) se relacionam da seguinte forma:
+        \begin{enumerate}
+            \item \(x = \rho \sin\phi \cos\theta\),
+            \item \(y = \rho \sin\phi \sin\theta\),
+            \item \(z = \rho \cos\theta\),
+            \item \(x^2 + y^2 + z^2 = \rho^2\)
+        \end{enumerate}
+\end{theorem}
+
+\begin{example}
+    Encontre uma equação em coordenadas esféricas cujo gráfico seja o parabolóide \(z = x^2 + y^2\).
+
+    Temos que \[z = x^2 + y^2 \Leftrightarrow \rho \cos\phi = \rho^2 \sin^2\phi \cos^2\theta + \rho^2 \sin^2\phi \sin^2\theta = \rho^2\sin^2\phi,\] portanto \(\rho(\cos\phi - \pi\sin^2\phi) = 0\) o que implica que \(\rho = 0\) ou \(\rho\sin^2\phi = \cos\phi.\)
+
+    Agora, note que o gráfico de \(\rho = 0\) é a origem, que também está no gráfico de \(\rho\sin^2\phi = \cos\phi\) (de fato, se \(\phi = \frac{\pi}{2}\), então \(\rho = 0\)).
+
+    Portanto, concluímos que
+        \begin{equation}\label{eqn.ParaboloideEsferico}
+            z = x^2 + y^2 \Leftrightarrow \rho\sin^2\phi = \cos\phi.
+        \end{equation}
+
+    Mais ainda, note que \(\sin\phi \neq 0\) em \eqref{eqn.ParaboloideEsferico}, pois se \(\sin\phi = 0\), então \(\phi = 0\) ou \(\phi = \pi\), em ambos os casos, teríamos \(0 = 1\), o que é absurdo.
+
+    Do anterior, \[z = x^2 + y^2 \Leftrightarrow \rho\sin^2\phi = \cos\phi \Leftrightarrow \rho = \frac{\cos\phi}{\sin^2\phi} = \cotg\phi\,\cossec\phi\]
+\end{example}
+
+Às vezes é conveniente usarmos coordenadas esféricas para calcular integrais triplas.
+
+A seguir consideramos o caso mais simples em que \(f(\rho,\phi,\theta)\) é contínua em \[\mathcal{Q} = \{(\rho,\phi,\theta) : a\leq\rho\leq b, c\leq\phi\leq d \text{ e } m\leq\theta\leq n\}.\]
+    {\cv FIGURA}
+
+Nesse caso, dividimos \(\mathcal{Q}\) em subregiões \(\mathcal{Q}_1,\dots,\mathcal{Q}_n\) que tenham a mesma forma de \(\mathcal{Q}\) usando gráficos de equações da forma
+    \begin{itemize}
+        \item \(\rho = a_k\) (esferas com centro na origem)
+        \item \(\phi = c_k\) (cones com eixo ao longo do eixo-z)
+        \item \(\theta = m_k\) (semi-planos contendo o eixo-z)
+    \end{itemize}
+
+A seguir ilustramos uma subregião \(\mathcal{Q}_k\) em que \(P = (\rho_k,\phi_k,\theta_k)\) e \(P'\) é a projeção de \(P\) no eixo-z.
+    {\cv FIGURA}
+
+Notando que \(\overline{P'P} = \rho_k \sin\phi_k\), podemos mostrar que
+    \begin{itemize}
+        \item o comprimento do arco \(\overset{\frown}{PS} = \rho_k \sin\phi_k\Delta\theta_k\),
+        \item o comprimento do arco \(\overset{\frown}{PR} = \rho_k \Delta\phi_k\),
+        \item o comprimento \(\overline{PQ} = \Delta\rho_k\).
+    \end{itemize}
+
+Agora, aproximando o volume \(\Delta V_k\) de \(\mathcal{Q}_k\) considerando-o como um paralelepípedo retângulo em três dimensões. Logo \[\Delta V_k \sim (\rho_k \sin\phi_k \Delta\theta_k) (\rho_k \Delta\phi_k)\Delta\rho_k\] ou seja, \[\Delta V_k \sim \rho_k^2\sin\phi_k\Delta\rho_k\Delta\theta_k.\] Assim, denotando por \(P_n = \{\mathcal{Q}_1,\dots,\mathcal{Q}_n\}\) a partição de \(\mathcal{Q}\), definimos a \textbf{integral tripla} de \(f\) sobre \(\mathcal{Q}\) por
+    \begin{align*}
+        \int\int\int_\mathcal{Q} f(\rho,\phi,\theta)\, dV
+            & = \lim_{\|P_n\|\to 0} \sum_{k=1}^{n} f(\rho_k,\phi_k,\theta_k) \Delta V_k \\
+            & = \lim_{\|P_n\|\to 0} \sum_{k=1}^{n} f(\rho_k,\phi_k,\theta_k) \rho_k^2 \sin\phi_k\Delta\rho_k\Delta\theta_k.
+    \end{align*}
+
+Mais ainda, podemos mostrar
+\begin{theorem}
+    Se \(f(\rho,\phi,\theta)\) é contínua em \(\mathcal{Q}\), então \[\int\int\int_\mathcal{Q} f(\rho,\phi,\theta)\, dV = \int_m^n \int_c^d \int_a^b f(\rho,\phi,\theta) \rho^2 \sin\phi\, d\rho d\phi d\theta\] e a ordem de integração não importa.
+\end{theorem}
+
+Para regiões mais complicadas, usamo as partições interiores e ajustamos os limites de integração convenientemente.
+
+\begin{example}
+    Calcule \(\int\int\int_\mathcal{Q} z\, dV\) em coordenadas esféricas, no qual \(\mathcal{Q}\) é o sólido hemisférico de raio \(a\).
+
+    Note que o sólido hemisférico de raio \(a\) é o sólido limitado por \(z=0\) e a esfera de raio \(a\).
+
+    Em coordenadas esféricas temos \[\mathcal{Q} = \{(\rho,\phi,\theta) : 0\leq \rho \leq a, 0\leq\phi\leq\frac{\pi}{2} \text{ e } 0\leq \theta\leq 2\pi\}.\] Logo, considerando a mudança de variáveis \(z = \rho\cos\phi\), temos
+        \begin{align*}
+            \int\int\int_\mathcal{Q} z\, dV
+                & = \int_0^{2\pi} \int_0^{\frac{\pi}{2}} \int_0^a \rho \cos\phi \rho^2 \sin\phi\, d\rho d\phi d\theta \\
+                & = \int_0^{2\pi} \int_0^{\frac{\pi}{2}} \cos\phi\sin\phi\left( \frac{\rho^4}{4} \right)\bigg|_0^a \, d\phi d\theta \\
+                & = \int_0^{2\pi} \int_0^{\frac{\pi}{2}}\frac{a^4}{4} \cos\phi \sin\phi\, d\phi d\theta \\
+                & = \frac{a^4}{4} \int_0^{2\pi} \int_0^1 u \, du d\theta = \frac{a^4}{4} \pi.
+        \end{align*}
+\end{example}
 
 % \section{Mudança de variáveis e jacobianos}
