@@ -1288,4 +1288,273 @@ Para regiões mais complicadas, usamo as partições interiores e ajustamos os l
         \end{align*}
 \end{example}
 
-% \section{Mudança de variáveis e jacobianos}
+\section{Mudança de variáveis e jacobianos}
+
+Nos nossos últimos estudos, vimos como transformar uma integral dupla em coordenadas retangulares em outra integral dupla em coordenadas polares. Também estudamos integrais triplas em coordenadas cilindricas e esféricas.
+
+No que segue introduziremos um método mais geral para mudanças de variáveis em integrais múltiplas. Este método está estritamente relacionado com as transformações de um sistema retangular em outro.
+
+\subsection{Transformação de coordenadas}
+
+Seja \(T: D \to E\) uma função em que \(D\) é uma região no plano-xy e \(E\) é uma região no plano-uv.
+    {\cv FIGURA}
+
+Ou seja, para cada ponto \((x,y)\in D\) existe um único ponto \((u,v)\in E\) tal que \[T(x,y) = (u,v)\]
+
+\begin{definition}
+    Dizemos que \(T\) é uma \textbf{transformação de coordenadas}\index{Transformação de coordenadas} do plano-xy para o plano-uv.
+\end{definition}
+
+\begin{remark}
+    Note que como cada par \((u,v)\) é \textit{univocamente} determinado por \((x,y)\), então \(u\) e \(v\) devem ser funções de \(x\) e \(y\). Ou seja, \[u = f(x,y),\; v = g(x,y) \text{ com } (x,y)\in D \text{ e } (u,v)\in E. \]
+\end{remark}
+
+Agora, dada uma transformação de coordenadas consideremos no plano-uv retas verticais e horizontais da seguinte forma:
+    \begin{multicols}{2}
+        \begin{center}
+            \textit{retas verticais}
+
+            \(u = c_1\)
+
+            \(u = c_2\)
+
+            \(u = c_3\)
+
+            \(\vdots\)
+        \end{center}
+
+        \newcolumn
+
+        \begin{center}
+            \textit{retas horizontais}
+
+            \(v = d_1\)
+
+            \(v = d_2\)
+
+            \(v = d_3\)
+
+            \(\vdots\)
+        \end{center}
+    \end{multicols}
+    {\cv FIGURA}
+
+Então, no plano-xy teremos os seguintes gráficos:
+    \begin{multicols}{2}
+        \begin{center}
+            \(u = f(x,y) = c_1\)
+
+            \(u = f(x,y) = c_2\)
+
+            \(u = f(x,y) = c_3\)
+
+            \(\vdots\)
+        \end{center}
+        \newcolumn
+        \begin{center}
+            \(v = g(x,y) = d_1\)
+
+            \(v = g(x,y) = d_2\)
+
+            \(v = g(x,y) = d_3\)
+
+            \(\vdots\)
+        \end{center}
+    \end{multicols}
+que são \textit{curvas de nível} de \(f\) e \(g\), respectivamente.
+    {\cv FIGURA}
+
+\begin{definition}
+    Chamamos as curvas de nível \(u = f(x,y) = c_i\) e \(v = g(x,y) = d_j\), \(i,j\in\{1,2,3,\dots\}\) de \textbf{curvas-u} e \textbf{curvas-v}, respectivamente (no plano-xy).
+\end{definition}
+
+\begin{example}\label{ex.MudancaCoordenadas}
+    Seja \(T\) a transformação de coordenadas do plano-xy para o plano-uv definida por \(T(x,y) = (u,v)\), com \[u = x+2y \text{ e } v = x-2y.\]
+
+    Esboce no plano-uv as retas \(u=2\), \(u=4\), \(u=6\), \(v = -1\), \(v=1\) e \(v=3\). Em seguida, esboce as curvas-u e as curvas-v correrspondentes no plano-xy.
+
+    Temos que \[T(x,y) = (x+2y,x-2y).\] Logo, para as curvas-u e curvas-v, temos
+        \begin{multicols}{2}
+            \begin{center}
+                \(u = 2 \Leftrightarrow x + 2y = 2\)
+
+                \(u = 4 \Leftrightarrow x + 2y = 4\)
+
+                \(u = 6 \Leftrightarrow x + 2y = 6\)
+            \end{center}
+            \newcolumn
+            \begin{center}
+                \(v = -1 \Leftrightarrow x - 2y = -1\)
+
+                \(v = 1 \Leftrightarrow x - 2y = 1\)
+
+                \(v = 3 \Leftrightarrow x - 2y = 3\)
+            \end{center}
+        \end{multicols}
+        {\cv FIGURA}
+\end{example}
+
+\begin{remark}
+    Se \(T\) é uma transformação injetora (ou seja, \((x_1,y_1)\neq(x_2,y_2)\) implica que \(T(x_1,y_1)\neq T(x_2,y_2)\)), então invertendo a correspondência, obtemos uma transformação \(T^{-1}: \operatorname{Im}_T \subset E \to D\) do plano-uv para o plano-xy chamada \textit{inversa} de \(T\)
+        {\cv FIGURA}
+\end{remark}
+
+Dessa forma, temos
+    \begin{enumerate}
+        \item \(T^{-1}(T(x,y)) = (x,y)\), para todo \((x,y)\in D\),
+        \item \(T(T^{-1}(u,v)) = (u,v)\), para todo \((u,v)\in\operatorname{Im}_T.\)
+    \end{enumerate}
+Mais ainda, podemos representar a transformação inversa por \[T^{-1}(u,v) = (x,y),\] no qual \(x = F(u,v)\) e \(y = G(u,v)\), com \(F\) e \(G\) funções.
+
+\begin{example}
+    Mostre que a transformação do Exemplo \eqref{ex.MudancaCoordenadas} é injetora e encontre sua inversa. Em seguida, encontre a curva no plano-uv tal que \(T^{-1}\) transforma na elipse \(x^2 + 4y^2 = 1\).
+
+    Sabemos que \[T(x,y) = (x+2y,x-2y).\] Se \(T(x_1,y_1) = T(x_2,y_2)\), então \[(x_1 + 2y_1,x_1-2y_1) = (x_2 + 2y_2,x_2-2y_2),\] portanto \[x_1 + 2y_1 = x_2 + 2y_2 \text{ e } x_1 - 2y_1 = x_2 - 2y_2,\] ou seja, \((x_1,y_1) = (x_2,y_2)\), o que mostra que \(T\) é injetora, portanto invertível na sua imagem.
+
+    Agora, como \(T(x,y) = (u,v)\), com \(u = x+2y\) e \(v=x-2y\), temos\(u+v = 2x\) e \(u-v=4y\), ou ainda \(x = \frac{u+v}{2}\) e \(y = \frac{u-v}{4}\), logo \(T^{-1}(u,v) = \left( \frac{u+v}{2}, \frac{u-v}{4} \right)\).
+
+    Por fim, para encontrarmos os pontos \((u,v)\) tais que \(T^{-1}(u,v) = (x,y)\) satisfaçam a equação \(x^2 + 4y^2=1\). Como vimos, \(T^{-1}(u,v) = \left( \frac{u+v}{2}, \frac{u-v}{4} \right)\), logo devemos ter \[\left( \frac{u+v}{2}\right)^2 + 4\left(\frac{u-v}{4} \right) = 1,\] ou ainda, \[\frac{1}{4} (u^2 + 2uv + v^2) + \frac{1}{4}(u^2 - 2uv + v^2) = 0 \Rightarrow \frac{1}{4}(2u^2 + 2v^2) = 1 \Rightarrow u^2 + v^2 = 2.\]
+    {\cv FIGURA}
+\end{example}
+
+\begin{example}
+    Seja \(T\) a transformação de coordenadas do plano-xy para o plano-\(r\theta\) dada por \[T(x,y) = (r,\theta) = (\sqrt{x^2 + y^2}),\arctan\left( \frac{y}{x} \right),\; x\neq 0.\]
+
+    Trace no plano-\(r\theta\) os gráficos de \(r=1\), \(r=2\), \(\theta = -\frac{1}{2}\) e \(\theta = \frac{1}{2}\). Esboce as curvas-r e as curvas-\(\theta\) no plano-xy.
+\end{example}
+
+\begin{multicols}{2}
+    \begin{center}
+        curvas-r
+
+        \(r=1 \Leftrightarrow x^2 + y^2 = 1\)
+
+        \(r=2 \Leftrightarrow x^2 + y^2 = 4\)
+    \end{center}
+    \newcolumn
+    \begin{center}
+        curvas-\(\theta\)
+
+        \(\theta = -\frac{1}{2} \Leftrightarrow \arctan\left( \frac{y}{x} \right) = -\frac{1}{2} \Leftrightarrow \frac{y}{x} = \tan\left( -\frac{1}{2} \right) \Leftrightarrow y = x \tan\left( -\frac{1}{2} \right)\)
+
+        \(\theta = \frac{1}{2} \Leftrightarrow \arctan\left( \frac{y}{x} \right) = \frac{1}{2} \Leftrightarrow \frac{y}{x} = \tan\left( \frac{1}{2} \right) \Leftrightarrow y = x \tan\left( \frac{1}{2} \right)\)
+    \end{center}
+\end{multicols}
+    {\cv FIGURA}
+
+\section{Mudança de variáveis e jacobianos}
+
+Para uma função de uma variável, vimos como fazer uma mudança de variáveis em uma integral definida \[\int_a^b f(x) \,dx.\]
+
+Sob certas condições, substituindo \(x = g(u)\), temos \(dx = g'(u) du\) e \[\int_a^b f(x) \,dx = \int_c^d f(g(u)) g'(u) \,du,\] com \(a = g(c)\) e \(b = g(d)\).
+
+Consideramos agora \[\int\int_\mathcal{R} F(x,y) \,dA,\] no qual \(\mathcal{R}\) é uma região no plano-xy e fazemos a substituição \[x = f(u,v) \text{ e } y = g(u,v)\] em que as derivadas parciais de 2ª ordem de \(f\) e \(g\) existem e são contínuas.
+
+Estas equações definem uma transformação de coordenadas \(\tilde{T}(u,v) = (x,y)\) do plano-uv para o plano-xy.
+
+\textbf{Problema: } Encontrar uma região \(\mathcal{S}\) do plano-uv que seja transformada em \(\mathcal{R}\) por \(\tilde{R}\) (ou seja, \(\tilde{T}(\mathcal{S}) = \mathcal{R}\))
+    {\cv FIGURA}
+
+Neste caso, teremos \[\int\int_\mathcal{R} F(x,y) \,dA = \int\int_\mathcal{S} F(f(u,v),g(u,v)) \,dA.\]
+
+Para existir uma região \(\mathcal{S}\) conveniente, impomos algumas condições para a região \(\mathcal{R}\) e para o integrando \(F(x,y)\)
+    \begin{enumerate}
+        \item \(\mathcal{R}\) consiste de todos os pontos que estão sobre uma curva simples, fechada e parcialmente suave \(C\) ou no interior dela.
+            {\cv FIGURA}
+        \item \(F\) tem derivadas parciais contínuas em uma região aberta contendo \(\mathcal{R}\).
+            {\cv FIGURA}
+        \item \(\tilde{T}\) transforma uma região \(\mathcal{S}\) do plano-uv \textit{biunivocamente} em \(\mathcal{R}\) (ou seja \(\tilde{T}:\mathcal{S} \to \mathcal{R}\) é bijetora).
+        \item \(\mathcal{S}\) é limitada por uma curva simples, fechada e parcialmente suave \(K\) e \(\tilde{T}\) transforma \(K\) em \(C\).
+            {\cv FIGURA}
+        \item A \textit{direção positiva} ao longo de \(C\) \((K)\) quando \(\mathcal{R}\)\((\mathcal{S})\) está sempre à esquerda. Analogamente, a \textit{direção negativa} ao longo de \(C\) \((K)\) é quando \(\mathcal{R}\) \((\mathcal{S})\) está sempre à direita.
+        \item Quando \((u,v)\) traçar \(K\) uma vez na direção positiva, o ponto \((x,y)\) deverá traçar \(C\) uma vez no sentido positivo \textbf{ou} no sentido negativo.
+    \end{enumerate}
+
+Nestas condições obtemos o seguinte resultado.
+
+\begin{theorem}[Mudança de Variáveis]\index{Teorema!Mudança de variáveis}\label{thm.MudacaVariaveis}
+    Se \(x = f(u,v)\), \(y = g(u,v)\) é uma transformação de coordenadas, então \[\int\int_\mathcal{R} F(x,y) \,dxdy = \pm \int\int_\mathcal{S} F(f(u,v),g(u,v)) \frac{\partial(x,y)}{\partial(u,v)}\, dudv, \] no qual \(\frac{\partial(x,y)}{\partial(u,v)} = \left|\begin{matrix}
+        \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial y} & \frac{\partial y}{\partial v}
+    \end{matrix}\right|\) é o \textbf{jacobiano}\index{Jacobiano} de \(x\) e \(y\) em relação a \(u\) e \(v\).
+\end{theorem}
+
+\begin{remark}
+    Quando \((u,v)\) traça a fronteira \(K\) de \(\mathcal{S}\) uma vez na direção positiva, o ponto correspondente \((x,y)\) traça a fronteira \(C\) de \(\mathcal{R}\) uma vez
+        \begin{enumerate}
+            \item no sentido positivo quando escolhemos o sinal positivo;
+            \item no sentido negativo quando escolhemos o sinal negativo.
+        \end{enumerate}
+\end{remark}
+
+\begin{remark}
+    Fazendo \(F(x,y) = 1\) em \(\mathcal{R}\), segue do Teorema \ref{thm.MudacaVariaveis} que a área de \(\mathcal{R}\) é \[A = \pm \int\int_\mathcal{S} \frac{\partial(x,y)}{\partial(u,v)} \,dudv.\]
+
+    Logo, podemos concluir que
+        \begin{enumerate}
+            \item se \(\frac{\partial(x,y)}{\partial(u,v)} > 0\) em ``toda'' a região \(\mathcal{S}\), então a integral \(I_\mathcal{S}\) é positiva e, então devemos escolher o sinal positivo;
+            \item se \(\frac{\partial(x,y)}{\partial(u,v)} < 0\) em ``toda'' região \(\mathcal{S}\), então a integral \(I_\mathcal{S}\) é negativa e, então devemos escolher o sinal negativo.
+        \end{enumerate}
+
+    Em outras palavras, se o jacobiano é \textit{sempre} positivo, então \((u,v)\) traça a fronteira de \(\mathcal{S}\) uma vez na direção positiva, o ponto \((x,y)\) correspondente traça a fronteira de \(\mathcal{R}\) uma vez na direção positiva. Agora, se o jacobiano é \textit{sempre} negativo, então \((x,y)\) traça a fronteira de \(\mathcal{R}\) uma vez na direção negativa.
+\end{remark}
+
+\begin{corollary}\label{coro.MudancaVariaveis}
+    Se o jacobiano \(\frac{\partial(x,y)}{\partial(u,v)}\) não muda de sinal em \(\mathcal{S}\), então \[\int\int_\mathcal{R} F(x,y)\, dxdy = \int\int_\mathcal{S} F(f(u,v),g(u,v)) \left|\frac{\partial(x,y)}{\partial(u,v)}\right|\, dudv.\]
+\end{corollary}
+
+\begin{example}
+    Calcule \(\int\int_\mathcal{R} e^{\frac{y-x}{y+x}}\, dxdy\), em que \(\mathcal{R}\) é a região do plano-xy limitada pelo trapezóide \((0,1), (0,2), (2,0)\) e \((1,0)\).
+        {\cv FIGURA}
+
+    Como \(y-x\) e \(x+y\) aparecem no integrando, tentamos a seguinte substituição
+        \begin{equation}\label{eqn.Substituicao}
+            u = y-x \text{ e } v = y+x.
+        \end{equation}
+
+    Estas equações definem uma transformação \(T(x,y) = (u,v)\) do plano-xy para o plano-uv.
+
+    Mais ainda, é fácil ver que \(T\) é injetora, de fato \[T(x_1,y_1) = T(x_2,y_2) \Leftrightarrow (y_1 - x_1, y_1 + x_1) = (y_2 - x_2, y_2 + x_2),\] logo \((x_1,y_1) = (x_2,y_2)\) e portanto \(T\) é inversível na sua imagem.
+
+    Assim, para aplicar o Teorema \ref{thm.MudacaVariaveis}, usaremos \(\tilde{T} = T^{-1}\) que é uma transformação do plano-uv para o plano-xy.
+
+    Vamos começar encontrando \(T^{-1}\). Pelas relações em \eqref{eqn.Substituicao}, obtemos \[x = \frac{1}{2}(v-u) \text{ e } y = \frac{1}{2}(u+v).\] Além disso, \[\frac{\partial(x,y)}{\partial(u,v)} = \left|\begin{matrix}
+        \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial y} & \frac{\partial y}{\partial v}
+    \end{matrix}\right| = \left|\begin{matrix}
+        -\frac{1}{2} & \frac{1}{2}\\ \frac{1}{2} & -\frac{1}{2}
+    \end{matrix}\right| = -\frac{1}{2}.\]
+
+    Para encontrar a região \(\mathcal{S}\) no plano-uv tal que \(T^{-1}(\mathcal{S}) = \mathcal{R}\), note que os lados de \(\mathcal{R}\) estão sobre as retas \[x = 0, x+y = 2, y=0 \text{ e } x+y = 1,\] fazendo \(x = \frac{1}{2}(v-u)\) e \(y = \frac{1}{2}(u+v)\) temos as curvas no plano-uv \[\frac{1}{2}(v-u) = 0, \frac{1}{2}(v-u) + \frac{1}{2}(u+v) = 2, \frac{1}{2}(u+v) = 0 \text{ e } \frac{1}{2}(v-u) + \frac{1}{2}(u+v) = 1,\] ou seja \(T\) leva os lados de \(\mathcal{R}\) nas retas \[v = u, v = 2, v = -u \text{ e } v = 1,\] mais ainda, usando desigualdades, podemos mostrar que os pontos interiores de \(\mathcal{S}\) correspondem as pontos interiores de \(\mathcal{R}\).
+
+    Com isso, conseguimos definir a região \(\mathcal{S}\) no plano-uv: {\cv FIGURA}
+
+    Além disso, note que quando \((u,v)\) percorre \(v=u\) de \((1,1)\) a \((2,2)\), temos que o ponto correspondente \((x,y)\) percorre a reta \(x=0\) da seguinte forma:
+        \begin{itemize}
+            \item Se \((u,v)=(1,1)\), então \(x=0\) e \(y=\frac{1}{2}(u+v) = \frac{1}{2}(1+1) = 1\), ou seja, \((x,y) = (0,1)\).
+            \item Agora, se \((u,v) = (2,2)\), \(x=0\) e \(y=\frac{1}{2}(u+v) = \frac{1}{2}(2+2)=2\), portanto \((x,y)=(0,2)\).
+        \end{itemize}
+    Assim, concluímos que \((x,y)\) percorre a reta \(x=0\) de \((0,1)\) a \((0,2)\).
+
+    Também, quando \((u,v)\) percorre \(v=2\) de \((2,2)\) a \((-2,2)\), o ponto \((x,y)\) correspondente percorre a reta \(x+y=2\), da seguinte forma:
+        \begin{itemize}
+            \item \((u,v) = (2,2)\) implica que \(x = \frac{1}{2}(v-u) = \frac{1}{2}(2-2) = 0\) e \(y=\frac{1}{2}(u+v) = \frac{1}{2}4 = 2\), ou seja \((x,y) = (0,2)\).
+            \item Se \((u,v) = (-2,2)\), então \(x = \frac{1}{2}(v-u) = \frac{1}{2}(2+2) = 2\) e \(y = \frac{1}{2}(u+v) = 0\), portanto \((x,y) = (2,0)\).
+        \end{itemize}
+
+    Continuando dessa forma, concluímos que se \((u,v)\) percorre a fronteira de \(\mathcal{S}\) uma vez no sentido positivo, então \((x,y)\) percorre a fronteira de \(\mathcal{R}\) uma vez no sentido negativo, portanto devemos escolher o sinal negativo.
+
+    Observe que, pelo Corolário \ref{coro.MudancaVariaveis}, como \(\frac{\partial(x,y)}{\partial(u,v)}<0\) em \(\mathcal{S}\), devemos decidir pelo sinal negativo.
+    
+    Finalmente, pelo Teorema \ref{thm.MudacaVariaveis}, temos que
+        \begin{align*}
+            \int\int_\mathcal{R} e^{\frac{y-x}{y+x}} \,dxdy
+                & = - \int\int_\mathcal{S} e^{\frac{u}{v}} \frac{\partial(x,y)}{\partial(u,v)}\, dudv\\
+                & = - \int\int_\mathcal{S} e^{\frac{u}{v}} \left( -\frac{1}{2} \right)\, dudv \\
+                & = \frac{1}{2} \int_1^2 \int_{-v}^v e^{\frac{u}{v}} \,dudv\\
+                & = \frac{1}{2} \int_1^2 \int_{-1}^1 ve^w\, dwdv \\
+                & = \frac{1}{2} \int_1^2 v(e - e^{-1}) dv \\
+                & = \frac{1}{2} (e - e^{-1}) \frac{v^2}{2}\bigg|_1^2 = \frac{3}{4}(e - e^{-1}).
+        \end{align*}
+
+
+\end{example}
+
