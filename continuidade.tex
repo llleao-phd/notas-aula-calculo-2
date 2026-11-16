@@ -579,3 +579,40 @@ O que fizemos até agora pode ser estendido para funções de 3 (ou mais) variá
     \item Dizemos que \(\displaystyle\lim_{\substack{x\to x_0 \\ y\to y_0 \\ z\to z_0}} f(x,y,z) = L\) se, para todo \(\varepsilon>0\), existe \(\delta>0\) tal que, para todo \((x,y,z)\in D_f\), \[0 < \|(x,y,z) - (x_0,y_0,z_0)\| \Rightarrow |f(x,y,z) - L| < \varepsilon.\]
     \item \(f:D_f\subset\R^3 \to \R\) é contínua em \((x_0,y_0,z_0)\in D_f\) se \(\displaystyle\lim_{\substack{x\to x_0 \\ y\to y_0 \\ z\to z_0}} f(x,y,z) = f(x_0,y_0,z_0)\).
 \end{enumerate}
+
+\section{Exercícios}
+
+\begin{enumerate}
+    \item[\textbf{Exercício 1}] Prove por definição que $\lim_{(x,y)\to(3,4)}(2x + 3y) = 18$ 
+    \item[\textbf{Exercício 2}] Calcule o limite, caso exista, ou ``mostre'' que o limite não existe. 
+        \begin{enumerate}
+            \item[(a)] $\lim_{(x,y)\to(5,-2)} (x^5 + 4x^3y - 5xy^2)$
+            \item[(b)] $\lim_{(x,y)\to(0,0)} \frac{xy}{\sqrt{x^2+y^2}}$ 
+            \item[(c)] $\lim_{(x,y)\to(0,0)} \frac{xy+1}{x^2+y^2+1}$ 
+            \item[(d)] $\lim_{(x,y)\to(0,0)} x \sin \frac{1}{x^2+y^2}$ 
+            \item[(e)] $\lim_{(x,y)\to(0,0)} \frac{xy}{x^2+y^2}$ 
+            \item[(f)] $\lim_{(x,y)\to(0,0)} \frac{x^2}{\sqrt{x^2+y^2}}$ 
+            \item[(g)] $\lim_{(x,y)\to(0,0)} \frac{x+y}{x-y}$ 
+            \item[(h)] $\lim_{(x,y,z)\to(3,0,1)} e^{-xy} \sin(\pi z / 2)$ 
+        \end{enumerate}
+    \item[\textbf{Exercício 3}] Calcule $\lim_{(x,y)\to(0,0)} \frac{\sin(x^2+y^2)}{x^2+y^2}$. 
+    \item[\textbf{Exercício 4}] Calcule 
+        \[
+        \lim_{(h,k)\to(0,0)} \frac{f(x+h, y+k) - f(x,y) - 2xh - k}{\|(h,k)\|}, 
+        \]
+    onde $f(x,y) = x^2 + y$. 
+    \item[\textbf{Exercício 5}] Calcule $\lim_{(x,y)\to(4,2)} \ln \left( \frac{x^2+y^2}{x-y+1} \right)$. Justifique sua resposta.
+    \item[\textbf{Exercício 6}] Determine o conjunto dos pontos de continuidade. Justifique sua resposta.
+    \begin{enumerate}
+        \item[(a)] $f(x,y) = 3x^2y^2 - 5xy + 6$
+        \hfill
+        \item[(b)] $f(x,y) = \dfrac{x^2+y^2}{\sqrt{9-x^2-y^2}}$
+        \item[(c)] $f(x,y) = \ln \left( \dfrac{x-y}{x^2+y^2} \right)$
+        \item[(d)] $f(x,y) = \begin{cases} \dfrac{x-3y}{x^2+y^2}, & (x,y) \neq (0,0), \\ 0, & (x,y) = (0,0) \end{cases}$
+    \end{enumerate}
+    \item[\textbf{Exercício 7}] Seja $f$ a função definida por
+        $$f(x,y) = \begin{cases} \dfrac{x^2y^5}{x^2+y^2}, & (x,y) \neq (0,0), \\ 0, & (x,y) = (0,0). \end{cases}$$
+    $f$ é contínua em $(0,0)$?
+    \item[\textbf{Exercício 8}] Discuta a continuidade da função \(h(x,y) = \ln(x^2 + y^2 + 4)\) em \(\R^2\). (\textit{dica: experimente usar o teorema de continuidade para funções compostas}).
+    
+\end{enumerate}

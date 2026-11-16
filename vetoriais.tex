@@ -1,13 +1,260 @@
 \chapter{Funções vetoriais}
 
-\section{Funções de uma variável a várias variáveis reais}
+\section{Funções de uma variável a várias variáveis reais - Curvas}
+
+\begin{definition}
+    Uma \textit{função de uma variável real a valores em} \(\R^2\)\label{Curva} é uma função \(F:A\subset\R \to \R^2\). Ou seja, para cada \(t\in A\), \(F\) associa um único vetor \(F(t)\in\R^2\).
+\end{definition}
+
+Vamos supor sempre que \(A\) é um intervalo ou união de intervalos {\cv FIGURA}
+
+\textbf{Notações. }
+    \begin{enumerate}
+        \item O conjunto \(A\) é o domínio de \(F\) e será denotado \(D_F\).
+        \item O conjunto \[\operatorname{Im}_F = \{F(t)\in\R^2 : t\in D_F\}\] é a imagem ou trajetória de \(F\).
+    \end{enumerate}
+
+\begin{remark}
+    A imagem de \(F\) é a \textit{curva} (ou o \textit{lugar geométrico}) em \(\R^2\), descrita por \(F(t)\) quando \(t\) varia em \(D_F\).
+\end{remark}
+
+Considerando a observação acima, muitas vezes chamamos a função \(F\) de \textit{curva em } \(\R^2\). Mais ainda, neste contexto é comum denotarmos \(F: I \to \R^2\) por \(\gamma: I \to \R^2\), com \(I\) sendo um intervalo (ou união de intervalos).
+
+\begin{remark}
+    Note que pela definição da curva \(F: A \to \R^2\) existem, e são únicas, duas funções \(x: A \to \R\) e \(y: A \to \R\) tais que \[F(t) = (x(t), y(t)),\; t\in A\]{\cv FIGURA}
+\end{remark}
+
+\begin{definition}
+    Dada a curva \(F(t) = (x(t),y(t))\), \(t\in A\), dizemos que \[\begin{cases}
+        x = x(t), \\
+        y = y(t),
+    \end{cases} \; t\in A\] são as \textit{equações paramétricas}\label{Curva! Equações paramétricas} de \(F\) com parâmetro \(t\).
+\end{definition}
+
+\begin{remark}
+    Mutias vezes podemos usar as equações paramétricas para eliminar o parâmetro \(t\) e facilitar o esboço da curva em \(\R^2\).
+\end{remark}
+
+\begin{example}
+    Suponha que \(A = I = [a,b]\) e \(x(t)\) e \(y(t)\) são contínuas em \(I\).
+
+    {\cv FIGURA}
+\end{example}
+
+\begin{definition}
+    A \textit{orientação}\label{Curva !Orientação} de uma curva parametrizada \(F\) é a direção definida pelos valores crescentes do parâmetro.
+\end{definition}
+
+
+\begin{remark}
+    Costumamos indicar a orientação de uma curva colocando setas na curva obtida em \(\R^2\).
+\end{remark}
+
+\begin{example}
+    Seja \(F\) a função dada por \(F(t) = (t,2t)\).
+        \begin{enumerate}
+            \item Calcule \(F(0)\) e \(F(1)\).
+            \item Desenhe a imagem de \(F\).
+        \end{enumerate}
+
+    Temos que \[F(0) = ((0),2(0)) = (0,0) \text{ e } F(1) = ((1),2(1)) = (1,2).\] Além disso, as equações paramétricas de \(F\) são dadas por \[\begin{cases}
+        x = t, \\
+        y = 2t,
+    \end{cases},\; t\in\R.\] Agora, \(x = t\) e \(y = 2t\) implica que \(y = 2x\), para todo \(x\in\R\), logo a imagem de \(F\) é a reta \(y = 2x\). {\cv FIGURA}
+
+    Além disso, se \(t_1 < t_2\), então \(2x_1 < 2x_2\), portanto a curva tem sentido de \(-\infty\) para \(\infty\).
+\end{example}
+
+\begin{example}
+    Desenhe a imagem da função \(F\) dada por \(F(t) = (t,t^2)\).
+
+    A imagem de \(F\) é a curva de equações paramétricas \[\begin{cases}
+        x = t, \\
+        y = t^2,
+    \end{cases} t\in \R\], ou seja \(y = x^2\), para todo \(x\in\R\).
+
+    Ou seja, a imagem de \(F\) coincide com a parábola \(y = x^2\), para \(x\in\R\). {\cv FIGURA}
+
+    Mais ainda,
+        \begin{itemize}
+            \item em \((-\infty,0]\), temos \(t_1 < t_2\), portanto \(x_1^2 > x_2^2\).
+            \item Agora, se \([0,\infty)\), \(t_1 < t_2\) implica que \(x_1^2 < x_2^2\),
+        \end{itemize}
+    daí concluímos a orientação da curva como na imagem.
+\end{example}
+
+\begin{example}
+    Desenha a imagem de \(F\) dada por \(F(t) = (\cos(t),\sin(t))\), com \(t\in[0,2\pi]\).
+
+    A imagem de \(F\) é a curva de equações paramétricas \[\begin{cases}
+        x = \cos(t),\\
+        y = \sin(t),
+    \end{cases}\; t\in\R\] logo \(x^2 + y^2 = 1.\) Ou seja, \(F\) é a circunferência centrada na origem de raio \(1\). {\cv FIGURA}
+
+    Mais ainda,
+        \begin{itemize}
+            \item \(t = 0 \Rightarrow F(0) = (1,0)\),
+            \item \(t = \frac{\pi}{2} \Rightarrow F\left(\frac{\pi}{2}\right) = (0,1)\),
+            \item \(t = \pi \Rightarrow F(\pi) = (-1,0)\),
+            \item \(t = \frac{3\pi}{2} \Rightarrow F\left( \frac{3\pi}{2} \right) = (0,-1)\),
+            \item \(t = 2\pi \Rightarrow F(2\pi) = (1,0)\),
+        \end{itemize}
+    portanto o ponto \(F(t) = (\cos t,\sin t)\) percorre o círculo no sentido antihorário.
+\end{example}
+
+\begin{example}
+    Desenha a imagem da função \(F(t) = (2\cos(t),\sin(t))\), para \(t\in[0,2\pi]\).
+
+    A imagem de \(F\) é a curva de equações paramétricas \[\begin{cases}
+        x = 2\cos(t)\\
+        y = \sin(t)
+    \end{cases} \Rightarrow \begin{cases}
+        \frac{x}{2} = \cos(t),\\
+        y = \sin(t)
+    \end{cases}\; t\in[0,2\pi],\] ou seja, \(\frac{x^2}{4} + y^2 = 1\).
+
+    Assim, para cada \(t\in[0,2\pi]\), o ponto \(F(t) = (2\cos(t),\sin(t))\) percorre a elipse \(\frac{x^2}{4} + y^2 = 1\) {\cv FIGURA}.
+
+    \begin{exercise}
+        Estude a orientação da curva obtida.
+    \end{exercise}
+\end{example}
+
+\begin{example}
+    Desenha a imagem da função \(F(t) = (e^{-t}\cos(t),e^{-t}\sin(t))\), para \(t\geq 0\).
+
+    A imagem de \(F\) é a curva de equações paramétricas \[\begin{cases}
+        x = e^{-t}\cos(t) \\
+        y = e^{-t}\sin(t)
+    \end{cases}\; t\geq 0,\] logo \[x^2 + y^2 = (e^{-t})^2(\cos^2(t) + \sin^2(t)) = e^{-2t},\] daí concluímos que \(x^2 + y^2 = e^{-2t}\). Observe que não eliminamos o parâmetro \(t\), porém podemos afirmar que, para cada \(t\geq 0\), \(F(t)\) percorre a circunferência centrada na origem de raio \(e^{-2t}\), como \(e^{-2t}\to 0\), quando \(t\to\infty\), concluímos que \(F(t)\) gira em torno da origem e sua distância à origem tende a zero.{\cv FIGURA}
+\end{example}
+
+\begin{exercise}
+    Desenhe a imagem da função \(F(t) = (t\cos(t),t\sin(t)),\) para \(t\in[0,3\pi]\).
+\end{exercise}
+
+\begin{definition}
+    Uma \textit{função de uma variável real a valores em } \(\R^3\)\label{Curva} é uma função \(f: A \to \R^3\), com \(A\subset\R\). Ou seja, a cada \(t\in A\), \(F\) associa um único vetor \(F(t) \in\R^3\). {\cv FIGURA}
+\end{definition}
+
+\textbf{Notações. }
+    \begin{enumerate}
+        \item \(A\) é o domínio de \(F\) e denotamos \(A = D_F\).
+        \item O conjunto \[\operatorname{Im}_F = \{F(t)\in\R^3 : t\in D_F\}\] é a \textit{imagem} ou \textit{trajetória} de \(F\).
+    \end{enumerate}
+
+\begin{remark}
+    A imagem de \(F\) é a \textit{curva} (ou lugar geométrico) em \(\R^3\) descrita por \(F(t)\) quado \(t\) varia em \(D_F\).
+\end{remark}
+
+Considerando essao observação, é comum chamar a função \(F\) de \textit{curva} em \(\R^3\).
+
+Neste contexto, denotamos \(F:I\to\R^3\) por \(\gamma:I\to\R^3\).
+
+\begin{remark}
+    Pela definição da curva \(F:A\to\R^3\) existem, e são únicas, três funções \(x : A\to\R\), \(y:A\to\R\) e \(z:A\to\R\) tais que \[F(t) = (x(t),y(t),z(t)),\; t\in A.\]{\cv FIGURA}
+\end{remark}
+
+\begin{definition}
+    Dada a curva \(F(t) = (x(t),y(t),z(t))\), com \(t\in A\), dizemos que \[\begin{cases}
+        x = x(t)\\
+        y = y(t),\\
+        z = z(t)
+    \end{cases}\; t\in A \] são as \textit{equações paramétricas}\label{Curva!Equações paramétricas} de \(F\) com \textit{parâmetro} \(t\).
+\end{definition}
+
+\begin{remark}
+    Como antes, as equações paramétricas podem ajudar no esboço da curva em \(\R^3\).
+\end{remark}
+
+Como no caso \(\R^2\), também podemos definir a orientação de uma curva em \(\R^3\).
+
+\begin{example}
+    Desenhe a imagem de \[F(t) = (t,t,t),\; t\geq 0.\]
+
+    A imagem de \(F\) é a curva (em \(\R^3\)) de equações paramétricas \[\begin{cases}
+        x = t\\
+        y = t,\\
+        z = t
+    \end{cases}\; t\geq 0\] é a reta que passa pela origem e é paralela ao vetor \((1,1,1)\).{\cv FIGURA}
+
+    Lembre que a reta que passa por \((x_0,y_0,z_0)\) e é paralela ao vetor \(\overrightarrow{a} = (a_1,a_2,a_3)\) é dada por \[(x,y,z) = (x_0,y_0,z_0) + t(a_1,a_2,a_3) = (x_0 + a_1 t, y_0 + a_2 t, z_0 + a_3 t),\; t\in\R,\] logo as equações paramétricas desta reta são \[\begin{cases}
+        x = x_0 + a_1 t \\
+        y = y_0 + a_2 t, \\
+        z = z_0 + a_3 t
+    \end{cases}\; t\in\R\]
+\end{example}
+
+\begin{example}
+    Desenhe a imagem de \[F(t) = (\cos(t),\sin(t),1).\]
+
+    A imagem de \(F\) é a curva de equações paramétricas \[\begin{cases}
+        x = \cos t \\
+        y = \sin t, \\
+        z = 1
+    \end{cases}\; t\in \R\] portanto \(x^2 + y^2 = 1\) e \(z = 1\).
+
+    Logo, \(z=1\) está fixado e a projeção de \(F(t)\) no plano-xy é a circunferência de centro na origem e raio \(1\). Portanto a imagem de \(F\) é uma circunferência de centro no eixo-z e raio \(1\). {\cv FIGURA}
+\end{example}
+
+\begin{example}
+    Desenhe a imagem de \[F(t) = (\cos t, \sin t, bt),\; t\geq 0,\] para \(b>0\) fixado.
+
+    A imagem de \(F\) é a curva de equações paramétricas \[\begin{cases}
+        x = \cos t \\
+        y = \sin t,\\
+        z = bt
+    \end{cases}\; t\geq 0\] logo \(x^2 + y^2 = 1\) e \(z = bt\), para todo \(t\geq 0\).
+
+    Assim, a projeção de \(F(t)\) no plano-xy é a circunferência \(x^2 + y^2 = 1\) e, por outro lado, no eixo-z temos um movimento crescente e uniforme dado pela equação \(z = bt\). {\cv FIGURA}
+\end{example}
+
+Muitas vezes é necessário considerar funções de uma variável real a valores em \(\R^n\) (\(n>3\)) e as definições são análogas ao que fizemos nos casos \(n=2\) e \(n=3\).
+
+\begin{example}
+    \(F(t) = (t,t^2,1,t^2)\), com \(t\in\R\), é uma função de uma variável real a valores em \(\R^4\).
+\end{example}
+
+\begin{example}
+    \(F(t) = (\cos t,\sin t, t^2, t, t^3)\), com \(t\in\R\), é uma função de uma variável real a valores em \(\R^5\).
+\end{example}
+
+Em geral, chamamos as funções de uma variável real a valores em \(\R^n\) (\(n\geq 2\)) de \textit{funções vetoriais de uma variável real}.
 
 \section{Operações com funções vetoriais de uma variável real}
 
-\section{Limite e continuidade de funções vetoriais}
+Lembre que se \(F: A\to\R^n\) é uma função vetorial, então existem, e são únicas, \(n\) funções \(f_i: A \to \R\), \(i\in\{1,2,\dots,n\}\), tais que \[F(t) = (f_1(t),f_2(t),\dots,f_n(t)),\; t\in A.\]
 
-\section{Derivada de funções vetoriais}
+\begin{definition}
+    Chamamos \(f_i: A \to \R\), \(i\in\{1,2,\dots,n\}\), de \textit{funções componentes}\label{Curva!Funções componentes} de \(F\).
+\end{definition}
 
-\chapter{Campos vetoriais: Ideia, conceito e motivação}
+\textbf{Notação. } É comum escrever \(F = (f_1,f_2,\dots,f_n)\) para indicar a função cujas componentes são \(f_1, f_2,\dots,f_n\).
 
-\section{Rotacional e Divergência}
+\begin{example}
+    Seja \(F(t) = (t,\sqrt{t},\sin(3t),\arctan(t))\), \(t\geq 0\). Então, as componentes de \(F\) são \[f_1(t) = t,\; f_2(t) = \sqrt{t},\; f_3(t) = \sin(3t),\; f_4(t) = \arctan(t),\] com \(t\geq 0\).
+\end{example}
+
+\begin{definition}
+    Sejam \(F,G : A \to \R^n\) funções vetoriais, \(f:A\to\R\) uma função a valores reais e \(k\) uma constante. Definimos
+        \begin{enumerate}
+            \item a função \textit{soma} de \(F\) e \(G\) por \(F + G : A \to \R^n\) é dada por \[(F+G)(t) = F(t) + G(t),\]
+            \item a função \textit{produto} de \(F\) pela constante \(k\) por \(k\cdot F: A \to \R^n\) é dada por \[(k\cdot F)(t) = k\cdot F(t),\]
+            \item a função \textit{produto} de \(F\) pela função escalar \(f\) por \(f\cdot F: A \to \R^n\) é dada por \[(f\cdot F)(t) = f(t)\cdot F(t),\]
+            \item a função \textit{produto escalar} de \(F\) e \(G\) por \(F\cdot G: A \to\R\) é dada por \[(F\cdot G)(t) = F(t)\cdot G(t) = f_1(t) g_1(t) + \dots f_n(t) g_n(t),\] no qual \(F = (f_1,\dots,f_n)\) e \(G = (g_1,\dots,g_n)\),
+            \item para \(n=3\), o \textit{produto vetorial} de \(F\) e \(G\) por \(F\times G: A \to \R^3\) é dada por \[(F\times G)(t) = F(t) \times G(t) = \left\|\begin{matrix}
+                \overrightarrow{i} & \overrightarrow{j} & \overrightarrow{k} \\
+                f_1(t) & f_2(t) & f_3(t) \\
+                g_1(t) & g_2(t) & g_3(t)
+            \end{matrix}\right\|\]
+        \end{enumerate}
+\end{definition}
+
+
+% \section{Limite e continuidade de funções vetoriais}
+
+% \section{Derivada de funções vetoriais}
+
+% \chapter{Campos vetoriais: Ideia, conceito e motivação}
+
+% \section{Rotacional e Divergência}

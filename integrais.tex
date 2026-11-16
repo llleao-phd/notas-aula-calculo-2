@@ -743,7 +743,7 @@ Em geral, se \(\mathcal{R}\) é uma região \(\mathcal{R}_x\) ou \(\mathcal{R}_y
 \begin{example}
     Calcule \[\int_1^4 \int_{-1}^2 (2x + 6x^2y) dy dx.\]
 
-    {\cv FIGURA}
+    %{\cv FIGURA}
 
     Temos
         \begin{align*}
@@ -762,7 +762,7 @@ Em geral, se \(\mathcal{R}\) é uma região \(\mathcal{R}_x\) ou \(\mathcal{R}_y
 \begin{example}
     Calcule \(\int_0^2 \int_{x^2}^{2x} (x^3 + 4y) dy dx\).
 
-    {\cv FIGURA}
+    %{\cv FIGURA}
 
     Temos
         \begin{align*}
@@ -777,7 +777,7 @@ Em geral, se \(\mathcal{R}\) é uma região \(\mathcal{R}_x\) ou \(\mathcal{R}_y
 
 \begin{example}
     Calcule \(\int_1^3 \int_{\frac{\pi}{6}}^{y^2} 2y\cdot \cos(x) dxdy\).
-        {\cv FIGURA}
+        %{\cv FIGURA}
 
     Temos \(h_1(y) = \frac{\pi}{6}\) e \(h_2(y) = y^2\). A interseção de \(h_1\) e \(h_2\) ocorre quando \(y^2 = \frac{\pi}{6}\), ou seja, \(y = \pm \sqrt{\frac{\pi}{6}}\), porém, sendo \(y>0\), a interseção ocorre apenas quando \(y = \sqrt{\frac{\pi}{6}}\).
 
@@ -808,7 +808,7 @@ A seguir apresentaremos um resultado que generaliza o Teorema de Fubini \ref{thm
     Suponha que \(f(x,y) \geq 0\), para todo \((x,y)\in\mathcal{R}_x\) e denote por \(S\) o gráfico de \(f\), \(Q\) o sólido sob \(S\) e sobre \(\mathcal{R}_x\) e \(V\) o volume de \(Q\).
 
     Neste caso, sabemos que \[\int\int_{\mathcal{R}_x} f(x,y) dA = V.\]
-        {\cv FIGURA}
+        %{\cv FIGURA}
     
     Da teoria de integrais definidas para funções de uma variável, uma fórmula para calcular o volume de \(Q\) é \[V = \int_a^b A(x) dx\] no qual \(A(x)\) é a área da seção transversal de \(Q\), como na figura.
 
@@ -834,7 +834,7 @@ A seguir apresentaremos um resultado que generaliza o Teorema de Fubini \ref{thm
         x=0 \\
         x=2
     \end{cases}.\]
-        {\cv FIGURA}
+        %{\cv FIGURA}
 
     Note que \(f(x,y) = x^3 + 4y\) é contínua em \(\mathcal{R}\).
 
@@ -855,7 +855,7 @@ A seguir apresentaremos um resultado que generaliza o Teorema de Fubini \ref{thm
     Seja \(\mathcal{R}\) a região limitada pelos gráficos de \(y = \sqrt{x}\), \(y = \sqrt{3x - 18}\) e \(y=0\). Se \(f\) é uma função contínua qualquer em \(\mathcal{R}\), expresse a integral dupla de \(f\) em \(\mathcal{R}\) em termos de integrais iteradas.
 
     Analisemos a interseção entre \(y = \sqrt{x}\) e \(y = \sqrt{3x-18}\). Temos que \[\sqrt{x} = \sqrt{3x - 18} \Rightarrow x = 3x - 18 \Rightarrow x=9\]
-    {\cv FIGRURA}
+    % {\cv FIGURA}
 
     Se olhamos \(\mathcal{R} = \mathcal{R}_1\cup\mathcal{R}_2\), com \[\mathcal{R}_1 = \mathcal{R}_{1,x} = \{(x,y)\in\R^2 : 0\leq x\leq 6 \text{ e } 0\leq y\leq \sqrt{x}\}\] \[\mathcal{R}_2 = \mathcal{R}_{2,x} = \{(x,y)\in\R^2 : 6\leq x \leq 9 \text{ e } \sqrt{3x-18}\leq y\leq \sqrt{x}\}.\]
 
@@ -882,7 +882,7 @@ A seguir apresentaremos um resultado que generaliza o Teorema de Fubini \ref{thm
     Calcule \(\int_0^4 \int_{\sqrt{y}}^{2} y\cos(x^5) dxdy\).
 
     Note que, pela integral dada, temos a região \[\mathcal{R} = \mathcal{R}_y = \{(x,y)\in\R^2 : 0\leq y\leq 4 \text{ e } \sqrt{y}\leq x\leq 2\}\]
-        {\cv FIGURA}
+        %{\cv FIGURA}
 
     Agora, a integral \[\int_0^4 \int_{\sqrt{y}}^{2} y\cos(x^5) dxdy\] não parece ser fácil de ser calculada. No entanto, observando \(\mathcal{R}\) com \(\mathcal{R}_x\) temos \[\mathcal{R} = \mathcal{R}_x = \{(x,y)\in\R^2 : 0\leq x\leq 2 \text{ e } 0\leq y\leq x^2 \}\] e \[\int_0^4 \int_{\sqrt{y}}^2 y\cos(x^5) dxdy = \int_0^2 \int_0^{x^2} y \cos(x^5) dy dx = \int_0^2 cos(x^5)\cdot \frac{x^4}{2} dx\]
 \end{example}
@@ -897,7 +897,7 @@ A seguir apresentaremos um resultado que generaliza o Teorema de Fubini \ref{thm
 Podemos definir integrais triplas para uma função de três variáveis \(x, y\) e \(z\), utilizando um processo parecido de funções de duas variáveis.
 
 No caso mais simples, suponha que \(f\) seja uma função contínua em toda uma região \(\mathcal{Q}\) em forma de paralelepípedo, digamos \[\mathcal{Q} = \{(x,y,z)\in\R^3 : a\leq x \leq b, c\leq y\leq d \text{ e } e\leq z\leq f\}\]
-    {\cv FIGURA}
+    %{\cv FIGURA}
 
 Dividindo \(\mathcal{Q}\) em subregiões \(\mathcal{Q}_1, \mathcal{Q}_2,\dots,\mathcal{Q}_n\) por meio de planos paralelos aos 3 planos coordenados temos uma partição \(P_n = \{\mathcal{Q}_1, \mathcal{Q}_2,\dots, \mathcal{Q}_n\}\) de \(\mathcal{Q}\), no qual cada \(\mathcal{Q}_k\) também é um paralelepípedo. A \textbf{norma}\index{Partição!Norma} de \(P_n\) é o comprimento da maior diagonal de todos os \(\mathcal{Q}_k\) e será denotada por \(\|P_N\|\).
 
@@ -933,7 +933,7 @@ Assim, como para funções de duas variáveis temos a seguinte definição:
 As integrais triplas podem ser definidas sobre uma região mais complicada do que um paralelepípedo.
 
 Suponhamos, por exemplo, que \(\mathcal{R}\) seja uma região no plano-xy que possa ser dividida em regiões \(\mathcal{R}_x\) e \(\mathcal{R}_y\) e que \(\mathcal{Q}\) seja a região \[\mathcal{Q} = \{(x,y,z)\in\R^3 : (x,y)\in\mathcal{R} \text{ e } k_1(x,y) \leq k \leq k_2(x,y)\},\] em que as derivadas parciais de \(k_1\) e \(k_2\) existem e são contínuas.
-    {\cv FIGURA}
+    %{\cv FIGURA}
 
 Subidividindo \(\mathcal{Q}\) por planos paralelos aos três planos coordenados, os pequenos paralelepípedos resultantes \(\mathcal{Q}_1,\mathcal{Q}_2,\dots, \mathcal{Q}_n\), que estão completamente contidos em \(\mathcal{Q}\) formam uma \textbf{partição interior}\index{Partição! Interior} \(P_n\) de \(\mathcal{Q}\), isto é, \(P_n = \{\mathcal{Q}_k : k\in\{1,2,\dots,n\}\}\). 
 
@@ -951,8 +951,8 @@ Também, como antes, podemos provar que
 
 \begin{remark}
     \begin{enumerate}
-        \item[a)] Se \(\mathcal{R}\) é uma região \(\mathcal{R}_x\), o Teorema \ref{thm.IntegralTriplaIterada} diz que \[\int\int\int_\mathcal{Q} f(x,y,z)\, dV = \int_a^b \int_{g_1(x)}^{g_2(x)}\int_{k_1(x,y)}^{k_2(x,y)} f(x,y,z)\, dz dy dx.\] {\cv FIGURA}
-        \item[b)] Se \(\mathcal{R}\) é uma região \(\mathcal{R}_y\), o Teorema \ref{thm.IntegralTriplaIterada} diz que \[\int\int\int_\mathcal{Q} f(x,y,z)\, dV = \int_c^d \int_{h_1(y)}^{h_2(y)}\int_{k_1(x,y)}^{k_2(x,y)} f(x,y,z)\, dz dx dy.\] {\cv FIGURA}
+        \item[a)] Se \(\mathcal{R}\) é uma região \(\mathcal{R}_x\), o Teorema \ref{thm.IntegralTriplaIterada} diz que \[\int\int\int_\mathcal{Q} f(x,y,z)\, dV = \int_a^b \int_{g_1(x)}^{g_2(x)}\int_{k_1(x,y)}^{k_2(x,y)} f(x,y,z)\, dz dy dx.\] %{\cv FIGURA}
+        \item[b)] Se \(\mathcal{R}\) é uma região \(\mathcal{R}_y\), o Teorema \ref{thm.IntegralTriplaIterada} diz que \[\int\int\int_\mathcal{Q} f(x,y,z)\, dV = \int_c^d \int_{h_1(y)}^{h_2(y)}\int_{k_1(x,y)}^{k_2(x,y)} f(x,y,z)\, dz dx dy.\] %{\cv FIGURA}
     \end{enumerate}
 
     Qualquer uma das duas integrais acima pode ser vista como um limite de soma tripla. Mais especificamente, temos que \[\int\int\int_\mathcal{Q} f(x,y,z)\, dV = \lim_{\|P_n\|\to 0} \sum_{i=1}^{n} \sum_{j=1}^{m} \sum_{k=1}^{p} f(u_i,v_j,w_k)\cdot \Delta z_k \Delta y_j \Delta x_i.\]
@@ -979,7 +979,7 @@ Também, como antes, podemos provar que
             \item quando \(y=0\) (ou seja, no plano-xz) temos \[z = 2 + x^2\], e
             \item as curvas de nível \(z=k\) são elípses \(x^2 + \frac{1}{4}y^2 = 2+k\).
         \end{itemize}
-    {\cv FIGURA}
+    %{\cv FIGURA}
 
     Logo, temos
         \[\mathcal{Q} = \left\{(x,y,z)\in\R^3 : 0\leq x\leq 1, 0\leq y\leq\sqrt{1-x^2} \text{ e } 0\leq z\leq 2 + x^2 + \frac{1}{4}y^2\right\}\]
@@ -1020,19 +1020,19 @@ Também, como antes, podemos provar que
 
 \begin{exercise}
     Encontre o volume do sólido limitado pelo cilindro \(y=x^2\) e pelos planos \(y+z=4\) e \(z=0\).
-    {\cv FIGURA}
+    %{\cv FIGURA}
 \end{exercise}
 
 Se \[\mathcal{Q} = \{(x,y,z) : a\leq x\leq b, h_1(x) \leq z\leq h_2(x) \text{ e } k_1(x,z)\leq y\leq k_2(x,z)\}\] no qual \(k_1\) e \(k_2\) possuem derivadas parciais contínuas e \(h_1\) e \(h_2\) são contínuas em \[\mathcal{R} = \{(x,z) : a\leq x\leq b \text{ e } h_1(x)\leq x\leq h_2(x)\}\] podemos mostrar o seguinte resultado
 \begin{theorem}
     Se \(f\) é contínua em \(\mathcal{Q}\), então \[\int\int\int_\mathcal{Q} f(x,y,z)\, dV = \int_a^b \int_{h_1(x)}^{h_2(x)} \int_{k_1(x,z)}^{k_2(x,z)} f(x,y,z)\, dy dz dx.\]
-        {\cv FIGURA}
+        %{\cv FIGURA}
 \end{theorem}
 
 De forma análoga, se \[\mathcal{Q} = \{(x,y,z) : e \leq z \leq f, g_1(z) \leq x \leq g_2(z) \text{ e } k_1(x,z)\leq y \leq k_2(x,z)\}\] em que \(g_1\) e \(g_2\) são contínuas e \(k_1\) e \(k_2\) admitem derivadas parciais contínuas em \[\mathcal{R} = \{(x,z) : e\leq z\leq f \text{ e } g_1(z)\leq x\leq g_2(z)\}\] temos
 \begin{theorem}
     Se \(f\) é contínua em \(\mathcal{Q}\), então \[\int\int\int_\mathcal{Q} f(x,y,z)\, dV = \int_e^f \int_{g_1(z)}^{g_2(z)} \int_{k_1(x,z)}^{k_2(x,z)} f(x,y,z)\, dy dx dz.\]
-        {\cv FIGURA}
+        %{\cv FIGURA}
 \end{theorem}
 
 \begin{exercise}
@@ -1041,7 +1041,7 @@ De forma análoga, se \[\mathcal{Q} = \{(x,y,z) : e \leq z \leq f, g_1(z) \leq x
 
 \begin{example}
     Encontre o volume da região \(\mathcal{Q}\) limitada pelos gráficos de \(z = 3x^2\), \(y = 4-x^2\), \(y = 0\) e \(z+y = 6\).
-        {\cv FIGURA}
+        %{\cv FIGURA}
 
     Vejamos a interseção entre \(z = 3x^2\) e \(z = 4 - x^2\),
         \[3x^2 = 4-x^2 \Rightarrow 4x^2 = 4 \Rightarrow x = \pm 1.\]
@@ -1067,7 +1067,7 @@ Se \(P\) é um ponto qualquer do espaço, então representamos \(P = (r,\theta,z
         \item \(r\) e \(\theta\) são as coordenadas polares da projeção \(P'\) de \(P\) ao plano-xy.
         \item \(z\) é a coordenada retangular usual de \(P\).
     \end{itemize}
-    {\cv FIGURA}
+    %{\cv FIGURA}
 
 Assim, como, para coordenadas polares, temos as seguintes relações entre coordenadas cilindricas e retangulares.
 
@@ -1085,16 +1085,16 @@ Assim, como, para coordenadas polares, temos as seguintes relações entre coord
         \begin{enumerate}
             \item \(r = a\), com \(a > 0\).
                 
-                Nesse caso temos \(r=a\) (com \(\theta\) e \(z\) arbitrários). Ou, \[x^2 + y^2 = a^2\] com \(z\in\R\). De qualquer forma, \(r=a\) representa um cilindro de raio \(a\) com eixo ao longo do eixo-z. {\cv FIGURA}
+                Nesse caso temos \(r=a\) (com \(\theta\) e \(z\) arbitrários). Ou, \[x^2 + y^2 = a^2\] com \(z\in\R\). De qualquer forma, \(r=a\) representa um cilindro de raio \(a\) com eixo ao longo do eixo-z. %{\cv FIGURA}
 
             \item \(\theta = \theta_0\)
             
-                Neste caso temos \(\theta = \theta_0\) fixado, com \(r\) e \(z\) arbitrários, ou seja, temos um plano contendo o eixo-z {\cv FIGURA}
+                Neste caso temos \(\theta = \theta_0\) fixado, com \(r\) e \(z\) arbitrários, ou seja, temos um plano contendo o eixo-z %{\cv FIGURA}
 
             \item \(z = z_0\)
             
                 Temos \(r\) e \(\theta\) arbritrários, o que gera um plano paralelo ao plano-xy.
-                    {\cv FIGURA}
+                    %{\cv FIGURA}
 
             \item \(z^2 = r^2\)
             
@@ -1103,12 +1103,12 @@ Assim, como, para coordenadas polares, temos as seguintes relações entre coord
             \item \(z = 4r^2\)
             
                 Temos \[z = 4r^2 \Leftrightarrow z = 4(x^2 + y^2) \Leftrightarrow z = 4x^2 + 4y^2\] representa um parabolóide.
-                {\cv FIGURA}
+                %{\cv FIGURA}
 
             \item \(r = 4\sin\theta\)
             
                 Temos \[r = 4\sin\theta \Leftrightarrow \Leftrightarrow r^2 = 4r\sin\theta \Leftrightarrow x^2 + y^2 = 4y \Leftrightarrow x^2 + (y-2)^2 = 4\] representa um cilindro (\(z\) aribitrário).
-                    {\cv FIGURA}
+                    %{\cv FIGURA}
         \end{enumerate}
 \end{example}
 
@@ -1117,7 +1117,7 @@ Assim, como, para coordenadas polares, temos as seguintes relações entre coord
 A seguir daremos a \textit{ideia} para a definição para o seguinte caso mais simples.
 
 Suponha que \(f(r,\theta,z)\) seja contínua em \[\mathcal{Q} = \{(x,y,z) : a\leq r\leq b, c\leq\theta\leq d \text{ e } m\leq z\leq n\}\]
-    {\cv FIGURA}
+    %{\cv FIGURA}
 
 Considerando uma partição \(P_n = \{\mathcal{Q}_1,\dots,\mathcal{Q}_n\}\) de \(\mathcal{Q}\) como na figura acima. Então definimos, como antes,
     \begin{align*}
@@ -1132,7 +1132,7 @@ e a ordem de integração não importa.
 
 Observe que usando partições interiores, podemos definir integrais triplas em coordenadas cilindricas em regiões mais complicadas.
 
-Por exemplo, se \(\mathcal{R}\) é a região polar do tipo \[\mathcal{R} = \mathcal{R}_\theta = \{(r,\theta) : \alpha \leq \theta \leq \beta \text{ e } g_1(\theta)\leq r \leq g_2(\theta)\}\] {\cv FIGURA} e \[\mathcal{Q} = \{(r,\theta,z) : (r,\theta)\in\mathcal{R}_\theta \text{ e } k_1(r,\theta) \leq z \leq k_2(r,\theta)\}\] em que as derivadas parciais de \(k_1\) e \(k_2\) existem e são contínuas, podemos provar que vale
+Por exemplo, se \(\mathcal{R}\) é a região polar do tipo \[\mathcal{R} = \mathcal{R}_\theta = \{(r,\theta) : \alpha \leq \theta \leq \beta \text{ e } g_1(\theta)\leq r \leq g_2(\theta)\}\] %{\cv FIGURA} e \[\mathcal{Q} = \{(r,\theta,z) : (r,\theta)\in\mathcal{R}_\theta \text{ e } k_1(r,\theta) \leq z \leq k_2(r,\theta)\}\] em que as derivadas parciais de \(k_1\) e \(k_2\) existem e são contínuas, podemos provar que vale
 \begin{theorem}[Coordenadas Cilindricas]
     Se \(f\) é contínua em \(\mathcal{Q}\), então
         \begin{align*}
@@ -1150,7 +1150,7 @@ Lembre que
 
 \begin{example}
     Calcule \(\int\int\int_\mathcal{Q} z\, dV\) em coordenadas cilindricas, no qual \(\mathcal{Q}\) é o sólido limitado por \(z=0\) e a parte superior da esfera de raio \(a\).
-        {\cv FIGURA}
+        %{\cv FIGURA}
 
     Em coordenadas cilindricas temos
         \[\mathcal{Q} = \{(r,\theta,z) : 0\leq \theta\leq 2\pi, 0\leq r\leq a \text{ e } a\leq z\leq \sqrt{a^2 - r^2}\}.\] Logo
@@ -1175,7 +1175,7 @@ As \textit{coordenadas esféricas} de um ponto \(P\) são dadas por uma terna or
         \item \(\phi\) é o ângulo entre \(\overrightarrow{OP}\) e o vetor \(\overrightarrow{k}\) (ou seja, o eixo-z positivo), \(0\leq \phi\leq \pi\).
         \item \(\theta\) é um ângulo polar associado à projeção \(P'\) de \(P\) sobre o plano-xy, \(0\leq \theta\leq 2\pi\).
     \end{itemize}
-{\cv FIGURA}
+%{\cv FIGURA}
 
 \begin{example}
     Considere as seguintes equações em coordenadas esféricas.
@@ -1184,16 +1184,16 @@ As \textit{coordenadas esféricas} de um ponto \(P\) são dadas por uma terna or
             \item \(\rho = \rho_0\), com \(\rho_0 > 0\).
             
                 Nesse caso, \(0\leq \theta\leq 2\pi\) e \(0\leq \phi\leq \pi\) são arbitrários, portanto temos uma esfera de raio \(\rho_0\).
-                    {\cv FIGURA}
+                    %{\cv FIGURA}
 
                 Observe que se \(\rho_0 = 0\), então \(\rho = 0\) consiste num único ponto, a origem.
 
             \item \(\phi = \phi_0\), com \(0<\phi_0<\pi\) e \(\phi_0 \neq \frac{\pi}{2}\).
             
                 Agora, temos \(\rho \geq 0\) e \(0 \leq \theta \leq 2\pi\) são arbitrários. Daí obtemos um cone de vértice na origem.
-                    {\cv FIGURA}
+                    %{\cv FIGURA}
 
-                Em particular, se \(\phi = 0\), temos apenas a parte não-negativa do eixo-z, e se \(\phi = \pi\), temos a parte não-positiva do eixo-z. {\cv FIGURA}
+                Em particular, se \(\phi = 0\), temos apenas a parte não-negativa do eixo-z, e se \(\phi = \pi\), temos a parte não-positiva do eixo-z. %{\cv FIGURA}
 
             \item \(\theta = \theta_0\).
             
@@ -1240,7 +1240,7 @@ Isto implica no seguinte resultado que fornece as relações entre as coordenada
 Às vezes é conveniente usarmos coordenadas esféricas para calcular integrais triplas.
 
 A seguir consideramos o caso mais simples em que \(f(\rho,\phi,\theta)\) é contínua em \[\mathcal{Q} = \{(\rho,\phi,\theta) : a\leq\rho\leq b, c\leq\phi\leq d \text{ e } m\leq\theta\leq n\}.\]
-    {\cv FIGURA}
+    %{\cv FIGURA}
 
 Nesse caso, dividimos \(\mathcal{Q}\) em subregiões \(\mathcal{Q}_1,\dots,\mathcal{Q}_n\) que tenham a mesma forma de \(\mathcal{Q}\) usando gráficos de equações da forma
     \begin{itemize}
@@ -1250,7 +1250,7 @@ Nesse caso, dividimos \(\mathcal{Q}\) em subregiões \(\mathcal{Q}_1,\dots,\math
     \end{itemize}
 
 A seguir ilustramos uma subregião \(\mathcal{Q}_k\) em que \(P = (\rho_k,\phi_k,\theta_k)\) e \(P'\) é a projeção de \(P\) no eixo-z.
-    {\cv FIGURA}
+    %{\cv FIGURA}
 
 Notando que \(\overline{P'P} = \rho_k \sin\phi_k\), podemos mostrar que
     \begin{itemize}
@@ -1297,7 +1297,7 @@ No que segue introduziremos um método mais geral para mudanças de variáveis e
 \subsection{Transformação de coordenadas}
 
 Seja \(T: D \to E\) uma função em que \(D\) é uma região no plano-xy e \(E\) é uma região no plano-uv.
-    {\cv FIGURA}
+    %{\cv FIGURA}
 
 Ou seja, para cada ponto \((x,y)\in D\) existe um único ponto \((u,v)\in E\) tal que \[T(x,y) = (u,v)\]
 
@@ -1337,7 +1337,7 @@ Agora, dada uma transformação de coordenadas consideremos no plano-uv retas ve
             \(\vdots\)
         \end{center}
     \end{multicols}
-    {\cv FIGURA}
+    %{\cv FIGURA}
 
 Então, no plano-xy teremos os seguintes gráficos:
     \begin{multicols}{2}
@@ -1362,7 +1362,7 @@ Então, no plano-xy teremos os seguintes gráficos:
         \end{center}
     \end{multicols}
 que são \textit{curvas de nível} de \(f\) e \(g\), respectivamente.
-    {\cv FIGURA}
+    %{\cv FIGURA}
 
 \begin{definition}
     Chamamos as curvas de nível \(u = f(x,y) = c_i\) e \(v = g(x,y) = d_j\), \(i,j\in\{1,2,3,\dots\}\) de \textbf{curvas-u} e \textbf{curvas-v}, respectivamente (no plano-xy).
@@ -1391,12 +1391,12 @@ que são \textit{curvas de nível} de \(f\) e \(g\), respectivamente.
                 \(v = 3 \Leftrightarrow x - 2y = 3\)
             \end{center}
         \end{multicols}
-        {\cv FIGURA}
+        %{\cv FIGURA}
 \end{example}
 
 \begin{remark}
     Se \(T\) é uma transformação injetora (ou seja, \((x_1,y_1)\neq(x_2,y_2)\) implica que \(T(x_1,y_1)\neq T(x_2,y_2)\)), então invertendo a correspondência, obtemos uma transformação \(T^{-1}: \operatorname{Im}_T \subset E \to D\) do plano-uv para o plano-xy chamada \textit{inversa} de \(T\)
-        {\cv FIGURA}
+        %{\cv FIGURA}
 \end{remark}
 
 Dessa forma, temos
@@ -1414,7 +1414,7 @@ Mais ainda, podemos representar a transformação inversa por \[T^{-1}(u,v) = (x
     Agora, como \(T(x,y) = (u,v)\), com \(u = x+2y\) e \(v=x-2y\), temos\(u+v = 2x\) e \(u-v=4y\), ou ainda \(x = \frac{u+v}{2}\) e \(y = \frac{u-v}{4}\), logo \(T^{-1}(u,v) = \left( \frac{u+v}{2}, \frac{u-v}{4} \right)\).
 
     Por fim, para encontrarmos os pontos \((u,v)\) tais que \(T^{-1}(u,v) = (x,y)\) satisfaçam a equação \(x^2 + 4y^2=1\). Como vimos, \(T^{-1}(u,v) = \left( \frac{u+v}{2}, \frac{u-v}{4} \right)\), logo devemos ter \[\left( \frac{u+v}{2}\right)^2 + 4\left(\frac{u-v}{4} \right) = 1,\] ou ainda, \[\frac{1}{4} (u^2 + 2uv + v^2) + \frac{1}{4}(u^2 - 2uv + v^2) = 0 \Rightarrow \frac{1}{4}(2u^2 + 2v^2) = 1 \Rightarrow u^2 + v^2 = 2.\]
-    {\cv FIGURA}
+    %{\cv FIGURA}
 \end{example}
 
 \begin{example}
@@ -1440,9 +1440,9 @@ Mais ainda, podemos representar a transformação inversa por \[T^{-1}(u,v) = (x
         \(\theta = \frac{1}{2} \Leftrightarrow \arctan\left( \frac{y}{x} \right) = \frac{1}{2} \Leftrightarrow \frac{y}{x} = \tan\left( \frac{1}{2} \right) \Leftrightarrow y = x \tan\left( \frac{1}{2} \right)\)
     \end{center}
 \end{multicols}
-    {\cv FIGURA}
+    %{\cv FIGURA}
 
-\section{Mudança de variáveis e jacobianos}
+\subsection{Mudança de variáveis e jacobianos}
 
 Para uma função de uma variável, vimos como fazer uma mudança de variáveis em uma integral definida \[\int_a^b f(x) \,dx.\]
 
@@ -1453,19 +1453,19 @@ Consideramos agora \[\int\int_\mathcal{R} F(x,y) \,dA,\] no qual \(\mathcal{R}\)
 Estas equações definem uma transformação de coordenadas \(\tilde{T}(u,v) = (x,y)\) do plano-uv para o plano-xy.
 
 \textbf{Problema: } Encontrar uma região \(\mathcal{S}\) do plano-uv que seja transformada em \(\mathcal{R}\) por \(\tilde{R}\) (ou seja, \(\tilde{T}(\mathcal{S}) = \mathcal{R}\))
-    {\cv FIGURA}
+    %{\cv FIGURA}
 
 Neste caso, teremos \[\int\int_\mathcal{R} F(x,y) \,dA = \int\int_\mathcal{S} F(f(u,v),g(u,v)) \,dA.\]
 
 Para existir uma região \(\mathcal{S}\) conveniente, impomos algumas condições para a região \(\mathcal{R}\) e para o integrando \(F(x,y)\)
     \begin{enumerate}
         \item \(\mathcal{R}\) consiste de todos os pontos que estão sobre uma curva simples, fechada e parcialmente suave \(C\) ou no interior dela.
-            {\cv FIGURA}
+            %{\cv FIGURA}
         \item \(F\) tem derivadas parciais contínuas em uma região aberta contendo \(\mathcal{R}\).
-            {\cv FIGURA}
+            %{\cv FIGURA}
         \item \(\tilde{T}\) transforma uma região \(\mathcal{S}\) do plano-uv \textit{biunivocamente} em \(\mathcal{R}\) (ou seja \(\tilde{T}:\mathcal{S} \to \mathcal{R}\) é bijetora).
         \item \(\mathcal{S}\) é limitada por uma curva simples, fechada e parcialmente suave \(K\) e \(\tilde{T}\) transforma \(K\) em \(C\).
-            {\cv FIGURA}
+            %{\cv FIGURA}
         \item A \textit{direção positiva} ao longo de \(C\) \((K)\) quando \(\mathcal{R}\)\((\mathcal{S})\) está sempre à esquerda. Analogamente, a \textit{direção negativa} ao longo de \(C\) \((K)\) é quando \(\mathcal{R}\) \((\mathcal{S})\) está sempre à direita.
         \item Quando \((u,v)\) traçar \(K\) uma vez na direção positiva, o ponto \((x,y)\) deverá traçar \(C\) uma vez no sentido positivo \textbf{ou} no sentido negativo.
     \end{enumerate}
@@ -1504,7 +1504,7 @@ Nestas condições obtemos o seguinte resultado.
 
 \begin{example}
     Calcule \(\int\int_\mathcal{R} e^{\frac{y-x}{y+x}}\, dxdy\), em que \(\mathcal{R}\) é a região do plano-xy limitada pelo trapezóide \((0,1), (0,2), (2,0)\) e \((1,0)\).
-        {\cv FIGURA}
+        %{\cv FIGURA}
 
     Como \(y-x\) e \(x+y\) aparecem no integrando, tentamos a seguinte substituição
         \begin{equation}\label{eqn.Substituicao}
@@ -1525,7 +1525,7 @@ Nestas condições obtemos o seguinte resultado.
 
     Para encontrar a região \(\mathcal{S}\) no plano-uv tal que \(T^{-1}(\mathcal{S}) = \mathcal{R}\), note que os lados de \(\mathcal{R}\) estão sobre as retas \[x = 0, x+y = 2, y=0 \text{ e } x+y = 1,\] fazendo \(x = \frac{1}{2}(v-u)\) e \(y = \frac{1}{2}(u+v)\) temos as curvas no plano-uv \[\frac{1}{2}(v-u) = 0, \frac{1}{2}(v-u) + \frac{1}{2}(u+v) = 2, \frac{1}{2}(u+v) = 0 \text{ e } \frac{1}{2}(v-u) + \frac{1}{2}(u+v) = 1,\] ou seja \(T\) leva os lados de \(\mathcal{R}\) nas retas \[v = u, v = 2, v = -u \text{ e } v = 1,\] mais ainda, usando desigualdades, podemos mostrar que os pontos interiores de \(\mathcal{S}\) correspondem as pontos interiores de \(\mathcal{R}\).
 
-    Com isso, conseguimos definir a região \(\mathcal{S}\) no plano-uv: {\cv FIGURA}
+    Com isso, conseguimos definir a região \(\mathcal{S}\) no plano-uv: %{\cv FIGURA}
 
     Além disso, note que quando \((u,v)\) percorre \(v=u\) de \((1,1)\) a \((2,2)\), temos que o ponto correspondente \((x,y)\) percorre a reta \(x=0\) da seguinte forma:
         \begin{itemize}

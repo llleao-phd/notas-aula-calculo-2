@@ -1,5 +1,7 @@
 \chapter{Derivadas parciais}
 
+\section{Definição e propriedades básicas}
+
 Sejam \(f:D_f\subset\R^2 \to \R\) e \((x_0,y_0)\in D_f\). Fixado \(y=y_0\), podemos considerar a função de uma variável \(g(x) = f(x,y_0)\). Assim
 \begin{definition}
     Se \(g'(x_0)\) existe, então \[\frac{\partial f}{\partial x} f(x_0,y_0) = g'(x_0)\] é a \textbf{derivada parcial} de \(f\) em relação a \(x\) no ponto \((x_0,y_0)\). \index{Derivada parcial}
@@ -287,6 +289,44 @@ Note que o gráfico da função \(g(x) = f(x,y_0)\) é a interseção do plano \
     Fixado \(y_0\in\R\), considere a função \[h(x) = f(x,y_0),\; x\in\R.\] Então \[h'(x) = \partial_xf(x,y_0) = 0\,; \forall x\in\R,\] ou seja, \(h\) é contínua (dado que é diferenciável) e \(h'(x) = 0\), para todo \(x\in\R\). Segue então que \(h\) é constante em \(\R\). Portanto \[h(x) = h(0),\;\forall x\in\R,\] daí \[f(x,y_0) = f(0,y_0),\;\forall x\in\R.\] Como \(y_0\in\R\) é arbitrário, segue que \[f(x,y) = f(0,y),\; \forall(x,y)\in\R^2.\] Tomando \(\phi(y) = f(0,y)\) temos que \[f(x,y) = \phi(y),\; \forall(x,y)\in\R^2.\]
 \end{proof}
 
+\subsection{Exercícios}
+
+\begin{enumerate}
+    \item Determine as derivadas parciais de primeira ordem da função.
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[(a)] $f(x,y) = 3x - 2y^4$
+                \item[(b)] $z = y \ln x$
+                \item[(c)] $f(x,y) = x^5 + 3x^3y^2 + 3xy^4$
+                \item[(d)] $z = xe^{3y}$
+                \item[(e)] $f(x,y) = \frac{x-y}{x+y}$
+                \item[(f)] $f(x,y) = x^y$
+                \item[(g)] $z = \sin x \cos y$
+                \item[(h)] $f(x,y) = \frac{xy^2}{x^2+y^2}$
+                \item[(i)] $f(x,y) = \tan^{-1}(x/y)$
+                \item[(j)] $f(x,y) = e^{y/x}$
+                \item[(k)] $z = (x^2+y^2)\ln(x^2+y^2)$                \item[(l)] $f(x,y) = \sin xy$
+            \end{enumerate}
+        \end{multicols}
+    \item Determine as derivadas parciais indicadas.
+        \begin{enumerate}
+            \item[(a)] $f(x,y) = \sqrt{x^2+y^2}, \quad f_x(3,4)$            
+            \item[(b)] $f(x,y) = \sin(2x+3y), \quad f_y(-6,4)$            
+            \item[(c)] $f(x,y,z) = x/(y+z), \quad f_z(3,2,1)$
+        \end{enumerate}
+    \item Determine as derivadas parciais da função $f(x,y) = x^2+y^2$. A seguir, interprete geometricamente $\frac{\partial f}{\partial x}(1,1)$ e $\frac{\partial f}{\partial y}(1,1)$.
+    \item Seja $f(x,y) = x^2 - xy + 2y^2$. Use a definição de derivadas parciais como limites para achar $\frac{\partial f}{\partial x}(x,y)$ e $\frac{\partial f}{\partial y}(x,y)$.
+    \item Considere a função $z = \frac{xy^2}{x^2+y^2}$. Verifique que $x\frac{\partial z}{\partial x} + y\frac{\partial z}{\partial y} = z$.
+    \item Dizemos que $(x_0,y_0)$ é um ponto crítico de $z = f(x,y)$ se $\frac{\partial f}{\partial x}(x_0,y_0) = 0$ e $\frac{\partial f}{\partial y}(x_0,y_0) = 0$. Determine, caso existam, os pontos críticos da função dada.
+        \begin{enumerate}
+            \item[(a)] $f(x,y) = x^2 + y^2$
+            \item[(b)] $f(x,y) = 2x + y^3$
+            \item[(c)] $f(x,y) = x^2 - 2xy + 3y^2 + x - y$
+            \item[(d)] $f(x,y) = x^4 + 4xy + y^4$
+        \end{enumerate}
+    \item (*) Seja \(f: \R^2 \to \R\) e suponha que \(\frac{\partial f}{\partial x}(x,y = 0 = \frac{\partial f}{\partial y}(x,y\) para todo \((x,y)\in\R^2\). Prove que \(f\) é constante.
+\end{enumerate}
+
 \section{Derivadas de funções definidas implicitamente}
 
 Dada a equação \[z = \sqrt{1 - x^2 - y^2},\; x^2 + y^2 < 1\] dizemos que \(z\) é uma \textbf{função explícita}\index{Funções de duas variáveis a valores reais! Implícita} de \((x,y)\), pois podemos escrever \(z = f(x,y)\), com \(f(x,y) = \sqrt{1 - x^2 - y^2}\) e \(D_f = \{(x,y)\in\R^2 : x^2 + y^2 < 1\}\).
@@ -382,6 +422,13 @@ também são definidas pela equação \[x^2 + y^2 + z^2 - 1 = 0.\]
 desde que \(e^{xyz} xy - 2z \neq 0\).
 \end{example}
 
+\subsection{Exercícios}
+
+\begin{enumerate}
+    \item Suponha que a função $z = z(x,y)$ admita derivadas parciais em todos os pontos de seu domínio e que seja dada implicitamente pela equação $xyz + z^3 = x$. Expresse $\frac{\partial z}{\partial x}$ e $\frac{\partial z}{\partial y}$ em termos de $x, y, z$.
+\end{enumerate}
+
+
 \section{Derivadas parciais para funções de mais de duas variáveis}
 
 As derivadas parciais também podem ser definidas para funções de três ou mais variáveis e as definições são análogas ao que fizemos para funções de duas variáveis. Por exemplo, definimos a derivada parcial em relação a \(x\) da função \(f(x,y,z)\) pondo \[\frac{\partial f}{\partial x} = \lim_{\to 0} \frac{f(x+h,y,z) - f(x,y,z)}{h}\] e esta é determinada olhando \(x\) e \(y\) como constantes e derivamos \(f(x,y,z)\) em relação a \(x\).
@@ -397,6 +444,16 @@ Em geral, se \(u = f(x_1,x_2,\dots,x_n)\), então sua derivada parcial em relaç
 \begin{example}
     Determine as derivadas parciais da função \(f(x,y,z) = e^{x,y,z}\). \[\partial_x f(x,y,z) = e^{xyz} yz,\; \partial_y f(x,y,z) = e^{xyz} xz\] e \[\partial_z f(x,y,z) = e^{xyz} xy.\]
 \end{example}
+
+\subsection{Exercícios}
+
+\begin{enumerate}
+    \item Calcule as derivadas parciais das seguqintes funções
+        \begin{enumerate}
+            \item $f(x,y,z) = xy^2z^3 + 3yz$
+            \item $f(x,y,z) = \ln(x+2y+3z)$
+        \end{enumerate}
+\end{enumerate}
 
 \section{Derivadas parciais de ordem superior}
 
@@ -437,6 +494,27 @@ O exemplo anterior nos mostra que a igualde \(\frac{\partial^2 f}{\partial x \pa
 \begin{theorem}[Schwarz]\index{Teorema! Schwarz}
     Seja \(f:D_f\subset\R^2 \to \R^2\) com \(D_f\) aberto. Se todas as derivadas parciais de 2º ordem existem e são contínuas em \(D_f\), então \[\frac{\partial^2 f}{\partial x \partial y}(x_0,y_0) = \frac{\partial^2 F}{\partial y \partial x}(x_0,y_0),\; \forall (x_0,y_0)\in D_f.\]
 \end{theorem}
+
+\subsection{Exercícios}
+
+\begin{enumerate}
+    \item Determine as derivadas parciais de segunda ordem.
+        \begin{enumerate}
+            \item \(f(x,y) = x^4 + 3x^2y^3\)
+            \item \(x = \frac{x}{x+y}\)
+            \item \(f(x,y) = e^{-x} \sin(y)\)
+        \end{enumerate}
+    \item Verifique se as condições do Teorema de Schwarz são verdadeiras.
+        \begin{enumerate}
+            \item \(f(x,y) = x^5y^4 - 3x^2y^3 + 2x^2\)
+            \item \(z = \ln\sqrt{x^2 + y^2}\).
+        \end{enumerate}
+    \item Seja \[f(x,y) = \begin{cases}
+        xy\frac{x^2 - y^2}{x^2 + y^2},\; (x,y)\neq(0,0) \\
+        0,\; (x,y)=(0,0).
+    \end{cases}\] Calcule \(\frac{\partial^2 f}{\partial x \partial y}(0,0)\) e \(\frac{\partial^2 f}{\partial y \partial x}(0,0)\).
+    \item Verifique que \(x \frac{\partial^2 f}{\partial x \partial y} + y \frac{\partial^2 f}{\partial y \partial y} = 0 \), se \(f(x,y) = (x+y)e^{\frac{x}{y}}\).
+\end{enumerate}
 
 \section{Funções diferenciáveis}
 
@@ -678,6 +756,33 @@ Muitas vezes é mais fácil verificar a continuidade das derivadas parciais do q
 
     \textbf{Pergunta. } Que conclusão podemos obter a partir desse exercício?
 \end{exercise}
+
+\subsection{Exercícios}
+
+\begin{enumerate}
+    \item Prove, usando a definição, que as funções abaixo são diferenciáveis.
+        \begin{enumerate}
+            \item \(f(x,y) = xy\)
+            \item \(f(x,y) = x + y\)
+            \item \( f(x,y) = x^2 y^2 \)
+            \item \(f(x,y) = \frac{1}{x+y}\)
+        \end{enumerate}
+    \item Estude a diferenciabildade das seguintes funções em \((0,0)\). Justifique!
+        \begin{enumerate}
+            \item \(f(x,y) = \begin{cases}
+                \frac{2xy^2}{x^2 + y^4},\; (x,y)\neq(0,0) \\
+                0,\; (x,y)=(0,0)
+            \end{cases}\)
+            \item \(f(x,y) = \begin{cases}
+                \frac{xy^2}{x^2+y^2},\; (x,y)\neq(0,0) \\
+                0,\; (x,y)=(0,0)
+            \end{cases}\)
+            \item \(f(x,y) = \begin{cases}
+                \frac{y^4}{x^2+y^2},\; (x,y)\neq(0,0) \\
+                0,\; (x,y)=(0,0)
+            \end{cases}\)
+        \end{enumerate}
+\end{enumerate}
 
 \section{Plano tangente e reta normal}
 
@@ -3689,3 +3794,4 @@ daí concluímos que \(2x(1-\mu) = 2z(1-\mu)\),
         \end{itemize}
     Portanto \(\left( \frac{1+\sqrt{7}}{2},0,\frac{1-\sqrt{7}}{2} \right) \text{ e } \left( \frac{1-\sqrt{7}}{2},0,\frac{1+\sqrt{7}}{2} \right)\) são os pontos de \(B\) mais afastados da origem. Mais ainda, \((0,1,0)\) é o ponto mais próximo da origem.
 \end{example}
+
