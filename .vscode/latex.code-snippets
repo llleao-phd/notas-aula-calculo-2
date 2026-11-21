@@ -1,0 +1,29 @@
+{
+  "Infinito": {
+    "scope": "latex",
+    "prefix": "@oo",
+    "body": "\\infty",
+    "description": "Insere o símbolo de infinito"
+  },
+
+  "overrigtharrow": {
+    "scope": "latex",
+    "prefix": "@->",
+    "body": "\\overrightarrow{$1}",
+    "description": "Insere o comando \\overrightarrow"
+  },
+
+  "lefteqn": {
+  "scope": "latex",
+  "prefix": "@lq",
+  "body": "\\lefteqn{$1}",
+  "description": "Insere \\lefteqn"
+  },
+
+  "overline": {
+  "scope": "latex",
+  "prefix": "@bar",
+  "body": "\\overline{$1}",
+  "description": "Insere \\overline"
+}
+}

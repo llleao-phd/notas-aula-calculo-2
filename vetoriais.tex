@@ -6,7 +6,8 @@
     Uma \textit{função de uma variável real a valores em} \(\R^2\)\label{Curva} é uma função \(F:A\subset\R \to \R^2\). Ou seja, para cada \(t\in A\), \(F\) associa um único vetor \(F(t)\in\R^2\).
 \end{definition}
 
-Vamos supor sempre que \(A\) é um intervalo ou união de intervalos {\cv FIGURA}
+Vamos supor sempre que \(A\) é um intervalo ou união de intervalos 
+    %{\cv FIGURA}
 
 \textbf{Notações. }
     \begin{enumerate}
@@ -21,7 +22,7 @@ Vamos supor sempre que \(A\) é um intervalo ou união de intervalos {\cv FIGURA
 Considerando a observação acima, muitas vezes chamamos a função \(F\) de \textit{curva em } \(\R^2\). Mais ainda, neste contexto é comum denotarmos \(F: I \to \R^2\) por \(\gamma: I \to \R^2\), com \(I\) sendo um intervalo (ou união de intervalos).
 
 \begin{remark}
-    Note que pela definição da curva \(F: A \to \R^2\) existem, e são únicas, duas funções \(x: A \to \R\) e \(y: A \to \R\) tais que \[F(t) = (x(t), y(t)),\; t\in A\]{\cv FIGURA}
+    Note que pela definição da curva \(F: A \to \R^2\) existem, e são únicas, duas funções \(x: A \to \R\) e \(y: A \to \R\) tais que \[F(t) = (x(t), y(t)),\; t\in A\]%{\cv FIGURA}
 \end{remark}
 
 \begin{definition}
@@ -38,7 +39,7 @@ Considerando a observação acima, muitas vezes chamamos a função \(F\) de \te
 \begin{example}
     Suponha que \(A = I = [a,b]\) e \(x(t)\) e \(y(t)\) são contínuas em \(I\).
 
-    {\cv FIGURA}
+    %{\cv FIGURA}
 \end{example}
 
 \begin{definition}
@@ -60,7 +61,7 @@ Considerando a observação acima, muitas vezes chamamos a função \(F\) de \te
     Temos que \[F(0) = ((0),2(0)) = (0,0) \text{ e } F(1) = ((1),2(1)) = (1,2).\] Além disso, as equações paramétricas de \(F\) são dadas por \[\begin{cases}
         x = t, \\
         y = 2t,
-    \end{cases},\; t\in\R.\] Agora, \(x = t\) e \(y = 2t\) implica que \(y = 2x\), para todo \(x\in\R\), logo a imagem de \(F\) é a reta \(y = 2x\). {\cv FIGURA}
+    \end{cases},\; t\in\R.\] Agora, \(x = t\) e \(y = 2t\) implica que \(y = 2x\), para todo \(x\in\R\), logo a imagem de \(F\) é a reta \(y = 2x\). %{\cv FIGURA}
 
     Além disso, se \(t_1 < t_2\), então \(2x_1 < 2x_2\), portanto a curva tem sentido de \(-\infty\) para \(\infty\).
 \end{example}
@@ -73,7 +74,7 @@ Considerando a observação acima, muitas vezes chamamos a função \(F\) de \te
         y = t^2,
     \end{cases} t\in \R\], ou seja \(y = x^2\), para todo \(x\in\R\).
 
-    Ou seja, a imagem de \(F\) coincide com a parábola \(y = x^2\), para \(x\in\R\). {\cv FIGURA}
+    Ou seja, a imagem de \(F\) coincide com a parábola \(y = x^2\), para \(x\in\R\). %{\cv FIGURA}
 
     Mais ainda,
         \begin{itemize}
@@ -89,7 +90,7 @@ Considerando a observação acima, muitas vezes chamamos a função \(F\) de \te
     A imagem de \(F\) é a curva de equações paramétricas \[\begin{cases}
         x = \cos(t),\\
         y = \sin(t),
-    \end{cases}\; t\in\R\] logo \(x^2 + y^2 = 1.\) Ou seja, \(F\) é a circunferência centrada na origem de raio \(1\). {\cv FIGURA}
+    \end{cases}\; t\in\R\] logo \(x^2 + y^2 = 1.\) Ou seja, \(F\) é a circunferência centrada na origem de raio \(1\). %{\cv FIGURA}
 
     Mais ainda,
         \begin{itemize}
@@ -113,7 +114,7 @@ Considerando a observação acima, muitas vezes chamamos a função \(F\) de \te
         y = \sin(t)
     \end{cases}\; t\in[0,2\pi],\] ou seja, \(\frac{x^2}{4} + y^2 = 1\).
 
-    Assim, para cada \(t\in[0,2\pi]\), o ponto \(F(t) = (2\cos(t),\sin(t))\) percorre a elipse \(\frac{x^2}{4} + y^2 = 1\) {\cv FIGURA}.
+    Assim, para cada \(t\in[0,2\pi]\), o ponto \(F(t) = (2\cos(t),\sin(t))\) percorre a elipse \(\frac{x^2}{4} + y^2 = 1\) %{\cv FIGURA}.
 
     \begin{exercise}
         Estude a orientação da curva obtida.
@@ -126,7 +127,7 @@ Considerando a observação acima, muitas vezes chamamos a função \(F\) de \te
     A imagem de \(F\) é a curva de equações paramétricas \[\begin{cases}
         x = e^{-t}\cos(t) \\
         y = e^{-t}\sin(t)
-    \end{cases}\; t\geq 0,\] logo \[x^2 + y^2 = (e^{-t})^2(\cos^2(t) + \sin^2(t)) = e^{-2t},\] daí concluímos que \(x^2 + y^2 = e^{-2t}\). Observe que não eliminamos o parâmetro \(t\), porém podemos afirmar que, para cada \(t\geq 0\), \(F(t)\) percorre a circunferência centrada na origem de raio \(e^{-2t}\), como \(e^{-2t}\to 0\), quando \(t\to\infty\), concluímos que \(F(t)\) gira em torno da origem e sua distância à origem tende a zero.{\cv FIGURA}
+    \end{cases}\; t\geq 0,\] logo \[x^2 + y^2 = (e^{-t})^2(\cos^2(t) + \sin^2(t)) = e^{-2t},\] daí concluímos que \(x^2 + y^2 = e^{-2t}\). Observe que não eliminamos o parâmetro \(t\), porém podemos afirmar que, para cada \(t\geq 0\), \(F(t)\) percorre a circunferência centrada na origem de raio \(e^{-2t}\), como \(e^{-2t}\to 0\), quando \(t\to\infty\), concluímos que \(F(t)\) gira em torno da origem e sua distância à origem tende a zero.%{\cv FIGURA}
 \end{example}
 
 \begin{exercise}
@@ -134,7 +135,7 @@ Considerando a observação acima, muitas vezes chamamos a função \(F\) de \te
 \end{exercise}
 
 \begin{definition}
-    Uma \textit{função de uma variável real a valores em } \(\R^3\)\label{Curva} é uma função \(f: A \to \R^3\), com \(A\subset\R\). Ou seja, a cada \(t\in A\), \(F\) associa um único vetor \(F(t) \in\R^3\). {\cv FIGURA}
+    Uma \textit{função de uma variável real a valores em } \(\R^3\)\label{Curva} é uma função \(f: A \to \R^3\), com \(A\subset\R\). Ou seja, a cada \(t\in A\), \(F\) associa um único vetor \(F(t) \in\R^3\). %{\cv FIGURA}
 \end{definition}
 
 \textbf{Notações. }
@@ -152,7 +153,7 @@ Considerando essao observação, é comum chamar a função \(F\) de \textit{cur
 Neste contexto, denotamos \(F:I\to\R^3\) por \(\gamma:I\to\R^3\).
 
 \begin{remark}
-    Pela definição da curva \(F:A\to\R^3\) existem, e são únicas, três funções \(x : A\to\R\), \(y:A\to\R\) e \(z:A\to\R\) tais que \[F(t) = (x(t),y(t),z(t)),\; t\in A.\]{\cv FIGURA}
+    Pela definição da curva \(F:A\to\R^3\) existem, e são únicas, três funções \(x : A\to\R\), \(y:A\to\R\) e \(z:A\to\R\) tais que \[F(t) = (x(t),y(t),z(t)),\; t\in A.\]%{\cv FIGURA}
 \end{remark}
 
 \begin{definition}
@@ -176,7 +177,7 @@ Como no caso \(\R^2\), também podemos definir a orientação de uma curva em \(
         x = t\\
         y = t,\\
         z = t
-    \end{cases}\; t\geq 0\] é a reta que passa pela origem e é paralela ao vetor \((1,1,1)\).{\cv FIGURA}
+    \end{cases}\; t\geq 0\] é a reta que passa pela origem e é paralela ao vetor \((1,1,1)\).%{\cv FIGURA}
 
     Lembre que a reta que passa por \((x_0,y_0,z_0)\) e é paralela ao vetor \(\overrightarrow{a} = (a_1,a_2,a_3)\) é dada por \[(x,y,z) = (x_0,y_0,z_0) + t(a_1,a_2,a_3) = (x_0 + a_1 t, y_0 + a_2 t, z_0 + a_3 t),\; t\in\R,\] logo as equações paramétricas desta reta são \[\begin{cases}
         x = x_0 + a_1 t \\
@@ -194,7 +195,7 @@ Como no caso \(\R^2\), também podemos definir a orientação de uma curva em \(
         z = 1
     \end{cases}\; t\in \R\] portanto \(x^2 + y^2 = 1\) e \(z = 1\).
 
-    Logo, \(z=1\) está fixado e a projeção de \(F(t)\) no plano-xy é a circunferência de centro na origem e raio \(1\). Portanto a imagem de \(F\) é uma circunferência de centro no eixo-z e raio \(1\). {\cv FIGURA}
+    Logo, \(z=1\) está fixado e a projeção de \(F(t)\) no plano-xy é a circunferência de centro na origem e raio \(1\). Portanto a imagem de \(F\) é uma circunferência de centro no eixo-z e raio \(1\). %{\cv FIGURA}
 \end{example}
 
 \begin{example}
@@ -206,7 +207,7 @@ Como no caso \(\R^2\), também podemos definir a orientação de uma curva em \(
         z = bt
     \end{cases}\; t\geq 0\] logo \(x^2 + y^2 = 1\) e \(z = bt\), para todo \(t\geq 0\).
 
-    Assim, a projeção de \(F(t)\) no plano-xy é a circunferência \(x^2 + y^2 = 1\) e, por outro lado, no eixo-z temos um movimento crescente e uniforme dado pela equação \(z = bt\). {\cv FIGURA}
+    Assim, a projeção de \(F(t)\) no plano-xy é a circunferência \(x^2 + y^2 = 1\) e, por outro lado, no eixo-z temos um movimento crescente e uniforme dado pela equação \(z = bt\). %{\cv FIGURA}
 \end{example}
 
 Muitas vezes é necessário considerar funções de uma variável real a valores em \(\R^n\) (\(n>3\)) e as definições são análogas ao que fizemos nos casos \(n=2\) e \(n=3\).
@@ -238,23 +239,679 @@ Lembre que se \(F: A\to\R^n\) é uma função vetorial, então existem, e são �
 \begin{definition}
     Sejam \(F,G : A \to \R^n\) funções vetoriais, \(f:A\to\R\) uma função a valores reais e \(k\) uma constante. Definimos
         \begin{enumerate}
-            \item a função \textit{soma} de \(F\) e \(G\) por \(F + G : A \to \R^n\) é dada por \[(F+G)(t) = F(t) + G(t),\]
-            \item a função \textit{produto} de \(F\) pela constante \(k\) por \(k\cdot F: A \to \R^n\) é dada por \[(k\cdot F)(t) = k\cdot F(t),\]
-            \item a função \textit{produto} de \(F\) pela função escalar \(f\) por \(f\cdot F: A \to \R^n\) é dada por \[(f\cdot F)(t) = f(t)\cdot F(t),\]
-            \item a função \textit{produto escalar} de \(F\) e \(G\) por \(F\cdot G: A \to\R\) é dada por \[(F\cdot G)(t) = F(t)\cdot G(t) = f_1(t) g_1(t) + \dots f_n(t) g_n(t),\] no qual \(F = (f_1,\dots,f_n)\) e \(G = (g_1,\dots,g_n)\),
-            \item para \(n=3\), o \textit{produto vetorial} de \(F\) e \(G\) por \(F\times G: A \to \R^3\) é dada por \[(F\times G)(t) = F(t) \times G(t) = \left\|\begin{matrix}
+            \item a função \textit{soma}\label{Funções vetorias!Soma} de \(F\) e \(G\) por \(F + G : A \to \R^n\) é dada por \[(F+G)(t) = F(t) + G(t),\]
+            \item a função \textit{produto}\label{Funções vetorias!Produto por escalar} de \(F\) pela constante \(k\) por \(k\cdot F: A \to \R^n\) é dada por \[(k\cdot F)(t) = k\cdot F(t),\]
+            \item a função \textit{produto}\label{Funções vetorias!Produto por função escalar} de \(F\) pela função escalar \(f\) por \(f\cdot F: A \to \R^n\) é dada por \[(f\cdot F)(t) = f(t)\cdot F(t),\]
+            \item a função \textit{produto escalar}\label{Funções vetorias!Produto escalar} de \(F\) e \(G\) por \(F\cdot G: A \to\R\) é dada por \[(F\cdot G)(t) = F(t)\cdot G(t) = f_1(t) g_1(t) + \dots f_n(t) g_n(t),\] no qual \(F = (f_1,\dots,f_n)\) e \(G = (g_1,\dots,g_n)\),
+            \item para \(n=3\), o \textit{produto vetorial}\label{Funções vetorias!Produto vetorial} de \(F\) e \(G\) por \(F\times G: A \to \R^3\) é dada por \[(F\times G)(t) = F(t) \times G(t) = \left|\begin{matrix}
                 \overrightarrow{i} & \overrightarrow{j} & \overrightarrow{k} \\
                 f_1(t) & f_2(t) & f_3(t) \\
                 g_1(t) & g_2(t) & g_3(t)
-            \end{matrix}\right\|\]
+            \end{matrix}\right|\]
         \end{enumerate}
 \end{definition}
 
+\textbf{Notação. } Uma notação comum para uma função vetorial \(F: A \to \R^n\) é \(\overrightarrow{F}\).
 
-% \section{Limite e continuidade de funções vetoriais}
+\begin{example}
+    Sejam \(\overrightarrow{F} \) e \(\overrightarrow{G}\) as funções dadas por \(\overrightarrow{F}(t) = (t, t^2, 2)\) e \(\overrightarrow{G}(t) = (3,t,t)\). Calcule
+        \begin{enumerate}
+            \item \(\overrightarrow{F}(t)\cdot\overrightarrow{G}(t)\).
+            \item \(t\overrightarrow{F}(t)\).
+            \item \(\overrightarrow{F}(t)\times\overrightarrow{G}(t)\).
+            \item \(2\overrightarrow{F}(t) + 3\overrightarrow{G}(t)\).
+        \end{enumerate}
 
-% \section{Derivada de funções vetoriais}
+    Temos
+        \begin{align*}
+            \overrightarrow{F}(t)\cdot\overrightarrow{G}(t)
+                & = (t,t^2,2)\cdot(3,t,t) \\
+                & = 3t + 3t^2 + 2t\\
+                & = 3t^2 + 5t.\\
+            t\cdot\overrightarrow{F}(t)
+                & = t(t,t^2,2)\\
+                & = (t^2, t^3,3t).\\
+            \overrightarrow{F}(t)\times\overrightarrow{G}(t)
+                & = \left|\begin{matrix}
+                    \overrightarrow{i} & \overrightarrow{j} & \overrightarrow{k}\\
+                    t & t^2 & 2 \\
+                    3 & t & t
+                \end{matrix}\right| \\
+                & = (t^2-2t)\overrightarrow{i} + (6-t^2)\overrightarrow{j} + (t^2-3t^2)\overrightarrow{k} \\
+                & = (t^2 - 2t, 6-t^2, -2t^2)\\
+            2\overrightarrow{F}(t) + 3\overrightarrow{G}(t)
+                & = 2(t,t^2,2) + 3(3,t,t) \\
+                & = (2t+9,2t^2+3t,4+3t)
+        \end{align*}
+\end{example}
 
-% \chapter{Campos vetoriais: Ideia, conceito e motivação}
+\begin{exercise}
+    Sejam as funções \(\overrightarrow{F}\), \(\overrightarrow{G}\) e \(f\) definidas por \(\overrightarrow{F}(t) = (\cos(3t), \sin(2t), t^2)\), \(\overrightarrow{G}(t) = (3,t^3,\arctan(t))\) e \(f(t) = e^{2t}\), \(t\in\R\). Encontre
+        \begin{enumerate}
+            \item o produto escalar entre \(\overrightarrow{F}\) e \(\overrightarrow{G}\),
+            \item o produto de \(\overrightarrow{F}\) pela função escalar \(f\),
+            \item o produto de vetorial de \(\overrightarrow{F}\) e \(\overrightarrow{G}\).
+        \end{enumerate} 
+\end{exercise}
 
-% \section{Rotacional e Divergência}
+\section{Limite e continuidade de funções vetoriais}
+
+\begin{definition}\label{Funções vetorias!Limite}
+    Seja \(\overrightarrow{F}: D_F \to \R^n\) uma função vetorial e \(t_0\) um ponto de acumulação de \(D_F\). Dizemos que \(\overrightarrow{F}(t)\) tende a \(L\in\R^n\) quando \(t\) tende a \(t_0\) e escrevemo \[\lim_{t\to t_0} \overrightarrow{F}(t) = L,\] se, para todo \(\varepsilon>0\), existe \(\delta>0\) tal que, para todo \(t\in D_F\) tal que \[0 < |t-t_0| < \delta \Rightarrow \|\overrightarrow{F}(t) - L\| < \varepsilon.\]
+\end{definition}
+
+\begin{remark}
+    Lembre que \[\|\overrightarrow{F}(t) - L\| < \varepsilon \Leftrightarrow \overrightarrow{F}(t) \in B_\varepsilon(L),\] no qual \[B_\varepsilon(L) = \{y\in\R^n : \|y-L\|<\varepsilon \} \] é a bola aberta de centro \(L\) e raio \(\varepsilon\) em \(R^n\).
+\end{remark}
+
+\textbf{Interpretação geométrica para o caso}
+
+Dizer que \(\lim_{t\to t_0} F(t)\), \(L\in\R^n\), significa que dado \(\varepsilon>0\), existe \(\delta>0\) tal que \[t\in(t_0-\delta,t_0+\delta), t\in D_F, t\neq t_0 \Rightarrow F(t)\in B_\varepsilon(L)\]%{\cv FIGURA}
+
+Lembre que para funções de uma variável a valores reais, sabemos que \[\lim_{t\to t_0} f(t) = a \Leftrightarrow \lim_{t\to t_0} |f(t) - a| = 0.\]
+
+\begin{proposition}\label{prop.Limite0}
+    Seja \(\overrightarrow{F}\) uma função vetorial com valores em \(\R^n\) e seja \(L\in\R^n\). Então \[\lim_{t\to t_0} F(t) = L \Leftrightarrow \lim_{t\to t_0} \|F(t) - L\| = 0\]
+\end{proposition}
+
+\begin{proof}
+    Temos que
+        \begin{align*}
+            \lim_{t\to t_0} F(t) = L
+                & \Leftrightarrow \forall \varepsilon>0, \exists \delta>0 (t\in D_F, 0<|t-t_0|<\delta \Rightarrow \|F(t) - L\|<\varepsilon) \\
+                & \Leftrightarrow \forall \varepsilon>0, \exists \delta>0 (t\in D_F, 0<|t-t_0|<\delta \Rightarrow |\|F(t) - L\| - 0|<\varepsilon) \\
+                & \Leftrightarrow \lim_{t\to t_0} \|F(t) - L\| = 0.
+        \end{align*}
+\end{proof}
+
+Outra propriedade importante é dada no seguinte teorema
+
+\begin{theorem}\label{thm.LimitePorCoordenadas}
+    Sejam \(\overrightarrow{F} = (f_1,f_2,\dots,f_n)\) uma função vetorial de uma variável real e \(L = (l_1,l_2,\dots,l_n)\in\R^n\). Então \[\lim_{t\to t_0} \overrightarrow{F}(t) = L \Leftrightarrow \lim_{t\to t_0} f_i(t) = l_i,\; i\in\{1,2,\dots,n\}.\]
+\end{theorem}
+
+\begin{proof}
+    Suponha que \[\lim_{t\to t_0} \overrightarrow{F}(t) = L,\] então, pela Proposição \ref{prop.Limite0}, \[\lim_{t\to t_0} \|\overrightarrow{F}(t) - L\| = 0.\]
+
+    Agora, para cada \(i\in\{1,2,\dots,n\}\), temos
+        \begin{align*}
+            \|\overrightarrow{F}(t) - L\|
+                & = \sqrt{(f_1(t) - l_1)^2 + (f_2(t) - l_2)^2 + \dots + (f_n(t) - l_n)^2} \\
+                & \geq \sqrt{(f_i(t) - l_i)^2}\\
+                & = |f_i(t) - l_i|.
+        \end{align*}
+
+    Assim, temos \[0 \leq |f_i(t) - l_i| \leq \|\overrightarrow{F}(t) - L\|\] e \(\lim_{t\to t_0} \|\overrightarrow{F}(t) - L\| = 0\), logo, pelo Teorema do Sanduíche, para cada \(i\in\{1,2,\dots,n\}\), \[\lim_{t\to t_0} |f_i(t) - l_i| = 0\] ou seja, \(\lim_{t\to t_0} f_i(t) = l_i\).
+
+    Suponha agora que \(\lim_{t\to t_0} f_i(t) = l_i\), para todo \(i\in\{1,2,\dots,n\}\), então \(\lim_{t\to t_0} |f_i(t) - l_i| = 0\), assim \[\lim_{t\to t_0} \|\overrightarrow{F}(t) - L\| = \lim_{t\to t_0} \sqrt{(f_1(t) - l_1)^2 + \dots + (f_n(t) - l_n)^2} = 0,\] ou seja \(\lim_{t\to t_0} \|\overrightarrow{F}(t) - L\| = 0\), logo \(\lim_{t\to t_0} \overrightarrow{F}(t) = L\).
+\end{proof}
+
+Note que o Teorema \ref{thm.LimitePorCoordenadas} nos diz que \[\lim_{t\to t_0} F(t) = \left( \lim_{t\to t_0} f_1(t), \dots, \lim_{t\to t_0} f_n(t) \right)\] desde que cada \(\lim_{t\to t_0} f_i(t)\) exista. 
+
+Assim, a definição de limite pode ser reescrita da seguinte forma
+
+\begin{definition}
+    Seja \(\overrightarrow{F}: D_F \to \R^n\) uma função vetorial de uma variável real. Então \[\lim_{t\to t_0} F(t) = \left( \lim_{t\to t_0} f_1(t), \dots, \lim_{t\to t_0} f_n(t) \right)\] desde que \(\lim_{t\to t_0} f_i(t)\) exista para cada \(i\in\{1,2,\dots,n\}\).
+\end{definition}
+
+\begin{example}
+    Seja \(\overrightarrow{F}(t) = \frac{\sin(t)}{t}\overrightarrow{i} + (t^2 + 3)\overrightarrow{j}\). Calcule \(\lim_{t\to 0} \overrightarrow{F}(t)\).
+
+    Temos que \[\lim_{t\to 0}\overrightarrow{F}(t) = \lim_{t\to 0} \frac{sin t}{t}\overrightarrow{i} + \lim_{t\to 0} (t^2 + 3)\overrightarrow{j} = \overrightarrow{i} + 3\overrightarrow{j} = (1,3).\]
+\end{example}
+
+A partir das conclusões acima, podemos provar também que
+
+\begin{proposition}
+    Se \(\overrightarrow{F} = (f_1,f_2,\dots,f_n)\) e \(\overrightarrow{G} = (g_1,g_2,\dots,g_n)\) são funções vetoriais de uma variável real e \[\lim_{t\to t_0} \overrightarrow{F}(t) = \overrightarrow{a} \text{ e } \lim_{t\to t_0} \overrightarrow{G}(t) = \overrightarrow{b},\] com \(\overrightarrow{a} = (a_1,\dots,a_n)\) e \(\overrightarrow{b} = (b_1,\dots,b_n)\), então \[\lim_{t\to t_0} \overrightarrow{F}(t) \cdot \overrightarrow{G}(t) = \overrightarrow{a}\cdot\overrightarrow{b}.\]
+\end{proposition}
+
+\begin{proof}
+    Como \(\lim_{t\to t_0} \overrightarrow{F}(t) = \overrightarrow{a}\) e \(\lim_{t\to t_0} \overrightarrow{G}(t) = \overrightarrow{b}\), sabemos que \(\lim_{t\to t_0} f_i(t) = a_i\) e \(\lim_{t\to t_0} g_i(t) = b_i\), logo
+        \begin{align*}
+            \lim_{t\to t_0} \overrightarrow{F}(t) \cdot \overrightarrow{G}(t)
+                & = \lim_{t\to t_0} \left[ f_1(t)\cdot g_1(t) + f_2(t)\cdot g_2(t) + \dots + f_n(t) \cdot g_n(t) \right] \\
+                & = \lim_{t\to t_0} f_1(t)g_1(t) + \dots + \lim_{t\to t_0} f_n(t) g_n(t) \\
+                & = a_1 b_1 + \dots + a_n b_n \\
+                & = \overrightarrow{a}\cdot\overrightarrow{b}
+        \end{align*}
+\end{proof}
+
+\begin{definition}\label{Funções vetorias!Continuidade}
+    Sejam \(\overrightarrow{F}:D_F\to\R^n\) e \(t_0\in D_F\). Dizemos que \(\overrightarrow{F}\) é \textit{contínua} em \(t_0\) se \[\lim_{t\to t_0} \overrightarrow{F}(t) = \overrightarrow{F}(t_0).\]
+\end{definition}
+
+\begin{remark}
+    Dizemos que \(\overrightarrow{F}\) é contínua em \(B\subset D_F\) se \(\overrightarrow{F}\) é contínua em todo \(t\in B\). Dizemos simplesmente que \(\overrightarrow{F}\) é contínua se \(\overrightarrow{F}\) é contínua para todo \(t\in D_F\).
+\end{remark}
+
+Do Teorema \ref{thm.LimitePorCoordenadas},
+
+\begin{proposition}
+    \(\overrightarrow{F} = (f_1,f_2,\dots,f_n)\) é contínua em \(t_0\) se, e somente se, \(f_i\) é contínua para todo \(i\in\{1,2,\dots,n\}\).
+\end{proposition}
+
+\begin{proof}
+    Pela definição de continuidade e pelo Teorema \ref{thm.LimitePorCoordenadas}, podemos concluir que
+        \begin{align*}
+            \lim_{t\to t_0} \overrightarrow{F}(t) = \overrightarrow{F}(t_0)
+                & \Leftrightarrow \left( \lim_{t\to t_0}f_1(t),\dots, \lim_{t\to t_0} f_n(t) \right) = (f_1(t_0),\dots,f_n(t_0)) \\
+                & \Leftrightarrow \lim_{t\to t_0} f_i(t) = f_i(t_0).
+        \end{align*}
+\end{proof}
+
+\section{Derivada de funções vetoriais}
+
+\begin{definition}
+    Sejam \(\overrightarrow{F}:D_F \to \R^n\) e \(t_0\in D_F\). A \textit{derivada}\label{Funções vetorias!Derivada} de \(\overrightarrow{F}\) em \(t_0\) é definida por \[\frac{D\overrightarrow{F}}{dt} (t_0) = \lim_{t\to t_0} \frac{\overrightarrow{F}(t) - \overrightarrow{F}(t_0)}{t-t_0}\] desde que o limite exista.
+\end{definition}
+
+\begin{remark}
+    Se \(\overrightarrow{F}\) admite derivada em \(t_0\), dizemos que \(\overrightarrow{F}\) é \textit{diferenciável} ou \textit{derivável} em \(t_0\).
+\end{remark}
+
+\begin{remark}
+    Dizemos que \(\overrightarrow{F}\) é diferenciável em \(B\subset D_F\) se for diferenciável em cada \(t\in B\). Além disso, dizemos que \(\overrightarrow{F}\) é diferenciável, se for diferenciável em cada \(t\in D_F\).
+\end{remark}
+
+\begin{example}
+    Seja \(\overrightarrow{F}(t) = (\cos t,\sin t, t)\). Encontre \(F'(t)\) para \(t_0\in\R\).
+
+    Temos que
+        \begin{align*}
+            F'(t_0)
+                & = \lim_{t\to t_0} \frac{F(t) - F(t_0)}{t-t_0} \\
+                & = \lim_{t\to t_0}\left( \frac{\cos t - \cos t_0}{t-t_0}, \frac{\sin t - \sin t_0}{t-t_0}, \frac{t-t_0}{t-t_0} \right) \\
+                & = \left( \lim_{t\to t_0}\frac{\cos t - \cos t_0}{t-t_0}, \lim_{t\to t_0}\frac{\sin t - \sin t_0}{t-t_0}, \lim_{t\to t_0}\frac{t-t_0}{t-t_0} \right) \\
+                & = \left( (\cos t)'\big|_{t=t_0}, (\sin t)'\big|_{t=t_0}, (t)'\big|_{t=t_0} \right) \\
+                & = (-\sin t_0, \cos t_0, 1)
+        \end{align*}
+\end{example}
+
+Este exemplo motiva o seguinte resultado
+
+\begin{theorem}
+    Sejam \(\overrightarrow{F} = (f_1,f_2,\dots,f_n)\) e \(t_0\in D_F\). Então, \(\overrightarrow{F}\) é diferenciável em \(t_0\) se, e somente se, \(f_1, f_2,\dots,f_n\) são diferenciáveis em \(t_0\). Mais ainda, se \(\overrightarrow{F}\) é diferenciável em \(t_0\), então \[\overrightarrow{F}'(t_0) = (f_1'(t_0), \dots, f_n'(t_0)).\]
+\end{theorem}
+
+\begin{proof}
+    Inicialmente, note que \[\frac{\overrightarrow{F}(t) - \overrightarrow{F}(t_0)}{t-t_0} = \left( \frac{f_1(t)-f_1(t_0)}{t-t_0}, \frac{f_2(t) - f_2(t_0)}{t-t_0}, \frac{f_n(t) - f_n(t_0)}{t-t_0} \right).\] Pelo Teorema \ref{thm.LimitePorCoordenadas}, \[\lim_{t\to t_0} \frac{\overrightarrow{F}(t) - \overrightarrow{F}(t_0)}{t-t_0} \text{ existe } \Leftrightarrow \lim_{t\to t_0}  \frac{f_i(t) - f_i(t_0)}{t-t_0} \text{ existe }\] Portanto \(\overrightarrow{F}\) é diferenciável se, e somente se, cada \(f_i\) é diferenciável, neste caso
+        \begin{align*}
+            \overrightarrow{F}'(t_0) 
+                & = \lim_{t\to t_0} \frac{\overrightarrow{F}(t) - \overrightarrow{F}(t_0)}{t-t_0}\\ 
+                & = \left( \lim_{t\to t_0} \frac{f_1(t) - f_1(t_0)}{t-t_0}, \dots, \lim_{t\to t_0}\frac{f_n(t)-f_n(t_0)}{t-t_0} \right) \\
+                & = (f_1'(t_0),\dots,f_n'(t_0)).
+        \end{align*}
+\end{proof}
+
+\begin{example}
+    Seja \(\overrightarrow{F}(t) = (\ln t, e^{-3t}, t^2)\).
+        \begin{enumerate}
+            \item Determine \(D_F\) e a região que \(\overrightarrow{F}\) é contínua.
+            \item Encontre \(\overrightarrow{F}'(t), \overrightarrow{F}'(1), \overrightarrow{F}''(t)\) e \(\overrightarrow{F}''(4)\).
+        \end{enumerate}
+
+    As componentes de \(\overrightarrow{F}\) são \[f_1(t) = \ln t, \; f_2(t) = e^{-3t} \text{ e } f_3(t) = t^2,\] como \(D_{f_1} = (0,\infty)\), \(D_{f_2} = \R\) e \(D_{f_3} = \R\), concluímos que \(D_F = (0,\infty)\).
+
+    Além disso, sabemos que cada componente é contínua em \((0,\infty)\), portanto \(F\) é contínua em \((0,\infty)\).
+
+    Agora, como cada componente é diferenciável, temos \[\overrightarrow{F}'(t) = \left( (\ln t)', (e^{-3t})', (t^2)' \right) = \left( \frac{1}{t}, -3e^{-3t}, 2t \right),\] portanto \(\overrightarrow{F}'(1) = (1,-3e^{-3},2)\). Da mesma forma \[\overrightarrow{F}''(t) = \left( (t^{-1})1, (-3e^{-3t})', (2t)' \right) = \left( -\frac{1}{t^2}, 9 e^{-3t}, 2 \right),\] portanto \(\overrightarrow{F}''(4) = \left( -\frac{1}{16}, 9e^{-12}, 2 \right)\).
+\end{example}
+
+\textbf{Interpretação geométrica de \(F'(t_0)\) no caso \(n=2\)}
+
+Sejam \(\overrightarrow{F}: D_F \to \R^2\) e \(t_0\in D_F\). Suponha que a imagem de \(F\) seja a curva abaixo
+%{\cv FIGURA}
+
+Note que, dado \(t\in D_F\), \[F'(t_0) \xleftrightarrow{t\to t_0} \frac{\overrightarrow{F}(t) - \overrightarrow{F}(t_0)}{t-t_0} // \overrightarrow{F}(t) - \overrightarrow{F}(t_0)\] assim, interpretamos \(\overrightarrow{F}'(t_0)\) como o ``vetor tangente'' à trajetória de \(\overrightarrow{F}\) em \(\overrightarrow{F}(t_0)\). O que motiva a seguinte definição
+
+\begin{definition}
+    Seja \(\overrightarrow{F}: D_F \to \R^n\) diferenciável em \(t_0\in D_F\), com \(\overrightarrow{F}'(t_0)\neq\overrightarrow{0}\).
+        \begin{enumerate}
+            \item Dizemos que \(\overrightarrow{F}'(t_0)\) é um \textit{vetor tangente}\label{Vetor tangente} à trajetória de \(\overrightarrow{F}\) em \(\overrightarrow{F}(t_0)\).
+            \item Chamamos a reta \[\mathbf{X} = \overrightarrow{F}(t_0) + \lambda\overrightarrow{F}'(t_0),\; \lambda\in\R\] de \textit{reta tangente}\label{Reta tangente} de \(\overrightarrow{F}\) no ponto \(\overrightarrow{F}(t_0)\).
+        \end{enumerate}
+\end{definition}
+
+\begin{example}
+    Considere \(\overrightarrow{F}(t) = (t,t,t^2)\) e determine a equação da reta tangente no ponto \(\overrightarrow{F}(1)\).
+
+    Sabemos que \(\overrightarrow{F}'(t) = (1,1,2t)\), portanto \(\overrightarrow{F}'(1) = (1,1,2)\), assim a reta tangente à \(\overrightarrow{F}\) em \(\overrightarrow{F}(1)\) tem equação \[\mathbf{X} = \overrightarrow{F}(1) + \lambda\overrightarrow{F}'(1) = (1,1,1) + \lambda (1,1,2),\; \lambda\in\R\]
+\end{example}
+
+\begin{exercise}
+    Seja \(\overrightarrow{F}(t) = (\cos t,\sin t)\), \(t\in\R\). Determine a equação da reta tangente à trajetória de \(\overrightarrow{F}\) no ponto \(\overrightarrow{F}\left( \frac{\pi}{4} \right)\).
+\end{exercise}
+
+Algumas propriedades básicas de diferenciação estão no seguinte teorema
+
+\begin{theorem}
+    Sejam \(\overrightarrow{F},\overrightarrow{G}: A \to \R^n \) e \(f: A \to \R\) diferenciáveis. Então
+        \begin{enumerate}
+            \item \(\frac{d}{dt}[\overrightarrow{F}(t) + \overrightarrow{G}(t)] = \frac{d}{dt}\overrightarrow{F}(t) + \frac{d}{dt}\overrightarrow{G}(t)\)
+            \item \(\frac{d}{dt}[k\cdot\overrightarrow{F}(t)] = k \frac{d}{dt}\overrightarrow{F}(t)\)
+            \item \(\frac{d}{dt}[f(t)\cdot\overrightarrow{F}(t)] = \frac{d}{dt}f(t)\cdot\overrightarrow{F}(t) + f(t)\cdot\frac{d}{dt}\overrightarrow{F}(t)\)
+            \item \(\frac{d}{dt}[\overrightarrow{F}(t)\cdot\overrightarrow{G}(t)] = \frac{d}{dt}\overrightarrow{F}(t)\cdot\overrightarrow{G}(t) + \overrightarrow{F}(t)\frac{d}{dt}\overrightarrow{G}(t)\)
+            \item \(\frac{d}{dt}[\overrightarrow{F}(t)\times\overrightarrow{G}(t)] = \frac{d}{dt}\overrightarrow{F}(t)\times\overrightarrow{G}(t) + \overrightarrow{F}(t)\frac{d}{dt}\overrightarrow{G}(t)\)
+        \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    Provaremos apenas o item (3) para \(n=3\).
+
+    Considerando \(\overrightarrow{F} = (f_1,f_2,f_3)\) temos que \[f(t)\cdot\overrightarrow{F}(t) = (f(t)\cdot f_1(t), f(t) f_2(t), f(t)f_3(t)),\] logo
+        \begin{align*}
+            {\lefteqn{\frac{d}{dt}[f(t)\cdot\overrightarrow{F}(t)]}}\\
+                & = \left( (f(t)\cdot f_1(t))', (f(t)\cdot f_2(t))', (f(t)\cdot f_3(t)) \right) \\
+                & = \left( f'(t) f_1(t) + f(t) f_1'(t), f'(t) f_2(t) + f(t) f_2'(t), f'(t) f_3(t) + f(t) f_3'(t) \right) \\
+                & = f'(t) \left( f_1(t), f_2(t), f_3(t) \right) + f(t) \left( f_1'(t), f_2'(t), f_3'(t) \right) \\
+                & = \frac{d}{dt}f(t)\cdot\overrightarrow{F}(t) + f(t)\cdot\frac{d}{dt}\overrightarrow{F}(t).
+        \end{align*}
+
+    Os demais itens ficam de exercício.
+\end{proof}
+
+\chapter{Funções de várias variáveis reais a valores vetoriais}
+
+\begin{definition}\index{Função de várias variáveis reais a valores vetoriais}
+    Sejam \(n,m\in\N\) não nulos. Uma função de \(n\) variáveis reais a valores em \(\R^m\) é uma função \(F: A \subset \R^n \to \R^m\).
+\end{definition}
+
+A função definida acima associa a cada n-upla \((x_1,\dots,x_n)\) um único vetor \(F(x_1,\dots,x_n)\in\R^m\). %{\cv FIGURA}
+
+\textbf{Notações. }
+    \begin{enumerate}
+        \item O conjunto \(A\) na definição acima é o \textit{Função de várias variáveis reais a valores vetoriais!Domínio} de \(F\) e será denotado por \(D_F\).
+        \item A \textit{Função de várias variáveis reais a valores vetoriais!Imagem} de \(F\) é conjunto \[\operatorname{Im}_F = \{F(x_1,\dots,x_n)\in\R^m : (x_1,\dots,x_n)\in D_F\}\]
+    \end{enumerate}
+
+\begin{remark}
+    \begin{enumerate}
+        \item Se \(B\subset D_F\), então \[F(B) = \{F(x_1,\dots,x_n)\in\R^m : (x_1,\dots,x_n)\in B\}\] e dizemos que \(F\) transforma \(B\subset\R^n\) no conjunto \(F(B)\subset\R^m\).
+        \item Como antes, \[F(x_1,\dots,x_n) = (f_1(x_1,\dots
+        ,x_n),\dots, f_m(x_1,\dots,x_n)),\] com \(f_i:D_F\to\R\) sendo as funções componentes de \(F\).
+        \item Usaremos as palavras \textit{transformação} e \textit{aplicação} como sinônimos de função.
+    \end{enumerate}
+\end{remark}
+
+\begin{example}
+    Seja \(F:\R^2\to\R^3\) dada por \(F(u,v) = (x,y,z)\), com \[\begin{cases}
+        x = u,\\ y = v,\\ z = u^2 + v^2.
+    \end{cases}\] Encontre a imagem de \(F\).
+
+    Temos que \(D_F = \R^2\) e \(F\) transforma cada par \((u,v)\) na terna \((u,v,u^2+v^2)\), logo
+        \begin{align*}
+            \operatorname{Im}_F
+                & = \{F(u,v)\in\R^3 : (u,v)\in\R^2\}\\
+                & = \{(u,v,u^2+v^2) : (u,v)\in\R^2\} \\
+                & = \{(x,y,z) : x = u, y=v \text{ e } z = u^2 + v^2\}\\
+                & = \{(x,y,z) : z = x^2 + y^2 \text{ e } (x,y)\in\R^2\},
+        \end{align*}
+    portanto a imagem de \(F\) coincide com o gráfico da função dada por \(z = x^2 + y^2\) (parabolóide).%{\cv FIGURA}
+
+    Em outras palavras, \(F\) transforma o plano-uv no parabolóide \(z = x^2 + y^2\).
+\end{example}
+
+\begin{example}[Coordenadas polares]
+    Seja \(\varphi(\theta,\rho) = (x,y)\), a função dada por \[\begin{cases}
+        x = \rho\cos\theta,\\ y=\rho\sin\theta.
+    \end{cases}\]
+
+    \begin{enumerate}
+        \item Desenhe \(\varphi(B)\), sendo \(B\) a reta \(\rho = 2\).
+        \item Desenhe \(\varphi(B)\), sendo \(B\) o retângulo \(0\leq\rho\leq 2\) e \(0\leq\theta\leq 2\pi\).
+    \end{enumerate}
+
+    Primeiro note que \(D_F = \R^2\) e \(\varphi:\R^2\to\R ^2\). 
+    
+    Agora, sendo \(B\) a reta \(\rho = 2\), temos que
+        \begin{align*}
+            \varphi(B)
+                & = \{\varphi(\theta,\rho) : (\theta,\rho)\in B\} \\
+                & = \{\varphi(\theta,\rho) : \theta\in\R \text{ e } \rho=2\} \\
+                & = \{(x,y) : x = \rho\cos\theta, y = \rho\sin\theta,\, \theta\in\R \text{ e } \rho=2\} \\
+                & = \{(x,y): x = 2\cos\theta, y = 2\sin\theta \text{ e } \theta\in\R\} \\
+                & = \{(x,y) : x^2 + y^2 = 4\}.
+        \end{align*}
+        %{\cv FIGURA}
+
+        Ou seja, \(\varphi\) transforma a reta \(\rho=2\) na circunferência \(x^2 + y^2 = 4\).
+
+        Agora, se \(@B\) é o retângulo \(0\leq\rho\leq 2\) e \(0\leq\theta\leq 2\pi\), sabemos que, para \(\rho = 0\) temos \(\varphi(\theta,0) = (0,0)\), para todo \(\theta\in[0,2\pi]\), ou seja, \(\varphi\) transforma a reta \(\rho=0\) e \(\theta\in[0,2\pi]\) na origem.
+
+        Além disso, fixado \(\rho\in[0,2\pi]\), como no item anterior, cada reta \(B_\rho\) é levada na circunferência centrada na origem de raio \(\rho^2\).
+
+        Assim concluímos que \(\varphi\) transforma \([0,2]\times[0,2\pi]\) no círculo \(x^2 + y^2 \leq 4\).
+\end{example}
+
+\begin{exercise}
+    Seja \(\varphi(u,v) = (x,y)\) dada por \[\begin{cases}
+        x=u,\\y=u^2+v^2
+    \end{cases}.\]
+
+    \begin{enumerate}
+        \item Desenhe as curvas \(v=1\) e \(u=1\).
+        \item Desenha a imagem de \(\varphi\).
+    \end{enumerate}
+\end{exercise}
+
+\section{Campos vetoriais}
+
+Se a cada ponto \(k\) de uma região (em \(\R^2\) ou \(\R^3\)) está associado exatamente \textit{um único} vetor tendo \(k\) como ponto inicial, então a coleção de todos esses vetores constitui um \textit{campo vetorial}.
+
+\begin{example}
+    Considere uma roda girando em torno de um eixo
+        %{\cv FIGURA}
+    
+    A cada ponto da roda corresponde um vetor velocidade. Um campo vetorial deste tipo é um \textit{campo de velocidade}.
+\end{example}
+
+\begin{example}
+    Um campo de velocidade também pode ser determinado pelo fluxo de água ou vento em uma região.
+        %{\cv FIGURA}
+\end{example}
+
+\begin{example}
+    Um \textit{campo de forças} é um campo vetorial em que a cada ponto está associado um vetor força. Os campos de força são comuns em estudos de mecênica e eletrecidade.
+\end{example}
+
+\begin{remark}
+    Nos exemplos acima, admitimos que os vetores são independentes do tempo. Tais \textit{campos vetoriais estacionários} serão os únicos considerados em nosso estudo.
+\end{remark}
+
+
+\begin{definition}
+    Seja \(A\subset\R^n\). Um \textit{campo vetorial}\index{Campo vetorial} sobre \(\R^n\) é uma função \(\overrightarrow{F}:A\to\R^n\). Em particular,
+        \begin{enumerate}
+            \item um \textit{campo vetorial} sobre \(\R^3\) é uma função \(\overrightarrow{F}:A\subset\R^3\to\R^3\). Para \((x,y,z)\in A\), denotamos \[\overrightarrow{F}(x,y,z) = P(x,y,z)\overrightarrow{i} + Q(x,y,z)\overrightarrow{j} + R(x,y,z)\overrightarrow{k},\] com \(P,Q,R : A\to\R\) funções componentes de \(\overrightarrow{F}\).
+            \item Um \textit{campo vetorial} sobre \(\R^2\) é uma função \(\overrightarrow{F}:A\subset\R^2\to\R^2\). Para \((x,y)\in A\), denotamos \[\overrightarrow{F}(x,y) = P(x,y,z)\overrightarrow{i} + Q(x,y,z)\overrightarrow{j},\] com \(P,Q : A\to\R\) funções componentes de \(\overrightarrow{F}\).
+        \end{enumerate}
+\end{definition}
+
+Lembre que para um campo vetorial \(\overrightarrow{F}\), interpretamos \(\overrightarrow{F}(\mathbf{X})\), para \(\mathbf{X}\in A\), como um vetor \textit{aplicado} em \(\mathbf{X}\).
+
+\begin{example}
+    Descreva o campo vetorial \(\overrightarrow{F}\) dado por \(\overrightarrow{F}(x,y) = \overrightarrow{j}\).
+
+    Neste caso, temos \[\overrightarrow{F}(0,0) = (0,1),\; \overrightarrow{F}(-2,1) = (0,1) \text{ e } \overrightarrow{F}(1,-2)=(0,1),\] portanto temos o campo vetorial
+        %{\cv FIGURA}
+    
+    Note que este é um campo vetorial constante, ou seja, a cada ponto \((x,y)\in\R^2\) associa o vetor \(\overrightarrow{j} = (0,1)\) aplicado no ponto \((x,y)\).
+\end{example}
+
+\begin{example}
+    Descreva o campo vetorial \(\overrightarrow{F}\), dado por \(\overrightarrow{F}(x,y) = -y\overrightarrow{i} + x\overrightarrow{j}\).
+
+    Inicialmente, vamos analisar alguns vetores \(\overrightarrow{F}(x,y)\) do campo vetorial para alguns pontos do plano
+        \begin{itemize}
+            \item \((x,y) = (1,0) \Rightarrow \overrightarrow{F}(1,0) = 0\overrightarrow{i} + 1\overrightarrow{j} = (0,1)\).
+            \item \((x,y) = (0,1) \Rightarrow \overrightarrow{F}(0,1) = -1\overrightarrow{i} + 0\overrightarrow{j} = (-1,0)\).
+            \item \((x,y) = (-1,0) \Rightarrow \overrightarrow{F}(-1,0) = 0\overrightarrow{i} + -1\overrightarrow{j} = (0,-1)\).
+            \item \((x,y) = (0,-1) \Rightarrow \overrightarrow{F}(0,-1) = -(-1)\overrightarrow{i} + 0\overrightarrow{j} = (1,0)\).
+            \item \((x,y) = (2,0) \Rightarrow \overrightarrow{F}(2,0) = 0\overrightarrow{i} + 2\overrightarrow{j} = (0,2)\).
+            \item \((x,y) = (0,2) \Rightarrow \overrightarrow{F}(0,2) = -2\overrightarrow{i} + 0\overrightarrow{j} = (-2,0)\).
+        \end{itemize}
+        %{\cv FIGURA}
+
+    Parece que cada vetor do campo vetorial é tangente ao círculo de centro na origem e raio \(\|(x,y)\|\).
+
+    Para confirmar e formalizar isso, note que se \(\overrightarrow{r} = (x,y)\) é o vetor posição do ponto \((x,y)\), então \[\overrightarrow{r}\cdot\overrightarrow{F}(x,y) = (x,y)\cdot(-y,x) = -xy + xy = 0,\] logo \(\overrightarrow{F}\) é perpendicular ao vetor posição \(\overrightarrow{r}=(x,y)\) e, portanto, é tantgente ao círculo centrado na origem de raio \(\|(x,y)\|\).
+
+    Note ainda que \[\|\overrightarrow{F}(x,y)\| = \sqrt{(-y)^2 + x^2} = \|(x,y)\| = \|\overrightarrow{r}\|.\] Logo, o comprimento do vetor \(\overrightarrow{F}(x,y)\) é igual ao raio do círculo. Isto implica que conforme \((x,y)\) se afasta da origem, o comprimento do vetor \(\overrightarrow{F}(x,y)\) aumenta.
+\end{example}
+
+Um dos campos vetoriais mais importantes na física está na seguinte definição:
+
+\begin{definition}
+    Seja \(\overrightarrow{r} = x\overrightarrow{i} + y\overrightarrow{j} + z\overrightarrow{k}\) o vetor posição de \((x,y,z)\) e seja \(\overrightarrow{u} = \frac{\overrightarrow{r}}{\|\overrightarrow{r}\|}\) o versor de \(\overrightarrow{r}\). Um campo vetorial \(\overrightarrow{F}\) é um \textit{campo quadrado inverso} se \[\overrightarrow{F}(x,y,z) = \frac{c}{\|\overrightarrow{r}\|^2} \overrightarrow{u} = \frac{c}{\|\overrightarrow{r}\|^3} \overrightarrow{r},\] no qual \(c\) é uma constante.
+\end{definition}
+
+Note que na definição acima \[\overrightarrow{F}(x,y,z) = \frac{c}{\|\overrightarrow{r}\|^3} \overrightarrow{r} = \frac{x}{(x^2 + y^2 + z^2)^{\frac{3}{2}}}(x\overrightarrow{i} + y\overrightarrow{j} + z\overrightarrow{k}) ,\] e se enquadra, de fato, da definção de campo vetorial. No entanto, para analisar os vetores no campo, a notação acima é mais conveniente.
+
+Observe que se \(c<0\), então o campo quadrado inverso é um múltiplo escalar negativo de \(\overrightarrow{r}\). Logo \(\overrightarrow{F}(x,y,z)\) está dirigido para a origem. Além disso, \[\|\overrightarrow{F}(x,y,z)\| = \frac{|c|}{\|\overrightarrow{r}\|^3} \|\overrightarrow{r}\| = \frac{|c|}{\|\overrightarrow{r}\|^2},\] ou seja, o comprimento do vetor \(\overrightarrow{F}(x,y)\) é inversamente proporcional ao quadrado da distância da origem ao ponto \((x,y,z)\). Assim, quando o ponto se afasta da origem, \(\|\overrightarrow{F}(x,y,z)\|\) diminui
+    %{\cv FIGURA}
+
+Por outro lado, se \(c>0\), \(\overrightarrow{F}(x,y,z)\) tem a mesma direção de \(\overrightarrow{r}\), e como antes, \(\|\overrightarrow{F}(x,y,z)\|\) diminui quando \((x,y,z)\) se afasta da origem.
+    %{\cv FIGURA}
+
+\begin{example}
+    A \textit{lei gravitacional de Newton} estabelece que se uma partícula de massa \(m_0\) está na origem de um sistema de coordenadas \(xyz\), então a força exercida sobre uma particula de massa \(m\) localizada em \((x,y,z)\) é \[\overrightarrow{F}(x,y,z) = -G \frac{m_0 m}{\|\overrightarrow{r}\|^2} \overrightarrow{u},\] no qual \(G\) é uma constante gravitacional, \(\overrightarrow{r}\) é o vetor posição de \((x,y,z)\) e \(\overrightarrow{u}\) é o versor de \(\overrightarrow{r}\).
+        %{\cv FIGURA}
+
+    Assim, a força da gravidade determina um campo vetorial quadrado inverso com \(c<0\).
+\end{example}
+
+\begin{example}
+    A \textit{lei de Coulomb} diz que se uma carga pontual de \(Q\) coulombs está na origem, então a força \(\overrightarrow{F}(x,y,z)\) que ela exerce sobre uma carga pontual de \(q\) coulombs localizada em \((x,y,z)\) é \[\overrightarrow{F}(x,y,z) = k \frac{Qq}{\|\overrightarrow{r}\|^2} \overrightarrow{u},\] com \(k>0\) sendo a constante eletrostática, \(\overrightarrow{r}\) é o vetor posição de \((x,y,z)\) e \(\overrightarrow{u}\) é o versor de \(\overrightarrow{r}\).
+
+    Logo, para cargas de mesmo sinal, temos \(Qq > 0\) e a força é \textit{repulsiva}. Já para cargas opostas, \(Qq<0\) e a força é \textit{atrativa}.
+
+    Novamente temos um campo quadrado inverso.
+\end{example}
+
+Seja \(f\) uma função de três variáveis reais a valores reais. Então o gradiente de \(f(x,y,z)\) é dado por
+    \begin{align*}
+        \nabla f(x,y,z) 
+        & = \left( \frac{\partial f}{\partial x}(x,y,z), \frac{\partial f}{\partial y}(x,y,z), \frac{\partial f}{\partial z} \right) \\
+        & = \frac{\partial f}{\partial x}(x,y,z)\overrightarrow{i} + \frac{\partial f}{\partial y}(x,y,z)\overrightarrow{j} + \frac{\partial f}{\partial z}(x,y,z)\overrightarrow{k}.
+    \end{align*}
+Logo, \(\nabla f: A\subset\R^3 \to \R^3\) é um campo vetorial.
+
+Campos vetorias deste tipo recebem um nome especial.
+
+\begin{definition}
+    Um campo vetorial \(\overrightarrow{F}\) é \textit{conservativo}\index{Campo vetorial!Conservativo} se \[\overrightarrow{F}(x,y,z) = \nabla f(x,y,z),\] para algum função escalar \(f\).
+
+    Neste caso, dizemos que \(f\) é um \textit{função potencial}\index{Campo vetorial!Função potencial} para \(F\) e que \(f(x,y,z)\) é o \textit{potencial}\index{Campo vetorial! Potencial} no ponto \((x,y,z)\).
+\end{definition}
+
+\begin{remark}
+    Lembre que se \((x_0,y_0,z_0)\in D_f\) pertence à superfície de nível \(f(x,y,z) = c\), então \(\nabla f(x_0,y_0,z_0)\) é normal à superfície de nível \(f(x,y,z) = c\) no ponto \((x_0,y_0,z_0)\).
+
+    Mais ainda, sabemos que \(\|\nabla f(x_0,y_0,z_0)\|\) é a taxa máxima de variação de \(f\) em \((x_0,y_0,z_0)\). Assim, podemos concluir que 
+        \begin{enumerate}
+            \item todo vetor \(\overrightarrow{F}(x_0,y_0,z_0)\) de um campo vetorial conservativo é normal à superfície de nível de uma função potencial \(f\) para \(\overrightarrow{F}\) no ponto \((x_0,y_0,z_0)\).
+            \item \(\|\overrightarrow{F}(x_0,y_0,z_0)\|\) é a taxa máxima de variação do potencial \(f\) em \((x_0,y_0,z_0)\).
+        \end{enumerate}
+    %{\cv FIGURA}
+\end{remark}
+
+\begin{theorem}
+    Todo campo vetorial quadrado inverso é conservativo.
+\end{theorem}
+
+\begin{proof}
+    Seja \(\overrightarrow{F}\) um campo vetorial quadrado inverso. Então, existe uma constante \(c\) tal que
+        \begin{align*}
+            \overrightarrow{F}(x,y,z)
+                & = \frac{c}{\|\overrightarrow{r}\|^2} \overrightarrow{u} \\
+                & = \frac{c}{\|\overrightarrow{r}\|^2} \frac{\overrightarrow{r}}{\|\overrightarrow{r}\|} \\
+                & = \frac{c}{\|\overrightarrow{r}\|^3} \overrightarrow{r} \\
+                & = \frac{c}{(x^2 + y^2 + z^2)^{\frac{3}{2}}} (x\overrightarrow{i} + y\overrightarrow{j} + z\overrightarrow{k}) \\
+                & = \frac{cx}{(x^2 + y^2 + z^2)^{\frac{3}{2}}}\overrightarrow{i} + \frac{cy}{(x^2 + y^2 + z^2)^{\frac{3}{2}}}\overrightarrow{j} + \\
+                & \quad \frac{cz}{(x^2 + y^2 + z^2)^{\frac{3}{2}}}\overrightarrow{k}.
+        \end{align*}
+
+    Assim, tomando \(f(x,y,z) = \frac{-c}{(x^2 + y^2 + z^2)^{\frac{1}{2}}}\), temos
+        \begin{align*}
+            \frac{\partial f}{\partial x}(x,y,z)
+                & = \frac{2cx\frac{1}{2}(x^2 + y^2 + z^2)^{-\frac{1}{2}}}{(x^2 + y^2 + z^2)}\\
+                & = \frac{cx}{(x^2 + y^2 + z^2)^{\frac{3}{2}}},\\
+            \frac{\partial f}{\partial y}(x,y,z)
+                & = \frac{cy}{(x^2 + y^2 + z^2)^{\frac{3}{2}}},\\
+            \frac{\partial f}{\partial z}(x,y,z)
+                & = \frac{cz}{(x^2 + y^2 + z^2)^{\frac{3}{2}}}.
+        \end{align*}
+
+    Logo \(\overrightarrow{F}(x,y,,z) = \nabla f(x,y,z)\), isto é, \(f\) é uma função potencial para \(\overrightarrow{F}\). Portanto \(\overrightarrow{F}\) é conservativo.
+\end{proof}
+
+\textbf{Pergunta. } Como que encontramos \(f\) na prova do teorema acima?
+
+\begin{remark}
+    Note que as superfícies de nível para a função potencial \(f\) do campo vetorial quadrado inverso \(\overrightarrow{F}\) do teorema anterior são da forma \[f(x,y,z) = \frac{-c}{(x^2 + y^2 + z^2)^{\frac{1}{2}}} = k,\; k\in\operatorname{Im}_f,\] ou seja, \(x^2 + y^2 + z^2 = \left( -\frac{c}{k} \right)^2.\)
+
+    Portanto, as superfícies de nível são esferas centradas na origem e os vetores \(\overrightarrow{F}(x,y,z)\) são ortogonais a essas esferas (orientadas para a origem ou a partir da origem, a depender do sinal de \(c\)).
+        %{\cv FIGURA}
+\end{remark}
+
+\begin{remark}
+    Os campos vetoriais de gravitação e de Coulomb são conservativos.
+\end{remark}
+
+\section{Rotacional e Divergência}
+
+A seguir definiremos duas operações para campos vetoriais que são básicas nas aplicações de Cálculo Vetorial à mecânica dos fluídos e à eletrecidade e magnetismo.
+
+\begin{definition}
+    Definimos o \textit{operador diferencial vetorial}\index{Operador diferencial vetorial} em três dimensões por \[\nabla = \overrightarrow{i} \frac{\partial}{\partial x} + \overrightarrow{j} \frac{\partial}{\partial y} + \overrightarrow{k} \frac{\partial}{\partial z}.\]
+\end{definition}
+
+Note que se \(f:D_f\subset\R^3\to\R\) é uma função escalar, \(\nabla\) opera sobre \(f\) da seguinte forma: \[\nabla f =  \frac{\partial}{\partial x}\overrightarrow{i} +  \frac{\partial}{\partial y}\overrightarrow{j} +  \frac{\partial}{\partial z}\overrightarrow{k}.\]
+
+\begin{definition}
+    Seja \[\overrightarrow{F}(x,y,z) = P(x,y,z)\overrightarrow{i} + Q(x,y,z)\overrightarrow{j} + R(x,y,z)\overrightarrow{k}\] um campo vetorial em \(\R^3\) e assuma que \(P,Q\) e \(R\) têm derivadas parciais em alguma região de \(\R^3\).
+
+    O \textit{rotacional}\index{Rotacional} de \(\overrightarrow{F}\) é o campo vetorial definido por \[\operatorname{rot} \overrightarrow{F} = \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right)\overrightarrow{i} + \left( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x} \right)\overrightarrow{j} + \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right)\overrightarrow{k}.\]
+\end{definition}
+
+Se olharmos o operador diferencial \(\nabla\) como um ``vetor'' com componentes \(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}\) e \(\frac{\partial}{\partial z}\), então \[\operatorname{rot}\overrightarrow{F} = \nabla \times \overrightarrow{F} = \left|\begin{matrix}
+    \overrightarrow{i} & \overrightarrow{j} & \overrightarrow{k}  \\
+    \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+    P & Q & R
+\end{matrix}\right|.\]
+
+\begin{example}
+    Seja \(\overrightarrow{F}(x,y,z) = xy^2z^4 \overrightarrow{i} + (2x^2y + z)\overrightarrow{j} + y^3z^2 \overrightarrow{k}.\) Encontre o rotacional de \(\overrightarrow{F}\).
+
+    Temos que
+        \begin{align*}
+            \operatorname{rot}\overrightarrow{F}
+                & = \nabla \times \overrightarrow{F} = \left|\begin{matrix}
+    \overrightarrow{i} & \overrightarrow{j} & \overrightarrow{k}  \\
+    \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+    xy^2z^4 & (2x^2y + z) & y^3z^2
+\end{matrix}\right|\\
+                & = \left( \frac{\partial}{\partial y} (y^3 z^2) - \frac{\partial}{\partial z} (2x^2y + z) \right)\overrightarrow{i} \\
+                & \quad + \left( \frac{\partial}{\partial z} (xy^2z^4) - \frac{\partial}{\partial x}(y^3 z^2) \right)\overrightarrow{j} \\
+                & \quad + \left( \frac{\partial}{\partial x}(2x^2y+z) - \frac{\partial}{\partial y} (xy^2z^4) \right)\overrightarrow{k}\\
+                & = (3y^2z^2 - 1)\overrightarrow{i} + 4xy^2z^3\overrightarrow{j} + (4xy - 2xyz^2)\overrightarrow{k}
+        \end{align*}
+\end{example}
+
+\begin{exercise}
+    Seja \(\overrightarrow{F}(x,y,z) = xz\overrightarrow{i} + xyz\overrightarrow{j} - y^2\overrightarrow{k}\). Encontre o rotacional de \(\overrightarrow{F}\).
+\end{exercise}
+
+Lembre que se \(f:D_f \subset \R^3 \to \R\), então o gradiente de \(f\) \[\nabla f(x,y,z) = \left( \frac{\partial f}{\partial x} (x,y,z), \frac{\partial f}{\partial y} (x,y,z), \frac{\partial f}{\partial z} (x,y,z) \right)\] é um campo vetorial, portanto podemos calcular \(\operatorname{rot}(\nabla f)\).
+
+\begin{theorem}\label{thm.rot0}
+    Se \(f:D_f \subset\R^3 \to \R\) possui derivadas de 2ª  ordem contínuas, então \[\operatorname{rot}(\nabla f) = \overrightarrow{0}\]
+\end{theorem}
+
+\begin{proof}
+    Temos que
+        \begin{align*}
+            \operatorname{rot}\overrightarrow{F}
+                & = \nabla \times \overrightarrow{F} = \left|\begin{matrix}
+    \overrightarrow{i} & \overrightarrow{j} & \overrightarrow{k}  \\
+    \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+    \frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} & \frac{\partial f}{\partial z}
+\end{matrix}\right|\\
+                & = \left( \frac{\partial^2 f}{\partial y \partial z} - \frac{\partial^2 f}{\partial z \partial y} \right)\overrightarrow{i} \\
+                & \quad + \left( \frac{\partial^2 f}{\partial z \partial x} - \frac{\partial^2 f}{\partial x \partial z} \right)\overrightarrow{j} \\
+                & \quad + \left( \frac{\partial^2 f}{\partial x \partial y} - \frac{\partial^2 f}{\partial y \partial x} \right)\overrightarrow{k} \\
+                & = \overrightarrow{0}.
+        \end{align*}
+\end{proof}
+
+Lembrando que um campo vetorial conservativo é da forma \(\overrightarrow{F} = \nabla f\), podemos reescrever o teorema anterior da seguinte maneira
+
+\begin{theorem}\label{thm.rot0Conservativo}
+    Se \(\overrightarrow{F}\) é um campo vetorial conservativo e as derivadas parciais de 2ª ordem da função potencial de \(\overrightarrow{F}\) são contínuas, então \(\operatorname{rot}\overrightarrow{F} = \overrightarrow{0}\).
+\end{theorem}
+
+\begin{remark}
+    O Teorema \ref{thm.rot0Conservativo} nos fornece uma maneira de verificar que um campo vetorial \textit{não} é conservativo.
+\end{remark}
+
+\begin{example}
+    Mostre que o campo vetorial \(\overrightarrow{F}(x,y,z) = xz\overrightarrow{i} + xyz\overrightarrow{j} - y^2\overrightarrow{k}\) não é conservativo.
+
+    Temos que \[\operatorname{rot}\overrightarrow{F} = -y(2+x)\overrightarrow{i} + x\overrightarrow{j} + yz\overrightarrow{k} \neq \overrightarrow{0},\] portanto, pelo Teorema \ref{thm.rot0Conservativo}, \(\overrightarrow{F}\) não é conservativo.
+\end{example}
+
+Em geral, a recíproca do Teorema \ref{thm.rot0Conservativo} não é verdadeira. O próximo teorema diz que se \(\overrightarrow{F}\) está definido em ``todo'' espaço, então a recíproca vale.
+
+\begin{theorem}\label{thm.rot0Conservativo1}
+    Seja \(\overrightarrow{F}\) um campo vetorial definido sobre todo \(\R^3\) tal que suas funções componentes tenham derivadas parciais de 2ª ordem contínuas. Se \(\operatorname{rot}\overrightarrow{F} = \overrightarrow{0}\), então \(\overrightarrow{F}\) é um campo vetorial conservativo.
+\end{theorem}
+
+\begin{remark}
+    Note que se pudermos usar o \ref{thm.rot0Conservativo1}, fica muito mais simples saber quando um campo é conservativo.
+\end{remark}
+
+\begin{example}
+    \begin{enumerate}
+        \item Mostre que \(\overrightarrow{F}(x,y,z) = y^2z^3\overrightarrow{i} + 2xyz^3\overrightarrow{j} + 3xy^2z^2\overrightarrow{k}\) é um campo vetorial conservativo.
+        \item Determine uma função \(f\) tal que \(\nabla f = \overrightarrow{F}\).
+    \end{enumerate}
+
+    Note que \(D_F = \R^3\) e é claro que suas funções componentes possuem derivadas de 2ª ordem contínuas. Logo, basta mostrarmos que \(\operatorname{rot}\overrightarrow{F} = \overrightarrow{0}\). De fato, 
+
+        \begin{align*}
+            \operatorname{rot}\overrightarrow{F}
+                & = \nabla \times \overrightarrow{F} = \left|\begin{matrix}
+    \overrightarrow{i} & \overrightarrow{j} & \overrightarrow{k}  \\
+    \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+     y^2 z^3 & 2xyz^3 & 3xy^2z^2
+\end{matrix}\right|\\
+                & = (6xyz^2 - 6xyz^2)\overrightarrow{i} + (3y^2z^2 - 3y^2z^2)\overrightarrow{j} + (2yz^3 - 2yz^3)\overrightarrow{k}\\
+                & \overrightarrow{0}
+        \end{align*}
+
+    Portanto, pelo Teorema \ref{thm.rot0Conservativo1}, \(\overrightarrow{F}\) é conservativo.
+
+    Agora, sendo \(\overrightarrow{F}\) conservativo, sabemos que \[ \overrightarrow{F}(x,y,z) = \nabla f(x,y,z) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial x} \right) = \left( y^2z^3, 2xyz^2, 3xy^2z^2 \right),\] ou seja \[\frac{\partial f}{\partial x} = y^2 z^3,\; \frac{\partial f}{\partial y} = 2xyz^3,\; \frac{\partial f}{\partial z} = 3xy^2z^2.\] Integrando \(\frac{\partial f}{\partial x}\) em relação a \(x\), obtemos \[f(x,y,z) = y^2 z^3 x + g(y,z),\] derivando esta expressão em relação a \(y\), \[\frac{\partial f}{\partial y} = 2xyz^3 + \frac{\partial g}{\partial y}(y,z),\] mas \(\frac{\partial f}{\partial y} = 2xyz^3\), portanto \(\frac{\partial g}{\partial y}(y,z) = 0 \), logo \(g(y,z) = h(z)\), assim \[f(x,y,z) = y^2 z^3 x + h(z),\] derivando em relação a \(z\), \[\frac{\partial f}{\partial z}(x,y,z) = 3xy^2z^2 + h'(z),\] mas \(\frac{\partial f}{\partial z}(x,y,z) = 3xy^2z^2,\) logo \(h'(z) = 0\). Do anterior, concluímos que \(h(z) = k\), portanto \(f(x,y,z) = xy^2z^3 + k\).
+\end{example}
+
+O nome ``rotacional'' está associado a aspectos de rotação de fluídos em movimento. Por exemplo, se \(\overrightarrow{F}\) representa o campo de velocidade de um fluído em movimento, então \(\operatorname{rot}\overrightarrow{F}\) nos dá informações acerca da rotação do fluído localmente. Mais especificamente, se \(P = (x,y,z)\) é um ponto em que o fluído está girando, então \(\operatorname{rot}\overrightarrow{F}\) está sobre o eixo de rotação e pode ser usado para descrever propriedades rotacionais do campo.
+    %{\cv FIGURA}
+
+Em particular, o comprimento de \(\operatorname{rot}\overrightarrow{F}\) é a medida do quão rápido as partículas se movem em torno do eixo.
+
+Logo, se \(\operatorname{rot}\overrightarrow{F} = \overrightarrow{0}\) no ponto \(P\), então o fluído não gira em torno de \(P\) e \(\overrightarrow{F}\) é chamado de \textit{irrotacional} em \(P\).
+
+\begin{definition}
+    Seja \[\overrightarrow{F}(x,y,z) = P(x,y,z)\overrightarrow{i} + Q(x,y,z)\overrightarrow{j} + R(x,y,z)\overrightarrow{k}\] um campo vetorial em \(\R^3\) e assuma que \(P,Q\) e \(R\) têm derivadas parciais em alguma região de \(\R^3\). O \textit{divergente}\index{Divergente} de \(\overrightarrow{F}\) é definido por \[\operatorname{div} \overrightarrow{F} = \frac{\partial P}{\partial x}(x,y,z) + \frac{\partial Q}{\partial y}(x,y,z) + \frac{\partial R}{\partial z}(x,y,z) = \nabla\cdot\overrightarrow{F}.\]
+\end{definition}
+
+\begin{example}
+    Seja \[\overrightarrow{F}(x,y,z) = xy^2z^4\overrightarrow{i} + (2x^2y + z)\overrightarrow{j} + y^3z^2\overrightarrow{k}.\] Encontre \(\operatorname{div}\overrightarrow{F}.\)
+
+    Temos que
+        \begin{align*}
+            \operatorname{div} \overrightarrow{F}
+                & = \nabla\cdot\overrightarrow{F} = \left( \frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z} \right)\cdot\left( xy^2z^4 + (2x^2y + z) + y^3z^2 \right) \\
+                & = y^2z^4 + 2x^2 + 2y^3z
+        \end{align*}
+\end{example}
+
+A razão para o nome ``divergente'' também está relacionado à mecânica dos fluídos. Por exemplo, se \(\overrightarrow{F}(x,y,z)\) é o campo de velocidade de um fluído, então \(\operatorname{div}\overrightarrow{F}\) representa a taxa de variação do fluído no ponto \((x,y,z)\). Em particular, se em \(P = (x,y,z)\)
+    \begin{itemize}
+        \item \(\operatorname{div}\overrightarrow{F} < 0\), então há maior quantidade de massa fluindo para \(P\) do que saíndo de \(P\), neste caso, dizemos que \(P\) é um \textit{poço};
+        \item \(\operatorname{div}\overrightarrow{F} > 0\), há maior quantidade de massa fluindo de \(P\) do que para \(P\), ou seja, \(P\) é uma \textit{fonte};
+        \item \(\operatorname{div}\overrightarrow{F} = 0,\), então o fluído está em equilíbrio, neste caso diremos que \(\overrightarrow{F}\) é \textit{imcompreensível} em \(P\).
+    \end{itemize}
+
+\begin{exercise}
+    Seja \[\overrightarrow{F}(x,y,z) = P(x,y,z)\overrightarrow{i} + Q(x,y,z)\overrightarrow{j} + R(x,y,z)\overrightarrow{k}\] um campo vetorial em \(\R^3\) e assuma que \(P,Q\) e \(R\) têm derivadas parciais de 2ª ordem contínuas em alguma região de \(\R^3\). Então \[\operatorname{div}(\operatorname{rot}\overrightarrow{F}) = 0.\]
+\end{exercise}
+
+\begin{remark}
+    Note que se \(f:D_f\subset\R^3 \to \R\), então \[\operatorname{div}(\nabla f) = \nabla\cdot\nabla f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2}.\]
+
+    Assim, \(\Delta = \nabla\cdot\nabla\) também pode ser definido como um operador diferencial e é chamado de \textit{operador de Laplace} de \(f\) ou, simplesmente, \textit{laplaciano} de \(f\).
+
+    Este nome é devido á relação com a equação de Laplace \[\frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2} = 0.\]
+\end{remark}
